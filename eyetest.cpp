@@ -6,6 +6,8 @@
 
 #include <iostream>
 #include <string>
+#include <ctime>
+#include <cstdlib>
 
 using namespace std;
 using namespace libeye;
@@ -13,73 +15,96 @@ using namespace libeye;
 // -------------------------------------
 
 int main(int argc, char **argv);
-View make_view();
-void draw_depth(View &view);
-void write_depth(const View &view, const string &filename);
+BiView make_view();
+void draw_depth(BiView &view);
+void write_sird(const BiView &view, const string &filename);
+void write_depth(const BiView &view, const string &filename);
 
 // -------------------------------------
 
 int main(int argc, char **argv) {
 	
-	View view = make_view();
+	srand(time(0));
+	
+	BiView view = make_view();
 	
 	draw_depth(view);
-	write_depth(view, "/tmp/image.png" );
+	
+	write_depth(view, "/tmp/depth.png");
+	write_sird(view, "/tmp/sird.png" );
 	
 	return 0;
 }
 
-View make_view() {
-	int width  = 800;
-	int height = 600;
-	
-	double screen_width  = 14.0;
-	double screen_height = screen_width * height / width;
-	
-	double scale = screen_width / width;
-	
-	double eye_back = 30.0;
-	double eye_sep  =  7.0;
-	
-	Screen screen(
-		point3(-screen_width/2, -screen_height/2, 0),
-		point3(scale, 0, 0),
-		point3(0, scale, 0) );
-	
-	point3 eye1(-eye_sep/2, 0, eye_back);
-	point3 eye2(+eye_sep/2, 0, eye_back);
-	
-	return View(width, height, screen, eye1);
+BiView make_view() {
+	return BiView(800, 600, 30, 7);
 }
 
-void draw_depth(View &view) {
+void draw_depth(BiView &view) {
 	
-	view.flatten(10);
+	view.flatten(20);
 	
-	point3 o(-3, -3, 1);
+	point3 o(0, 0, 18);
 	
 	point3 e1(1, 0, 0);
 	point3 e2(0, 1, 0);
 	point3 e3(0, 0, 1);
 	
-	point3 l1 = o;
-	point3 l2 = o  + 5*e1;
-	point3 l3 = o  + 5*e3;
-	point3 l4 = l2 + 5*e3;
+	point3 a = o - 4*e1 - 4*e2;
+	point3 b = o + 4*e1 - 4*e2;
+	point3 c = o + 4*e1 + 4*e2;
+	point3 d = o - 4*e1 + 4*e2;
 	
-	point3 u1 = l1 + 5*e2;
-	point3 u2 = l2 + 5*e2;
-	point3 u3 = l3 + 5*e2;
-	point3 u4 = l4 + 5*e2;
-	
-	view.draw_triangle(l1, l2, u1);
-	view.draw_triangle(u2, l2, u1);
+	view.draw_triangle(a, b, c);
+	view.draw_triangle(d, b, c);
 }
 
-void write_depth(const View &view, const string &filename) {
+void write_sird(const BiView &view, const string &filename) {
 	PLAnyBmp bmp;
 	PLPixel32 **lines;
 	int x, y;
+	int row, col;
+	
+	PLPNGEncoder enc;
+	
+	bmp.Create(view.width, view.height, PLPixelFormat::A8R8G8B8);
+	lines = bmp.GetLineArray32();
+	
+	StereoBlank stereo(view);
+	
+	for (y=0; y<view.height; y++)
+	for (x=0; x<view.width; x++) {
+		lines[y][x] = PLPixel32(255, 255, 255);
+	}
+	
+	int rows;
+	int cols;
+	int *grid_cols;
+	int vgap;
+	
+	stereo.isometric_grid(rows, cols, grid_cols, vgap, 2);
+	
+	for (row=0; row<rows; row++)
+	for (col=0; col<cols; col++) {
+		int x = grid_cols[col + row*cols];
+		int y = row * vgap;
+		
+		if (x < 0 || x >= view.width) continue;
+		
+		lines[y][x] = PLPixel32(0, 0, 0);
+	}
+	
+	delete[] grid_cols;
+	
+	enc.MakeFileFromBmp(filename.c_str(), &bmp);
+}
+
+void write_depth(const BiView &biview, const string &filename) {
+	PLAnyBmp bmp;
+	PLPixel32 **lines;
+	int x, y;
+	
+	const View &view = biview.right;
 	
 	PLPNGEncoder enc;
 	
