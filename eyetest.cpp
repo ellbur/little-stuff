@@ -9,6 +9,8 @@
 #include <ctime>
 #include <cstdlib>
 
+#include "drawings.hpp"
+
 using namespace std;
 using namespace libeye;
 
@@ -44,19 +46,7 @@ void draw_depth(BiView &view) {
 	
 	view.flatten(20);
 	
-	point3 o(0, 0, 18);
-	
-	point3 e1(1, 0, 0);
-	point3 e2(0, 1, 0);
-	point3 e3(0, 0, 1);
-	
-	point3 a = o - 4*e1 - 4*e2;
-	point3 b = o + 4*e1 - 4*e2;
-	point3 c = o + 4*e1 + 4*e2;
-	point3 d = o - 4*e1 + 4*e2;
-	
-	view.draw_triangle(a, b, c);
-	view.draw_triangle(d, b, c);
+	tee(view, 18);
 }
 
 void write_sird(const BiView &view, const string &filename) {
@@ -135,7 +125,7 @@ void write_depth(const BiView &biview, const string &filename) {
 			/ (max_depth - min_depth) * 254 );
 		index &= 0xFF;
 		
-		lines[view.height - y - 1][x] = PLPixel32(index, index, index);
+		lines[y][x] = PLPixel32(index, index, index);
 	}
 	
 	enc.MakeFileFromBmp(filename.c_str(), &bmp);
