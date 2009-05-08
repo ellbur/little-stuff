@@ -1,6 +1,9 @@
 
 #include <drawings.hpp>
 
+#include <cstdlib>
+#include <cstring>
+
 using namespace libeye;
 
 void center_square(BiView &view, double depth, double edge)
