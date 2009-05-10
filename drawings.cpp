@@ -45,6 +45,31 @@ void tile(BiView &view, double depth, const char **tiles,
 	}
 }
 
+void draw_shape_mask(BiView &view, double depth, ShapeMask &mask)
+{
+	int i, j;
+	
+	int cols = mask.width;
+	int rows = mask.height;
+	
+	double width  = 2 * view.half_width(depth);
+	double height = 2 * view.half_height(depth);
+	
+	double tile_width  = width  / cols;
+	double tile_height = height / rows;
+	
+	point3 corner(-width/2, height/2, depth);
+	point3 e1(tile_width, 0, 0);
+	point3 e2(0, -tile_height, 0);
+	
+	for (i=0; i<rows; i++)
+	for (j=0; j<cols; j++) {
+		if (! mask.in_shape(j, i)) continue;
+		
+		view.draw_pgram(corner + i*e2 + j*e1, e1, e2);
+	}
+}
+
 void tee(BiView &view, double depth)
 {
 	const char *tiles[10] = {
