@@ -1,0 +1,109 @@
+#!/usr/bin/perl
+
+# thesaurize [file]
+#
+# Author: Owen Healy <ellbur@gmail.com>
+# Version: 0.1
+# Depends: `dict -f -d moby-thesaurus` must work
+#
+
+$| = 1;
+
+main();
+
+sub main {
+	
+	while (<>) {
+		do_line($_);
+	}
+}
+
+# do_line($line)
+#
+# Handle one line of input
+#
+sub do_line {
+	my $line = shift;
+	
+	my $word_start = 0;
+	my $word_stop  = 0;
+	my $length = length($line);
+	
+	my $try;
+	my $word;
+	my $syn;
+	my $isword = 0;
+	
+	for (;;) {
+		if ($word_stop >= $length) {
+			return;
+		}
+		
+		$try = substr($line, $word_stop, 1);
+		
+		if ($isword) {
+			if ($try =~ /\w/) {
+			}
+			else {
+				$word = substr($line, $word_start, $word_stop-$word_start);
+				$syn = lookup($word);
+				print $syn;
+				
+				$isword = 0;
+				print $try;
+			}
+		}
+		else {
+			if ($try =~ /\w/) {
+				$word_start = $word_stop;
+				$isword = 1;
+			}
+			else {
+				print $try;
+			}
+		}
+		
+		$word_stop++;
+	}
+}
+
+# lookup($word)
+#
+# Returns a random synonym
+#
+sub lookup {
+	my $word = shift;
+	
+	my $thes;
+	my @lines;
+	my $ind;
+	my $num_lines;
+	my $line;
+	my $syns;
+	my $num_syns;
+	my $syn;
+	
+	$thes = `dict -f -d moby-thesaurus $word 2>/dev/null`;
+	
+	@lines = split(/\n/, $thes);
+	$num_lines = scalar(@lines) - 3; # First three meta info
+	if ($num_lines <= 0) { return $word; }
+	
+	$ind = int(rand($num_lines));
+	$line = $lines[3 + $ind];
+	$line =~ s/^\s*//;
+	$line =~ s/\s*$//;
+	
+	@syns = split(/\s*\,\s*/, $line);
+	$num_syns = scalar(@syns);
+	if ($num_syns <= 0) { return $word; }
+	
+	$ind = int(rand($num_syns));
+	$syn = $syns[$ind];
+	
+	if ($word =~ /^[A-Z]/) {
+		$syn = ucfirst($syn);
+	}
+	
+	return $syn;
+}
