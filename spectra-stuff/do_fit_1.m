@@ -1,19 +1,28 @@
 
-function [Coeffs Components] = do_fit_1(Energy, Channels, Res, Edges)
+function Reg = do_fit_1(Spectrum, Edges)
 
-FWidth = 8;
+if length(Edges) == 0
+	Reg.Coeffs = [];
+	Reg.Components = [];
+	return
+end
+
+Channels = Spectrum.Channels;
+Res      = Spectrum.Resolution;
+Energy   = Spectrum.Centers;
 
 Widths = sqrt(Res*Res + 2.45*(Edges - 5895));
-FChannels = top_hat(Channels', FWidth)';
+FChannels = fitting_filter(Channels')';
 Components = zeros(length(Channels), length(Edges));
 
 for II = 1:length(Edges)
 	
 	Peak = peak_height(Energy, Edges(II), Widths(II), 1);
-	Components(1:length(Channels), II) = Peak;
+	FPeak = fitting_filter(Peak')';
 	
+	Components(1:length(Channels), II) = Peak;
+	FComponents(1:length(FPeak), II) = FPeak;
 end
 
-FComponents = top_hat(Components', FWidth)';
-
-Coeffs = FComponents \ FChannels;
+Reg.Coeffs = FComponents \ FChannels;
+Reg.Components = Components;

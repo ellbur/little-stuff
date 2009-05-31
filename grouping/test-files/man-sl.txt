@@ -1,0 +1,38 @@
+SL(6)                                                                                            SL(6)
+
+
+
+NAME
+       sl - display animations aimed to correct users who accidentally enter sl instead of ls.
+
+SYNOPSIS
+       sl [ -alFe ]
+
+DESCRIPTION
+       sl  Displays  animations  aimed  to  correct users who accidentally enter sl instead of ls.  SL
+       stands for Steam Locomotive.
+
+OPTIONS
+       -a     An accident seems to happen. You’ll feel pity for people who cry for help.
+
+       -l     shows little one.
+
+       -F     It flies.
+
+       -e     Allow interrupt by Ctrl+C.
+
+
+SEE ALSO
+       ls(1)
+
+BUGS
+       It rarely shows contents of current directory.
+
+AUTHOR
+       sl was written by Toyoda Masashi <toyoda@is.titech.ac.jp>. This  manual  page  was  written  by
+       Brian Ristuccia <brianr@debian.org> and Kenshi Muto <kmuto@debian.org> for the Debian GNU/Linux
+       system but may be used by others under the same license as sl itself.
+
+
+
+4.2 Berkeley Distribution                    Jan 18, 2001                                        SL(6)

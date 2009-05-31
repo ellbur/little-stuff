@@ -1,0 +1,17 @@
+
+Matlab code to group things based on similarity.
+Owen Healy
+ellubr@gmail.com
+
+To compare files, the program 'bzip2' must be installed. It will work best on
+text files.
+
+A test set of files is in ./test-files/ . It's a rather cheap set, because
+it contains some very, very different types of files (and the program still
+messes up occasionally).
+
+The algorithm is still a work in progress. It usually handles small groups
+correctly, but not usually large groups (more than 30 it rarely gets right).
+The other interpretation is that it is always right, and you're just wrong
+about what you thought it should do.
+

@@ -1,0 +1,28 @@
+
+function [ Change Grouper ] = improve_elem(Grouper, II)
+
+Score = rate_group(Grouper, Grouper.Group);
+
+Try_Group = Grouper.Group;
+Change = 0;
+
+if sum(Grouper.Group == Grouper.Group(II)) == 1
+	return
+end
+
+for Try=1:(Grouper.K)
+	if Try == Grouper.Group(II)
+		continue
+	end
+	
+	Try_Group(II) = Try;
+	Try_Score = rate_group(Grouper, Try_Group);
+	
+	if Try_Score < Score
+		Change = 1;
+		Grouper.Group = Try_Group;
+		
+		break;
+	end
+end
+

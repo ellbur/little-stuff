@@ -1,0 +1,47 @@
+PWD(1)                                       User Commands                                      PWD(1)
+
+
+
+NAME
+       pwd - print name of current/working directory
+
+SYNOPSIS
+       pwd [OPTION]
+
+DESCRIPTION
+       Print the full filename of the current working directory.
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       NOTE:  your  shell  may  have  its  own  version  of  pwd, which usually supersedes the version
+       described here.  Please refer to your shell’s documentation for details about  the  options  it
+       supports.
+
+AUTHOR
+       Written by Jim Meyering.
+
+REPORTING BUGS
+       Report bugs to <bug-coreutils@gnu.org>.
+
+COPYRIGHT
+       Copyright  ©  2008  Free  Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later
+       <http://gnu.org/licenses/gpl.html>
+       This is free software: you are free to change and redistribute it.  There is  NO  WARRANTY,  to
+       the extent permitted by law.
+
+SEE ALSO
+       getcwd(3)
+
+       The full documentation for pwd is maintained as a Texinfo manual.  If the info and pwd programs
+       are properly installed at your site, the command
+
+              info pwd
+
+       should give you access to the complete manual.
+
+
+
+GNU coreutils 6.9.92.4-f088d-dirty           January 2008                                       PWD(1)
