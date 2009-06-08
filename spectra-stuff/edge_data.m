@@ -1,5 +1,7 @@
 
 global EdgeData;
+global ShortEdgeSelect;
+global ShortEdgeData;
 
 EdgeData = [
        0,       0,        0,        0,        0,       0,       0,       0,       0,       0,       0,      0 , 
@@ -95,3 +97,7 @@ EdgeData = [
        0,       0,        0,        0,        0,       0,       0,       0,       0,       0,       0,      0 , 
  98439.0, 94665.0, 111300.0, 114530.0, 110406.0, 13614.7, 13438.8, 17220.0, 16428.3, 20167.1, 11618.3, 3170.8 
 ];
+
+ShortEdgeSelect = [ 1 3 6 8 12 ];
+
+ShortEdgeData = EdgeData(:, ShortEdgeSelect);

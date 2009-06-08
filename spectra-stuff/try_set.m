@@ -3,9 +3,11 @@ function Fit = try_set(Spectrum, Elements)
 
 FWidth = 8;
 
-[Edges Z Edge_Numbers] = edges_by_element(Elements);
+[Edges Z Edge_Numbers] = short_edges_by_element(Elements);
 
-Select = (Edges >= min(Spectrum.Centers)) & (Edges <= max(Spectrum.Centers));
+Select = (Edges >= min(Spectrum.Centers)) & ...
+	     (Edges <= max(Spectrum.Centers)) & ...
+		 (Edges <= 15000);
 Edges        = Edges(Select);
 Z            = Z(Select);
 Edge_Numbers = Edge_Numbers(Select);

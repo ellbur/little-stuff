@@ -4,29 +4,10 @@ elements
 
 global EdgeData;
 
-while 1
-	
-	All_Files = dir('/home/owen/stuff/spectra');
-	Names = {All_Files.name};
-	
-	Pick = Names{1 + floor(rand()*length(Names))};
-	
-	if length(Pick) < 5
-		continue;
-	end
-	
-	if Pick(length(Pick)-3) ~= '.'
-		continue;
-	end
-	
-	File = sprintf('/home/owen/stuff/spectra/%s', Pick);
-	break;
-end
+Spectrum = random_spectrum();
+Spectrum.Resolution = est_resolution(Spectrum);
 
-File
-
-Spectrum = emsa_read(File);
-Spectrum.Resolution = 130;
+Spectrum.File
 
 Elem_Start =  3;
 Elem_Stop  = 80;

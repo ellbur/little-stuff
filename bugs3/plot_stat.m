@@ -9,6 +9,6 @@ Std  = std(Data, 0, 2);
 plot(Time, Mean);
 hold on;
 plot(Time, Mean - 2*Std);
-plot(Time Mean + 2*Std);
+plot(Time, Mean + 2*Std);
 hold off;
 
