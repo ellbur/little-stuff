@@ -33,9 +33,6 @@ void make_task(uint16_t start_ptr)
 	
 	tasks[i].active = 1;
 	
-	printf("Setting up task %d to start at %04x\n", (int)i, (int)start_ptr);
-	fflush(stdout);
-	
 	// Calculate the stack pointer and set it
 	
 	stack_ptr = (uint8_t*) (STACK_START - STACK_SIZE*i) - 1;
@@ -108,9 +105,6 @@ void inspect_stack(uint8_t *sp)
 
 void start_preemptor(void)
 {
-	printf("Starting preemptor\n");
-	fflush(stdout);
-	
 	setup_timer();
 	set_timer_interrupt(TASK_SWITCH_DELAY);
 	

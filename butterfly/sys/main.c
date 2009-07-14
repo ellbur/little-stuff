@@ -4,10 +4,12 @@
 #include <avr/interrupt.h>
 
 #include <stdio.h>
+#include <string.h>
 
 #include "uart.h"
 #include "timer.h"
 #include "tasks.h"
+#include "mutex.h"
 
 void routine_1(void);
 void routine_2(void);
@@ -15,25 +17,8 @@ void routine_2(void);
 int main(void) {
 	uart_init();
 	
-	stdout = &uart_stream;
-	stdin  = &uart_stream;
-	
-	printf("EIMSK  = %02x\n", (int) EIMSK);
-	printf("EIFR   = %02x\n", (int) EIFR);
-	printf("PCMSK1 = %02x\n", (int) PCMSK1);
-	printf("\n");
-	printf("main      = %04x\n", (int) (&main));
-	printf("routine_1 = %04x\n", (int) (&routine_1));
-	printf("task_die  = %04x\n", (int) (&task_die));
-	
-	printf("About to make a task\n");
-	fflush(stdout);
-	
 	make_task((uint16_t) &routine_1);
 	make_task((uint16_t) &routine_2);
-	
-	printf("About to start tasks\n");
-	fflush(stdout);
 	
 	start_preemptor();
 	
@@ -45,27 +30,45 @@ ISR(__vector_3)
 	// Button press. Do nothing
 }
 
+ISR(BADISR_vect)
+{
+	printf("\n\n\n\n");
+	fflush(stdout);
+	printf("Bad Interrupt!!\n\n");
+	fflush(stdout);
+}
+
+// ----------------------------------------------
+
+#define PRINT_STRING_LEN 16
+char print_string[PRINT_STRING_LEN] = "foo\n";
+
+mutex_t string_mutex = 0;
 
 void routine_1(void)
 {
+	char temp_string[PRINT_STRING_LEN];
+	
 	while (1) {
-		lock_atomic();
 		
-		printf("A\n");
+		mutex_spinlock(&string_mutex);
+		memcpy(temp_string, print_string, PRINT_STRING_LEN);
+		mutex_unlock(&string_mutex);
+		
+		printf("%s", temp_string);
 		fflush(stdout);
-		
-		unlock_atomic();
 	}
 }
 
 void routine_2(void)
 {
+	char temp_string[PRINT_STRING_LEN];
+	
 	while (1) {
-		lock_atomic();
+		fgets(temp_string, PRINT_STRING_LEN, stdin);
 		
-		printf("B\n");
-		fflush(stdout);
-		
-		unlock_atomic();
+		mutex_spinlock(&string_mutex);
+		memcpy(print_string, temp_string, PRINT_STRING_LEN);
+		mutex_unlock(&string_mutex);
 	}
 }

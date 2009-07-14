@@ -8,6 +8,7 @@ FWidth = 8;
 Select = (Edges >= min(Spectrum.Centers)) & ...
 	     (Edges <= max(Spectrum.Centers)) & ...
 		 (Edges <= 15000);
+
 Edges        = Edges(Select);
 Z            = Z(Select);
 Edge_Numbers = Edge_Numbers(Select);

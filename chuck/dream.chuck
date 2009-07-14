@@ -1,0 +1,113 @@
+
+# 1 Just basic variables and stuff
+
+a = 22
+b = 38.7
+
+c = (a + b) * a / b + 100
+d = c + 1
+
+# Oops change that
+a = 23.1
+
+# Catch that this is circular
+b = c + 1
+
+# This is not circular
+i  = 0
+i := i + 1 # Raw assignment
+
+# 2 Flags and tainting
+
+flag a 'risky'
+identify 'risky'
+
+depends a
+
+clear a 'risky'
+a = 19 but 'approx'
+
+# 3 Functions
+
+sub leroy(x, y) {
+	z = x + 1 + a
+	return x + z
+}
+
+d = leroy(a, b)
+
+# 4 Structs
+
+struct file {
+	name  = ''
+	mtime = 0
+	atime = 0
+	ctime = 0
+}
+
+dump = file(name='/tmp/stuff.txt', mtime=a)
+
+# An exception
+dump.atime = 20
+
+# 5 Columns
+
+foo = raw table {
+	x,   y,   z,
+	1,   1,   1,
+	1,   2,   2,
+	3,   3,   9,
+	8,   7,  56,
+	7,   6,  42,
+}
+
+check = foo.x * foo.y
+
+bar = table (foo) {
+	x = x
+	y = y
+	z = z
+	
+	w = x + y + z
+	t = x * y * z
+}
+
+baz = table (foo) foo.x mod 2; bar.x=x {
+	sum  =  sum(x + w + t)
+	mean = mean(x + w + t)
+}
+
+# 6 Exceptions
+
+# Here x, y implicitly refer to bar.x, bar.y
+bar.w[x <= 1] = y + 9
+
+# The 'official' calculation must be done first, and
+# then exceptions in the order in which they are applied
+bar.z[z < 0]  = 0
+bar.z[z < 10 || t < 0] = 5
+
+# 7 Hypothetical stuff
+
+pretend that a = 24
+wakeup
+
+f = suppose a = 25
+pretend f
+wakeup
+
+pretend
+a = 50
+b = 59
+wakeup
+
+g = suppose a isall 10:20
+cvec = g.c
+cmean = mean(cvec)
+
+h = suppose b isall linspace(30, 40, 20)
+cmeanvec = h.cmean
+
+# 7 Hypothetical stuff as data
+
+

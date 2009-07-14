@@ -3,6 +3,7 @@
 #define _tasks_h 1
 
 #include <inttypes.h>
+#include <avr/io.h>
 #include "asm-routines.h"
 
 #define STACK_START        1200
@@ -11,8 +12,20 @@
 #define TASK_SWITCH_DELAY  600
 #define MAX_TASKS          4
 
-#define lock_atomic()   cli()
-#define unlock_atomic() sei()
+static inline void lock_atomic(void) {
+	TIMSK1 &= ~(1 << 1);
+}
+
+static inline void unlock_atomic(void) {
+	TIMSK1 |= (1 << 1);
+	
+	// This is usually a good time to surrender
+	context_switch();
+}
+
+static inline void unlock_atomic_keep(void) {
+	TIMSK1 |= (1 << 1);
+}
 
 struct task {
 	uint8_t active;

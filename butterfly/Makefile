@@ -32,7 +32,7 @@ OBJECTS     =  $(OBJECTS_C) $(OBJECTS_S)
 
 HEADERS     =  $(wildcard *.h)
 
-all: depend $(HEX) ;
+all: $(HEX) ;
 
 # ------------------------------------------------
 
@@ -74,4 +74,4 @@ temps: $(SOURCES) $(HEADERS)
 objdump: $(ELF)
 	$(OBJDUMP) -zhD $(ELF) > $(OD)
 
-include $(shell touch depend)
+include depend
