@@ -1,7 +1,7 @@
 
-function Spectrum = random_spectrum()
+function Spectrum = random_spectrum(Dir='/home/owen/stuff/spectra')
 
-All_Files = dir('/home/owen/stuff/spectra');
+All_Files = dir(Dir);
 Names = {All_Files.name};
 
 Filter = { };
@@ -22,7 +22,7 @@ for II=1:length(All_Files)
 	JJ = JJ + 1;
 end
 
-Pick = Names{1 + floor(rand()*length(Names))};
-File = sprintf('/home/owen/stuff/spectra/%s', Pick);
+Pick = Filter{1 + floor(rand()*length(Filter))};
+File = sprintf('%s/%s', Dir, Pick);
 
 Spectrum = emsa_read(File);

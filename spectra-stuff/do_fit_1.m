@@ -1,5 +1,5 @@
 
-function Reg = do_fit_1(Spectrum, Edges)
+function Reg = do_fit_1(Spectrum, Edges, Filter=@fitting_filter)
 
 if length(Edges) == 0
 	Reg.Coeffs = [];
@@ -12,7 +12,7 @@ Res      = Spectrum.Resolution;
 Energy   = Spectrum.Centers;
 
 Widths = sqrt(Res*Res + 2.45*(Edges - 5895));
-FChannels = fitting_filter(Channels')';
+FChannels = Filter(Channels')';
 Components = zeros(length(Channels), length(Edges));
 
 for II = 1:length(Edges)

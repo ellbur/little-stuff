@@ -1,7 +1,7 @@
 
 function Spectrum = emsa_read(File)
 
-[Status File2] = system(sprintf('./emsa_read.pl %s', File), 1);
+[Status File2] = system(sprintf('java -cp .:/home/owen/java EMSAToOctave "%s"', File), 1);
 Table = csvread(File2);
 
 delete(File2);

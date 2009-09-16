@@ -1,0 +1,32 @@
+#!/usr/bin/perl
+
+@lines = ();
+
+while (<>) {
+	push(@lines, $_);
+}
+
+# Perhaps due to poor random number generator,
+# the suffle function sucks. So repeat it.
+@lines = shuffle(@lines);
+@lines = shuffle(@lines);
+@lines = shuffle(@lines);
+@lines = shuffle(@lines);
+
+foreach $line (@lines) {
+	print $line;
+}
+
+sub shuffle {
+	my @list = @_;
+	
+	for (my $i=0; $i<scalar(@list); $i++) {
+		my $j = int rand(scalar(@list) - $i) + $i;
+		
+		my $temp = $list[$j];
+		$list[$j] = $list[$i];
+		$list[$i] = $temp;
+	}
+	
+	return @list;
+}
