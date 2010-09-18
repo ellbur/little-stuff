@@ -1,0 +1,19 @@
+
+digraph tree {
+
+subgraph Andy {
+
+}
+
+subgraph Katie {
+
+}
+
+AndyKatie [label="="];
+
+Andy -> AndyKatie;
+Katie -> AndyKatie;
+
+AndyKatie -> Andy;
+
+}

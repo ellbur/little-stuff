@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+
+# We need to fork and get rid of the child
+
+# cd /
+chdir('/') or die($!);
+
+# Hide input, output
+open(STDIN,  '/dev/null') or die($!);
+open(STDOUT, '/dev/null') or die($!);
+
+my $pid = fork();
+defined($pid) or die($!);
+
+if ($pid) {
+	exit(0);
+}
+
+open(STDERR, '/dev/null') or die($!);
+
+exec('/home/owen/src/little-stuff/service-event/service') or die($!);
+

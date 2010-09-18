@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo Delay 1
+while read line ; do
+	echo "String $line"
+done
+

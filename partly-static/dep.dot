@@ -1,0 +1,86 @@
+
+digraph Foo {
+
+arg [penwidth=3];
+A [penwidth=3];
+
+I -> I_cond [color="red"];
+I -> I_true [color="red"];
+I -> I_false [color="red"];
+
+I_cond -> A;
+I_true -> A;
+I_false -> A;
+
+subgraph cluster_4 {
+	I;
+	I_cond;
+	I_true;
+	I_false;
+}
+
+B -> I_cond [penwidth=3];
+F -> I_true [penwidth=3];
+C -> I_false [penwidth=3];
+
+J -> J_x [color="red"];
+J -> J_clo [color="red"];
+
+G -> J_x [penwidth=3];
+H -> J_clo [penwidth=3];
+
+E -> E_foo [color="red"];
+E_foo -> D [penwidth=3];
+
+D -> C;
+
+subgraph cluster_2 {
+	E;
+	E_foo;
+}
+
+subgraph cluster_3 {
+	J;
+	J_clo;
+	J_x;
+}
+
+subgraph cluster_0 {
+	arg;
+	arg_x;
+	
+	subgraph cluster_1 {
+		arg_clo;
+		arg_clo_foo;
+		arg_clo_fooclo;
+	}
+}
+
+arg -> arg_clo [color="red"];
+arg_clo -> E [penwidth=3];
+
+arg_clo -> arg_clo_foo [color="red"];
+arg_clo_foo -> E_foo [penwidth=3];
+
+arg_clo -> arg_clo_fooclo [color="red"];
+arg_clo_fooclo -> K_fooclo [penwidth=3];
+
+arg -> arg_x [color="red"];
+arg_x -> B [penwidth=3];
+
+arg_clo -> K [penwidth=3];
+
+K -> K_fooclo [color="red"];
+K_fooclo -> H [penwidth=3];
+
+subgraph cluster_5 {
+	K;
+	K_fooclo;
+}
+
+F;
+G;
+
+J -> C [color="green", penwidth=2];
+
+}

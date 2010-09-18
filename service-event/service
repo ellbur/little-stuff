@@ -1,0 +1,50 @@
+#!/usr/bin/perl
+
+print STDERR "  starting service\n";
+
+use IO::Socket;
+
+print STDERR "  getting socket\n";
+
+my $socket = new IO::Socket::INET(
+	LocalPort => '8000',
+	Proto     => 'tcp',
+	Listen    => 1,
+	Reuse     => 1
+);
+
+print STDERR "  checking socket\n";
+
+$socket or die("Cannot create service listener socket: $!");
+
+print STDERR "  waiting for connections\n";
+
+while (my $connect = $socket->accept())
+{
+	my $pid = fork();
+
+	if (! $pid) {
+		do_connection($connect);
+		exit(0);
+	}
+	
+	print STDERR "  Left child $pid to handle service\n";
+
+	waitpid(-1, WNOHANG);
+}
+
+sub do_connection {
+	my $connect = shift;
+	
+	print STDERR "  Reading lines\n";
+
+	while (my $line = <$connect>) {
+		print $connect "Your face is $line";
+	}
+	
+	print STDERR "  Done reading lines\n";
+
+	$connect->shutdown(2) or die($!);
+	close($connect) or die($!);
+};
+

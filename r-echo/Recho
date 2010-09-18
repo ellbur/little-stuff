@@ -1,0 +1,3 @@
+#!/usr/bin/Rscript
+
+source(commandArgs(trailingOnly=T)[1], echo=T)

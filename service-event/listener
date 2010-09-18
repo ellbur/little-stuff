@@ -1,0 +1,73 @@
+#!/usr/bin/perl
+
+use IO::Socket;
+use Getopt::Long;
+
+my $port     = $ARGV[1];
+my $service  = $ARGV[0];
+
+print "port    =  $port\n";
+print "service =  $service\n";
+
+my $socket = new IO::Socket::INET(
+	LocalPort => $port,
+	Proto     => 'tcp',
+	Listen    => 1,
+	ReuseAddr => 1,
+	ResuePort => 1
+);
+
+$socket or die("cannot create listener socket: $!");
+
+my $connect = $socket->accept();
+$socket->shutdown(2);
+close($socket);
+
+print STDERR "starting service...\n";
+`$service`;
+
+# Should automatically call connect()
+my $redirect = new IO::Socket::INET(
+	PeerHost => 'localhost',
+	PeerPort => $port,
+	Proto     => 'tcp'
+);
+
+$redirect or die("Failed to establish client connection: $!");
+
+my $pipe_child = fork();
+
+if (! $pipe_child) {
+	copy($redirect, $connect, 'server -> client');
+
+	exit(0);
+}
+else {
+	print STDERR "forked $pipe_child to do server -> client\n";
+	
+	copy($connect, $redirect, 'server <- client');
+
+	# Reap all children
+	waitpid(-1, WNOHANG);
+}
+
+sub copy {
+	my $a = shift;
+	my $b = shift;
+	my $name = shift;
+	
+	while (<$a>) {
+		print $b $_;
+	}
+	
+	print "done getting lines ($name)\n";
+	
+	$b->shutdown(2) or die($!);
+	close($b) or die($!);
+}
+
+sub owner {
+	my $foo = `fuser -n tcp 8000 2>&1`;
+	return $foo;
+}
+

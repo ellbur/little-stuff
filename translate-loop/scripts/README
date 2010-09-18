@@ -1,0 +1,60 @@
+
+== Other Software ==
+
+The scripts here use the python interpreter. They make use of the following
+python libraries:
+ - csv
+ - re
+ - optparse
+I used python version 2.6.4
+
+The scripts need to call an external program called 'translate-bin'. It is
+part of the Debian package libtranslate-bin or may be obtained from
+http://www.nongnu.org/libtranslate/ .
+
+== Files ==
+
+loop.py
+Prints out the complete cycle resulting from an input sentence. Output is
+printed to STDOUT.
+
+Usage: loop.py: [OPTIONS] <sentence>
+
+Options:
+  -h, --help        show this help message and exit
+  -f FROM_LANGUAGE  Form language, two letter code
+  -t TO_LANGUAGE    To language, two letter code
+  -s SERVICE        Translation service (see translate-bin)
+
+find_many.py
+Reads lines from STDIN. For each line, find the resulting cycle. Prints
+results to STDOU as a comma-separated-value table.
+
+Usage: find_many.py: [OPTIONS]
+
+Options:
+  -h, --help        show this help message and exit
+  -f FROM_LANGUAGE  Form language, two letter code
+  -t TO_LANGUAGE    To language, two letter code
+  -s SERVICE        Translation service (see translate-bin)
+
+== Examples ==
+
+For a list of sentences stored in a file called 'sentences.txt', find the
+period of each one and output to 'sentence-periods.csv':
+$ cat sentences.txt | ./find_many.py > sentence-periods.csv
+
+Same as above, except from English to French:
+$ cat sentences.txt | ./find_many.py -f en -t fr > sentence-periods.csv
+
+Look at the cycle starting with 'He looked straight ahead' from English to
+Spanish:
+$ ./loop.py -f en -t es 'He looked straight ahead'
+
+Which will print out:
+en <--> es
+1 after 1
+  He looked straight ahead
+  He looked forward *
+  He looked forward *
+

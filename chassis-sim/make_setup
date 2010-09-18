@@ -1,0 +1,29 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from __future__ import print_function
+import sys
+
+pattern = """
+from distutils.core import setup
+from distutils.extension import Extension
+from Cython.Distutils import build_ext
+
+name    = '{0}'
+sources = ['{0}.pyx']
+objects =  {1}
+
+setup(
+	name        = 'Some stuff',
+	cmdclass    = {{'build_ext': build_ext }},
+	ext_modules = [Extension(name, sources, extra_objects=objects)]
+)
+"""
+
+name    = sys.argv[1]
+objects = sys.argv[2].split(',')
+
+print(pattern.format(
+	name,
+	repr(objects)
+))

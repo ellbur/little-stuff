@@ -1,0 +1,21 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import sys
+
+argset = set()
+adding = 1
+
+for i in range(1, len(sys.argv)):
+	arg = sys.argv[i]
+	
+	if arg == "--":
+		adding = 0
+		continue
+	
+	if adding:
+		argset.add(arg)
+	elif arg in argset: argset.remove(arg)
+
+for arg in argset:
+	print("{0}".format(arg))

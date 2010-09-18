@@ -1,0 +1,4 @@
+#!/bin/sh
+
+type-gen-macro | xmacroplay $DISPLAY
+

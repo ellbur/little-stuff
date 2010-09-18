@@ -1,0 +1,43 @@
+
+digraph Foo {
+
+A -> test [penwidth=3];
+A -> I;
+I -> res1 [penwidth=3];
+res1 [label="res[B->cond, F->true, C->false]"];
+I -> scope;
+
+B -> mem1 [penwidth=3];
+mem1 [label="mem[x]"];
+B -> arg;
+
+F -> con1;
+con1 [label="1"];
+
+C -> D [penwidth=3];
+C -> J;
+
+J -> res2 [penwidth=3];
+res2 [label="res[G->x, H->clo]"];
+J -> scope;
+
+D -> mem2 [penwidth=3];
+mem2 [label="mem[foo]"];
+D -> E;
+
+E -> mem3 [penwidth=3];
+mem3 [label="mem[clo]"];
+E -> arg;
+
+G -> con2;
+con2 [label="1"];
+
+H -> mem4 [penwidth=3];
+mem4 [label="mem[foo_clo]"];
+H -> K;
+
+K -> mem5 [penwidth=3];
+mem5 [label="mem[clo]"];
+K -> arg;
+
+}

@@ -1,0 +1,12 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import re
+import sys
+
+pattern = re.compile('\\w+')
+
+for line in sys.stdin:
+	for word in re.findall(pattern, line):
+		print(word)
+	sys.stdout.flush()
