@@ -1,0 +1,24 @@
+help(FNN)
+library(FNN)
+help(FNN)
+help('FNN')
+help(knn)
+source('foo.R')
+Test = ceps.pieces(readSound('~/stuff/music/chrisman/Take It To The Max.mp3'))
+help(knn)
+data(iris3)
+iris3
+knn
+Test
+head(Test)
+All.C[,1]
+head(All.C[,1])
+head(All.C)
+Train = All.C[,1:10]
+Class = Train[,'Type']
+Class = All.C[,'Type']
+Test
+knn
+knn(Train, Test, Class)
+history()
+savehistory(file='history.txt')

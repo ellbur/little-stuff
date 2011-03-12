@@ -1,0 +1,19 @@
+
+:- module a.
+:- interface.
+
+:- import_module
+	io,
+	list,
+	string
+.
+
+:- pred main(io::di, io::uo) is det.
+:- implementation.
+
+main(!IO) :-
+	io.write(2, !IO)
+.
+
+	
+

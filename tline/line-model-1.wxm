@@ -1,0 +1,76 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 0.8.4 ] */
+
+/* [wxMaxima: input   start ] */
+par(a,b) := a*b/(a+b);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq1 : dz = par(z + A*dx, B/dx) - z;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq2 : dz/dx = fullratsimp(rhs(eq1)/dx);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq3 : dz/dx = fullratsimp(subst([dx=0], rhs(eq2)));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq4 : dz/dx = A - (1/B)*z^2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq5 : dx = dz / (A - z^2/B);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq6 : x = integrate(1/(A - z^2/B), z) + C;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq7 : solve([eq6], [z])[1];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+This seems to be the wrong half of the bifurcation. Let's pretend
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+eq8 : z = sqrt(A*B) * tanh(sqrt(A/B)*x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq9 : diff(rhs(eq8), x) = subst(eq8, A-z^2/B);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+radcan(trigsimp(lhs(eq9)));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+trigsimp(rhs(eq9));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+So we know this is correct.
+
+Now what do A and B look like?
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+eqA : A = Rlin + Llin*%i*w;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eqB : B = 1/(1/(Cpar*%i*w) + 1/Rpar);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+fullratsimp(subst([eqA, eqB], eq8));
+/* [wxMaxima: input   end   ] */
+
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

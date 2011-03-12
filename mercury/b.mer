@@ -1,0 +1,30 @@
+
+:- module b.
+:- interface.
+
+:- import_module
+	io,
+	list,
+	string
+.
+
+:- pred main(io::di, io::uo) is det.
+:- implementation.
+
+main(!IO) :-
+.
+
+:- pred near_hook(T::in, T::out).
+near_hook(A*(B+C), A*B+A*C).
+near_hook((B+C)*A, B*A+C*A).
+near_hook(A+B, z(A)+B).
+near_hook(A+B, A+z(B)).
+near_hook(z(A), 0).
+near_hook(0+A, A).
+near_hook(A+0, A).
+near_hook(A+B, B+A).
+
+all_near_hooks(Exp, Hooks) :-
+	solutions(near_hook(Exp), Hooks)
+.
+

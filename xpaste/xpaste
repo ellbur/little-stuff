@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ ${#*[@]} -eq 0 ] ; then
+	xclip -selection clipboard
+else
+	echo -n $* | xclip -selection clipboard
+fi
+
+xdotool key --clearmodifiers 'Shift_L+Insert'

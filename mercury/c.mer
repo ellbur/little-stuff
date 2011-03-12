@@ -1,0 +1,29 @@
+
+:- module c.
+:- interface.
+
+:- import_module
+	io,
+	list,
+	int,
+	string
+.
+
+:- pred main(io::di, io::uo) is det.
+:- implementation.
+
+main(!IO) :-
+	H = hook(A+B, B+A, [])
+.
+
+:- type hook(E1,E2) --->
+	hook(
+		hook_start :: E1,
+		hook_end   :: E2,
+		hook_notes :: list(string)
+	)
+.
+
+near_hook(hook(A+B, B+A, [])).
+near_hook(hook(A+B, A, ["Assuming element is zero"])).
+

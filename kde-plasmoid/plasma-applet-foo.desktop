@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Foo Plasma
+Comment=Foo Plasma
+Type=Service
+ServiceTypes=Plasma/Applet
+Icon=folder-red
+ 
+X-KDE-Library=plasma_applet_foo
+X-KDE-PluginInfo-Author=Owen
+X-KDE-PluginInfo-Email=ellbur@gmail.com
+X-KDE-PluginInfo-Name=foo
+X-KDE-PluginInfo-Version=3.0
+X-KDE-PluginInfo-Website=
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true

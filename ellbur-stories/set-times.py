@@ -10,7 +10,12 @@ import optparse
 from get_story_time import get_story_time
 
 def set_time(filename):
-	date = get_story_time(filename)
+	try:
+		date = get_story_time(filename)
+	except:
+		print('Error setting date for story {0}'.format(filename))
+		return
+	
 	seconds = time.mktime(date.timetuple())
 	
 	os.utime(filename, (seconds, seconds))

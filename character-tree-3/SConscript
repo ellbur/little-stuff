@@ -1,0 +1,26 @@
+
+env = Environment()
+
+env.Append(CXXFLAGS = '-g')
+env.Append(CXXFLAGS = '-Wall')
+env.Append(CXXFLAGS = '-O3')
+env.Append(CXXFLAGS = '--std=c++0x')
+
+env.Append(CPPPATH = './src/')
+
+env.Append(LINKFLAGS = '--std=c++0x')
+env.Append(LINKFLAGS = '-Wall')
+env.Append(LINKFLAGS = '-O3')
+
+lib_sources = (
+      Glob('./src/analysis/*.cpp')
+    + Glob('./src/output/*.cpp')
+)
+
+tree_text = env.Program(
+    target = 'tree-text',
+    source = lib_sources + Glob('./src/tree-text/*.cpp')
+)
+
+
+

@@ -1,0 +1,99 @@
+#!/usr/bin/perl
+
+#
+# Depends: `dict -f -d moby-thesaurus` must work
+#
+
+main();
+
+sub main {
+	
+	$| = 1;
+	
+	my $word_path  = $ARGV[0];
+	my $story_path = $ARGV[1];
+	
+	my @source_words = `cat "$word_path"`;
+	my $story_text = `cat "$story_path"`;
+	
+	my @out_source_words = ( );
+	for my $word (@source_words) {
+		$word =~ s/\s*//g;
+		@out_source_words = (@out_source_words, $word);
+	}
+	my @source_words = @out_source_words;
+	
+	my %source_table = ( );
+	for my $word (@source_words) {
+		$source_table{lc($word)} = 1;
+	}
+	
+	my %rep_table = ( );
+	
+	while ($story_text =~ /([\w\']+)/g) {
+		my $target = $1;
+		
+		if (exists $rep_table{$target}) {
+		}
+		elsif (exists $source_table{lc($target)}) {
+			$rep_table{$target} = $target;
+		}
+		else {
+			my @syns = get_syns($target);
+			my @out_syns = ();
+			
+			for my $syn (@syns) {
+				if (exists $source_table{lc($syn)}) {
+					@out_syns = (@out_syns, $syn);
+				}
+			}
+			@syns = @out_syns;
+			my $text = join(",", @syns);
+			my $n = scalar(@syns);
+			
+			if (scalar(@syns) == 0) {
+				$rep_table{$target} = '';
+			}
+			else {
+				my $i = int(rand(scalar(@syns)));
+				my $rep = $syns[$i];
+				
+				$rep_table{$target} = $rep;
+			}
+		}
+	}
+	
+	for my $target (keys(%rep_table)) {
+		my $rep = $rep_table{$target};
+		$story_text =~ s/\b$target\b/$rep/gi;
+	}
+	
+	print $story_text;
+}
+
+sub get_syns {
+	my $word = shift;
+	
+	my $thes;
+	my @lines;
+	my $ind;
+	my $num_lines;
+	my $line;
+	my $syns;
+	
+	$thes = `dict -f -d moby-thesaurus "$word" 2>/dev/null`;
+	
+	@lines = split(/\n/, $thes);
+	$num_lines = scalar(@lines) - 3; # First three meta info
+	if ($num_lines <= 0) { return $word; }
+	
+	$ind = int(rand($num_lines));
+	$line = $lines[3 + $ind];
+	$line =~ s/^\s*//;
+	$line =~ s/\s*$//;
+	
+	@syns = split(/\s*\,\s*/, $line);
+	
+	return @syns;
+}
+
