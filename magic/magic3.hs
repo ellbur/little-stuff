@@ -1,6 +1,4 @@
 
-import Data.Set as Set
-
 data Object = Pure Idiom | AntiPure Idiom
     | Weak String (Object -> OpenMagic)
     | Strong String (OpenMagic -> OpenMagic)
@@ -11,7 +9,7 @@ instance Show Object where
     show (Weak name _) = name
     show (Strong name _) = name
 
-data ClosedMagic = ClosedMagic (Set Idiom) Object
+data ClosedMagic = ClosedMagic [Idiom] Object
     deriving (Show)
 
 data OpenMagic = OpenMagic ([Idiom] -> ClosedMagic)
@@ -22,7 +20,7 @@ eval (OpenMagic f) = f []
 
 data Idiom = Idiom {
         i_name :: String,
-        i_pure :: Object -> ClosedMagic,
+        i_pure :: OpenMagic,
         i_ap   :: OpenMagic,
         i_bind :: OpenMagic
     }
@@ -38,58 +36,108 @@ instance Show Idiom where
 
 m :: OpenMagic -> OpenMagic -> OpenMagic
 m car cdr = OpenMagic result where
-    result idiomStack = m2 idiomStack (close car idiomStack) cdr
+    -- There's something beautifully monadic about this line.
+    result pureStack = close (m2 pureStack (close car pureStack) cdr) pureStack
 
 m2 :: [Idiom] -> ClosedMagic -> OpenMagic -> OpenMagic
-m2 idiomStack (ClosedMagic carIdioms carResult) cdr =
-    if Set.null carIdioms
-       then m3 idiomStack carResult cdr
-       else error "Not implemented: car transforms"
+m2 pureStack (ClosedMagic [] carResult) cdr = m3 pureStack carResult cdr
+m2 pureStack (ClosedMagic _ carResult) cdr = error "Not implemented: car transforms"
 
 m3 :: [Idiom] -> Object -> OpenMagic -> OpenMagic
-m3 idiomStack (Pure idiom) cdr = result where
-    -- TODO: We really need to inspect the idiom stack and see if we are allowed to do this.
-    (ClosedMagic cdrIdioms cdrResult) = close cdr idiomStack
-    result =
-        if member idiom cdrIdioms
-           then ClosedMagic (delete idiom cdrIdioms) cdrResult
-           else close ((i_pure idiom) `m` cdr) idiomStack
-m3 idiomStack (AntiPure idiom) cdr = result where
-    -- TODO: We really need to inspect the idiom stack and see if we are allowed to do this.
-    (ClosedMagic cdrIdioms cdrResult) = close cdr idiomStack
-    result =
-        if member idiom cdrIdioms
-           then error "Not implemented: monads"
-           else ClosedMagic (insert idiom cdrIdioms) cdrResult
-m3 idiomStack (Strong _ carFunc) cdr = carFunc cdr
-m3 idiomStack (Weak _ carFunc) cdr = result where
-    (ClosedMagic cdrIdioms cdrObject) = close cdr idiomStack
-    result :: ClosedMagic
-    result =
-        if Set.null cdrIdioms
-           then carFunc cdrObject
-           else error "Not implemented: transforming via idiom"
+-- How to implement pures:
+--   1. Search for idiom in the anti-pure stack.
+--   2. If it's not there, this is just P cdr
+--   3. If you find it on top, just strip it off.
+--   4. If you find it somwhere in the middle, ie you have TOP ++ [idiom] ++ BOTTOM,
+--      you need to use the idiom-map to apply anti-pure-TOP to cdr+BOTTOM.
+-- Take note that the anti-pure stack is associative.
+m3 pureStack (Pure idiom) cdr = result where
+    -- From cdr's perspective, when it looks up it seems this idiom in pure.
+    pureStack' = idiom : pureStack
+    (ClosedMagic cdrIdioms cdrObject) = close cdr pureStack'
+    result = search cdrIdioms []
+    
+    p = i_pure idiom
+    a = i_ap idiom
+    
+    search [] above = p `m` (cdrObject `openWith` cdrIdioms)
+    search (cdrIdiom : cdrIdioms') above
+        | cdrIdiom == idiom = case above of
+                                   [] -> cdrObject `openWith` cdrIdioms'
+                                   _  ->
+                                        let
+                                          antiPureTop = p `m` (multiAntiPure $ reverse above)
+                                          cdrPlusBottom = cdrObject `openWith` cdrIdioms'
+                                        in
+                                          a `m` antiPureTop `m` cdrPlusBottom
+        | otherwise  = search cdrIdioms' (cdrIdiom : above)
+-- How to implement anti-pures:
+--   1. Search to see if the idiom exists already in the anti-pure stack.
+--   2. If it does, it's monad time. Too sad.
+--   3. If not, just add it to the top of the stack.
+m3 pureStack (AntiPure idiom) cdr = result where
+    (ClosedMagic cdrIdioms cdrObject) = close cdr pureStack
+    result = search cdrIdioms []
+    
+    search [] above = cdrObject `openWith` (idiom : cdrIdioms)
+    search (cdrIdiom : cdrIdioms') above
+        | cdrIdiom == idiom = error "Not implemented: monads"
+        | otherwise         = search cdrIdioms' (cdrIdiom : above)
+    
+m3 pureStack (Strong _ carFunc) cdr = carFunc cdr
+m3 pureStack (car @ (Weak _ carFunc)) cdr = result where
+    (ClosedMagic cdrIdioms cdrObject) = close cdr pureStack
+    result :: OpenMagic
+    result = case cdrIdioms of
+                  [] -> carFunc cdrObject
+                  -- TODO: This case can be made more efficient with a higher-degree combinator.
+                  (cdrIdiom : cdrIdioms') -> let
+                        a = i_ap cdrIdiom
+                        p = i_pure cdrIdiom
+                        apcarcdr = a `m` (p `m` (open car)) `m` (cdrObject `openWith` cdrIdioms')
+                        backOn = multiAntiPure [cdrIdiom]
+                     in
+                        backOn `m` apcarcdr
 
-weak name f = ClosedMagic empty $ Weak name f
-strong name f = ClosedMagic empty $ Strong name f
+weak :: String -> (Object -> OpenMagic) -> OpenMagic
+weak name f = OpenMagic $ \is -> ClosedMagic [] $ Weak name f
 
-mI = OpenMagic $ \is -> strong "I" $ \a -> close a is
-mK = OpenMagic $ \is -> weak "K" $ \a -> strong "K1" $ \b -> ClosedMagic empty a
-mS = OpenMagic $ \is -> weak "S" $ \a -> weak "S1" $ \b -> strong "S2" $ \c -> combineS is a b c
+strong :: String -> ([Idiom] -> OpenMagic -> OpenMagic) -> OpenMagic
+strong name f = OpenMagic $ \is -> ClosedMagic [] $ Strong name (\o -> f is o)
 
-combineS :: [Idiom] -> Object -> Object -> OpenMagic -> ClosedMagic
-combineS is a b c = acbc where
-    ac :: ClosedMagic
-    ac = m3 is a c
-    bc = OpenMagic $ \is2 -> m3 is2 b c
-    acbc = m2 is ac bc
+open :: Object -> OpenMagic
+open obj = OpenMagic $ \is -> ClosedMagic [] obj
+
+openWith :: Object -> [Idiom] -> OpenMagic
+openWith obj antiPureStack = OpenMagic $ \is -> ClosedMagic antiPureStack obj
+
+multiAntiPure :: [Idiom] -> OpenMagic
+multiAntiPure [] = mI
+multiAntiPure (idiom : []) = OpenMagic $ \s -> ClosedMagic [] $ AntiPure idiom
+multiAntiPure _ = error "Not implemented: multiple anti pures"
+
+mI = strong "I" $ \is a -> a
+mK = weak "K" $ \a -> strong "K1" $ \is b -> open a
+mS = weak "S" $ \a -> weak "S1" $ \b -> strong "S2" $ \is c ->
+    let
+      ac = m (open a) c
+      bc = m (open b) c
+    in
+      m ac bc
 
 x = Idiom "x" mK mS undefined
 
-akx = OpenMagic $ \s -> ClosedMagic empty $ AntiPure x
-kx = OpenMagic $ \s -> ClosedMagic empty $ Pure x
+akx = OpenMagic $ \s -> ClosedMagic [] $ AntiPure x
+kx = OpenMagic $ \s -> ClosedMagic [] $ Pure x
 
-yo = m mI (m akx mI)
+sii = mS `m` mI `m` mI
+-- This term has no normal form.
+siisii = sii `m` sii
+-- But this term does!
+ok = mK `m` mI `m` siisii
     
+f = kx `m` (mK `m` (akx `m` mI))
+yo = f `m` mI `m` mS
+
 dawg = eval yo
 
