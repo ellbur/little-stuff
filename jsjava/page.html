@@ -1,0 +1,52 @@
+
+<html>
+    <head>
+        <script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js"></script>
+    </head>
+    <style type="text/css">
+        #input {
+            display: inline;
+        }
+        #line, #output {
+            font-size: 14pt;
+            font-family: monospace;
+        }
+        #line {
+            border: none;
+            border-bottom: 2px solid #000;
+            background: transparent;
+        }
+    </style>
+<body>
+        
+    <pre id="box"><span id="output"></span><form id="input"><input id="line" type="text"/></form></pre>
+    <applet id="theApplet" code="Main.class" width="0" height="0"/>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            output = $('#output') // global
+            var theApplet = document.getElementById('theApplet')
+            var input = $('#input')
+            var line = $('#line')[0]
+            line.value = '';
+            output.text(theApplet.getText())
+
+            theApplet.setup(window)
+
+            input.submit(function(ev) {
+                ev.preventDefault()
+                console.log(line.value)
+                theApplet.feed(line.value + '++++++++++')
+                output.text(theApplet.getText())
+                line.value = '';
+            })
+        })
+
+        function callback() {
+            output.text(theApplet.getText())
+        }
+    </script>
+
+</body>
+</html>
+

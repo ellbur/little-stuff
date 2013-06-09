@@ -44,24 +44,14 @@ struct Change {
         time(time), value(value) { }
 };
 
-struct DynSignal {
-    shared_ptr<ifstream> file;
-    vector<Change> changes;
-    bool valid;
-    
-    DynSignal(shared_ptr<ifstream> file);
-};
 struct Signal {
     string name;
     string symbol;
     int width;
-    vector<Change> const& changes();
+    vector<Change> changes;
     
-    Signal(string name, string symbol, int width, shared_ptr<ifstream> file);
+    Signal(string name, string symbol, int width, vector<Change> const& changes);
     Signal();
-    
-    private:
-        shared_ptr<DynSignal> dyn;
 };
 
 struct VCD;
@@ -76,19 +66,19 @@ struct Module {
     bool existsAsSignal();
     bool existsAsModule();
     bool existsAsScope() { return existsAsModule(); }
-    Signal asSignal();
+    shared_ptr<Signal> asSignal();
 };
 
 struct VCD {
     set<string> scopes;
-    map<string,Signal> signals;
+    map<string,shared_ptr<Signal>> signals;
+    map<string,shared_ptr<Signal>> signalsBySymbol;
     
     VCD(string path);
     Module operator&(string rest);
     
     private:
-        void buildSignals();
-        shared_ptr<ifstream> file;
+        void buildSignals(string path);
 };
 
 #endif

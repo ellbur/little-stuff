@@ -1,0 +1,4 @@
+
+sbt clean
+sbt compile
+

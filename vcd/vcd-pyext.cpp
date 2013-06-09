@@ -4,21 +4,21 @@
 #include <sstream>
 #include "vcd.hpp"
 
-using namespace std;
+using std::ostringstream;
 
 struct VCD_Object {
     PyObject_HEAD;
-    VCD *vcd;
+    shared_ptr<VCD> vcd;
 };
 
 struct Scope_Object {
     PyObject_HEAD;
-    Module *module;
+    shared_ptr<Module> module;
 };
 
 struct Signal_Object {
     PyObject_HEAD;
-    Signal *signal;
+    shared_ptr<Signal> signal;
 };
 
 static void VCD_dealloc(VCD_Object *self);
@@ -111,17 +111,14 @@ static PyTypeObject Signal_Type = {
 };
 
 static void VCD_dealloc(VCD_Object *self) {
-    delete self->vcd;
     self->ob_type->tp_free((PyObject*) self);
 }
 
 static void Scope_dealloc(Scope_Object *self) {
-    delete self->module;
     self->ob_type->tp_free((PyObject*) self);
 }
 
 static void Signal_dealloc(Signal_Object *self) {
-    delete self->signal;
     self->ob_type->tp_free((PyObject*) self);
 }
 
@@ -134,15 +131,15 @@ static PyObject* VCD_getattr(PyObject *self, PyObject *attrName) {
     name = PyString_AsString(attrName);
     
     VCD &vcd = *((VCD_Object*) self)->vcd;
-    Module modu = vcd & name;
-    if (!(modu.existsAsSignal() || modu.existsAsScope())) {
+    shared_ptr<Module> modu = shared_ptr<Module>(new Module(vcd & name));
+    if (!(modu->existsAsSignal() || modu->existsAsScope())) {
         PyErr_SetString(PyExc_AttributeError, name);
         return NULL;
     }
     
     Scope_Object *obj = (Scope_Object*) Scope_Type.tp_alloc(&Scope_Type, 0);
     if (obj != NULL)
-        obj->module = new Module(modu);
+        obj->module = modu;
     return (PyObject*) obj;
 }
 
@@ -154,16 +151,16 @@ static PyObject* Scope_getattr(PyObject *self, PyObject *attrName) {
     const char* name;
     name = PyString_AsString(attrName);
     
-    Module &modu = *((Scope_Object*) self)->module;
-    Module next = modu & name;
-    if (!(next.existsAsSignal() || next.existsAsScope())) {
+    shared_ptr<Module> modu = ((Scope_Object*) self)->module;
+    shared_ptr<Module> next = shared_ptr<Module>(new Module((*modu) & name));
+    if (!(next->existsAsSignal() || next->existsAsScope())) {
         PyErr_SetString(PyExc_AttributeError, name);
         return NULL;
     }
     
     Scope_Object *obj = (Scope_Object*) Scope_Type.tp_alloc(&Scope_Type, 0);
     if (obj != NULL)
-        obj->module = new Module(next);
+        obj->module = next;
     return (PyObject*) obj;
 }
 
@@ -177,13 +174,13 @@ static PyObject* Scope_call(PyObject *self, PyObject *args, PyObject *kw) {
     }
     
     if (obj != NULL)
-        obj->signal = new Signal(modu.asSignal());
+        obj->signal = modu.asSignal();
     return (PyObject*) obj;
 }
 
 static PyObject* Signal_changes(PyObject *self, PyObject *args) {
     Signal &sig = *((Signal_Object*)self)->signal;
-    vector<Change> changes = sig.changes();
+    vector<Change> changes = sig.changes;
     
     PyObject* list = PyList_New(changes.size());
     for (int i=0; i<changes.size(); i++) {
@@ -199,7 +196,7 @@ static PyObject* vcd_parse_vcd(PyObject *mod, PyObject *args) {
     const char* path;
     if (!PyArg_ParseTuple(args, "s", &path)) return NULL;
     
-    VCD *vcd = new VCD(path);
+    shared_ptr<VCD> vcd = shared_ptr<VCD>(new VCD(path));
     
     VCD_Object *self;
     self = (VCD_Object*) VCD_Type.tp_alloc(&VCD_Type, 0);

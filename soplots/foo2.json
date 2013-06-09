@@ -1,0 +1,63 @@
+{
+  "total": 1954722,
+  "page": 1,
+  "pagesize": 2,
+  "questions": [
+    {
+      "tags": [
+        "linq",
+        "c#-4.0"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075767/timeline",
+      "question_comments_url": "/questions/7075767/comments",
+      "question_answers_url": "/questions/7075767/answers",
+      "question_id": 7075767,
+      "owner": {
+        "user_id": 733323,
+        "user_type": "registered",
+        "display_name": "Joper",
+        "reputation": 242,
+        "email_hash": "18f3cce90cddea2ef7a030060a371c03"
+      },
+      "creation_date": 1313484975,
+      "last_activity_date": 1313484975,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 1,
+      "score": 0,
+      "community_owned": false,
+      "title": "List of <T> ToDictionary getting an error",
+      "body": "<p>I have query which selecting data form table with unique values in Date column</p>\n\n<p>But during that code executing :</p>\n\n<pre><code>Dictionary&lt;string, decimal&gt; data = base.repository.FindAll&lt;Entity&gt;().ToDictionary(x =&gt; x.Date.Day.ToString(), y =&gt; y.Point);\n</code></pre>\n\n<p>I am getting  an error:</p>\n\n<pre><code>An item with the same key has already been added.\n\nDescription: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. \n\nException Details: System.ArgumentException: An item with the same key has already been added.\n</code></pre>\n\n<p>I also run query in data base to check it it is really no duplicates in Date column.</p>\n\n<p>Also i run this query to confirm that there is no duplications:</p>\n\n<pre><code>IList&lt;Entity&gt; history = base.repository.FindAll&lt;Entity&gt;().Distinct().ToList();\n      var query =\n                from c in history\n                group c by c.Date into g\n                where g.Count() &gt; 1\n\nselect new { Country = g.Key, CityCount = g.Count() };\n</code></pre>\n\n<p>so there wasn't any values in <code>query</code> so it means that 100% no duplicated dates in data.</p>\n\n<p>Cant understand why it is happening? Any ideas?</p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "java-annotations"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075761/timeline",
+      "question_comments_url": "/questions/7075761/comments",
+      "question_answers_url": "/questions/7075761/answers",
+      "question_id": 7075761,
+      "owner": {
+        "user_id": 471149,
+        "user_type": "registered",
+        "display_name": "misha nesterenko",
+        "reputation": 419,
+        "email_hash": "57b35133ca0bb14cdcae952427381673"
+      },
+      "creation_date": 1313484919,
+      "last_activity_date": 1313484919,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 3,
+      "score": 0,
+      "community_owned": false,
+      "title": "java cycle annotations",
+      "body": "<p>I want to create tree structure with annotation</p>\n\n<pre><code>@Retention(RetentionPolicy.RUNTIME)\npublic @interface MyNode {\n     String name();\n     MyNode next() default null;\n}\n</code></pre>\n\n<p>but compiler tells that it is cycle and hence it is not allowed. </p>\n\n<p>I wonder why it is not allowed and how can I make something like it?</p>\n"
+    }
+  ]
+}

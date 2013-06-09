@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+
+# Settings
+
+my %settings = (
+    ev_per_adu   =>    7.89256,
+    
+    carbon_hw    =>   12,
+    carbon_gap   =>    1,
+    carbon_param =>  270.0, # eV
+    
+    fast_trig    => 1727.0, # eV
+    fast_bigtrig => 1060.0, # eV
+    slow_trig    =>  416.0, # eV
+    slow_bigtrig =>  360.0, # eV
+    
+    sym          =>   14,
+    dur          =>   30,
+    lag          =>   16
+);
+
+use ctrl_in qw(gen_ctrl_in);
+print gen_ctrl_in \%settings;
+

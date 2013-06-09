@@ -1,0 +1,29 @@
+
+So, first we have the nummber 5:
+<<>>=
+print(5)
+@
+
+And then more python code
+<<>>=
+import sys
+print(sys.argv)
+@
+
+<<>>=
+for arg in sys.argv:
+	print(arg)
+@
+
+Images!!
+
+<<>>=
+import matplotlib.pyplot as pp
+import numpy as np
+@
+
+<<fig=True>>=
+x = np.linspace(0, 10, 100)
+pp.plot(x, np.sin(x))
+@
+

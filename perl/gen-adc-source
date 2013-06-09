@@ -1,0 +1,74 @@
+#!/usr/bin/perl
+
+my $csv_path = $ARGV[0];
+my @adc_data = ();
+
+open(my $csv_in, "<", $csv_path);
+my $i = 0;
+while (<$csv_in>) {
+    chomp;
+    if ($_ =~ /^s*(\d+)\s*$/) {
+        push @adc_data, int($1);
+    }
+}
+close($csv_in);
+
+my $trace_last = $#adc_data;
+
+$trace_set = '';
+for (my $i=0; $i<=$trace_last; $i++) {
+    my $val = $adc_data[$i];
+    $trace_set .= "        trace($i) <= $val;\n";
+}
+
+print <<__END__
+
+library ieee;
+use ieee.std_logic_textio.all;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity ADCSource is
+    port (
+        Clock   : in std_logic;
+        AdcData : out unsigned(15 downto 0);
+        Done    : out std_logic
+    );
+end entity ADCSource;
+
+library ieee;
+use ieee.std_logic_textio.all;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+use std.textio.all;
+-- For printf
+library EASICS_PACKAGES;
+use EASICS_PACKAGES.PCK_FIO.all;
+
+architecture Arch of ADCSource is
+    type Trace_T is array(0 to $trace_last) of natural;
+    signal trace   : Trace_T;
+    signal counter : natural := 0;
+begin
+    process begin
+$trace_set
+        wait;
+    end process;
+
+    process (Clock)
+        variable l : line;
+    begin
+        if rising_edge(Clock) then
+            counter <= counter + 1;
+        end if;
+    end process;
+    
+    Done <= '1' when counter >= trace'right else '0';
+    
+    AdcData <= to_unsigned(trace(counter), 16) when counter <= trace'right
+        else to_unsigned(trace(trace'right), 16);
+end Arch;
+
+__END__
+

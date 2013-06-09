@@ -1,0 +1,2952 @@
+{
+  "total": 1954888,
+  "page": 3,
+  "pagesize": 100,
+  "questions": [
+    {
+      "tags": [
+        "javascript"
+      ],
+      "answer_count": 4,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075829/timeline",
+      "question_comments_url": "/questions/7075829/comments",
+      "question_answers_url": "/questions/7075829/answers",
+      "question_id": 7075829,
+      "owner": {
+        "user_id": 560073,
+        "user_type": "registered",
+        "display_name": "Oleander",
+        "reputation": 621,
+        "email_hash": "19adc8aa86a620a896e483d92488c414"
+      },
+      "creation_date": 1313485288,
+      "last_activity_date": 1313486577,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 26,
+      "score": 2,
+      "community_owned": false,
+      "title": "Nicest way to add an edit feature to a text/link?",
+      "body": "<p>I've a bunch of text (links and raw text) on my site that I want moderators and administrators to be able to edit. I somehow need to add the possibility to edit the text in question.</p>\n\n<p>My first thought was to add an edit link next to each part that could be edited, but that doesn't look right. To many 'Edit' links where added to the page, it looked really strange.</p>\n\n<p>My second idea was to add some key-combo to each link that can be edited.\nLike; hold shift key while clicking on the given text/link to edit.</p>\n\n<p><strong>My question is now</strong>; is there a good way to add a shortcut like this to any text/link on the site using JavaScript.</p>\n\n<p>Adding an option to the right click menu would be spot-on, but that doesn't seems to be possible.</p>\n\n<p>This is how it looks right now:</p>\n\n<p><img src=\"http://i.stack.imgur.com/HHK80.png\" alt=\"example image\"></p>\n\n<p>The feature doesn't need to be supported by any other browser then Chrome.</p>\n"
+    },
+    {
+      "tags": [
+        "postgresql",
+        "datetime",
+        "sqlalchemy"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075828/timeline",
+      "question_comments_url": "/questions/7075828/comments",
+      "question_answers_url": "/questions/7075828/answers",
+      "question_id": 7075828,
+      "owner": {
+        "user_id": 806847,
+        "user_type": "registered",
+        "display_name": "PythonWolf",
+        "reputation": 16,
+        "email_hash": "96c6cd109f796dca243b6c66c0210868"
+      },
+      "creation_date": 1313485274,
+      "last_activity_date": 1313485969,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 6,
+      "score": 0,
+      "community_owned": false,
+      "title": "Make Sqlalchemy Use Date In Filter Using Postgresql",
+      "body": "<p>I'm trying to perform the following query in Sqlalchemy.</p>\n\n<pre><code>Select * from \"Mytable\" where Date(date_time_field) = \"2011-08-16\";\n</code></pre>\n\n<p>I have tried several methods. Some here on SO.\nBut none seems \"realistic\" since some do Casts Other String Formating ?!?! and not a plain simple Date() <em>( By Date i Mean the Postgresql Date not the Python One)</em> at the ORM Field.</p>\n\n<p>Is it possible at the ORM level to declare a Simple Date() around the queried field ?</p>\n\n<p>Best Regards\nAntónio</p>\n"
+    },
+    {
+      "tags": [
+        "symfony-2.0"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075824/timeline",
+      "question_comments_url": "/questions/7075824/comments",
+      "question_answers_url": "/questions/7075824/answers",
+      "question_id": 7075824,
+      "owner": {
+        "user_id": 537794,
+        "user_type": "registered",
+        "display_name": "BobFlemming",
+        "reputation": 128,
+        "email_hash": "81db3c1cc44df2353498d991e5536a2a"
+      },
+      "creation_date": 1313485242,
+      "last_activity_date": 1313485242,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 5,
+      "score": 0,
+      "community_owned": false,
+      "title": "Symfony2 - Routing with query in routing.yml",
+      "body": "<p>I wish to enable variables to be added to the URL for a route in Symfony2 ie.</p>\n\n<pre><code>www.mysymfonyproject.com/blog/1?style=fresh&amp;rpp=5 \n</code></pre>\n\n<p>The documentation talks about generating urls with query, but from what I understand this is for dynamic content in the app?: </p>\n\n<pre><code>$router-&gt;generate('blog', array('page' =&gt; 2, 'category' =&gt; 'Symfony'));\n// /blog/2?category=Symfony\n</code></pre>\n\n<p>What I would like would be this:</p>\n\n<pre><code>_blogList:\npattern: /blog/{page}?{query}\ndefaults: { _controller: TestBundle:Blog:view ,page:1, query: NULL } \n</code></pre>\n\n<p>But obviously that doesn't work.</p>\n\n<p>Can this be done using YAML? Or do I need to switch my config.yml to PHP? </p>\n\n<p>Thanks.</p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "bitwise-operators",
+        "bitwise-and"
+      ],
+      "answer_count": 1,
+      "accepted_answer_id": 7075885,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075818/timeline",
+      "question_comments_url": "/questions/7075818/comments",
+      "question_answers_url": "/questions/7075818/answers",
+      "question_id": 7075818,
+      "owner": {
+        "user_id": 606432,
+        "user_type": "registered",
+        "display_name": "Ganesh Bhat",
+        "reputation": 38,
+        "email_hash": "62c37a0d8b33821057b861ec11843729"
+      },
+      "creation_date": 1313485214,
+      "last_activity_date": 1313485587,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 34,
+      "score": 0,
+      "community_owned": false,
+      "title": "why java/android allows bitwise & between a boolean variable and a String",
+      "body": "<p>I am allowed to do a bitwise &amp; between a boolean variable and a String.\nThere is no compilation error!</p>\n\n<p>What would the result? How does it work.\nAs per my understanding, it shall not allow the bitwise operation of this type.\nIs it a bug or bitwise feature thinks only interms of bit and dont care about type?</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        ".net",
+        "linq",
+        "dynamic-linq"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075816/timeline",
+      "question_comments_url": "/questions/7075816/comments",
+      "question_answers_url": "/questions/7075816/answers",
+      "question_id": 7075816,
+      "owner": {
+        "user_id": 185593,
+        "user_type": "registered",
+        "display_name": "serhio",
+        "reputation": 5081,
+        "email_hash": "a6b31d4c10c3cffdb546c8b4253afc0a"
+      },
+      "creation_date": 1313485205,
+      "last_edit_date": 1313485582,
+      "last_activity_date": 1313485582,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 22,
+      "score": 0,
+      "community_owned": false,
+      "title": "Dynamic Linq and the enumerations",
+      "body": "<p>I would like to use enumerations in my dynamic LINQ queries. </p>\n\n<p>Is it possible, and if, how?</p>\n\n<p>Consider the code bellow: </p>\n\n<pre><code>using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Linq.Dynamic;\n\nnamespace ConsoleApplication2\n{\n    class Program\n    {\n        static void Main(string[] args)\n        {\n            Room aRoom = new Room() { Name = \"a Room\" };\n            Room bRoom = new Room() { Name = \"b Room\" };\n            Room cRoom = new Room() { Name = \"c Room\" };\n\n            House myHouse = new House\n            {\n                Rooms = new List&lt;Room&gt;(new Room[] { aRoom }),\n                MainRoom = aRoom\n            };\n            House yourHouse = new House()\n            {\n                Rooms = new List&lt;Room&gt;(new Room[] { bRoom, cRoom }),\n                MainRoom = bRoom\n            };\n            House donaldsHouse = new House()\n            {\n                Rooms = new List&lt;Room&gt;(new Room[] { aRoom, bRoom, cRoom }),\n                MainRoom = aRoom\n            };\n\n            var houses = new List&lt;House&gt;(new House[] { myHouse, yourHouse, donaldsHouse });\n\n            // MainRoom.Name = \\\"a Room\\\" and Rooms.Count = 3 or \n            // ?????????????????????????\n            var aRoomsHouses = houses.AsQueryable&lt;House&gt;().Where(\"MainRoom.Type = \\\"RoomType.Kitchen\\\"\");\n\n            Console.WriteLine(\"aRoomsHouses count = {0}\", aRoomsHouses.Count());\n            Console.ReadKey();\n        }\n    }\n\n    public class House\n    {\n        public string Address { get; set; }\n        public double Area { get; set; }\n        public Room MainRoom { get; set; }\n        public List&lt;Room&gt; Rooms { get; set; }\n    }\n\n    public class Room\n    {\n        public double Area { get; set; }\n        public string Name { get; set; }\n        public RoomType Type { get; set; }\n    }\n\n    public enum RoomType\n    {\n        Kitchen,\n        Bedroom,\n        Library,\n        Office\n    }\n}\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "php",
+        "dom"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075815/timeline",
+      "question_comments_url": "/questions/7075815/comments",
+      "question_answers_url": "/questions/7075815/answers",
+      "question_id": 7075815,
+      "owner": {
+        "user_id": 678855,
+        "user_type": "registered",
+        "display_name": "David",
+        "reputation": 107,
+        "email_hash": "f769f2e59de1dc0a52445432da9a87b3"
+      },
+      "creation_date": 1313485204,
+      "last_edit_date": 1313486415,
+      "last_activity_date": 1313488250,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 18,
+      "score": 0,
+      "community_owned": false,
+      "title": "Changing some data inside the src parameter of the image and adding hyperlinks to the image PHP DOM",
+      "body": "<p>I have some text with images inside it.\nFor example like this</p>\n\n<pre><code>texttext&lt;img src=\"2011-08-15/4/img/123.JPG\" alt=\"\" width=\"528\" height=\"394.3458646616541\" &gt;texttext\n</code></pre>\n\n<p>Now I need some  code that searches for the image, finds it, checks if it has class.\nIf no then I want to change it's soruce from this</p>\n\n<pre><code>2011-08-15/4/img/123.JPG\n</code></pre>\n\n<p>to this</p>\n\n<pre><code>2011-08-15/4/mini/123.JPG\n</code></pre>\n\n<p>And then add hyperlink to image plus remove width and height params from img tag, so the final result must be like this</p>\n\n<pre><code>texttext&lt;a href=\"2011-08-15/4/img/123.JPG\" class=\"colorbox cboxElement\" style=\"margin: 0 5px 5px 0\"&gt;&lt;img src=\"2011-08-15/4/mini/123.JPG\" alt=\"\"&gt;&lt;/a&gt;texttext\n</code></pre>\n\n<p>Here is the code that searches and all I need is code that does all the manipulations.</p>\n\n<pre><code>$doc = new DOMDocument();\n$doc-&gt;loadHTML($article_header);\n\n$imgs = $doc-&gt;getElementsByTagName('img');\nforeach ($imgs as $img) {\n    if(!$img-&gt;getAttribute('class')){\n        // ......Here must be some code that does all the work......\n        $article_header = $doc-&gt;saveXml();\n    }\n}\n</code></pre>\n\n<p>Is there a way to solve this problem ? If you can't write the whole code maybe you could help me with small examples ?</p>\n\n<ol>\n<li>How to change something inside src parameter and save .</li>\n<li>How to remove width and height parameters from img tag . </li>\n<li>How to add hyperlink tag to im tag.</li>\n</ol>\n\n<p>I need this 3 techniques </p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "speech-recognition",
+        "speech-to-text"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075808/timeline",
+      "question_comments_url": "/questions/7075808/comments",
+      "question_answers_url": "/questions/7075808/answers",
+      "question_id": 7075808,
+      "owner": {
+        "user_id": 844872,
+        "user_type": "registered",
+        "display_name": "Illep",
+        "reputation": 111,
+        "email_hash": "15cf8e9490ec58e8449f3f05d1c87667"
+      },
+      "creation_date": 1313485182,
+      "last_activity_date": 1313486129,
+      "up_vote_count": 3,
+      "down_vote_count": 0,
+      "view_count": 26,
+      "score": 3,
+      "community_owned": false,
+      "title": "Voice to Text recognition",
+      "body": "<p>I am a beginner in Android development. Is there any possibility to write a speech to text software that could access Googles network based back-end voice to text system ?</p>\n"
+    },
+    {
+      "tags": [
+        "javascript",
+        "jquery",
+        "redirect"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075804/timeline",
+      "question_comments_url": "/questions/7075804/comments",
+      "question_answers_url": "/questions/7075804/answers",
+      "question_id": 7075804,
+      "owner": {
+        "user_id": 882078,
+        "user_type": "registered",
+        "display_name": "Oliver 'Oli' Jensen",
+        "reputation": 92,
+        "email_hash": "16e9ff39414b2bbcff76f98df40fa615"
+      },
+      "creation_date": 1313485173,
+      "last_activity_date": 1313485402,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 33,
+      "score": 0,
+      "community_owned": false,
+      "title": "Javascript Redirect - Wrong redirect",
+      "body": "<p>I use the javascript redirect function, to redirect whenever a form has completed the processing.</p>\n\n<p>It use it like this:</p>\n\n<pre><code>redirect(\"?i=login\"); //On the page. http://www.domain.com/folder/?i=index\n</code></pre>\n\n<p>Although, it redirects to: <a href=\"http://www.domain.com/folder/www.domain.com/folder/?i=login\" rel=\"nofollow\">http://www.domain.com/folder/www.domain.com/folder/?i=login</a></p>\n\n<p>Why is that?</p>\n"
+    },
+    {
+      "tags": [
+        "objective-c",
+        "memory-management"
+      ],
+      "answer_count": 3,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075802/timeline",
+      "question_comments_url": "/questions/7075802/comments",
+      "question_answers_url": "/questions/7075802/answers",
+      "question_id": 7075802,
+      "owner": {
+        "user_id": 262455,
+        "user_type": "registered",
+        "display_name": "Jack",
+        "reputation": 82,
+        "email_hash": "59a1c42c2a0adcac12cc7c5ba1ad1727"
+      },
+      "creation_date": 1313485151,
+      "last_activity_date": 1313485460,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 23,
+      "score": 1,
+      "community_owned": false,
+      "title": "Releasing objects that may not have been created",
+      "body": "<p>In most of the tutorials I've been reading there are examples of classes with custom init methods.</p>\n\n<p>For example</p>\n\n<pre><code>@implementation MyPerson\n\n-(id) initWithDefaultName {\nself = [super init];\nif (self) {\nNSString *name = @\"John Doe\";\n}\nreturn self;\n}\n</code></pre>\n\n<p>Now, I know that I am supposed to pair this up with </p>\n\n<pre><code>-(void) dealloc\n{\n[name release];\n[super dealloc];\n}\n</code></pre>\n\n<p>What I don't understand however, is why this wouldn't crash if I call <code>[MyPerson init]</code> followed by <code>[MyPerson release]</code></p>\n"
+    },
+    {
+      "tags": [
+        "sqlite",
+        "r"
+      ],
+      "answer_count": 1,
+      "accepted_answer_id": 7076068,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075800/timeline",
+      "question_comments_url": "/questions/7075800/comments",
+      "question_answers_url": "/questions/7075800/answers",
+      "question_id": 7075800,
+      "owner": {
+        "user_id": 373908,
+        "user_type": "registered",
+        "display_name": "lokheart",
+        "reputation": 816,
+        "email_hash": "3e3303f1a856408290a6664ea292b69e"
+      },
+      "creation_date": 1313485146,
+      "last_activity_date": 1313486973,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 12,
+      "score": 0,
+      "community_owned": false,
+      "title": "nested select in mysqlite",
+      "body": "<p>I am learning sqlite using the example from <a href=\"http://code.google.com/p/sqldf/\" rel=\"nofollow\">sqldf</a>, I have come across example 3 about nested select and I don't quite understand the code:</p>\n\n<pre><code>sqldf(\"select iris.Species '[Species]',\n              avg(Sepal_Length) '[Avg of SLs &gt; avg SL]'\n       from iris,\n         (select Species, avg(Sepal_Length) SLavg\n          from iris group by Species) SLavg\n       where iris.Species = SLavg.Species\n          and Sepal_Length &gt; SLavg\n       group by iris.Species\")\n</code></pre>\n\n<p>I think the code above is trying to:</p>\n\n<ul>\n<li>create a table with <code>[Species]</code> and <code>[Avg of SLs &gt; avg SL]</code> using data from <code>iris</code> (from line 1-3)</li>\n<li>create a table named <code>SLavg</code> with Species and average Sepal_Length for each Species from <code>iris</code> (from line 4-6)</li>\n</ul>\n\n<p>I wonder why <code>SLavg</code> is present in line 4-5 for 2 times, I tried removing <code>SLavg</code> and sqldf gives me <code>statement: no such column: SLavg</code> and <code>statement: no such column: SLavg.Species</code>.</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        ".net",
+        "wpf",
+        "custom-controls",
+        "flowdocument"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075799/timeline",
+      "question_comments_url": "/questions/7075799/comments",
+      "question_answers_url": "/questions/7075799/answers",
+      "question_id": 7075799,
+      "owner": {
+        "user_id": 896321,
+        "user_type": "unregistered",
+        "display_name": "Nam",
+        "reputation": 1,
+        "email_hash": "e0779e20f3a6ac1154fbce7da4cd8a71"
+      },
+      "creation_date": 1313485145,
+      "last_activity_date": 1313487654,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 8,
+      "score": 0,
+      "community_owned": false,
+      "title": "Embed custom control in WPF FlowDocument",
+      "body": "<p>Is there any way to embed a custom control into the flowdocument and have it correctly displayed by the FlowDocument viewers (export it to Xaml text file and open it by a viewer)?</p>\n"
+    },
+    {
+      "tags": [
+        "iphone",
+        "objective-c",
+        "ios",
+        "cocoa-touch",
+        "ipad"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075797/timeline",
+      "question_comments_url": "/questions/7075797/comments",
+      "question_answers_url": "/questions/7075797/answers",
+      "question_id": 7075797,
+      "owner": {
+        "user_id": 609369,
+        "user_type": "registered",
+        "display_name": "Nando Lambrusco",
+        "reputation": 1,
+        "email_hash": "435c8819f553bf05a1c176834726a44d"
+      },
+      "creation_date": 1313485142,
+      "last_edit_date": 1313485767,
+      "last_activity_date": 1313486156,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 19,
+      "score": 0,
+      "community_owned": false,
+      "title": "ios: turn on/off airplane mode from code for iPhone / iPad",
+      "body": "<p>is there a way to turn on/off airplane mode in ios (>4.x) from code?\nI am looking for some (offical) API calls...</p>\n\n<p>Greetings,\nMarco</p>\n"
+    },
+    {
+      "tags": [
+        "iphone",
+        "objective-c",
+        "ios",
+        "apple-push-notifications",
+        "apns"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075795/timeline",
+      "question_comments_url": "/questions/7075795/comments",
+      "question_answers_url": "/questions/7075795/answers",
+      "question_id": 7075795,
+      "owner": {
+        "user_id": 896320,
+        "user_type": "unregistered",
+        "display_name": "Raman Walia",
+        "reputation": 1,
+        "email_hash": "b7b70bafc962d50653f307090d0bd4c5"
+      },
+      "creation_date": 1313485134,
+      "last_edit_date": 1313486184,
+      "last_activity_date": 1313486354,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 6,
+      "score": 0,
+      "community_owned": false,
+      "title": "Multiple Servers connecting to APNS with same SSL certificate",
+      "body": "<p>We are launching a product which has both a client and server piece. The client would be available over App Store and server can be downloaded from our company's web site. \nThe server part would be installed by individual customer on their own network.</p>\n\n<p>While implementing Push notifications, it cam to my notice that the server talks to Apple Push Notification Service and validates itself with the SLL Certificate. </p>\n\n<p>The question is, can all our customer use the same SSL certificates and connect to APNS to push notifications on their devices?</p>\n\n<p>Please note that there is only on client app, that is available through app store. </p>\n"
+    },
+    {
+      "tags": [
+        "repeater"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075792/timeline",
+      "question_comments_url": "/questions/7075792/comments",
+      "question_answers_url": "/questions/7075792/answers",
+      "question_id": 7075792,
+      "owner": {
+        "user_id": 626309,
+        "user_type": "registered",
+        "display_name": "user626309",
+        "reputation": 36,
+        "email_hash": "859e12e621afa659f5f39bd7b1f83651"
+      },
+      "creation_date": 1313485129,
+      "last_activity_date": 1313485129,
+      "up_vote_count": 0,
+      "down_vote_count": 2,
+      "view_count": 7,
+      "score": -2,
+      "community_owned": false,
+      "title": "change repeater header template colum name dynamically",
+      "body": "<p>I have a repeator with header values set at design time in headertemplate. Can I modify these headers at runtime as per some condition?</p>\n\n<p>Thanks,</p>\n"
+    },
+    {
+      "tags": [
+        "android",
+        "android-location"
+      ],
+      "answer_count": 5,
+      "accepted_answer_id": 7075911,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075784/timeline",
+      "question_comments_url": "/questions/7075784/comments",
+      "question_answers_url": "/questions/7075784/answers",
+      "question_id": 7075784,
+      "owner": {
+        "user_id": 892996,
+        "user_type": "unregistered",
+        "display_name": "Nikud",
+        "reputation": 15,
+        "email_hash": "817b375912deebe5a98047c0732fcde6"
+      },
+      "creation_date": 1313485079,
+      "last_activity_date": 1313487294,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 31,
+      "score": 1,
+      "community_owned": false,
+      "title": "cell location indoors",
+      "body": "<p>My question is simple, how in the heavens do I get the exact location of a cell phone which is indoors, GPS wont work since it requires clear skys. Network Provider of the LocationManager only gives me the location of the closest cell tower of my network provider. Will appreciate the help.</p>\n"
+    },
+    {
+      "tags": [
+        "s"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "closed_date": 1313485217,
+      "closed_reason": "not constructive",
+      "question_timeline_url": "/questions/7075774/timeline",
+      "question_comments_url": "/questions/7075774/comments",
+      "question_answers_url": "/questions/7075774/answers",
+      "question_id": 7075774,
+      "owner": {
+        "user_id": 896318,
+        "user_type": "unregistered",
+        "display_name": "Good-to-know",
+        "reputation": 4,
+        "email_hash": "d19b7e5ddf92a059369124c63e4ffa91"
+      },
+      "creation_date": 1313484992,
+      "last_activity_date": 1313484992,
+      "up_vote_count": 2,
+      "down_vote_count": 10,
+      "view_count": 44,
+      "score": -8,
+      "community_owned": false,
+      "title": "Just wondering...",
+      "body": "<p>How come people like <a href=\"http://stackoverflow.com/users/16076/mitch-wheat\">this</a> only asked a couple of questions of their own and spent a lot of time answering huge amount of questions? What is the point of their being on Stackoverflow.com? To answer as many questions as possible and to gain as many reputation as possible? Or, do they receive money from Stackoverflow.com for answering other people's questions? Possible? Just interesting how they, being professional programmers, have so much time answering questions of all kinds, wise or stupid. What is the secret? Seems they are paid well here or there as they have a lot of time to contribute to others... Do they have families? Do they lack communication in thier lives? Or what is the reason???</p>\n"
+    },
+    {
+      "tags": [
+        "database",
+        "dynamic",
+        "button",
+        "labels",
+        "directcast"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075773/timeline",
+      "question_comments_url": "/questions/7075773/comments",
+      "question_answers_url": "/questions/7075773/answers",
+      "question_id": 7075773,
+      "owner": {
+        "user_id": 896273,
+        "user_type": "registered",
+        "display_name": "user896273",
+        "reputation": 1,
+        "email_hash": "fbdefb645475a072c08bbe98b0c8ef39"
+      },
+      "creation_date": 1313484991,
+      "last_activity_date": 1313484991,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 6,
+      "score": 0,
+      "community_owned": false,
+      "title": "changing the properties of dynamically created labels with a press of a button",
+      "body": "<p>I have made a program wherein you the labels are dynamically created with a press of a button. if you press on the label, the label would then change color from white to blue. my problem is that how will you make the backcolor of the label change when the button3 is pressed.</p>\n\n<p>here are the codes. placed the whole thing since I dunno if you guys would understand what I mean. </p>\n\n<pre><code>       Public Class Form1\n\n\nDim counter As Integer = 0\nDim count As Integer = 0\nDim click As Integer = 0\n\n\n\n\nPrivate Sub seatclick(ByVal sender As System.Object, ByVal e As System.EventArgs)\n    'change the color of the labels from white to blue when they are clicked\n    Dim lbl As New Label()\n\n    lbl = DirectCast(sender, Label)\n    If lbl.BackColor = Color.White Then\n\n\n        lbl.BackColor = Color.Blue\n        If lbl.BackColor = Color.Blue Then\n            count += 1\n            click = 1\n            Label38.Text = \"Total Seats Selected: \" &amp; count\n        End If\n\n\n        Exit Sub\n    ElseIf lbl.BackColor = Color.White Then\n        click = 2\n    End If\n\n\n\n\nEnd Sub\n\nPrivate Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click\n\n    Label2.Visible = True\n    Label3.Visible = True\n    Label4.Visible = True\n    Label5.Visible = True\n    Label6.Visible = True\n    Label7.Visible = True\n    Label8.Visible = True\n    Label9.Visible = True\n    Label10.Visible = True\n    Label11.Visible = True\n    Label12.Visible = True\n    Label13.Visible = True\n    Label14.Visible = True\n    Label15.Visible = True\n    Label16.Visible = True\n    Label17.Visible = True\n    Label18.Visible = True\n    Label19.Visible = True\n    Label20.Visible = True\n    Label21.Visible = True\n    Label22.Visible = True\n    Label23.Visible = True\n    Label24.Visible = True\n    Label25.Visible = True\n    Label26.Visible = True\n    Label27.Visible = True\n    Label28.Visible = True\n    Label29.Visible = True\n    Label30.Visible = True\n    Label31.Visible = True\n    Label32.Visible = True\n    Label33.Visible = True\n    Label34.Visible = True\n    Label35.Visible = True\n    Label36.Visible = True\n    Label37.Visible = True\n'dynamically create labels\n    Dim i As Integer, ii As Integer\n\n\n    Dim startcol As Integer = 580, startrow As Integer = 100, chrr As Integer = 64\n    Dim startcol2 As Integer = 450, startrow2 As Integer = 100, chrr2 As Integer = 64\n    Dim startcol3 As Integer = 415, startrow3 As Integer = 130, chrr3 As Integer = 64\n    Dim startcol4 As Integer = 310, startrow4 As Integer = 370, chrr4 As Integer = 64\n    Dim startcol5 As Integer = 1058, startrow5 As Integer = 100, chrr5 As Integer = 64\n    Dim startcol6 As Integer = 1058, startrow6 As Integer = 130, chrr6 As Integer = 64\n    Dim startcol7 As Integer = 1058, startrow7 As Integer = 370, chrr7 As Integer = 64\n\n    counter += 1\n\n\n    For i = 5 To 7\n\n        Dim lbl As New Label()\n        With lbl\n            If counter = 1 Then\n                .Visible = True\n            ElseIf counter = 2 Then\n                .Visible = False\n            End If\n\n            .Text = Chr(chrr + 1) &amp; i\n            .Size = New Size(30, 30)\n            .Location = New Point(startcol2, startrow2)\n            .BackColor = Color.White\n            .BorderStyle = BorderStyle.FixedSingle\n            .TextAlign = ContentAlignment.MiddleCenter\n            AddHandler lbl.Click, AddressOf seatclick\n\n            Me.Controls.Add(lbl)\n        End With\n        startcol2 += 35\n    Next\n    For ii = 4 To 11\n        For i = 4 To 7\n            Dim lbl As New Label()\n            With lbl\n                If counter = 1 Then\n                    .Visible = True\n                ElseIf counter = 2 Then\n                    .Visible = False\n                End If\n\n                .Text = Chr(chrr3 + ii - 2) &amp; i\n                .Size = New Size(30, 30)\n                .Location = New Point(startcol3, startrow3)\n                .BackColor = Color.White\n                .BorderStyle = BorderStyle.FixedSingle\n                .TextAlign = ContentAlignment.MiddleCenter\n                AddHandler lbl.Click, AddressOf seatclick\n\n                Me.Controls.Add(lbl)\n            End With\n            startcol3 += 35\n        Next\n        chrr3 += 0\n        startcol3 = 415\n        startrow3 += 30\n    Next\n    For ii = 1 To 9\n        For i = 1 To 7\n            Dim lbl As New Label()\n            With lbl\n                If counter = 1 Then\n                    .Visible = True\n                ElseIf counter = 2 Then\n                    .Visible = False\n                End If\n\n                .Text = Chr(chrr4 + ii + 9) &amp; i\n                .Size = New Size(30, 30)\n                .Location = New Point(startcol4, startrow4)\n                .BackColor = Color.White\n                .BorderStyle = BorderStyle.FixedSingle\n                .TextAlign = ContentAlignment.MiddleCenter\n                AddHandler lbl.Click, AddressOf seatclick\n\n                Me.Controls.Add(lbl)\n            End With\n            startcol4 += 35\n        Next\n        chrr4 += 0\n        startcol4 = 310\n        startrow4 += 30\n    Next\n\n    For ii = 8 To 20\n        For i = 8 To 20\n            Dim lbl As New Label()\n            With lbl\n                If counter = 1 Then\n                    .Visible = True\n                ElseIf counter = 2 Then\n                    .Visible = False\n                End If\n\n                .Text = Chr(chrr + ii - 7) &amp; i\n                .Size = New Size(30, 30)\n                .Location = New Point(startcol, startrow)\n                .BackColor = Color.White\n                .BorderStyle = BorderStyle.FixedSingle\n                .TextAlign = ContentAlignment.MiddleCenter\n                AddHandler lbl.Click, AddressOf seatclick\n\n                Me.Controls.Add(lbl)\n            End With\n            startcol += 35\n        Next\n        chrr += 0\n        startcol = 580\n        startrow += 30\n    Next\n    For i = 21 To 23\n\n        Dim lbl As New Label()\n        With lbl\n            If counter = 1 Then\n                .Visible = True\n            ElseIf counter = 2 Then\n                .Visible = False\n            End If\n\n            .Text = Chr(chrr5 + ii - 20) &amp; i\n            .Size = New Size(30, 30)\n            .Location = New Point(startcol5, startrow5)\n            .BackColor = Color.White\n            .BorderStyle = BorderStyle.FixedSingle\n            .TextAlign = ContentAlignment.MiddleCenter\n            AddHandler lbl.Click, AddressOf seatclick\n\n            Me.Controls.Add(lbl)\n        End With\n        startcol5 += 35\n    Next\n    For ii = 21 To 28\n        For i = 21 To 24\n            Dim lbl As New Label()\n            With lbl\n                If counter = 1 Then\n                    .Visible = True\n                ElseIf counter = 2 Then\n                    .Visible = False\n                End If\n\n                .Text = Chr(chrr6 + ii - 19) &amp; i\n                .Size = New Size(30, 30)\n                .Location = New Point(startcol6, startrow6)\n                .BackColor = Color.White\n                .BorderStyle = BorderStyle.FixedSingle\n                .TextAlign = ContentAlignment.MiddleCenter\n                AddHandler lbl.Click, AddressOf seatclick\n\n                Me.Controls.Add(lbl)\n            End With\n            startcol6 += 35\n        Next\n        chrr6 += 0\n        startcol6 = 1058\n        startrow6 += 30\n    Next\n    For ii = 29 To 37\n        For i = 21 To 27\n            Dim lbl As New Label()\n            With lbl\n                If counter = 1 Then\n                    .Visible = True\n                ElseIf counter = 2 Then\n                    .Visible = False\n                End If\n\n                .Text = Chr(chrr7 + ii - 19) &amp; i\n                .Size = New Size(30, 30)\n                .Location = New Point(startcol7, startrow7)\n                .BackColor = Color.White\n                .BorderStyle = BorderStyle.FixedSingle\n                .TextAlign = ContentAlignment.MiddleCenter\n                AddHandler lbl.Click, AddressOf seatclick\n\n                Me.Controls.Add(lbl)\n            End With\n            startcol7 += 35\n        Next\n        chrr7 += 0\n        startcol7 = 1058\n        startrow7 += 30\n    Next\nEnd Sub\n\nPrivate Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click\n\n    'shows the movie lists\n    Form2.Show()\n\nEnd Sub\n\nPrivate Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click\n\n     'problem arises here\n       End Sub\n       End Class\n</code></pre>\n\n<p>here are the things I have tried but did not work.\n1.  make a new class to handle the change in color from blue to red after a prompt</p>\n\n<pre><code>        Private Sub buttonclick(ByVal sender As System.Object, ByVal e As System.EventArgs)\n    Dim lbl1 As New Label()\n    Dim click As Integer\n    lbl1 = DirectCast(sender, Label)\n    If lbl1.BackColor = Color.Blue Then\n        click = MsgBox(\"Would you like to reserve the  seat/s \" &amp; lbl1.Text &amp; \"?\", vbYesNo, \"Seat Reservation\")\n        If click = vbYes Then\n            lbl1.BackColor = Color.Red\n        Else\n            lbl1.BackColor = Color.White\n        End If\n    ElseIf lbl1.BackColor = Color.Red Then\n        MsgBox(lbl1.Text &amp; \" is already reserved. Please choose another seat.\")\n        Exit Sub\n    End If\nEnd Sub\n</code></pre>\n\n<p>after that placed an addhandler inside the for loop.(one of the for loops)</p>\n\n<pre><code>    For i = 5 To 7\n\n        Dim lbl As New Label()\n        With lbl\n            If counter = 1 Then\n                .Visible = True\n            ElseIf counter = 2 Then\n                .Visible = False\n            End If\n\n            .Text = Chr(chrr + 1) &amp; i\n            .Size = New Size(30, 30)\n            .Location = New Point(startcol2, startrow2)\n            .BackColor = Color.White\n            .BorderStyle = BorderStyle.FixedSingle\n            .TextAlign = ContentAlignment.MiddleCenter\n            AddHandler lbl.Click, AddressOf seatclick\n            AddHandler button3.click, AddressOf buttonclick\n            Me.Controls.Add(lbl)\n        End With\n        startcol2 += 35\n    Next\n</code></pre>\n\n<p>result of this would be the error System.InvalidCastException\nso does putting the buttonclick code inside the button3_click</p>\n\n<pre><code>            Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click\n    Dim lbl1 As New Label()\n    Dim click As Integer\n    lbl1 = DirectCast(sender, Label)\n    If lbl1.BackColor = Color.Blue Then\n        click = MsgBox(\"Would you like to reserve the  seat/s \" &amp; lbl1.Text &amp; \"?\",                         vbYesNo, \"Seat Reservation\")\n        If click = vbYes Then\n            lbl1.BackColor = Color.Red\n        Else\n            lbl1.BackColor = Color.White\n        End If\n    ElseIf lbl1.BackColor = Color.Red Then\n        MsgBox(lbl1.Text &amp; \" is already reserved. Please choose another seat.\")\n        Exit Sub\n    End If\nEnd Sub\n</code></pre>\n\n<p>reuslt 1: with lbl1=DirectCast(sender, label)\nit will result in the same error as above\nresult 2: without lbl1 =DirectCast(sender, label)\nthe button will do nothing</p>\n\n<p>PS here is the link to what my program looks like. <a href=\"http://i46.photobucket.com/albums/f147/xenon2011/seatmap.png\" rel=\"nofollow\">link to my program</a> . the button3 in the image is Reserve Seat.\n please help me guys with this little problem of mine. I have dried up every resource I had. </p>\n\n<p>thanks in advance</p>\n"
+    },
+    {
+      "tags": [
+        "c++",
+        "debugging",
+        "gdb"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075771/timeline",
+      "question_comments_url": "/questions/7075771/comments",
+      "question_answers_url": "/questions/7075771/answers",
+      "question_id": 7075771,
+      "owner": {
+        "user_id": 624734,
+        "user_type": "registered",
+        "display_name": "adrian_sev",
+        "reputation": 18,
+        "email_hash": "a9ff56d0330d7ab5d51455f8cd7540b6"
+      },
+      "creation_date": 1313484988,
+      "last_activity_date": 1313487927,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 26,
+      "score": 1,
+      "community_owned": false,
+      "title": "debugging:: gdb :: what is src2dst?",
+      "body": "<p>Have anyone an idea or a link to an explanation regarding src2dst in gdb? as in :</p>\n\n<pre><code>#8  __cxxabiv1::__dynamic_cast (src_ptr=0x5aa21d0, src_type=0x7f1e92dd5840, dst_type=0x7f1e8d2751a0, src2dst=0) at ../../../../libstdc++-v3/libsupc++/dyncast.cc:57\n</code></pre>\n\n<p>and related to this: what can be the cause of an dynamic cast that goes wrong?\nThanks!</p>\n"
+    },
+    {
+      "tags": [
+        "android",
+        "background",
+        "background-image"
+      ],
+      "answer_count": 3,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075769/timeline",
+      "question_comments_url": "/questions/7075769/comments",
+      "question_answers_url": "/questions/7075769/answers",
+      "question_id": 7075769,
+      "owner": {
+        "user_id": 889778,
+        "user_type": "unregistered",
+        "display_name": "Luk",
+        "reputation": 11,
+        "email_hash": "0df096abf3d76c83a90dc655c6f646e6"
+      },
+      "creation_date": 1313484983,
+      "last_activity_date": 1313485816,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 30,
+      "score": 1,
+      "community_owned": false,
+      "title": "Change background image - Android",
+      "body": "<p>I have main.xml file where is my background file:</p>\n\n<pre><code>&lt;LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\nandroid:orientation=\"vertical\"\nandroid:layout_width=\"fill_parent\"\nandroid:layout_height=\"fill_parent\"\nandroid:gravity=\"center\"\nandroid:background=\"@drawable/backgroundfile\"\n</code></pre>\n\n<p>In another activity xml file there is the same \"backgroundfile\".</p>\n\n<p>I'd like to know if there is possibility to define one background file to all activities. I am going to create new activity where user will choose background for the whole app. Is it possible? Can you give me some clues?</p>\n\n<p>Thank you for help. \nExcuse me for language mistakes.</p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "annotations"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075761/timeline",
+      "question_comments_url": "/questions/7075761/comments",
+      "question_answers_url": "/questions/7075761/answers",
+      "question_id": 7075761,
+      "owner": {
+        "user_id": 471149,
+        "user_type": "registered",
+        "display_name": "misha nesterenko",
+        "reputation": 424,
+        "email_hash": "57b35133ca0bb14cdcae952427381673"
+      },
+      "creation_date": 1313484919,
+      "last_edit_date": 1313485309,
+      "last_activity_date": 1313486905,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 39,
+      "score": 1,
+      "community_owned": false,
+      "title": "java cyclic annotations",
+      "body": "<p>I want to create tree structure with annotation</p>\n\n<pre><code>@Retention(RetentionPolicy.RUNTIME)\npublic @interface MyNode {\n     String name();\n     MyNode next() default null;\n}\n</code></pre>\n\n<p>but compiler tells that it is cycle and hence it is not allowed. </p>\n\n<p>I wonder why it is not allowed and how can I make something like it?</p>\n"
+    },
+    {
+      "tags": [
+        "vb.net",
+        "winforms",
+        "controls"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075759/timeline",
+      "question_comments_url": "/questions/7075759/comments",
+      "question_answers_url": "/questions/7075759/answers",
+      "question_id": 7075759,
+      "owner": {
+        "user_id": 891986,
+        "user_type": "unregistered",
+        "display_name": "ajordison",
+        "reputation": 6,
+        "email_hash": "97e6500665a04f27e6e28d1cf51c74ce"
+      },
+      "creation_date": 1313484908,
+      "last_activity_date": 1313484908,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 8,
+      "score": 1,
+      "community_owned": false,
+      "title": "Best control to draw in",
+      "body": "<p>I have a VB app which draws primitive shapes (lines, filled rectangles etc.) into a picturebox control (from its paint event). I've since found out that a picturebox is probably the <em>worst</em> control to use for this. I've also found out that it's better to draw directly onto the form but I don't really want to do this as a control gives clipping for 'free'.</p>\n\n<p>What would be the best control for this? The panel control looks like a good candidate but the experiment I tried actually performed worse!</p>\n\n<p>Thanks.</p>\n"
+    },
+    {
+      "tags": [
+        "android",
+        "layout",
+        "view",
+        "coordinates",
+        "params"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075755/timeline",
+      "question_comments_url": "/questions/7075755/comments",
+      "question_answers_url": "/questions/7075755/answers",
+      "question_id": 7075755,
+      "owner": {
+        "user_id": 495967,
+        "user_type": "registered",
+        "display_name": "amigal",
+        "reputation": 16,
+        "email_hash": "fd1268fd2346b761a8efb02df045f24e"
+      },
+      "creation_date": 1313484893,
+      "last_activity_date": 1313487009,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 20,
+      "score": 1,
+      "community_owned": false,
+      "title": "Android - Setting X and Y coordinates to view in runtime",
+      "body": "<p>I have my own created class that extends class View.\nI need to set the X and Y coordinates and add my view in runtime.</p>\n\n<p>adding it is OK. My question is: </p>\n\n<p>Is there a way to set X and Y without the use of <strong>AbsoluteLayout</strong> params?</p>\n\n<p>(I didn't found any other options of setX/setY in other layout params).</p>\n\n<p>Thanks in Advance,\nAmigal</p>\n"
+    },
+    {
+      "tags": [
+        "c++",
+        "c"
+      ],
+      "answer_count": 5,
+      "favorite_count": 0,
+      "closed_date": 1313488373,
+      "closed_reason": "exact duplicate",
+      "question_timeline_url": "/questions/7075753/timeline",
+      "question_comments_url": "/questions/7075753/comments",
+      "question_answers_url": "/questions/7075753/answers",
+      "question_id": 7075753,
+      "owner": {
+        "user_id": 896316,
+        "user_type": "unregistered",
+        "display_name": "ali",
+        "reputation": 1,
+        "email_hash": "ce8b4552e44cb13280c746e103eb7189"
+      },
+      "creation_date": 1313484876,
+      "last_activity_date": 1313485258,
+      "up_vote_count": 0,
+      "down_vote_count": 2,
+      "view_count": 69,
+      "score": -2,
+      "community_owned": false,
+      "title": "How to execute a C program",
+      "body": "<blockquote>\n  <p><strong>Possible Duplicate:</strong><br>\n  <a href=\"http://stackoverflow.com/questions/2529617/how-to-stop-c-console-application-from-exiting-immediately\">How to stop C++ console application from exiting immediately?</a>  </p>\n</blockquote>\n\n\n\n<p>I successfully compiled and run my C program but how to see my output.\nwhen i click on run button.</p>\n\n<p>it's just blinking and agian showing ide.</p>\n"
+    },
+    {
+      "tags": [
+        "objective-c",
+        "ios",
+        "actionscript-3"
+      ],
+      "answer_count": 2,
+      "favorite_count": 1,
+      "question_timeline_url": "/questions/7075752/timeline",
+      "question_comments_url": "/questions/7075752/comments",
+      "question_answers_url": "/questions/7075752/answers",
+      "question_id": 7075752,
+      "owner": {
+        "user_id": 785923,
+        "user_type": "registered",
+        "display_name": "bitmapdata.com",
+        "reputation": 6,
+        "email_hash": "71de92842c798b882d576f75ff79fe9c"
+      },
+      "creation_date": 1313484859,
+      "last_edit_date": 1313485656,
+      "last_activity_date": 1313486661,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 31,
+      "score": 1,
+      "community_owned": false,
+      "title": "how to get instanceName by String",
+      "body": "<p>In Objective-C how to get instance name by certain rules?</p>\n\n<p>For example:</p>\n\n<p>Type1: self.btn(0,1,2,3,4,5,6,7,8,9...) in for loop get number from i</p>\n\n<pre><code>for(int i = 0; i&lt;10; i++){\n//wrong code ( similar ActionScript3.0 code)\nself.\"btn\"+i = [UIButton buttonWithType:UIButonTypeRoundRect];\n//i think code but, not available\nself.[NSString stringWithFormat:@\"btn%d\", i] = [UIButton buttonWithType:UIButtonTypeRoundedRect];\n}\n</code></pre>\n\n<p>Type2: UIButton *btn(0,1,2,3,4,5,6,7,8,9...) in for loop get number from i</p>\n\n<pre><code>for(int i =0; i&lt;10; i++){\n//wrong code ( similar ActionScript3.0 code)\nUIButton *\"btn\"+i = [UIButton buttonWithType:UIButtonTypeRoundRect];\n//i think code but, not available\nUIButton *[NSString stringWithFormat:@\"btn%d\", i] = [UIButton buttonWithType:UIButtonTypeRoundedRect];\n}\n</code></pre>\n\n<p>So, In ActionScript3.0 Soruce is below.</p>\n\n<pre><code>for( var i=0; i&lt;10; i++){\nthis[\"btn\"+i] = new SimpeButton();\n//btn0, btn1, btn2...btn10 get by for loop i object Simpebutton ten.\n}\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        ".net",
+        "fluent-nhibernate",
+        "queryover"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075748/timeline",
+      "question_comments_url": "/questions/7075748/comments",
+      "question_answers_url": "/questions/7075748/answers",
+      "question_id": 7075748,
+      "owner": {
+        "user_id": 445533,
+        "user_type": "registered",
+        "display_name": "bretddog",
+        "reputation": 721,
+        "email_hash": "3edde31582b5d94f52cfff495b2d5c04"
+      },
+      "creation_date": 1313484822,
+      "last_edit_date": 1313487687,
+      "last_activity_date": 1313487687,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 6,
+      "score": 0,
+      "community_owned": false,
+      "title": "FluentNHibernate; How to use QueryOver to put filter on sub-level object?",
+      "body": "<p>I'm trying to understand how to retrieve an object graph, where I want to put a filter on a sub-level object. So considering below classes. I want the query to retrieve the full collection of A, with their full collections of B, but for the collections of C, I want only to retrieve element of a certain range of dates. </p>\n\n<p>I'm trying to understand this material: \n<a href=\"http://nhforge.org/blogs/nhibernate/archive/2009/12/17/queryover-in-nh-3-0.aspx#Associations\" rel=\"nofollow\">http://nhforge.org/blogs/nhibernate/archive/2009/12/17/queryover-in-nh-3-0.aspx#Associations</a></p>\n\n<p>..with the expressions; Restrictions, Associations, Alias, Projections, SubQueries. </p>\n\n<p>Maybe it should be obvious, but I have a hard time seeing what are the different application of these extensions. How would I build the specific query I described above?</p>\n\n<pre><code> Class A\n   public List&lt;B&gt; Bs;\n\n Class B\n   public List&lt;C&gt; Cs;\n\n Class C\n   public Date time;\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "css"
+      ],
+      "answer_count": 3,
+      "accepted_answer_id": 7075861,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075746/timeline",
+      "question_comments_url": "/questions/7075746/comments",
+      "question_answers_url": "/questions/7075746/answers",
+      "question_id": 7075746,
+      "owner": {
+        "user_id": 460701,
+        "user_type": "registered",
+        "display_name": "Brett",
+        "reputation": 38,
+        "email_hash": "a4e7791c3d9dbde665e4b9748bd3da70"
+      },
+      "creation_date": 1313484804,
+      "last_activity_date": 1313485439,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 19,
+      "score": 0,
+      "community_owned": false,
+      "title": "Line height of wrapping text in list items",
+      "body": "<p>On the following page:</p>\n\n<p><a href=\"http://steve.brettatkin.com/projects.php\" rel=\"nofollow\">http://steve.brettatkin.com/projects.php</a></p>\n\n<p>When you hover over \"Work\", a sub-menu appears.  The 4th and 5th links have text that wraps.  How do decrease the line-height so that the second line of the link doesn't look like a new link?</p>\n\n<p>I've tried a combination of margin/padding/line-height on the <li> but it isn't working.</p>\n\n<p>Thanks</p>\n\n<p>Brett</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "c#-4.0",
+        "c#-3.0",
+        "c#-2.0"
+      ],
+      "answer_count": 3,
+      "accepted_answer_id": 7075775,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075745/timeline",
+      "question_comments_url": "/questions/7075745/comments",
+      "question_answers_url": "/questions/7075745/answers",
+      "question_id": 7075745,
+      "owner": {
+        "user_id": 885906,
+        "user_type": "registered",
+        "display_name": "Yasser",
+        "reputation": 14,
+        "email_hash": "8f31b3a91771aa20ed423637d0ae0e01"
+      },
+      "creation_date": 1313484798,
+      "last_activity_date": 1313485111,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 24,
+      "score": 0,
+      "community_owned": false,
+      "title": "get Item Index of arrayList knowing its Name",
+      "body": "<p>is there a function that take array list item and bring back item index ?</p>\n\n<p>for ex:</p>\n\n<p>int indexItem = ArrayList.getItemIndexByName(itemName);</p>\n"
+    },
+    {
+      "tags": [
+        "python",
+        "emacs",
+        "elisp",
+        "ipython"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075742/timeline",
+      "question_comments_url": "/questions/7075742/comments",
+      "question_answers_url": "/questions/7075742/answers",
+      "question_id": 7075742,
+      "owner": {
+        "user_id": 896314,
+        "user_type": "unregistered",
+        "display_name": "Ben",
+        "reputation": 1,
+        "email_hash": "79e2f00738b6cd72e45b5fbacb849239"
+      },
+      "creation_date": 1313484792,
+      "last_edit_date": 1313485020,
+      "last_activity_date": 1313485020,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 11,
+      "score": 0,
+      "community_owned": false,
+      "title": "Emacs Lisp: Open a new frame, start IPython, run previous buffer",
+      "body": "<p>I want to write an ELisp function to start a Python interpreter (IPython) in a new frame and then run the contents of the previous buffer in the IPython interpreter.  I am using Emacs 23.3.1, python-mode 6.0 and ipython.el.</p>\n\n<p>Here's my function so far:</p>\n\n<pre><code>(defun python-run ()\n  \"Use to run Python programs.\"\n  (interactive)\n  (let (my-buffer-name buffer-name)\n    (select-frame (make-frame))\n    (set-frame-size (selected-frame) 90 60)\n    (py-shell)\n    (delete-other-windows)\n    (switch-to-buffer my-buffer-name)\n    (py-execute-buffer)))\n</code></pre>\n\n<p>The output is that:  </p>\n\n<ol>\n<li>IPython successfully starts via <code>py-shell</code>.</li>\n<li>There is still two windows in the frame, not one like I want.</li>\n<li>It doesn't successfully execute the buffer, output is:</li>\n</ol>\n\n<pre>\nIn [1]: execfile(r'/var/folders/so/sox1TODiEE0hAb6AVusYq++++Tc/-Tmp-/python-26368Zoi.py') # PYTHON-> MODE\n---------------------------------------------------------------------------\nIOError                                   \nTraceback (most recent call last)\n/Users/ben/ in ()\n----> 1 execfile(r'/var/folders/so/sox1TODiEE0hAb6AVusYq++++Tc/-Tmp-/python-26368Zoi.py') # PYTHON-> MODE \nIOError: [Errno 2] No such file or directory: '/var/folders/so/sox1TODiEE0hAb6AVusYq++++Tc/-Tmp-> /python-26368Zoi.py'\nIn [2]: ## working on region in file /var/folders/so/sox1TODiEE0hAb6AVusYq++++Tc/-Tmp-/python-> 26368fXv.py...\nexecfile(r'/var/folders/so/sox1TODiEE0hAb6AVusYq++++Tc/-Tmp-/python-26368fXv.py') # PYTHON-MODE\nFile \"/var/folders/so/sox1TODiEE0hAb6AVusYq++++Tc/-Tmp-/python-26368fXv.py\", line 1\n   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n    ^\nSyntaxError: invalid syntax\n</pre>\n\n<p>Any thoughts on how to get either the single window or the buffer to be executed?  Thanks!</p>\n"
+    },
+    {
+      "tags": [
+        "api",
+        "basecamp"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075740/timeline",
+      "question_comments_url": "/questions/7075740/comments",
+      "question_answers_url": "/questions/7075740/answers",
+      "question_id": 7075740,
+      "owner": {
+        "user_id": 615007,
+        "user_type": "unregistered",
+        "display_name": "pmalerba",
+        "reputation": 1,
+        "email_hash": "59240cec7e23469fecea94a16bfeccba"
+      },
+      "creation_date": 1313484785,
+      "last_activity_date": 1313484785,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 4,
+      "score": 0,
+      "community_owned": false,
+      "title": "Basecamp API Last Users Login",
+      "body": "<p>I'm playing with Basecamp PHP API( <a href=\"http://code.google.com/p/basecamp-php-api/\" rel=\"nofollow\">http://code.google.com/p/basecamp-php-api/</a>\n).\nI'd like to see the last login by a user. I'm analyzing and debugging\nthe response of differents PHP API functions like:</p>\n\n<ul>\n<li><p><strong>getPeople()</strong> (people.xml)</p></li>\n<li><p><strong>getPeopleForProject($project_id,$format=null)</strong></p></li>\n<li><p><strong>getPerson($person_id);</strong></p></li>\n</ul>\n\n<p>But any of these func have the information I need, even if reading\nhere <a href=\"http://developer.37signals.com/basecamp/reference.shtml\" rel=\"nofollow\">http://developer.37signals.com/basecamp/reference.shtml</a> in the\npeople.xml I shoud see:</p>\n\n<pre><code>&lt;person&gt;\n  &lt;id type=\"integer\"&gt;#{id}&lt;/id&gt;\n...\n  ---&gt; &lt;last-login type=\"datetime\"&gt;#{last_login}&lt;/last-login&gt; &lt;------\n  &lt;company-id type=\"integer\"&gt;#{company_id}&lt;/company-id&gt;\n  &lt;client-id type=\"integer\"&gt;#{client_id}&lt;/client-id&gt;\n  &lt;avatar-url&gt;#{avatar_url}&lt;/avatar-url&gt;\n...\n&lt;/person&gt;\n</code></pre>\n\n<p>What I get is for exaple for <strong>getPeople()</strong> is</p>\n\n<pre><code>[person] =&gt; Array\n                (\n                    [0] =&gt; SimpleXMLElement Object\n                        (\n                            [client-id] =&gt; 0\n                            [created-at] =&gt; hide\n                            [deleted] =&gt; hide\n                            [has-access-to-new-projects] =&gt; hide\n                            [id] =&gt; hide\n                            [im-handle] =&gt; SimpleXMLElement Object\n                                (\n                                    [@attributes] =&gt; Array\n                                        (\n                                            [nil] =&gt; true\n                                        )\n                                )\n                            [im-service] =&gt; SimpleXMLElement Object\n                                (\n                                    [@attributes] =&gt; Array\n                                        (\n                                            [nil] =&gt; true\n                                        )\n                                )\n                            [phone-number-fax] =&gt; SimpleXMLElement\nObject\n                                (\n                                    [@attributes] =&gt; Array\n                                        (\n                                            [nil] =&gt; true\n                                        )\n                                )\n                            [phone-number-home] =&gt; SimpleXMLElement\nObject\n                                (\n                                    [@attributes] =&gt; Array\n                                        (\n                                            [nil] =&gt; true\n                                        )\n                                )\n                            [phone-number-mobile] =&gt; SimpleXMLElement\nObject\n                                (\n                                    [@attributes] =&gt; Array\n                                        (\n                                            [nil] =&gt; true\n                                        )\n                                )\n                            [phone-number-office] =&gt; SimpleXMLElement\nObject\n                                (\n                                    [@attributes] =&gt; Array\n                                        (\n                                            [nil] =&gt; true\n                                        )\n                                )\n                            [phone-number-office-ext] =&gt;\nSimpleXMLElement Object\n                                (\n                                    [@attributes] =&gt; Array\n                                        (\n                                            [nil] =&gt; true\n                                        )\n                                )\n                            [title] =&gt; SimpleXMLElement Object\n                                (\n                                    [@attributes] =&gt; Array\n                                        (\n                                            [nil] =&gt; true\n                                        )\n                                )\n                            [updated-at] =&gt; hide\n                            [uuid] =&gt; hide\n                            [first-name] =&gt; hide\n                            [last-name] =&gt; hide\n                            [company-id] =&gt; hide\n                            [user-name] =&gt; hide\n                            [administrator] =&gt; hide\n                            [email-address] =&gt; hide\n                            [avatar-url] =&gt; hide\n                        )\n</code></pre>\n\n<p>Any information about last login.\nCould you help me to figure out what's wrong?</p>\n\n<p>Tnx </p>\n"
+    },
+    {
+      "tags": [
+        "iphone",
+        "objective-c",
+        "ios"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075738/timeline",
+      "question_comments_url": "/questions/7075738/comments",
+      "question_answers_url": "/questions/7075738/answers",
+      "question_id": 7075738,
+      "owner": {
+        "user_id": 896313,
+        "user_type": "unregistered",
+        "display_name": "Damjan Mozetic",
+        "reputation": 1,
+        "email_hash": "f1b5e9fd97c16c095fff3301ef101cc8"
+      },
+      "creation_date": 1313484774,
+      "last_edit_date": 1313485964,
+      "last_activity_date": 1313488071,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 15,
+      "score": 0,
+      "community_owned": false,
+      "title": "Editing Changed IB event fires before text is changed in a UITextField",
+      "body": "<p>I am firing the updateFindName method by linking it to the Editing Changed event in IB. The problem is that the method seems to fire before recording the actial change in the UITextField uiFindName. I wanted to update the uiFindNameLabel's text to uiFindName's placeholder text when the user clears all text in uiFindName, and it does, but only AFTER another character is typed into the uiFindName. Any tips?</p>\n\n<pre><code>- (IBAction)updateFindName:(id)sender {\n    if ([uiFindNameLabel.text isNotEmpty]) {\n        uiFindNameLabel.text = uiFindName.text;\n    } else {\n        uiFindNameLabel.text = uiFindName.placeholder;\n    }\n}\n</code></pre>\n\n<p>Note, isNotEmpty is just a method checking for empty strings.</p>\n"
+    },
+    {
+      "tags": [
+        "android"
+      ],
+      "answer_count": 4,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075737/timeline",
+      "question_comments_url": "/questions/7075737/comments",
+      "question_answers_url": "/questions/7075737/answers",
+      "question_id": 7075737,
+      "owner": {
+        "user_id": 896312,
+        "user_type": "unregistered",
+        "display_name": "Simon",
+        "reputation": 6,
+        "email_hash": "50ae3e96bdef2b0965e146e90555bbf3"
+      },
+      "creation_date": 1313484764,
+      "last_activity_date": 1313488313,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 19,
+      "score": 1,
+      "community_owned": false,
+      "title": "Trying to send a view's id with an intent. Getting \"false\"",
+      "body": "<p>This class has information that I want to send with an intent to another activity. When the image button \"superman\" is pressed the onClick() handler sends an intent to SuperheroActivity. But when I try and retrieve that information in the other activity I get \"false\".</p>\n\n<pre><code>public class MenuActivity extends Activity implements\n    OnClickListener {\nprivate ImageButton superman;\n\n/** Called when the activity is first created. */\n@Override\npublic void onCreate(Bundle savedInstanceState) {\n    super.onCreate(savedInstanceState);\n    setContentView(R.layout.menu);\n\n    superman = (ImageButton) findViewById(R.id.superman);\n    superman.setOnClickListener(this);\n}\n\n@Override\npublic void onClick(View v) {\n    Intent intent = new Intent(MenuActivity.this, SuperheroActivity.class);\n    intent.putExtra(\"id\", v.getId());\n    startActivity(intent);\n}\n</code></pre>\n\n<p>}</p>\n\n<p>This is the piece of code that tries to retrieve the information from the intent. Note: This is SuperheroActivity.</p>\n\n<pre><code>Intent intent = getIntent();\nid = intent.getIntExtra(\"id\", 0);\n// This is just a dirty way for me to see the value of the id I am getting.\nTextView text = (TextView) findViewById(R.id.superheroText); \ntext.setText(id);\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "php",
+        "mysql"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075736/timeline",
+      "question_comments_url": "/questions/7075736/comments",
+      "question_answers_url": "/questions/7075736/answers",
+      "question_id": 7075736,
+      "owner": {
+        "user_id": 735496,
+        "user_type": "registered",
+        "display_name": "micahhoover",
+        "reputation": 92,
+        "email_hash": "c182316699e6565294a7b9857f00d4b7"
+      },
+      "creation_date": 1313484751,
+      "last_activity_date": 1313486398,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 23,
+      "score": 0,
+      "community_owned": false,
+      "title": "query blob as varchar",
+      "body": "<p>I'm trying to get a blob field returned to php as a varchar.</p>\n\n<p>The field is a blob named \"ssn\".</p>\n\n<p>If I do:</p>\n\n<pre><code>select cast(ssn as char) from staff\n</code></pre>\n\n<p>I get a bunch of entries (with what appears to be garbage that messes with my javascript).</p>\n\n<p>I don't even know the column name to reference them.</p>\n\n<p>If I try to grab it in PHP using thusly:</p>\n\n<pre><code>mysql_result( $result, $index, \"ssn\" )\n</code></pre>\n\n<p>I get:</p>\n\n<blockquote>\n  <p>... ssn not found in MySQL result ...</p>\n</blockquote>\n\n<p>Any suggestions?</p>\n\n<p>How do I avoid getting garbage back? Is it just that my client's ssn's are scrambled so I can't see them? Are there similar types I should consider casting to? And how do I reference it in my mysql_result() call?</p>\n"
+    },
+    {
+      "tags": [
+        "android"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075734/timeline",
+      "question_comments_url": "/questions/7075734/comments",
+      "question_answers_url": "/questions/7075734/answers",
+      "question_id": 7075734,
+      "owner": {
+        "user_id": 864340,
+        "user_type": "registered",
+        "display_name": "Dylan",
+        "reputation": 16,
+        "email_hash": "6882d82dfb7f22be1157ea1586ab8e43"
+      },
+      "creation_date": 1313484734,
+      "last_activity_date": 1313484734,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 10,
+      "score": 1,
+      "community_owned": false,
+      "title": "Loss of focus causes event build-up in Android ActivityGroup",
+      "body": "<p>I am making an app which makes use of <code>ActivityGroup</code> to embed activities in an <code>ExpandableListView</code>, primarily so that 3rd party apps can then extend the functionality of my app by registering additional activities to display as the children of list groups. Unfortunately there is an issue where if more than one group is in the expanded state, and then one of those groups is contracted then expanded again, the activities in the other expanded groups that were visible on the screen then do not receive touch events until after I contract then expand them again, or scroll them out of view then back into view. The events that were attempted then all execute immediately, so for example if a frustrated user tries to click several times on a button that launches a dialog, the result is several dialogs layered upon each other. I think that this issue is something to do with focus. How can I fix this? Thanks in advance.</p>\n"
+    },
+    {
+      "tags": [
+        "asp.net",
+        "vb.net"
+      ],
+      "answer_count": 1,
+      "accepted_answer_id": 7075788,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075732/timeline",
+      "question_comments_url": "/questions/7075732/comments",
+      "question_answers_url": "/questions/7075732/answers",
+      "question_id": 7075732,
+      "owner": {
+        "user_id": 460612,
+        "user_type": "registered",
+        "display_name": "stuartmclark",
+        "reputation": 428,
+        "email_hash": "9c7622d3d2da3fa4dd967390ba095086"
+      },
+      "creation_date": 1313484712,
+      "last_activity_date": 1313485092,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 8,
+      "score": 0,
+      "community_owned": false,
+      "title": "Convert internal web application to public web application",
+      "body": "<p>I have been tasked with setting up an internal web application to become public facing. The web site was written in ASP.Net and I am just looking for some advice about how I should go about this procedure. </p>\n\n<p>Apart from hosting the site on a public facing server I don't know what else I would need to take into consideration. </p>\n\n<p>Any information would be appreciated.</p>\n"
+    },
+    {
+      "tags": [
+        "c",
+        "linux"
+      ],
+      "answer_count": 2,
+      "accepted_answer_id": 7075827,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075731/timeline",
+      "question_comments_url": "/questions/7075731/comments",
+      "question_answers_url": "/questions/7075731/answers",
+      "question_id": 7075731,
+      "owner": {
+        "user_id": 266405,
+        "user_type": "registered",
+        "display_name": "JohnB",
+        "reputation": 58,
+        "email_hash": "bec5f8559a4a62d7fb6d100b3a8ba3bd"
+      },
+      "creation_date": 1313484711,
+      "last_activity_date": 1313485659,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 30,
+      "score": 2,
+      "community_owned": false,
+      "title": "ASCII English Text / ASCII C Program Text Question",
+      "body": "<p>Can anyone tell me the difference between ASCII English Text and ASCII C Program Text files. I have been writing a small program and when I use the Linux 'file' command on one of the files it describes it as ASCII English Text whereas all other files are described as ASCII C Program Text. The program compiles but I am getting strange results. This might be unrelated but I cant escape the thought that this is causing the issue. </p>\n\n<p>So what are the difference between these files? Why does the file compile and could this cause issues? Finally how can I convert from  ASCII English Text to ASCII C Program Text.</p>\n\n<p>Thanks!</p>\n"
+    },
+    {
+      "tags": [
+        "iphone",
+        "xcode"
+      ],
+      "answer_count": 1,
+      "accepted_answer_id": 7075810,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075730/timeline",
+      "question_comments_url": "/questions/7075730/comments",
+      "question_answers_url": "/questions/7075730/answers",
+      "question_id": 7075730,
+      "owner": {
+        "user_id": 896310,
+        "user_type": "unregistered",
+        "display_name": "Polo",
+        "reputation": 3,
+        "email_hash": "22e8c9cd4e7991af5f2f24235ab27119"
+      },
+      "creation_date": 1313484705,
+      "last_activity_date": 1313485191,
+      "up_vote_count": 0,
+      "down_vote_count": 2,
+      "view_count": 20,
+      "score": -2,
+      "community_owned": false,
+      "title": "animating image in heart beat form by xcode",
+      "body": "<p>I have inserted an image in the view.No I need to set an animation in a way that it glows on and off (like heartbeat action) when user selects that image.What will be the code for that?please help me.</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        ".net",
+        "ipc"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075729/timeline",
+      "question_comments_url": "/questions/7075729/comments",
+      "question_answers_url": "/questions/7075729/answers",
+      "question_id": 7075729,
+      "owner": {
+        "user_id": 130213,
+        "user_type": "registered",
+        "display_name": "Jay",
+        "reputation": 111,
+        "email_hash": "0685124fbb8db1c72a3b6ab088a6961a"
+      },
+      "creation_date": 1313484681,
+      "last_activity_date": 1313485431,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 13,
+      "score": 0,
+      "community_owned": false,
+      "title": "What kind of IPC have event for notify?",
+      "body": "<p>the case is, user will open a aspx to look for file generated in runtime. Such file is generated my a managed window service at the beginning design.</p>\n\n<p>Now I am considering to have a IPC between aspx and the window service, so when I have a request from the user, I can send a message to windows service. After it is done, send back the file path and then open it in aspx.</p>\n\n<p>I have a look about IPCChannel, Named Pipe and shared memory ...seems they are not very good on this purpose ...</p>\n\n<p>Actually, the function just like filesystemwatcher ...When a message come, raise a event and I response ...</p>\n\n<p>Thanks.</p>\n"
+    },
+    {
+      "tags": [
+        "django",
+        "apache",
+        "mod-wsgi",
+        "django-file-upload"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075716/timeline",
+      "question_comments_url": "/questions/7075716/comments",
+      "question_answers_url": "/questions/7075716/answers",
+      "question_id": 7075716,
+      "owner": {
+        "user_id": 348869,
+        "user_type": "registered",
+        "display_name": "ApPeL",
+        "reputation": 588,
+        "email_hash": "775783b93b373fc1e9c9f58f2357a644"
+      },
+      "creation_date": 1313484598,
+      "last_edit_date": 1313485061,
+      "last_activity_date": 1313485061,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 7,
+      "score": 0,
+      "community_owned": false,
+      "title": "Django 1.1.2 file upload with Apache and WSGI",
+      "body": "<p>I have a centos5 server running apache and mod_wsgi.</p>\n\n<p>I have updated my django settings file to allow for bigger uploads.</p>\n\n<pre><code>FILE_UPLOAD_MAX_MEMORY_SIZE = 429916160\n</code></pre>\n\n<p>the maximum i have set it too is 500mb</p>\n\n<p>filesize = 162,4 MB total\nAlthough I find that when the file reaches about 25% (seeing in Google Chrome), it seems like it times out or the connection just terminates.</p>\n\n<p>Are there any further adjustmenst that need to be made in Apache, or mod_wsgi to achieve bigger uploads?</p>\n\n<p>Thanks in advance</p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "homework"
+      ],
+      "answer_count": 4,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075714/timeline",
+      "question_comments_url": "/questions/7075714/comments",
+      "question_answers_url": "/questions/7075714/answers",
+      "question_id": 7075714,
+      "owner": {
+        "user_id": 560347,
+        "user_type": "registered",
+        "display_name": "Kashif Imran",
+        "reputation": 1,
+        "email_hash": "74d02130b9af8cd64dc822a8cff6566a"
+      },
+      "creation_date": 1313484579,
+      "last_edit_date": 1313485371,
+      "last_activity_date": 1313486557,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 54,
+      "score": 0,
+      "community_owned": false,
+      "title": "Displaying top 10 most occuring words in a file in descending order",
+      "body": "<p>I have a program which sorts the all the words of a file according to their occurrence.</p>\n\n<p>How can I display only the top 10 of them in descending order?</p>\n\n<p>Here is my program:</p>\n\n<pre><code>import java.io.*; \nimport java.util.*; \n\npublic class HashMapEx {\n\n    public static void main(String[] args) {         \n        LinkedHashMap&lt;String, Integer&gt; wordcount =\n                new LinkedHashMap&lt;String, Integer&gt;();\n        try { \n            BufferedReader in = new BufferedReader(\n                                      new FileReader(\"c:\\\\test\\\\sample.txt\"));\n            String str;\n\n            while ((str = in.readLine()) != null) { \n                str = str.toLowerCase(); // convert to lower case \n                int idx1 = -1;\n\n                for (int i = 0; i &lt; str.length(); i++) { \n\n                    if  ((!Character.isLetter(str.charAt(i))) ||\n                         (i + 1 == str.length())) { \n\n                        if (i - idx1 &gt; 1) { \n                            if (Character.isLetter(str.charAt(i))) \n                                i++;\n                            String word = str.substring(idx1 + 1, i);\n                            if  (wordcount.containsKey(word)) { \n                                wordcount.put(word, wordcount.get(word) + 1);\n                            } else { \n                                wordcount.put(word, 1);\n                            } \n                        }          \n                        idx1 = i;\n                    } \n                } \n            } \n            in.close();\n        } catch (Exception e) { \n            e.printStackTrace();\n            System.exit(1);\n        } \n\n        ArrayList&lt;Integer&gt; values = new ArrayList&lt;Integer&gt;();\n        values.addAll(wordcount.values());\n\n        Collections.sort(values, Collections.reverseOrder());\n\n        int last_i = -1;\n\n        for (Integer i : values) { \n            if (last_i == i) // without duplicates\n                continue;\n            last_i = i;\n\n            for (String s : wordcount.keySet()) { \n                if (wordcount.get(s) == i) // which have this value  \n                    System.out.println(s + \":\" + i);\n            } \n        } \n    } \n} \n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "graph",
+        "onmouseover",
+        "jung"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075713/timeline",
+      "question_comments_url": "/questions/7075713/comments",
+      "question_answers_url": "/questions/7075713/answers",
+      "question_id": 7075713,
+      "owner": {
+        "user_id": 410823,
+        "user_type": "registered",
+        "display_name": "Skarab",
+        "reputation": 951,
+        "email_hash": "08ab32adfbfa32a2f52733864c72c0e6"
+      },
+      "creation_date": 1313484572,
+      "last_activity_date": 1313484572,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 7,
+      "score": 1,
+      "community_owned": false,
+      "title": "Jung2: How to implement displaying details of a node on mouse over of a Node?",
+      "body": "<p>I am looking for a way how to display details of a node (as a popup) on MouseOver. Unfortunately the Jung2 tutorial does not provide any information how to implement this kind of functionality. Could anybody share a code sample or point me to an example on the web?</p>\n"
+    },
+    {
+      "tags": [
+        "r",
+        "windows-7",
+        "installation",
+        "package"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075709/timeline",
+      "question_comments_url": "/questions/7075709/comments",
+      "question_answers_url": "/questions/7075709/answers",
+      "question_id": 7075709,
+      "owner": {
+        "user_id": 390542,
+        "user_type": "registered",
+        "display_name": "flashflail",
+        "reputation": 145,
+        "email_hash": "d1a75d795e4550ee72726752dace8051"
+      },
+      "creation_date": 1313484555,
+      "last_activity_date": 1313485359,
+      "up_vote_count": 3,
+      "down_vote_count": 0,
+      "view_count": 12,
+      "score": 3,
+      "community_owned": false,
+      "title": "Install binary zipped R package via command line",
+      "body": "<p>I am trying to install zipped binary R packages via command line on a windows 7 machine with</p>\n\n<pre><code>R CMD INSTALL packagename\n</code></pre>\n\n<p>but it doesn't work. I read that CMD INSTALL can't be used to install binary packages. So how can I install binary packages via command line?</p>\n"
+    },
+    {
+      "tags": [
+        "sharepoint",
+        "sharepoint2010",
+        "workspace",
+        "sharepointadmin"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075706/timeline",
+      "question_comments_url": "/questions/7075706/comments",
+      "question_answers_url": "/questions/7075706/answers",
+      "question_id": 7075706,
+      "owner": {
+        "user_id": 896241,
+        "user_type": "registered",
+        "display_name": "Pavel A. Lemnitskiy",
+        "reputation": 1,
+        "email_hash": "665a76d8295386738cec5b3759f9ba0e"
+      },
+      "creation_date": 1313484536,
+      "last_activity_date": 1313484536,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 5,
+      "score": 0,
+      "community_owned": false,
+      "title": "Failed synchronizzation with a sharepoint workspace after localization",
+      "body": "<p>I have a SharePoint Server 2010 and Office 2010 workspace on the user's computers. I'v needed to make the ordinary thing:\n - deploy a sharepoint's site structure with documents stores in the libraries;\n - connect user's computers to workspaces for accessing to these documents.</p>\n\n<p>For the first time everything was OK, but when I installed the official Russian language pack synchronizatoin had failed. Old workspaces are not synchronizing since that and any attempt of connecting to new workspace raises an error like \"hresult 0x8004005 exception in groove.exe\" either for connecting from client's computer or directly from website.</p>\n\n<p>The text of exception, for example: \"Unspecified error. HRESULT: 0x80004005 (0x664353775) Process: GROOVE.exe\".</p>\n\n<p>There is an interesting fact: this error raises only in an ordinary sharepoint sites i.e. in .../wss10/sites/... area. When I'v created a site in Central Administration area like .../wss10:5555/TestSite then syncrinization of clients with this site was OK. But in any cases I need to connect to an ordinary siites like <a href=\"http://wss10/sites/Test10\" rel=\"nofollow\">http://wss10/sites/Test10</a>, so it is not a good decision.</p>\n\n<p>I am assuming that the cause is in the incorrect starting of some sharepoint service or in the privilege system.</p>\n\n<p>Can anybody explain me how I must customize my sharepoint server for reparing synchronization? </p>\n"
+    },
+    {
+      "tags": [
+        "ios",
+        "xcode4",
+        "xcode4.1"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075704/timeline",
+      "question_comments_url": "/questions/7075704/comments",
+      "question_answers_url": "/questions/7075704/answers",
+      "question_id": 7075704,
+      "owner": {
+        "user_id": 851578,
+        "user_type": "registered",
+        "display_name": "user851578",
+        "reputation": 58,
+        "email_hash": "57e336ff44dbfab100d50f95f39e3f10"
+      },
+      "creation_date": 1313484528,
+      "last_activity_date": 1313484751,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 13,
+      "score": 0,
+      "community_owned": false,
+      "title": "How to use device instead of Simulator",
+      "body": "<p>I am a new with iphone development and want to test my application on my iphone . I have paid $100 but can not find any way to workout how to do that . There are some references around but they are for xcode 3.</p>\n\n<p>Any help would be much appreciated.</p>\n"
+    },
+    {
+      "tags": [
+        "events",
+        "dojo",
+        "internet-explorer-9"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075695/timeline",
+      "question_comments_url": "/questions/7075695/comments",
+      "question_answers_url": "/questions/7075695/answers",
+      "question_id": 7075695,
+      "owner": {
+        "user_id": 685893,
+        "user_type": "registered",
+        "display_name": "harris",
+        "reputation": 1,
+        "email_hash": "c75ab10ea7f6048f0bd1d9ab11075e22"
+      },
+      "creation_date": 1313484476,
+      "last_activity_date": 1313484476,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 2,
+      "score": 0,
+      "community_owned": false,
+      "title": "dojo: override anonymous function in events.js to handle events in IE9",
+      "body": "<p><br>\n   I am using dojo 1.5 library in my project.While working on IE9,dojo.stopEvent and preventDefault breaks to prevent browser right click action.However I got the patch on <a href=\"http://bugs.dojotoolkit.org/changeset/23802/dojo\" rel=\"nofollow\">http://bugs.dojotoolkit.org/changeset/23802/dojo</a>. <br>However I don't want to make changes in library itself.I am looking for writing my own code to patch this by overriding the methods of event.js.\n<br>But I am not able to override the anonymous function.<br>How do I solve this?<br>\nThanks in advance.     </p>\n"
+    },
+    {
+      "tags": [
+        "ruby-on-rails",
+        "rails-migrations"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075686/timeline",
+      "question_comments_url": "/questions/7075686/comments",
+      "question_answers_url": "/questions/7075686/answers",
+      "question_id": 7075686,
+      "owner": {
+        "user_id": 896301,
+        "user_type": "unregistered",
+        "display_name": "Ghassan-Shaaban",
+        "reputation": 1,
+        "email_hash": "93dc730edc5edded0294d55f88e1eb9e"
+      },
+      "creation_date": 1313484397,
+      "last_edit_date": 1313488321,
+      "last_activity_date": 1313488321,
+      "up_vote_count": 0,
+      "down_vote_count": 2,
+      "view_count": 23,
+      "score": -2,
+      "community_owned": false,
+      "title": "Ruby-On-Rails rake db:migrate",
+      "body": "<p>I am using the command <code>db:migrate</code> for my application, but I am facing the following error:</p>\n\n<pre><code>C:\\Sites\\myapplicationname&gt;rake db:migrate\n&lt;in C:/Sites/myapplicationame&gt;\nrake aborted! \nuninitialized constant SmartSessionStore\n</code></pre>\n\n<p>Please help me out here!</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "regex"
+      ],
+      "answer_count": 1,
+      "favorite_count": 1,
+      "question_timeline_url": "/questions/7075683/timeline",
+      "question_comments_url": "/questions/7075683/comments",
+      "question_answers_url": "/questions/7075683/answers",
+      "question_id": 7075683,
+      "owner": {
+        "user_id": 341062,
+        "user_type": "registered",
+        "display_name": "BombDefused",
+        "reputation": 791,
+        "email_hash": "47f211bc51bcc38942e1f834daa67704"
+      },
+      "creation_date": 1313484387,
+      "last_activity_date": 1313485172,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 19,
+      "score": 0,
+      "community_owned": false,
+      "title": "Help identifying issue in Relative to Absolute URL RegEx Replacement",
+      "body": "<p>I have been working with some code I found <a href=\"http://blog.nathan-taylor.net/2010/07/aspnet-convert-relative-url-to-absolute.html\" rel=\"nofollow\">here</a> to help me with converting relative URLs to absolute URLs in HTML page source.</p>\n\n<p>I want to work with RegEx, and not HTML Agility pack for this particular problem.</p>\n\n<p>I've modified the code slightly, which is working well except that relative urls with a preceeding \"/\" are replaced, but it seems, so far as I can tell, relative URL's that don't include a preceeding slash are not.</p>\n\n<p>I'm pretty sure the issue is in the intitial regEx string, as no replaces are attempted. This is beyond my regular expression knowledge.</p>\n\n<p>Can anyone help me identify what is causing this not to match the types of URL I have described?</p>\n\n<p><code>const string htmlPattern = \"(?&lt;attrib&gt;\\\\shref|\\\\ssrc|\\\\sbackground)\\\\s*?=\\\\s*?\"\n                                  + \"(?&lt;delim1&gt;[\\\"'\\\\\\\\]{0,2})(?!#|http|ftp|mailto|javascript)\"\n                                  + \"/(?&lt;url&gt;[^\\\"'&gt;\\\\\\\\]+)(?&lt;delim2&gt;[\\\"'\\\\\\\\]{0,2})\";</code></p>\n\n<p>// Wrapper Code</p>\n\n<pre><code>public static string GetRelativePathReplacedHtml(string source, Uri uri)\n    {\n        source = source.HtmlAppRelativeUrlsToAbsoluteUrls( uri );\n\n        return source;\n    }\n</code></pre>\n\n<p>// RegEx Match Code</p>\n\n<pre><code>public static string HtmlAppRelativeUrlsToAbsoluteUrls(this string html, Uri rootUrl)\n    {\n        if (string.IsNullOrEmpty(html))\n            return html;\n\n        const string htmlPattern = \"(?&lt;attrib&gt;\\\\shref|\\\\ssrc|\\\\sbackground)\\\\s*?=\\\\s*?\"\n                                  + \"(?&lt;delim1&gt;[\\\"'\\\\\\\\]{0,2})(?!#|http|ftp|mailto|javascript)\"\n                                  + \"/(?&lt;url&gt;[^\\\"'&gt;\\\\\\\\]+)(?&lt;delim2&gt;[\\\"'\\\\\\\\]{0,2})\";\n\n        var htmlRegex = new Regex(htmlPattern, RegexOptions.IgnoreCase | RegexOptions.Multiline);\n        html = htmlRegex.Replace(html, m =&gt; htmlRegex.Replace(m.Value, \"${attrib}=${delim1}\" + (\"~/\" + m.Groups[\"url\"].Value).ToAbsoluteUrl(rootUrl) + \"${delim2}\"));\n\n        const string cssPattern = \"@import\\\\s+?(url)*['\\\"(]{1,2}\"\n                                  + \"(?!http)\\\\s*/(?&lt;url&gt;[^\\\"')]+)['\\\")]{1,2}\";\n\n        var cssRegex = new Regex(cssPattern, RegexOptions.IgnoreCase | RegexOptions.Multiline);\n        html = cssRegex.Replace(html, m =&gt; cssRegex.Replace(m.Value, \"@import url(\" + (\"~/\" + m.Groups[\"url\"].Value).ToAbsoluteUrl(rootUrl) + \")\"));\n\n        return html;\n    }\n</code></pre>\n\n<p>// Url Conversion</p>\n\n<pre><code>    public static string ToAbsoluteUrl(this string relativeUrl, Uri rootUrl)\n    {\n        if (string.IsNullOrEmpty(relativeUrl))\n            return relativeUrl;\n\n        if (relativeUrl.StartsWith(\"/\"))\n            relativeUrl = relativeUrl.Insert(0, \"~\");\n        if (!relativeUrl.StartsWith(\"~/\"))\n            relativeUrl = relativeUrl.Insert(0, \"~/\");\n\n        var url = rootUrl;\n        var port = url.Port != 80 ? (\":\" + url.Port) : String.Empty;\n\n        // return string.Format(\"{0}://{1}{2}{3}\", url.Scheme, url.Host, port, VirtualPathUtility.ToAbsolute(relativeUrl));\n        return string.Format(\"{0}://{1}{2}{3}\", url.Scheme, url.Host, port, relativeUrl.Replace(\"~/\", \"/\"));\n    }\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "linux",
+        "scripting"
+      ],
+      "answer_count": 3,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075676/timeline",
+      "question_comments_url": "/questions/7075676/comments",
+      "question_answers_url": "/questions/7075676/answers",
+      "question_id": 7075676,
+      "owner": {
+        "user_id": 651829,
+        "user_type": "registered",
+        "display_name": "Ranger",
+        "reputation": 23,
+        "email_hash": "802e6d1fa18238aee67f2ff8e5aacffa"
+      },
+      "creation_date": 1313484345,
+      "last_activity_date": 1313487594,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 36,
+      "score": 0,
+      "community_owned": false,
+      "title": "Problems with Linux scripting",
+      "body": "<p>I'm relativity new to scripting and such but I'm trying to make a script that will run at a particular time which will backup a network drive to a off site destination.</p>\n\n<p>I have the commands working manually and have figured out the timing but I am getting the following error when trying to run the script:</p>\n\n<pre><code>    cd /volume1/Data\n    lftp -u [username],[password] [Destination]\n    Mirror [directoryname] -R -n\n</code></pre>\n\n<p>Can't cd to volume1/Data, line 3 mirror not found.</p>\n\n<p>I've to checked the capitalization and spelling.</p>\n\n<p>hmmm </p>\n"
+    },
+    {
+      "tags": [
+        "mysql",
+        "data-structures"
+      ],
+      "answer_count": 2,
+      "accepted_answer_id": 7075915,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075670/timeline",
+      "question_comments_url": "/questions/7075670/comments",
+      "question_answers_url": "/questions/7075670/answers",
+      "question_id": 7075670,
+      "owner": {
+        "user_id": 715239,
+        "user_type": "registered",
+        "display_name": "Adam Ingmansson",
+        "reputation": 19,
+        "email_hash": "28e56559ce38daf706f18292aceb53e4"
+      },
+      "creation_date": 1313484323,
+      "last_activity_date": 1313487395,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 21,
+      "score": 0,
+      "community_owned": false,
+      "title": "SQL query as (dynamic) column value",
+      "body": "<p>Consider the following MySQL scenario:</p>\n\n<pre><code>Table1:\nid, date, value\n\nTable2:\nid, month, count\n</code></pre>\n\n<p>Table one exists of many rows spanning over 1 year (the dates) and different values</p>\n\n<p>Is there any way to have the values of Table 2 columns 'count' as SQL queries?</p>\n\n<p>Example:\nrow 1 in Table2</p>\n\n<pre><code>ID | Month | Count\n------------------------------------------------------------------------------\n1  | 07    | SELECT COUNT(*) FROM Table1 WHERE MONTH(DATE) = Table2.month\n</code></pre>\n\n<p>So if i do a <strong>select * from Table2 where month = 07</strong></p>\n\n<p>Then I would get the number of rows from Table one with the corresponding month.</p>\n\n<p>Some kind of a dynamic column value for each rows, is there a way?</p>\n\n<p>Note: I mean if there is any built in way, not using a subquery like</p>\n\n<pre><code>SELECT *, \n(SELECT COUNT(*) FROM Table1 WHERE MONTH(date) = Table2.month) as count\nFROM Table2 where id = 2352\n</code></pre>\n\n<p>as my real queries will use multiple and thus get really messy :(</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "javascript"
+      ],
+      "answer_count": 2,
+      "accepted_answer_id": 7075849,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075668/timeline",
+      "question_comments_url": "/questions/7075668/comments",
+      "question_answers_url": "/questions/7075668/answers",
+      "question_id": 7075668,
+      "owner": {
+        "user_id": 896299,
+        "user_type": "unregistered",
+        "display_name": "Skyangelic",
+        "reputation": 11,
+        "email_hash": "ac56ff6fe31c33537112bf68b6609acb"
+      },
+      "creation_date": 1313484312,
+      "last_edit_date": 1313484730,
+      "last_activity_date": 1313485861,
+      "up_vote_count": 2,
+      "down_vote_count": 4,
+      "view_count": 46,
+      "score": -2,
+      "community_owned": false,
+      "title": "How to use/add dynamic radio button",
+      "body": "<p>i got a button, and 4 text field, when i click the button,4 radio button will be create, and the value in 4 text field will be my radio button value,but how to do that?</p>\n"
+    },
+    {
+      "tags": [
+        "php",
+        "mysql",
+        "performance",
+        "query",
+        "mysql5"
+      ],
+      "answer_count": 1,
+      "accepted_answer_id": 7075822,
+      "favorite_count": 1,
+      "question_timeline_url": "/questions/7075664/timeline",
+      "question_comments_url": "/questions/7075664/comments",
+      "question_answers_url": "/questions/7075664/answers",
+      "question_id": 7075664,
+      "owner": {
+        "user_id": 873945,
+        "user_type": "registered",
+        "display_name": "learner",
+        "reputation": 33,
+        "email_hash": "3c83b67cb77e5aa00452c604b95f58e9"
+      },
+      "creation_date": 1313484307,
+      "last_activity_date": 1313485230,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 21,
+      "score": 0,
+      "community_owned": false,
+      "title": "How to add count of different query using a query in mysql5?",
+      "body": "<p>Hi I need a query like this</p>\n\n<pre>\n\n    select count(id) from employee where.. => gives count1=10\n\n    select count(id) from emplyer where..  => gives count2=5\n\n    select count(id) from users where..    => gives count3=20\n\n</pre>\n\n<p>I can add these result like this</p>\n\n<pre>\n\n    count = count1+count2+count3;\n\n</pre>\n\n<p>But I want to know whether there is any option get count using a single query  instead of add these result separatly. Also I want to know which one is the best way in case of application perfomance. </p>\n"
+    },
+    {
+      "tags": [
+        "objective-c",
+        "ipad",
+        "ios4",
+        "sqlite3"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075663/timeline",
+      "question_comments_url": "/questions/7075663/comments",
+      "question_answers_url": "/questions/7075663/answers",
+      "question_id": 7075663,
+      "owner": {
+        "user_id": 854377,
+        "user_type": "registered",
+        "display_name": "Kunal",
+        "reputation": 18,
+        "email_hash": "f2b0e49a2c9a1c55ab944f6a0e4bb840"
+      },
+      "creation_date": 1313484307,
+      "last_activity_date": 1313484556,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 6,
+      "score": 0,
+      "community_owned": false,
+      "title": "Table view sqlite data not deleting - iOS - iPad application",
+      "body": "<p>For some reason my data in the database is not deleting, I would be grateful if you can point out the error.</p>\n\n<pre><code>- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath \n{\nNSUInteger row = [indexPath row];\n\n    //Delete\n    sqlite3_stmt *stmt2; \n    NSArray *del = [[arr objectAtIndex:row] componentsSeparatedByString:@\" \"];\n    NSString *update1 = [NSString stringWithFormat:@\"delete from survey where name='%@' and surname='%@';\",[del objectAtIndex:1],[del objectAtIndex:2]];\n    int x = sqlite3_prepare_v2(database, [update1 UTF8String], -1, &amp;stmt2, nil);\n    NSLog(@\"x=%d\",x);\n    if (sqlite3_step(stmt2) != SQLITE_DONE)\n        NSLog(@\"Deletion Error.\");\n\n    [arr removeObjectAtIndex:row]; \n    [tblView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];\n}\n</code></pre>\n\n<p>Many thanks.</p>\n"
+    },
+    {
+      "tags": [
+        "css",
+        "internet-explorer",
+        "htc",
+        "rounded",
+        "corner"
+      ],
+      "answer_count": 2,
+      "favorite_count": 1,
+      "question_timeline_url": "/questions/7075662/timeline",
+      "question_comments_url": "/questions/7075662/comments",
+      "question_answers_url": "/questions/7075662/answers",
+      "question_id": 7075662,
+      "owner": {
+        "user_id": 896298,
+        "user_type": "unregistered",
+        "display_name": "Aseman",
+        "reputation": 6,
+        "email_hash": "f96b60b68529e24dae4b416d858c5ee5"
+      },
+      "creation_date": 1313484303,
+      "last_edit_date": 1313486000,
+      "last_activity_date": 1313487219,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 16,
+      "score": 1,
+      "community_owned": false,
+      "title": "rounded Corner Problems IE",
+      "body": "<p>I rounded Div Corner Using This Htc File :\n<a href=\"http://code.google.com/p/curved-corner/\" rel=\"nofollow\">Google Code Curved Corner</a></p>\n\n<p>This Worked Nice in IE6/8 but i set background image in top my div with no-repeat css. now i see my background auto repeat in div. ( with htc file without this worked nice )</p>\n\n<pre><code>    width:860px;\nmargin:0 auto;\nmargin:10px 0 10px 0;\nfloat:right;\nborder:#e1e1e1 1px solid;\nbackground:url(images/wrapper.png) top center no-repeat;\n-moz-border-radius: 6px;\n-webkit-border-radius: 6px;\n-khtml-border-radius: 6px;\nborder-radius: 6px;\n    behavior: url(border.htc);\n</code></pre>\n\n<p>This My Code, How To fix This Problem !?\nThanks</p>\n"
+    },
+    {
+      "tags": [
+        "ios"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075660/timeline",
+      "question_comments_url": "/questions/7075660/comments",
+      "question_answers_url": "/questions/7075660/answers",
+      "question_id": 7075660,
+      "owner": {
+        "user_id": 859616,
+        "user_type": "registered",
+        "display_name": "neoJacob",
+        "reputation": 22,
+        "email_hash": "4e130b1ba96c6ea032b56efb8da51e25"
+      },
+      "creation_date": 1313484301,
+      "last_activity_date": 1313484301,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 6,
+      "score": 0,
+      "community_owned": false,
+      "title": "Can any one point me a basic example of using ASIHTTP cache . Want to integrate with my JSON Parsing Application",
+      "body": "<p>Can any one point me a basic example of using ASIHTTP cache . I already read their documentation here <a href=\"http://allseeing-i.com/ASIHTTPRequest/How-to-use\" rel=\"nofollow\">in this link</a> . In my application i am parsing some JSON content and want to store into the cache . When the application loads next time ... just want to check if the cache is available  otherwise Parse it from the Web . How i can i achieve this .... thanks in adavance ......</p>\n"
+    },
+    {
+      "tags": [
+        "ef-code-first"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075656/timeline",
+      "question_comments_url": "/questions/7075656/comments",
+      "question_answers_url": "/questions/7075656/answers",
+      "question_id": 7075656,
+      "owner": {
+        "user_id": 887149,
+        "user_type": "registered",
+        "display_name": "Mohayeminul Islam",
+        "reputation": 28,
+        "email_hash": "d84417dd8031826a5899b7e67ee15db4"
+      },
+      "creation_date": 1313484261,
+      "last_edit_date": 1313488340,
+      "last_activity_date": 1313488340,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 12,
+      "score": 0,
+      "community_owned": false,
+      "title": "DbUpdateException when trying to save changes",
+      "body": "<p>I am Trying EF Code First on existing database.</p>\n\n<p>I have a table named <code>Template</code> and the key is TemplateId. However, this key is not auto-incremental, the user manually insert this.</p>\n\n<p>In the post of create action is like this:</p>\n\n<pre><code>[HttpPost]\npublic ActionResult CreateView(Template template) {\n    Context.Templates.Add(template);            \n    Context.SaveChanges();    \n    return RedirectToAction(\"ViewList\");\n}\n</code></pre>\n\n<p>I get a <code>DbUpdateException</code> at <code>Context.SaveChanges</code>.</p>\n\n<p>The exception says that the TemplateId is null. However, I have debugged and found that the TemplateId in the template object is just fine.</p>\n\n<p>I am a novice, sorry if the question miss some detail.</p>\n"
+    },
+    {
+      "tags": [
+        ".htaccess"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075651/timeline",
+      "question_comments_url": "/questions/7075651/comments",
+      "question_answers_url": "/questions/7075651/answers",
+      "question_id": 7075651,
+      "owner": {
+        "user_id": 449568,
+        "user_type": "registered",
+        "display_name": "geoffs3310",
+        "reputation": 505,
+        "email_hash": "2da86a29d9239b6094c80cc317faea50"
+      },
+      "creation_date": 1313484251,
+      "last_activity_date": 1313484621,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 8,
+      "score": 0,
+      "community_owned": false,
+      "title": "can i use htaccess rewrite to remove part of a url",
+      "body": "<p>I have a url like the following:</p>\n\n<p>www.domain.com/blog/about</p>\n\n<p>The reason it is /blog first is because it is a wordpress site installed in a subfolder of my site called blog. Is it possible to remove the blog part of the url with htaccess so that the url would look like </p>\n\n<p>www.domain.com/about </p>\n\n<p>but the page being served would be the /blog/about page?</p>\n\n<p>Thanks</p>\n"
+    },
+    {
+      "tags": [
+        "latex"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075647/timeline",
+      "question_comments_url": "/questions/7075647/comments",
+      "question_answers_url": "/questions/7075647/answers",
+      "question_id": 7075647,
+      "owner": {
+        "user_id": 896296,
+        "user_type": "unregistered",
+        "display_name": "Edvin",
+        "reputation": 11,
+        "email_hash": "416f6296d7be5f8653fc9dd061712ca7"
+      },
+      "creation_date": 1313484239,
+      "last_activity_date": 1313484239,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 10,
+      "score": 2,
+      "community_owned": false,
+      "title": "Selective equation numbering in latex",
+      "body": "<p>I would like to number only the equations I actually refer in a manuscript. I know plenty of ways to do this manually, but as the manuscript progresses and I change which equations I refer to later I am likely to forget to change the display style of those equations. </p>\n\n<p>I would really like a way to make latex automatically recognize that an equations is being referred and typeset all equations not referred unnumbered, and typeset all equations that are referred using \\ref{} with numbers in the right margin.</p>\n"
+    },
+    {
+      "tags": [
+        "mysql",
+        "query",
+        "join",
+        "limit"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075643/timeline",
+      "question_comments_url": "/questions/7075643/comments",
+      "question_answers_url": "/questions/7075643/answers",
+      "question_id": 7075643,
+      "owner": {
+        "user_id": 187907,
+        "user_type": "registered",
+        "display_name": "sa125",
+        "reputation": 1179,
+        "email_hash": "b023325c7040398bba3c332c9e69f604"
+      },
+      "creation_date": 1313484225,
+      "last_edit_date": 1313485633,
+      "last_activity_date": 1313486787,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 20,
+      "score": 0,
+      "community_owned": false,
+      "title": "Use table column value for LIMIT when performing join",
+      "body": "<p>I have a situation where I'm performing a join between two tables, and I need a value from one table to be used as a LIMIT factor for a subquery in the join. Assume I have the following [extremely simplified] tables -</p>\n\n<pre><code>data:\n\nexperiment_id | value\n--------------|--------\n       1      |  2.5\n       1      |  2.6\n       1      |  4.5\n       1      |  2.3\n       1      |  3.5\n       1      |  2.8\n       2      |  2.3\n       2      |  1.2\n       2      |  1.1\n       2      |  3.6\n       2      |  3.8\n       2      |  4.1\n       2      |  7.9\n       2      |  4.2\n       2      |  1.0\n\n\ndata_clip:\n\nexperiment_id | clip_index\n--------------|------------\n       1      |     3\n       2      |     5\n</code></pre>\n\n<p>I need to sum each experiment's <strong>sorted</strong> values up to a certain clip_index, that varies between experiments. So, my result table will ideally look like this:</p>\n\n<pre><code>results:\nexperiment_id |  sum\n--------------|-------\n       1      |  7.6    # =&gt; 2.3 + 2.5 + 2.8\n       2      | 13.0    # =&gt; 1.0 + 1.1 + 1.2 + 2.3 + 3.6 + 3.8 \n</code></pre>\n\n<p>Typically, I'd do this calculation with some client side scripting (ruby, python, etc), but I wanted to try doing this on the db level. Some imaginary SQL might look like this (there's all sorts of wrong with this query, I know, but hopefully you get the idea):</p>\n\n<pre><code>SELECT \n  T0.experiment_id as `id`,\n  (SELECT SUM(x.value) from\n       (SELECT   value \n        FROM     data \n        WHERE    experiment_id = t0.experiment_id\n        ORDER BY value \n        LIMIT    t0.clip_index ) as x) AS `sum`\nFROM data_clip AS t0\n</code></pre>\n\n<p>Several problems:</p>\n\n<ol>\n<li>LIMIT must be defined with a constant (1000, 10, etc.), not a column.</li>\n<li>where WHERE condition in the subquery fails for not recognizing <code>t0</code> table.</li>\n</ol>\n\n<p>My question is basically how to accomplish the variable limit and sum between the two tables using mostly SQL. I thought about using <code>group_concat</code> and <code>substring_index</code> to isolate the values up to <code>clip_index</code> for each row, but then there's the issue of summing up the numbered strings (<code>\"1.2,2.3,3.2\"</code>) and the server limitation on the size of <code>group_concat</code> buffer (configurable, but values can be around ~100k per experiment). Any thoughts? Thanks.</p>\n"
+    },
+    {
+      "tags": [
+        "latex"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075640/timeline",
+      "question_comments_url": "/questions/7075640/comments",
+      "question_answers_url": "/questions/7075640/answers",
+      "question_id": 7075640,
+      "owner": {
+        "user_id": 849922,
+        "user_type": "registered",
+        "display_name": "Frempe",
+        "reputation": 14,
+        "email_hash": "0e36b7593b366d11c7e62ca32ab83db8"
+      },
+      "creation_date": 1313484215,
+      "last_activity_date": 1313484859,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 9,
+      "score": 0,
+      "community_owned": false,
+      "title": "Place a grid of pictures (2x2) with captions",
+      "body": "<p>I have 4 photos that i like to place in in grid on my pages and add a caption to each photo. Does anyone know how to do this? Thanks in advance!</p>\n"
+    },
+    {
+      "tags": [
+        "delphi",
+        "memory-management",
+        "components",
+        "delphi-xe",
+        "ownership"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075637/timeline",
+      "question_comments_url": "/questions/7075637/comments",
+      "question_answers_url": "/questions/7075637/answers",
+      "question_id": 7075637,
+      "owner": {
+        "user_id": 62391,
+        "user_type": "registered",
+        "display_name": "Smasher",
+        "reputation": 5603,
+        "email_hash": "649769a1a14842f0f0c533a09aa04901"
+      },
+      "creation_date": 1313484209,
+      "last_activity_date": 1313487126,
+      "up_vote_count": 9,
+      "down_vote_count": 0,
+      "view_count": 47,
+      "score": 9,
+      "community_owned": false,
+      "title": "Delphi Ownership Confusion",
+      "body": "<p>I always thought that the owner is responsible for destroying visual controls and that I can manually control destruction if I pass <code>nil</code> as the owner.</p>\n\n<p>Consider the following example:</p>\n\n<pre><code>TMyForm = class (TForm)\nprivate\n  FButton : TButton;\nend;\n\n...\nFButton := TButton.Create(nil);   // no owner!!\nFButton.Parent := Self;\n</code></pre>\n\n<p>I would expect this button to produce a memory leak but it doesn't and in fact the destructor of <code>TButton</code> is called.</p>\n\n<p>Further investigation showed that the <code>TWinControl</code> destructor contains the following snippet of code:</p>\n\n<pre><code>I := ControlCount;\nwhile I &lt;&gt; 0 do\nbegin\n  Instance := Controls[I - 1];\n  Remove(Instance);\n  Instance.Destroy;\n  I := ControlCount;\nend;\n</code></pre>\n\n<p>which looks like it is destroying the child components (the ones with <code>Parent</code> set to the control itself).</p>\n\n<p>I was not expecting the parent control to destroy the control. Can anybody explain why this is happening? And who is destroying the object if I pass in an owner?</p>\n"
+    },
+    {
+      "tags": [
+        "asp.net",
+        "vb.net",
+        "devexpress"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075635/timeline",
+      "question_comments_url": "/questions/7075635/comments",
+      "question_answers_url": "/questions/7075635/answers",
+      "question_id": 7075635,
+      "owner": {
+        "user_id": 406791,
+        "user_type": "registered",
+        "display_name": "gledhilla",
+        "reputation": 28,
+        "email_hash": "64c427af3c7d9f70b38bc18d4c3ee2f5"
+      },
+      "creation_date": 1313484196,
+      "last_edit_date": 1313484664,
+      "last_activity_date": 1313484664,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 16,
+      "score": 0,
+      "community_owned": false,
+      "title": "Changing font colour on alternate rows in gridview",
+      "body": "<p>I'm looking for a way to change the font colour on alternate rows within a datagrid. e.g. normal row would be green and the alternate row would be blue.</p>\n\n<p>I can change either by using </p>\n\n<ul>\n<li>me.datagrid.Styles.Row.Forcolour</li>\n<li>me.datagrid.Styles.AlternatingRow.Forcolour</li>\n</ul>\n\n<p>The problem is that I am having trouble using both of them together as I need to manipulate both colours. I have created a HtmlRowPrepared event and have been setting them there, however, If I set the Row.Forcolour first, it will over ride the AlternatingRow.Forcolour and vice versa.</p>\n\n<p>This needs to be done via SEVER SIDE code only as the colour choices are held in the database.</p>\n\n<p>If you could help I would be very grateful. </p>\n\n<p>Many thanks</p>\n"
+    },
+    {
+      "tags": [
+        "vb.net",
+        "freeze",
+        "hang"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075626/timeline",
+      "question_comments_url": "/questions/7075626/comments",
+      "question_answers_url": "/questions/7075626/answers",
+      "question_id": 7075626,
+      "owner": {
+        "user_id": 896294,
+        "user_type": "unregistered",
+        "display_name": "Spikky577",
+        "reputation": 1,
+        "email_hash": "6dddfcceecf85a5f21cc65ab40b00eee"
+      },
+      "creation_date": 1313484139,
+      "last_activity_date": 1313484139,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 18,
+      "score": 0,
+      "community_owned": false,
+      "title": "(Visual Basic 2010)What is causing my program to hang after multiple uses?",
+      "body": "<p>Because I am not sure what is causing it, I have to copy and paste all the code, sorry if thats against the rules. This program is written in Visual Basic 2010 and what it should do is use cmd to operate Robocopy then display the results in real time. It does this, but hangs after a few uses, I'm new to this coding and am not too sure how to handle threads so it could be that but I have no idea how to fix it anyway.</p>\n\n<p>If someone could help me I'd be very grateful :)</p>\n\n<pre><code>Public Class Form1\n\nPrivate Results As String\nPrivate Delegate Sub delUpdate()\nPrivate Finished As New delUpdate(AddressOf UpdateText)\nDim button_click As Integer = 0\nDim myProcess As New Process\nDim StartInfo As New System.Diagnostics.ProcessStartInfo\n\nDim Folder_TBC As String\nDim Folder_DES As String\nDim RoboCommand As String\n\nPrivate Sub UpdateText()\n    ' TextBox_CMDout.Text = Results\n    TextBox_CMDout.AppendText(System.Environment.NewLine() &amp; Results)\n    TextBox_CMDout.ScrollToCaret()\nEnd Sub\n\nPrivate Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click\n    If button_click = 0 Then\n        RoboCommand = Chr(34) + TextBox_FolderTBC.Text + Chr(34) + \" \" + Chr(34) + TextBox_FolderDes.Text + Chr(34) + \" \"\n\n        If CheckBox_ISF.Checked = True Then RoboCommand = RoboCommand + \"/S \"\n        If CheckBox_MUT.Checked = True Then RoboCommand = RoboCommand + \"/MT \"\n        If CheckBox_MOV.Checked = True Then RoboCommand = RoboCommand + \"/Move \"\n\n        opencmd()\n        button_click += 1\n    End If\n    Dim CMDThread As New Threading.Thread(AddressOf CMDAutomate)\n    CMDThread.Start()\n\n\n\n\n\nEnd Sub\n\nPrivate Sub opencmd()\n    StartInfo.FileName = \"cmd\" 'starts cmd window\n    StartInfo.UseShellExecute = False 'required to redirect\n    StartInfo.CreateNoWindow = True 'creates no cmd window\n    StartInfo.RedirectStandardInput = True\n    StartInfo.RedirectStandardOutput = True\n    StartInfo.RedirectStandardError = True\n    myProcess.StartInfo = StartInfo\n    myProcess.Start()\nEnd Sub\n\nPrivate Sub CMDAutomate()\n    'Dim SR As System.IO.StreamReader = myprocess.StandardOutput\n    'Dim SW As System.IO.StreamWriter = myprocess.StandardInput\n    myProcess.StandardInput.WriteLine(\"robocopy \" &amp; Folder_TBC &amp; Folder_DES)\n    myProcess.StandardInput.WriteLine(System.Environment.NewLine())\n\n    ' SW.WriteLine(\"exit\") 'exits command prompt window\n    While myProcess.StandardOutput.EndOfStream = False\n        Results = myProcess.StandardOutput.ReadLine()\n        Invoke(Finished)\n    End While\n    'Results = SR.ReadToEnd 'returns results of the command window\n    'SW.Close()\n    'SR.Close()\n    'invokes Finished delegate, which updates textbox with the results text\n    Application.ExitThread()\nEnd Sub\n\nPrivate Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click\n    FolderBrowserDialog1.ShowDialog()\n    TextBox_FolderTBC.Text = FolderBrowserDialog1.SelectedPath\nEnd Sub\n\nPrivate Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click\n    FolderBrowserDialog1.ShowDialog()\n    TextBox_FolderDes.Text = FolderBrowserDialog1.SelectedPath\nEnd Sub\n\nPrivate Sub Form1_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing\n    Application.ExitThread()\n    Application.Exit()\n    End\nEnd Sub\n</code></pre>\n\n<p>End Class</p>\n"
+    },
+    {
+      "tags": [
+        "iphone"
+      ],
+      "answer_count": 3,
+      "favorite_count": 1,
+      "question_timeline_url": "/questions/7075620/timeline",
+      "question_comments_url": "/questions/7075620/comments",
+      "question_answers_url": "/questions/7075620/answers",
+      "question_id": 7075620,
+      "owner": {
+        "user_id": 602011,
+        "user_type": "registered",
+        "display_name": "Jim",
+        "reputation": 243,
+        "email_hash": "591360431906ad7bfc6ff0f1739c7da8"
+      },
+      "creation_date": 1313484124,
+      "last_activity_date": 1313484679,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 27,
+      "score": 1,
+      "community_owned": false,
+      "title": "iPhone: performSelector with BOOL parameter?",
+      "body": "<p>Is there any way to send BOOL in selector ?</p>\n\n<pre><code>[self performSelector:@selector(doSomething:) withObject:YES afterDelay:1.5];\n</code></pre>\n\n<p>Or I should use NSInvocation ? Could somebody write a sample please ?</p>\n"
+    },
+    {
+      "tags": [
+        "android"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075615/timeline",
+      "question_comments_url": "/questions/7075615/comments",
+      "question_answers_url": "/questions/7075615/answers",
+      "question_id": 7075615,
+      "owner": {
+        "user_id": 896293,
+        "user_type": "unregistered",
+        "display_name": "ece çalıkuş",
+        "reputation": 6,
+        "email_hash": "a82abd899850b63fec74307105fde14a"
+      },
+      "creation_date": 1313484101,
+      "last_activity_date": 1313486808,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 14,
+      "score": 1,
+      "community_owned": false,
+      "title": "how to upload photos flickr with voice recognition like qooqle",
+      "body": "<p>there is an application called qooqle developed by mit students. my company that i am intern in ask me to develop this project in android. but i am not good enough in android. at least can you give me an opinion where i should start for this project. by the way i am not going to develop the whole project. my project will include only uploading pictures to flickr with voice and tagging them with voice..\nthis is the project if you dont hear before:\nQooqle on Vimeo</p>\n\n<p><a href=\"http://vimeo.com/23240025\" rel=\"nofollow\">http://vimeo.com/23240025</a></p>\n"
+    },
+    {
+      "tags": [
+        "xml",
+        "xslt",
+        "xpath"
+      ],
+      "answer_count": 2,
+      "accepted_answer_id": 7075813,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075614/timeline",
+      "question_comments_url": "/questions/7075614/comments",
+      "question_answers_url": "/questions/7075614/answers",
+      "question_id": 7075614,
+      "owner": {
+        "user_id": 596878,
+        "user_type": "registered",
+        "display_name": "Daniel J F",
+        "reputation": 83,
+        "email_hash": "206a1c3eeaa4241a4e2c21ddea386887"
+      },
+      "creation_date": 1313484097,
+      "last_edit_date": 1313485259,
+      "last_activity_date": 1313485259,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 16,
+      "score": 0,
+      "community_owned": false,
+      "title": "How to translate to a HTML code (\"&something;\")",
+      "body": "<p>I'm trying to translate a symbol to its HTML code, e.g. <code>'</code> to <code>&amp;rsquo;</code> with this code:</p>\n\n<pre><code>&lt;xsl:variable name=\"apos\"&gt;'&lt;/xsl:variable&gt;\n&lt;xsl:variable name=\"test\"&gt;&amp;rsquo;&lt;/xsl:variable&gt;\n\n&lt;xsl:value-of select='translate(title, $apos, $test)' /&gt;\n</code></pre>\n\n<p>This works:</p>\n\n<pre><code>&lt;xsl:variable name=\"test\"&gt;&amp;#39;&lt;/xsl:variable&gt;\n</code></pre>\n\n<p>But is it possible to make the first example work?</p>\n"
+    },
+    {
+      "tags": [
+        "facebook",
+        "facebook-graph-api"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075613/timeline",
+      "question_comments_url": "/questions/7075613/comments",
+      "question_answers_url": "/questions/7075613/answers",
+      "question_id": 7075613,
+      "owner": {
+        "user_id": 80932,
+        "user_type": "registered",
+        "display_name": "ufk",
+        "reputation": 1649,
+        "email_hash": "c8df6a60fa19ec03cde467dad65c8f24"
+      },
+      "creation_date": 1313484093,
+      "last_activity_date": 1313484868,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 8,
+      "score": 0,
+      "community_owned": false,
+      "title": "creating test users - method is not supported for native application",
+      "body": "<p>I'm trying to create a test user for my facebook web application. (apps.facebook.com/<code>&lt;myappname&gt;</code>).</p>\n\n<p>I browsed my firefox browser to the following URL:</p>\n\n<pre><code>https://graph.facebook.com/&lt;app_id&gt;/accounts/test-users?installed=true&amp;access_token=&lt;app_id&gt;|&lt;app_secret&gt;\n</code></pre>\n\n<p>I got the following result:</p>\n\n<p>{\n   \"error\": {\n      \"type\": \"OAuthException\",\n      \"message\": \"(#15) This method is not supported for native apps\"\n   }\n}</p>\n\n<p>any ideas?</p>\n\n<p>thanks</p>\n"
+    },
+    {
+      "tags": [
+        "drupal"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075612/timeline",
+      "question_comments_url": "/questions/7075612/comments",
+      "question_answers_url": "/questions/7075612/answers",
+      "question_id": 7075612,
+      "owner": {
+        "user_id": 696734,
+        "user_type": "registered",
+        "display_name": "user696734",
+        "reputation": 1,
+        "email_hash": "5faec01e7fb40db735ef8b940ba77802"
+      },
+      "creation_date": 1313484086,
+      "last_activity_date": 1313484086,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 8,
+      "score": 0,
+      "community_owned": false,
+      "title": "how to save content source/markup in drupal7",
+      "body": "<p>hi everyone,\n            I need to save the markup/source of the content types to json files in drupal7.please guide how i do this with my custom module</p>\n"
+    },
+    {
+      "tags": [
+        "java"
+      ],
+      "answer_count": 8,
+      "accepted_answer_id": 7075697,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075608/timeline",
+      "question_comments_url": "/questions/7075608/comments",
+      "question_answers_url": "/questions/7075608/answers",
+      "question_id": 7075608,
+      "owner": {
+        "user_id": 327426,
+        "user_type": "registered",
+        "display_name": "shinynewbike",
+        "reputation": 687,
+        "email_hash": "103c5dd33104f74cfede07b9941d3573"
+      },
+      "creation_date": 1313484055,
+      "last_edit_date": 1313484603,
+      "last_activity_date": 1313485887,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 75,
+      "score": 1,
+      "community_owned": false,
+      "title": "What's a suitable return type for this Java method?",
+      "body": "<p>we are implementing a system with Strategy pattern. </p>\n\n<p>Some callers to a specific methods require a Hashmap of data while in some case it would be a user-defined DTO. Some need both.</p>\n\n<p>How do we decide which return type to use, instead of an Arraylist containing Hashmap and DTO ? Is there anything more approporiate? </p>\n\n<p>Example:</p>\n\n<p>Some caller needs only 2 strings and prefers a Hashmap.</p>\n\n<p>Some other caller to the same API needs 12 values which are suited to put in a DTO. 1st caller does not need all the elements in the DTO.</p>\n\n<p>3rd caller needs all 14 values and hence both structures.</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "autofac"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075605/timeline",
+      "question_comments_url": "/questions/7075605/comments",
+      "question_answers_url": "/questions/7075605/answers",
+      "question_id": 7075605,
+      "owner": {
+        "user_id": 223583,
+        "user_type": "registered",
+        "display_name": "Zuber",
+        "reputation": 116,
+        "email_hash": "b5eb5e3b9f1b96717a38c97c7e19ee47"
+      },
+      "creation_date": 1313484039,
+      "last_edit_date": 1313487710,
+      "last_activity_date": 1313487710,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 7,
+      "score": 0,
+      "community_owned": false,
+      "title": "InstancePerLifetimeScope and InstancePerMatchingLifetimeScope",
+      "body": "<p>In Autofac, can someone explain what happens when I register a component the following way:</p>\n\n<pre><code>builder.RegisterType&lt;SomeComponent&gt;()\n       .InstancePerMatchingLifetimeScope(contextTag)\n       .InstancePerLifetimeScope();\n</code></pre>\n\n<p>Q1. Is this a valid way of registering components?</p>\n\n<p>Q2. Does InstancePerLifetimeScope override the other? Will I get an exception if I try to resolve the component in the 'contextTag' scope?</p>\n"
+    },
+    {
+      "tags": [
+        "c++",
+        "stl",
+        "c++0x",
+        "unordered-map"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075603/timeline",
+      "question_comments_url": "/questions/7075603/comments",
+      "question_answers_url": "/questions/7075603/answers",
+      "question_id": 7075603,
+      "owner": {
+        "user_id": 150634,
+        "user_type": "registered",
+        "display_name": "sftrabbit",
+        "reputation": 1261,
+        "email_hash": "9f438bc04462ee5af4132921a3474842"
+      },
+      "creation_date": 1313484035,
+      "last_edit_date": 1313484904,
+      "last_activity_date": 1313487572,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 44,
+      "score": 2,
+      "community_owned": false,
+      "title": "Using an unordered_map where Key is a member of T",
+      "body": "<p>Is there any nice way to use an unordered_map so that you can access objects by a member variable in constant time (average case)? The following example has this functionality but requires the name of each <code>Person</code> to be duplicated as the Key:</p>\n\n<pre><code>#include &lt;iostream&gt;\n#include &lt;string&gt;\n#include &lt;unordered_map&gt;\n#include &lt;algorithm&gt;\n\nclass Person {\n public:\n  Person() : name_(\"\") {}\n  Person(const std::string&amp; name) : name_(name) {}\n  std::string getName() const { return name_; }\n  void kill() const { std::cout &lt;&lt; name_ &lt;&lt; \" is dead!\" &lt;&lt; std::endl; }\n private:\n  std::string name_;\n};\n\nint main(int argc, const char* argv[]) {\n  Person p1(\"dave\");\n  Person p2(\"bob\");\n\n  std::unordered_map&lt;std::string, Person&gt; map = {\n    {p1.getName(), p1}, // Duplicating the\n    {p2.getName(), p2}  // keys here\n  };\n\n  map[\"dave\"].kill();\n  return 0;\n}\n</code></pre>\n\n<p>I'm thinking that somehow the <code>value_type</code> would need to be <code>Person</code> itself, instead of a <code>pair&lt;string, Person&gt;</code> and the <code>unordered_map</code> would need to know to use <code>Person::getName</code> when hashing and accessing objects.</p>\n\n<p>The ideal solution would allow me to set up an <code>unordered_map</code> (or <code>unordered_set</code> if it's more apt for the job) that knows to use <code>Person::getName</code> to get the key of each object. I would then be able to insert them simply by giving the object (and no key because it knows how to get the key) and access them by giving keys that would compare equal to the return value of <code>Person::getName</code>.</p>\n\n<p>Something along the lines of:</p>\n\n<pre><code>// Pseudocode\nstd::unordered_map&lt;Person, Person::getName&gt; map = {p1, p2};\nmap[\"dave\"].kill();\n</code></pre>\n\n<p>So is it possible to instantiate an <code>unordered_map</code> template class that can do this neatly?</p>\n"
+    },
+    {
+      "tags": [
+        "windows",
+        "harddrive"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "closed_date": 1313484176,
+      "closed_reason": "off topic",
+      "migrated": {
+        "new_question_id": 323792,
+        "to_site": {
+          "name": "Super User",
+          "logo_url": "http://sstatic.net/superuser/img/logo.png",
+          "api_endpoint": "http://api.superuser.com",
+          "site_url": "http://superuser.com",
+          "description": "Q&A for computer enthusiasts and power users",
+          "icon_url": "http://sstatic.net/superuser/img/apple-touch-icon.png",
+          "state": "normal",
+          "styling": {
+            "link_color": "#1086A4",
+            "tag_foreground_color": "#1087A4",
+            "tag_background_color": "#FFFFFF"
+          }
+        },
+        "on_date": 1313484177
+      },
+      "question_timeline_url": "/questions/7075602/timeline",
+      "question_comments_url": "/questions/7075602/comments",
+      "question_answers_url": "/questions/7075602/answers",
+      "question_id": 7075602,
+      "locked_date": 1313484177,
+      "owner": {
+        "user_id": 497255,
+        "user_type": "registered",
+        "display_name": "Cody",
+        "reputation": 475,
+        "email_hash": "d4427dfe7d92e2ad5113c2fa7e220b8e"
+      },
+      "creation_date": 1313484030,
+      "last_activity_date": 1313484030,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 8,
+      "score": 1,
+      "community_owned": false,
+      "title": "How to make 2 HDD act as one Windows 7",
+      "body": "<p>Is there any way how to configure Windows to make 2 Hard Drives Act like one ,like HardDrive 1 and HardDrive 2 to get a Single Drive Letter ,without using Raid .\nI think is there a way to achieve it using Windows or any other Software .</p>\n\n<p>I Hope i was clear enough .\nBests</p>\n"
+    },
+    {
+      "tags": [
+        "md5",
+        "crc"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075600/timeline",
+      "question_comments_url": "/questions/7075600/comments",
+      "question_answers_url": "/questions/7075600/answers",
+      "question_id": 7075600,
+      "owner": {
+        "user_id": 707761,
+        "user_type": "registered",
+        "display_name": "adnangohar",
+        "reputation": 1,
+        "email_hash": "ab7952acd25f02142b18e2a2fc8f36bd"
+      },
+      "creation_date": 1313484023,
+      "last_activity_date": 1313484023,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 2,
+      "score": 0,
+      "community_owned": false,
+      "title": "CRC/MD5 check for one Zip file or every file within Zip file",
+      "body": "<p>I have a zip file which contains a number of other files,I want to create a CRC/MD5 check for these files, so that after I download them from the server I can check whether they were tempered or not. </p>\n\n<p>My question is what is the best practice to apply CRC/MD5, should I apply one Hash to the zip file only or should I apply Hashes to all the files within the zip file and then just zip them.  </p>\n\n<p>I saw a sample in which the second approach was used i.e. they signed every file and included an XML file containing the list of files within the zip and their corresponding checksums. I am currently only applying hash to my zip file and not to individual files within the zip.</p>\n\n<p>Thanks\nAdnan</p>\n"
+    },
+    {
+      "tags": [
+        "xcode",
+        "interface-builder",
+        "lion"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075597/timeline",
+      "question_comments_url": "/questions/7075597/comments",
+      "question_answers_url": "/questions/7075597/answers",
+      "question_id": 7075597,
+      "owner": {
+        "user_id": 151471,
+        "user_type": "registered",
+        "display_name": "andyvn22",
+        "reputation": 2065,
+        "email_hash": "9240988ba7c6920363a0ea401f5d683f"
+      },
+      "creation_date": 1313484010,
+      "last_activity_date": 1313484010,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 2,
+      "score": 0,
+      "community_owned": false,
+      "title": "Suppress Xcode's \"Full Screen Behavior\" warning",
+      "body": "<p>How can I suppress Xcode's \"Full Screen Behavior on Mac OS X prior to 10.7\" warning that occurs in my xib files?</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "asp.net",
+        "visual-studio",
+        "vb",
+        "asp"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075595/timeline",
+      "question_comments_url": "/questions/7075595/comments",
+      "question_answers_url": "/questions/7075595/answers",
+      "question_id": 7075595,
+      "owner": {
+        "user_id": 658809,
+        "user_type": "registered",
+        "display_name": "Ryan Sammut",
+        "reputation": 227,
+        "email_hash": "72bfcaf32b3480f5cecb438684cabb92"
+      },
+      "creation_date": 1313484009,
+      "last_activity_date": 1313484172,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 25,
+      "score": 1,
+      "community_owned": false,
+      "title": "Referncing a .dll file which was written in ASP and Vb INTO a .NET 4.0 Project with C#",
+      "body": "<p>I am trying to reference an old .dll file which was written in classic asp with VB. I am now trying to reference it to a C# asp.NET 4.0 Application but I am recieving that error. Is this possible? </p>\n\n<p><img src=\"http://i.stack.imgur.com/2uMCL.jpg\" alt=\"Error Recieved\"></p>\n"
+    },
+    {
+      "tags": [
+        "sharepoint"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075594/timeline",
+      "question_comments_url": "/questions/7075594/comments",
+      "question_answers_url": "/questions/7075594/answers",
+      "question_id": 7075594,
+      "owner": {
+        "user_id": 894636,
+        "user_type": "registered",
+        "display_name": "user894636",
+        "reputation": 1,
+        "email_hash": "4ec17d1f1107097c2e7a543a2931ec96"
+      },
+      "creation_date": 1313484000,
+      "last_edit_date": 1313488282,
+      "last_activity_date": 1313488282,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 6,
+      "score": 0,
+      "community_owned": false,
+      "title": "Failed to instantiate file \"default.master\" from module \"DefaultMasterPage\": Source path \"default.master\" not found",
+      "body": "<p>I create site-definition using VS 2010 and set the master on onet.xml file as the follwing </p>\n\n<pre><code> &lt;Feature ID=\"22A9EF51-737B-4ff2-9346-694633FE4416\"&gt;\n      &lt;!-- Publishing --&gt;\n      &lt;Properties xmlns=\"http://schemas.microsoft.com/sharepoint/\"&gt;\n        &lt;Property Key=\"ChromeMasterUrl\" Value=\"/_catalogs/masterpage/test.master\"/&gt;\n        &lt;Property Key=\"WelcomePageUrl\" Value=\"$Resources:osrvcore,List_Pages_UrlName;/default.aspx\"/&gt;\n        &lt;Property Key=\"PagesListUrl\" Value=\"$Resources:osrvcore,List_Pages_UrlName;\"/&gt;\n        &lt;Property Key=\"AvailableWebTemplates\" Value=\"\"/&gt;\n        &lt;!--&lt;Property Key=\"AvailablePageLayouts\" Value=\"~SiteCollection/_catalogs/masterpage/\"/&gt;\n        &lt;Property Key=\"DefaultPageLayout\" Value=\"~SiteCollection/_catalogs/masterpage/\"/&gt;--&gt;\n        &lt;Property Key=\"AlternateCssUrl\" Value=\"\" /&gt;\n        &lt;Property Key=\"SimplePublishing\" Value=\"true\" /&gt;\n      &lt;/Properties&gt;\n    &lt;/Feature&gt;\n</code></pre>\n\n<p>when i create site from this template  i get this error</p>\n\n<p>Failed to instantiate file \"default.master\" from module \"DefaultMasterPage\": Source path \"default.master\" not found.</p>\n"
+    },
+    {
+      "tags": [
+        "jquery",
+        "url",
+        "mobile"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075582/timeline",
+      "question_comments_url": "/questions/7075582/comments",
+      "question_answers_url": "/questions/7075582/answers",
+      "question_id": 7075582,
+      "owner": {
+        "user_id": 896279,
+        "user_type": "registered",
+        "display_name": "user896279",
+        "reputation": 1,
+        "email_hash": "be24177294199053b885f9c1e5d7d800"
+      },
+      "creation_date": 1313483955,
+      "last_activity_date": 1313487119,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 12,
+      "score": 0,
+      "community_owned": false,
+      "title": "getting url values in jquery mobile?",
+      "body": "<p>i am trying to get the value attached in the url using jquery mobile.</p>\n\n<p><a href=\"http://localhost/testing/nothing.html#details?id=0&amp;color=blue\" rel=\"nofollow\">http://localhost/testing/nothing.html#details?id=0&amp;color=blue</a></p>\n\n<p>I want to get the id = 0 and color = blue using jquery mobile when i go to the \"details\" page:</p>\n\n<p>$('#details').live('pagecreate',function(event)\n{</p>\n\n<p>});</p>\n\n<p>Thanks.</p>\n"
+    },
+    {
+      "tags": [
+        "jquery",
+        "css",
+        "drupal"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075581/timeline",
+      "question_comments_url": "/questions/7075581/comments",
+      "question_answers_url": "/questions/7075581/answers",
+      "question_id": 7075581,
+      "owner": {
+        "user_id": 670597,
+        "user_type": "registered",
+        "display_name": "BigJobbies",
+        "reputation": 213,
+        "email_hash": "0c8f31fe15de271b1f6b830b7f32108c"
+      },
+      "creation_date": 1313483955,
+      "last_activity_date": 1313483955,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 3,
+      "score": 0,
+      "community_owned": false,
+      "title": "Drupal 7 - Adding pathClass to superfish",
+      "body": "<p>Im using the superfish menu system in my Drupal template.</p>\n\n<p>I have 3 levels of menus, which are displaying perfect, except the 'active' class only shows on the 3rd level.</p>\n\n<p>I need it to show the active state on the 2 other menu links that takes you to that 3rd level.</p>\n\n<p>I added the following code to the superfish jquery</p>\n\n<pre><code>pathClass:  'active-trail'\n</code></pre>\n\n<p>When i view the source code, it shows class=\"active-trail\" on all of the menu items that i need, but the only thing is, when i use css to try and style it, it only styles the 3rd level again which is where i was to begin with</p>\n\n<pre><code>.active-trail { color: #F5822A; }\n</code></pre>\n\n<p>Even though the other 2 menus have the active-trail class, the css doesnt seem to style it.</p>\n\n<p>Has anyone else had this issue?</p>\n\n<p>Any help would be grand.</p>\n\n<p>Cheers,</p>\n"
+    },
+    {
+      "tags": [
+        "node.js",
+        "proxy"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075577/timeline",
+      "question_comments_url": "/questions/7075577/comments",
+      "question_answers_url": "/questions/7075577/answers",
+      "question_id": 7075577,
+      "owner": {
+        "user_id": 231957,
+        "user_type": "registered",
+        "display_name": "Luc",
+        "reputation": 902,
+        "email_hash": "67db701d6a4e067c6aeeca5dec7a82ef"
+      },
+      "creation_date": 1313483944,
+      "last_edit_date": 1313485628,
+      "last_activity_date": 1313488265,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 11,
+      "score": 0,
+      "community_owned": false,
+      "title": "proxy request in node.js / express",
+      "body": "<p>I have a nginx server as a front end to a node.js application.<br>\nWhen the request gets to the application, I'd like to slightly modify it (the request) and forward it to another node.js application. What would be the best way to do this ?</p>\n\n<p>I was thinking of node-proxy but as I use expressjs in the node apps, I'm not really sure how to use node-proxy and express at the same time.  </p>\n\n<p>any idea ?</p>\n\n<p><strong>UPDATE</strong></p>\n\n<p>Could I use res.redirect in my expressjs routes to forward to other node.js application ? I have just tried this but it does not work as expected. </p>\n"
+    },
+    {
+      "tags": [
+        "backbone.js"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075573/timeline",
+      "question_comments_url": "/questions/7075573/comments",
+      "question_answers_url": "/questions/7075573/answers",
+      "question_id": 7075573,
+      "owner": {
+        "user_id": 836484,
+        "user_type": "registered",
+        "display_name": "rkw",
+        "reputation": 1413,
+        "email_hash": "ef2a04223d1274e8fcef48d8208f9797"
+      },
+      "creation_date": 1313483927,
+      "last_activity_date": 1313487995,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 10,
+      "score": 0,
+      "community_owned": false,
+      "title": "How do you .pluck() values from a Collection after you .filter() it?",
+      "body": "<pre><code>window.CardList = Backbone.Collection.extend(...);\n\nvar Cards = new CardList;\n\nCards.filter(...).pluck('values')\n</code></pre>\n\n<p>Is there a clean way to filter a collection and then pluck the values?  The only work around I know is to reinitialize the collection:</p>\n\n<pre><code>new CardList(Cards.filter(...)).pluck('values')\n</code></pre>\n\n<p>OR to map the output after it's been filtered:</p>\n\n<pre><code>Cards.filter(...).map(...)\n</code></pre>\n\n<p>which seems weird since it has a perfectly good .pluck() method</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "linq",
+        "list",
+        ".net-3.5",
+        "casting"
+      ],
+      "answer_count": 5,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075572/timeline",
+      "question_comments_url": "/questions/7075572/comments",
+      "question_answers_url": "/questions/7075572/answers",
+      "question_id": 7075572,
+      "owner": {
+        "user_id": 896258,
+        "user_type": "registered",
+        "display_name": "meorfi",
+        "reputation": 6,
+        "email_hash": "b9f4beb433f59cc79457ce917a619f21"
+      },
+      "creation_date": 1313483920,
+      "last_edit_date": 1313484927,
+      "last_activity_date": 1313485211,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 31,
+      "score": 1,
+      "community_owned": false,
+      "title": "Using LINQ to convert List<U> to List<T>",
+      "body": "<p>I have 2 classes which have some identical properties. \nI stock into a list properties from 1st class, and after that, i want to take some needed properties and put them into a list of 2nd class type.\nI've made cast sequence through C# and that runs OK, but i must do with LINQ. I tried to do something but without good results. Help me please with suggestions.</p>\n\n<p>1st Class:</p>\n\n<pre><code> public class ServiceInfo\n{\n    private long _id;\n    private string _name;\n    private long _qty;\n    private double _amount;\n    private string _currency;\n    private DateTime? _date;\n\n    public long ID\n    {\n        get\n        {\n            return this._id;\n        }\n        set\n        {\n            _id = value;\n        }\n    }\n\n    public string Name\n    {\n        get\n        {\n            return this._name;\n        }\n        set \n        {\n            _name = value;\n        }\n    }\n\n    public long Quantity\n    {\n        get\n        {\n            return this._qty;\n        }\n        set \n        {\n            _qty = value;\n        }\n    }\n\n    public double Amount\n    {\n        get\n        {\n            return this._amount;\n        }\n        set \n        {\n            _amount = value;\n        }\n    }\n\n    public string Currency\n    {\n        get\n        {\n            return this._currency;\n        }\n        set\n        {\n            _currency = value;\n        }\n    }\n\n    public DateTime? Date\n    {\n        get\n        {\n            return this._date;\n        }\n        set \n        {\n            _date = value;\n        }\n    }\n}\n</code></pre>\n\n<p>2nd Class: </p>\n\n<pre><code>class InvoiceWithEntryInfo\n{\n    private long IdField;\n    private string nameField;\n    private long qtyField;\n    private double amountField;\n    private string currencyField;\n    private DateTime dateField;\n\n    public long IdIWEI\n    {\n        get\n        {\n            return this.IdField;\n        }\n        set\n        {\n            IdIWEI = value;\n        }\n    }\n    public string NameIWEI\n    {\n        get\n        {\n            return this.nameField;\n        }\n        set\n        {\n            NameIWEI = value;\n        }\n    }\n    public long QuantityIWEI\n    {\n        get\n        {\n            return this.qtyField;\n        }\n        set\n        {\n            QuantityIWEI = value;\n        }\n    }\n    public double AmountIWEI\n    {\n        get\n        {\n            return this.amountField;\n        }\n        set\n        {\n            AmountIWEI = value;\n        }\n    }\n    public DateTime? DateIWEI\n    {\n        get\n        {\n            return this.dateField;\n        }\n        set\n        {\n            DateIWEI = value;\n        }\n    }\n    public string OwnerIWEI\n    {\n        get;\n        set;\n    }\n}\n</code></pre>\n\n<p>C# sample which runs OK:\n...</p>\n\n<pre><code>var sil = new List&lt;ServiceInfo&gt;();\nvar iweil = new List&lt;InvoiceWithEntryInfo&gt;();\n</code></pre>\n\n<p>...</p>\n\n<pre><code>if (sil != null)\n    {\n        foreach (ServiceInfo item in sil)\n        {\n            iweil.Add(new InvoiceWithEntryInfo\n                {\n                    IdIWEI = item.ID,\n                    AmountIWEI = item.Amount,\n                    DateIWEI = item.Date\n                });\n        }\n</code></pre>\n\n<p>LINQ sample wich doesnt run OK:</p>\n\n<pre><code>            iweilCOPY = sil.ConvertAll&lt;InvoiceWithEntryInfo&gt;(a =&gt; (InvoiceWithEntryInfo)a);\n\n            iweilCOPY = sil.FindAll(a =&gt; (sil is InvoiceWithEntryInfo)).ConvertAll&lt;InvoiceWithEntryInfo&gt;(a =&gt; (InvoiceWithEntryInfo)a);\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "jquery"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075570/timeline",
+      "question_comments_url": "/questions/7075570/comments",
+      "question_answers_url": "/questions/7075570/answers",
+      "question_id": 7075570,
+      "owner": {
+        "user_id": 883378,
+        "user_type": "unregistered",
+        "display_name": "Abi",
+        "reputation": 8,
+        "email_hash": "3d945e83eb8468aa1f07c6bfb40b9426"
+      },
+      "creation_date": 1313483905,
+      "last_activity_date": 1313483905,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 20,
+      "score": 0,
+      "community_owned": false,
+      "title": "how to solve the \"Permission denied\" error?",
+      "body": "<p>Webpage error details</p>\n\n<p>User Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727; InfoPath.2; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)\nTimestamp: Tue, 16 Aug 2011 08:34:11 UTC</p>\n\n<p>Message: Permission denied\nLine: 3517\nChar: 4\nCode: 0\nURI: <a href=\"http://dev.aps.edu.sg/template/aps2010/scripts/jquery-1.3.2.js\" rel=\"nofollow\">http://dev.aps.edu.sg/template/aps2010/scripts/jquery-1.3.2.js</a></p>\n"
+    },
+    {
+      "tags": [
+        "scala",
+        "scalate"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075569/timeline",
+      "question_comments_url": "/questions/7075569/comments",
+      "question_answers_url": "/questions/7075569/answers",
+      "question_id": 7075569,
+      "owner": {
+        "user_id": 516982,
+        "user_type": "registered",
+        "display_name": "prassee",
+        "reputation": 472,
+        "email_hash": "85e243df819b4cc68a8380c44cdbbdf4"
+      },
+      "creation_date": 1313483896,
+      "last_activity_date": 1313483896,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 11,
+      "score": 0,
+      "community_owned": false,
+      "title": "how to use scalate with scalatra",
+      "body": "<p>Hi Iam developing a application with Scalatra.I would like to use scalate \nto render the pages using the template. Are there any blogs or pointers to combine \nscaml and scala code. </p>\n"
+    },
+    {
+      "tags": [
+        "mysql",
+        "database-design",
+        "normalization",
+        "database-relations"
+      ],
+      "answer_count": 3,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075568/timeline",
+      "question_comments_url": "/questions/7075568/comments",
+      "question_answers_url": "/questions/7075568/answers",
+      "question_id": 7075568,
+      "owner": {
+        "user_id": 861264,
+        "user_type": "registered",
+        "display_name": "千里ちゃん",
+        "reputation": 182,
+        "email_hash": "7a3a95ce1320a29ccaf0b7a5a18da76c"
+      },
+      "creation_date": 1313483871,
+      "last_activity_date": 1313485311,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 13,
+      "score": 0,
+      "community_owned": false,
+      "title": "Restructure tables on an existing website, to store historical data?",
+      "body": "<p>I've been trying to find a match for my issue in existing questions, and I'll accept links as an answer and close my question if you have them.  </p>\n\n<p>What I'm trying to find is a way to restructure my existing tables.  I have a website, and I spent kind of a long time working on it.  Now I have all the tables and selects in place.  Unfortunately, the \"First Name\" \"Last Name\" table is changing a lot, as users update their info.  I want to store historical data for these fields, so I can find users by their real names after they've changed them.  The names aren't unique, but they're easier to remember than their ID numbers.  So, I have a member's table with the fields (username, email, firstname, middlename, familyname, dob, password, country).  Should I just create new tables for firstname and familyname so that I can store the changes?</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "databinding",
+        "gridview",
+        "webforms",
+        "checkboxlist"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075567/timeline",
+      "question_comments_url": "/questions/7075567/comments",
+      "question_answers_url": "/questions/7075567/answers",
+      "question_id": 7075567,
+      "owner": {
+        "user_id": 750216,
+        "user_type": "registered",
+        "display_name": "Răzvan Panda",
+        "reputation": 419,
+        "email_hash": "974fb481d985024715a6816dfbb9cebf"
+      },
+      "creation_date": 1313483870,
+      "last_edit_date": 1313488357,
+      "last_activity_date": 1313488357,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 16,
+      "score": 0,
+      "community_owned": false,
+      "title": "How to transform a custom CheckBoxList into an equivalent GridView?",
+      "body": "<p>I have this custom CheckBoxList:</p>\n\n<pre><code>&lt;CustomCheckBoxList runat=\"server\" ID=\"ItemsCBL\" DataSourceID=\"ItemsData\"\n    DataTextField=\"datacolumn\" DataValueField=\"datacolumn\"\n    SelectedValues='&lt;%# Bind(\"Items\") %&gt;' /&gt;\n</code></pre>\n\n<p><strong>Where SelectedValues attribute is of type <code>NHibernate.Collection.Generic.PersistentGenericBag&lt;string&gt;</code></strong></p>\n\n<p>How can I transform it into a GridView with same binding functionality?</p>\n\n<pre><code>&lt;GridView runat=\"server\" ID=\"ItemsAllowed\" ShowFooter=\"false\" DataSourceID=\"ItemsData\"\n AutoGenerateColumns=\"false\"&gt;\n&lt;Columns&gt;\n  &lt;asp:TemplateField HeaderText=\"UserAllowed\"&gt;\n    &lt;ItemTemplate&gt;\n      &lt;asp:CheckBox ID=\"cbUserAllowed\" runat=\"server\" /&gt;\n    &lt;/ItemTemplate&gt;\n  &lt;/asp:TemplateField&gt;\n  &lt;asp:TemplateField HeaderText=\"ItemList\"&gt;\n    &lt;ItemTemplate&gt;\n      &lt;asp:Literal ID=\"litItem\" runat=\"server\" Text='&lt;%# Bind(\"datacolumn\") %&gt;' /&gt;\n    &lt;/ItemTemplate&gt;\n  &lt;/asp:TemplateField&gt;\n&lt;/Columns&gt;\n&lt;/GridView&gt;\n</code></pre>\n\n<p>I need to transform it to a GridView cause I need to add one extra checkbox column.</p>\n\n<p>Thanks for replies!</p>\n"
+    },
+    {
+      "tags": [
+        "c",
+        "interview-questions"
+      ],
+      "answer_count": 4,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075565/timeline",
+      "question_comments_url": "/questions/7075565/comments",
+      "question_answers_url": "/questions/7075565/answers",
+      "question_id": 7075565,
+      "owner": {
+        "user_id": 862620,
+        "user_type": "registered",
+        "display_name": "Jimmy",
+        "reputation": 669,
+        "email_hash": "4de0bdb3db0cbf0a8df4e95a75ecd39d"
+      },
+      "creation_date": 1313483866,
+      "last_edit_date": 1313484212,
+      "last_activity_date": 1313485540,
+      "up_vote_count": 4,
+      "down_vote_count": 0,
+      "view_count": 58,
+      "score": 4,
+      "community_owned": false,
+      "title": "Is this explanation accurate for C code that won't compile?",
+      "body": "<p>Alleged interview question and answer <a href=\"http://www.programmerinterview.com/index.php/c-cplusplus/c-will-it-compile/\" rel=\"nofollow\">here</a>.</p>\n\n<p>Will the following code compile (in C)?</p>\n\n<pre><code>#define X 8;\nint main(void)\n{\n    ++X; // will this line compile?\n}`\n</code></pre>\n\n<p>I am no expert in C, but I know some C++ and thought: of course not, you cannot increment the number 8, it is an rvalue.  Of course the preprocessor replaces the <code>X</code> with the <code>8</code> before trying to compile, and when it does try to compile, it will fail for that very reason.  Then again, I am the one reading interview question websites so then I thought who knows...</p>\n\n<p>Here is the explanation given:</p>\n\n<p>\"Strictly speaking, the operand of the prefix (or postfix) increment operator must be a non-modifiable lvalue. Now that we know what an lvalue is, we must ask ourselves if X is an lvalue. X is a macro, which means that it does not identify a place in memory – macros use simple text replacement via the preprocessor. Because macros don’t exist in a region of memory, they are not lvalues. This means that X can not be used as an operand of the prefix increment operator. Thus, the code shown above will not compile.\"</p>\n\n<p>Is this explanation as bunk as I think it is? </p>\n\n<p>How many errors can you find above?  I think maybe that should be the interview question...</p>\n\n<p>And this is just funny:</p>\n\n<p>\"Intuitively, you might be able to say that the code above will not compile – without knowing exactly why. However, in an interview situation, you will be expected to provide some reasoning like what’s given above. Simple yes or no answers just won’t cut it in an interview.\"  (!)</p>\n"
+    },
+    {
+      "tags": [
+        "jquery",
+        "tomcat",
+        "servlets",
+        "jquery-validate"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075550/timeline",
+      "question_comments_url": "/questions/7075550/comments",
+      "question_answers_url": "/questions/7075550/answers",
+      "question_id": 7075550,
+      "owner": {
+        "user_id": 828381,
+        "user_type": "registered",
+        "display_name": "mck",
+        "reputation": 34,
+        "email_hash": "f865fea8de172ff876dcf5f28ffc71c3"
+      },
+      "creation_date": 1313483776,
+      "last_activity_date": 1313484287,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 16,
+      "score": 1,
+      "community_owned": false,
+      "title": "Weird JQuery validate error when rendered on a server in IE7 ('this.0.form' is null or not an object)",
+      "body": "<p>I'm trying to implement a custom validation function that requires a group of fields to all be either filled or empty. I used <a href=\"http://stackoverflow.com/questions/1378472/jquery-validate-can-i-re-validate-a-group-of-fields-after-changing-one\">this answer</a> and everything seemed to work when \nI run it locally. When I put it on a tomcat server and it's being rendered from a servlet I get the following error when run in IE7, in Firefox it works fine at both instances.</p>\n\n<blockquote>\n  <p>'this.0.form' is null or not an object\n  jquery.validate.js line 97</p>\n</blockquote>\n\n<p>You can find the validate plugin <a href=\"http://bassistance.de/jquery-plugins/jquery-plugin-validation/\" rel=\"nofollow\">here</a>. The relevant code is below. It goes into the error in the commented line.</p>\n\n<pre><code> /*\n  * Form Validation\n  */\n $.validator.addMethod(\"notEmpty\", function (value, element) {\n     return value !== \"\";\n }, \"This value cannot be empty\");\n\n $.validator.addMethod(\"all\", function (value, element, options) {\n\n    var row = $(element).closest(options[1]);\n    var empties_in_group = $(options[0], row).filter(function() {\n        return $(this).val() === \"\";\n    }).length;\n\n    //Either all have to be empty or filled\n    var valid = empties_in_group === 0 || empties_in_group === $(options[0], row).length;\n\n    if (!$(element).data('reval')) {\n        var fields = $(options[0], row);\n        fields.data('reval', true).valid(); //Error happens in this line\n        fields.data('reval', false);\n    }\n    return valid;\n }, \"Either none or all fields in this section have to be filled\");\n\n$.validator.addClassRules({\n    percentage: {\n        digits: true,\n        min: 0,\n        max: 100\n    },\n    cpu_util:   {all: [\".cpu_util\", 'tr']},\n    cpu_load:   {all: [\".cpu_load\", 'tr']},\n    disk_used:  {all: [\".disk_used\", 'tr']},\n    disk_cons:  {all: [\".disk_cons\", 'tr']},\n    time_field: {all: [\".time_field\", 'li']},\n    log_msgs:   {all: [\".log_msgs\", 'li']},\n    log_unchng: {all: [\".log_unchng\", 'td']},\n    log_ex:     {all: [\".log_ex\", 'td']},\n    mem_free:   {all: [\".mem_free\", 'tr']},\n    mem_used:   {all: [\".mem_used\", 'tr']},\n    cpu_mem:    {all: [\".cpu_mem\", 'tr']},\n    cpu_util:   {all: [\".cpu_util\", 'tr']},\n    swap:       {all: [\".swap\", 'tr']}\n});\n</code></pre>\n\n<p>Any ideas?</p>\n"
+    },
+    {
+      "tags": [
+        "android",
+        "button",
+        "spinner"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075549/timeline",
+      "question_comments_url": "/questions/7075549/comments",
+      "question_answers_url": "/questions/7075549/answers",
+      "question_id": 7075549,
+      "owner": {
+        "user_id": 371720,
+        "user_type": "registered",
+        "display_name": "shihab_returns",
+        "reputation": 6,
+        "email_hash": "0643bc61a55674647ce0de1dda62b90b"
+      },
+      "creation_date": 1313483775,
+      "last_edit_date": 1313484954,
+      "last_activity_date": 1313484954,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 21,
+      "score": 1,
+      "community_owned": false,
+      "title": "How to perform an action based on the selected value of a Spinner in on a Button click?",
+      "body": "<p>I want to perform an action based on the <code>Spinner</code>s selected value inside of the <code>Button</code>s <code>onClick()</code> method. </p>\n\n<p>How I get the selected item of a <code>Spinner</code>?</p>\n\n<p>My code:</p>\n\n<pre><code>spinner = (Spinner) findViewById(R.id.spinner);\nbtnConvert = (Button) findViewById(R.id.btnConvert);\nbtnConvert.setOnClickListener(new OnClickListener() {\n\n@Override\npublic void onClick(View v) {\n    // Here I want to perform an action based on the selected item of a listener\n}\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "c",
+        "optimization",
+        "compiler"
+      ],
+      "answer_count": 3,
+      "accepted_answer_id": 7075590,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075547/timeline",
+      "question_comments_url": "/questions/7075547/comments",
+      "question_answers_url": "/questions/7075547/answers",
+      "question_id": 7075547,
+      "owner": {
+        "user_id": 760807,
+        "user_type": "registered",
+        "display_name": "MetallicPriest",
+        "reputation": 805,
+        "email_hash": "ae23e7c588bea8a70cad5565d31655f7"
+      },
+      "creation_date": 1313483747,
+      "last_edit_date": 1313484120,
+      "last_activity_date": 1313484537,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 44,
+      "score": 0,
+      "community_owned": false,
+      "title": "Is it possible to allocate on stack",
+      "body": "<p>The <code>malloc</code> function always allocate memory on the heap. However, while studying the <a href=\"http://en.wikipedia.org/wiki/Escape_analysis\" rel=\"nofollow\">Escape Analylis Article on Wikipedia</a>, I came to know that as an optimization, a compiler can convert heap allocations to stack allocations. For example, if it sees that an allocated memory is only used and then freed inside a function. </p>\n\n<p>Now my question is, is there a way that the programmer can do so himself. That is allocate memory on stack? I know C99 allows a variable to be given as size for an array declaration, but say the programmer wants to resize it. Can it be done?</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "architecture"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075545/timeline",
+      "question_comments_url": "/questions/7075545/comments",
+      "question_answers_url": "/questions/7075545/answers",
+      "question_id": 7075545,
+      "owner": {
+        "user_id": 529892,
+        "user_type": "registered",
+        "display_name": "hungryMind",
+        "reputation": 2094,
+        "email_hash": "df63a062e684d7555c1c621bcb5735c3"
+      },
+      "creation_date": 1313483744,
+      "last_activity_date": 1313483744,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 14,
+      "score": 0,
+      "community_owned": false,
+      "title": "UI representation of Server Object",
+      "body": "<p>I have an application where lots of objects are created and whose property are changing frequently by user. There are various modules in server, and for each module one session is created. Each session consists one clients and one user running the main app. User just interfere with objects and modify its property which current I am using a property grid in windows form to do it. How client will be connected to main app is yet to decide. I am thinking of duplex WCF service. I need two suggestions :</p>\n\n<ol>\n<li><p>How to represent the remote objects on client UI? I was thinking of creating UI items manually on VS form designer and place a mapping XML file, which UI on initialize use the mapping table to get property details of each UI element and modify accordingly. Like a panel in UI will be filled with some color when mapped object's faulted state is true.</p></li>\n<li><p>Since the objects on server is changing frequently, what is the best way to tell the client to update the UI. I was thinking of duplex WCF where if client is registered for particular object, he will be notified the change in object. My question is should we transfer entire object to client or only the updated property along with object Id (wrapped in new type)</p>\n\n<pre><code>interface IChange\n{\n    string ObjectName { get; set; }\n    string PropertyName { get; set; }\n    object NewValue { get; set; }\n    object OldValue { get; set; }\n}\n</code></pre></li>\n</ol>\n\n<p>Suggest me alternative or better way to achieve my goal</p>\n"
+    },
+    {
+      "tags": [
+        "mysql"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075543/timeline",
+      "question_comments_url": "/questions/7075543/comments",
+      "question_answers_url": "/questions/7075543/answers",
+      "question_id": 7075543,
+      "owner": {
+        "user_id": 416100,
+        "user_type": "registered",
+        "display_name": "sakhunzai",
+        "reputation": 118,
+        "email_hash": "5e77a3b2e1f3f28670533adecd7fcd0f"
+      },
+      "creation_date": 1313483727,
+      "last_edit_date": 1313487325,
+      "last_activity_date": 1313487325,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 12,
+      "score": 2,
+      "community_owned": false,
+      "title": "In mysql I want to set lower_case_table_names=1 on existing databases to avoid cases-sensitivity issues accross multiple platforms",
+      "body": "<p>In mysql I want to set lower_case_table_names=1 on existing databases to avoid cases-sensitivity issues accross multiple platforms. </p>\n\n<p><strong>A)</strong>  <code>What are the risks ?</code>( <a href=\"http://dev.mysql.com/doc/refman/5.0/en/identifier-case-sensitivity.html\" rel=\"nofollow\">besides show table issue</a>)</p>\n\n<p><strong>B)</strong>  After setting lower_case_table_names=1, will I be in position to query databases across \n     multiple platforms consistantly  ?\n     <code>select * from USERS == select * from users</code>;</p>\n\n<p><strong>C)</strong> How the triggers + stored procedure + functions + views + events \n    will be affected in this regards. I know lower_case_table_names is only for \"TABLE\"<br>\nnames but how about triggers other database objects . Will they remain case-insensitive \n   How about views ? </p>\n\n<p><strong>D)</strong> Do I need to rename all tables before/after this configuration setting or this  will  do the miracle in one step (i.e lower_case_table_names=1 neutralize table names) ?</p>\n\n<p><strong>E)</strong>  What will be the exact steps WRT:<code>mysqd / my.ini</code> ?</p>\n\n<p>Your intellectual  input is much appreciated in advance :)</p>\n\n<p>regards</p>\n"
+    },
+    {
+      "tags": [
+        "javascript",
+        "jquery",
+        "dom"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075539/timeline",
+      "question_comments_url": "/questions/7075539/comments",
+      "question_answers_url": "/questions/7075539/answers",
+      "question_id": 7075539,
+      "owner": {
+        "user_id": 616225,
+        "user_type": "registered",
+        "display_name": "Kor",
+        "reputation": 355,
+        "email_hash": "ca6e421b31f38e89b1b9dcd9978844b7"
+      },
+      "creation_date": 1313483702,
+      "last_activity_date": 1313487674,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 21,
+      "score": 0,
+      "community_owned": false,
+      "title": "Call a function when appending an input into DOM using jQuery",
+      "body": "<p>I have a page that appends and removes inputs from DOM using jquery. Some of them share a class (\"numeric\"). Once each input is appended, my code should call .numeric() to every new input with \"numeric\" class. I defined this block at the beginning of the code, </p>\n\n<pre><code>$('input.numeric')\n    .live('load', function() {\n        $(this).numeric();\n    });\n</code></pre>\n\n<p>but load seems not to be related to appended nodes after DOM is loaded. Ready event isn't working either.</p>\n\n<p>How could I do that? Thanks mates</p>\n"
+    },
+    {
+      "tags": [
+        "eventlistener",
+        "batik"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075537/timeline",
+      "question_comments_url": "/questions/7075537/comments",
+      "question_answers_url": "/questions/7075537/answers",
+      "question_id": 7075537,
+      "owner": {
+        "user_id": 896278,
+        "user_type": "registered",
+        "display_name": "songhama",
+        "reputation": 1,
+        "email_hash": "824c33608bf6d1858a27ea25a64fdb31"
+      },
+      "creation_date": 1313483678,
+      "last_activity_date": 1313483678,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 4,
+      "score": 0,
+      "community_owned": false,
+      "title": "EventListener doesn't work",
+      "body": "<p>I have written a Swing component which wraps JSVGCanvas, and I would \nlike to capture DOM elements using eventlistener. </p>\n\n<p>So some source code of the program is as follows:</p>\n\n<pre><code>@Override\npublic void run() {\ntry {\n        while (true) {\n           // Only update the DOM while rendering is not in progress\n           Element newNode = null;\n           Element parent = null;\n\n           UpdateManager um = jSVGCanvas1.getUpdateManager();\n           doc = um.getDocument();\n           Element svgRoot = doc.getDocumentElement();\n\n            synchronized (updateList) {\n                    switch (EditType) {\n                        case ADD: {\n                         Element newNode = doc.createElementNS(SVGDOMImplementation.SVG_NAMESPACE_URI, \"line\");\n                           newNode = doc.createElementNS(SVGDOMImplementation.SVG_NAMESPACE_URI, \"line\");\n                           newNode.setAttributeNS(null, \"id\", \"currentdrawing_111123\");\n                           newNode.setIdAttribute(\"\", true);\n               newNode.setIdAttribute(\"id\", true);\n                           newNode.setAttributeNS(null, \"stroke\", \"black\"); \n                       newNode.setAttributeNS(null, \"stroke-width\", \"1\");\n                       newNode.setAttributeNS(null, \"x1\", \"7\");\n               newNode.setAttributeNS(null, \"y1\", \"22\");\n                       newNode.setAttributeNS(null, \"x2\", \"115\");\n               newNode.setAttributeNS(null, \"y2\", \"223\");\n\n               parent = svgRoot;\n                           parent.appendChild(newNode);                             \n                           break;\n                        }\n                        case UPDATE: {\n\n                            break;\n                        }\n                        case REMOVE: {\n\n                            break;\n                        }\n\n                    }\n\n                } else {\n                    updateList.wait();\n                }\n            }\n            if ((parent != null) &amp;&amp; (newNode != null)) {\n                parent.appendChild(newNode);\n                if (!buttonGroup1.isSelected(cursorbutton.getModel())) {\n                    t1 = (EventTarget) doc.getElementById (newNode.getAttribute(\"id\").toString());\n                    t1.addEventListener (\"click\", new OnClickCircleAction (), false);\n                 }\n\n            } else {\n                log.log(Level.WARNING, \"Unknown parent element ID {0}, element {1} not added\", new Object[]{parent, newNode});\n            }\n\n            // Check to see if we emptied the list this run\n            if (updateList.size() == 0) {\n                rendering = new Date().getTime();\n                // Resize the SVG Canvas\n                svgRoot.setAttribute(\"width\", String.valueOf(getWidth()));\n                svgRoot.setAttribute(\"height\", String.valueOf(getHeight()));\n\n                log.info(\"--- Forcing Canvas Repaint ---\");\n                // This can take a while, and putting it inside the synchronized\n                //  block seems to deadlock due to updates being enqueued\n                um.forceRepaint();\n\n\n            }\n        }\n    } catch (InterruptedException ex) {\n        log.warning(\"Caught Interrupted Exception, exiting update thread\");\n    }\n\n        }\n</code></pre>\n\n<p>But my event handler is never called. \nI do not understand why it is not called. </p>\n\n<p>Using JDK 1.6.25 and Batik 1.7. </p>\n\n<p>Any suggestions would be greatly appreciated. </p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "java-me"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075536/timeline",
+      "question_comments_url": "/questions/7075536/comments",
+      "question_answers_url": "/questions/7075536/answers",
+      "question_id": 7075536,
+      "owner": {
+        "user_id": 896175,
+        "user_type": "registered",
+        "display_name": "Dipayan",
+        "reputation": 1,
+        "email_hash": "a4c42caffd84e3e28f1a183f844b8ffb"
+      },
+      "creation_date": 1313483668,
+      "last_edit_date": 1313483788,
+      "last_activity_date": 1313483788,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 11,
+      "score": 0,
+      "community_owned": false,
+      "title": "HashTable to Lwuit Table",
+      "body": "<p>Please give me Some example \nAfter parsing a JSON String I want to put it in a HashTable,From the HashTable I get the value and put it in a LWUIT table,every thing will be dynamically ,there is no hardcore value.</p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "management",
+        "barcode",
+        "inventory-management"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075534/timeline",
+      "question_comments_url": "/questions/7075534/comments",
+      "question_answers_url": "/questions/7075534/answers",
+      "question_id": 7075534,
+      "owner": {
+        "user_id": 835461,
+        "user_type": "registered",
+        "display_name": "Jideobi Benedine Ofomah",
+        "reputation": 21,
+        "email_hash": "6e7f7f5e924084bbfbee427013491b46"
+      },
+      "creation_date": 1313483655,
+      "last_activity_date": 1313483655,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 8,
+      "score": 0,
+      "community_owned": false,
+      "title": "How to Integrate Barcode Scanner into Java Inventory Management Program",
+      "body": "<p>This is the First time am using a handheld bar code scanner in any application. The barcode scanner is Zebex Z-3110 Handeld Bar Code Scanner. i want to use this bar code scanner to scan bar codes on item which will then read the code feed it to Java Inventory management program that am working on, then the Java program will use the code fed to it by the Bar code scanner to search the database for details of that item. the barcode scanner will also be used to read the item barcode when it's been recorded to the inventory. urgent help needed.</p>\n"
+    },
+    {
+      "tags": [
+        "python"
+      ],
+      "answer_count": 1,
+      "accepted_answer_id": 7075561,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075533/timeline",
+      "question_comments_url": "/questions/7075533/comments",
+      "question_answers_url": "/questions/7075533/answers",
+      "question_id": 7075533,
+      "owner": {
+        "user_id": 739489,
+        "user_type": "registered",
+        "display_name": "Bogdan",
+        "reputation": 328,
+        "email_hash": "1ab163d42df75b031207ef967b273981"
+      },
+      "creation_date": 1313483651,
+      "last_activity_date": 1313483828,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 33,
+      "score": 1,
+      "community_owned": false,
+      "title": "python method variables and Objects created in method",
+      "body": "<p>So I know that in Python variables declared in a method are not visible outside of it. But what is their life cycle? I would expect that a variable declared inside a method is created each time that method is called. </p>\n\n<p>I'm asking because of the following situation. I have a method as follows(this is used with cherrypy, probably not relevant but still I'll add it for the off chance this influences it in any way).</p>\n\n<p>First the custom Filter class I'm using:</p>\n\n<pre><code>class Filter():\n\"\"\"\nClass used to filter tables displayed in UI, based on few criteria.\nInitialize filter with a list of fields, and correspondinf values.\n\"\"\"\ndef __init__(self, display_name= \"\", fields= [], values= [], operations= []):\n    self.display_name = display_name\n    self.fields = fields\n    self.values = values\n    self.selected = False \n    self.operations = operations\n</code></pre>\n\n<p>Now the method I'm talking about</p>\n\n<pre><code>@cherrypy.expose\n@logged() \ndef getfiltereddatatypes(self, name, filters, datatype):\n    ...some mumbo jumbo...\n\n    default_filter = self._get_default_filters(inputTree, name)\n\n    #default_filter here can be a object of type Filter if defined or None otherwise\n\n    print \"RECIEVED \" + str(filters)\n    if default_filter is not None:\n        print \"CREATING NEW\"\n        new_filter = copy.deepcopy(default_filter)\n    else:\n        print \"CREATING NEW\"\n        new_filter = Filter()\n    [new_filter.fields.append(value) for value in filters['fields']]\n    [new_filter.operations.append(value) for value in filters['operations']]\n    [new_filter.values.append(value) for value in filters['values']]\n    print \"LENGTH =\" + str(len(new_filter.fields))\n\n    ...Some other mumbo jumbo....\n</code></pre>\n\n<p>So basically I want to add the filter values recieved as parameter in the <code>filters</code> variable to the default_ones. But i want this to be done each time the method is called, or to better explain it, I made the prints to show my problem. So at first method call:</p>\n\n<pre><code>    RECIEVED {'operations': ['!='], 'fields': ['model.DataType.subject'], 'values': ['w']}\n    CREATING NEW\n    LENGTH =1\n</code></pre>\n\n<p>So as expected, a new Filter object is created, and the operations, fields, and values from the recieved parameter are added, length(fields) = 1. But at my second pass:</p>\n\n<pre><code>    RECIEVED {'operations': ['!='], 'fields': ['model.DataType.subject'], 'values': ['']}\n    CREATING NEW\n    LENGTH =2\n</code></pre>\n\n<p>Now this I can't explain this behaviour. As you can see, the CREATING NEW brach of the if is called again, the <code>filters</code> variable holds one item lists but the length of the result is 2. If I run it again and again it will always increment. It's like the <code>new_filter = Filter()</code> call returns the new_filter from the previous method call. What causes this kind of behaviour? I'm thiking maybe if I do a <code>new_filter = copy.deepcopy(Filter())</code> it might solve it but why should I be forced to do that?</p>\n\n<p>Regards,\nBogdan </p>\n"
+    },
+    {
+      "tags": [
+        "php",
+        "jquery",
+        "mysql"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075527/timeline",
+      "question_comments_url": "/questions/7075527/comments",
+      "question_answers_url": "/questions/7075527/answers",
+      "question_id": 7075527,
+      "owner": {
+        "user_id": 875032,
+        "user_type": "unregistered",
+        "display_name": "Alan",
+        "reputation": 35,
+        "email_hash": "a3a466e5b50e66427d3fc886a784d7c8"
+      },
+      "creation_date": 1313483597,
+      "last_activity_date": 1313484353,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 33,
+      "score": 0,
+      "community_owned": false,
+      "title": "Rotating Or Slide Show in PHP and Jquery",
+      "body": "<p>Working with images which are loaded from MySQL database, does anyone have an idea of simple rotating banner framework I can use? I'm looking for simple simple that will allow the visitor to see a series of images rotate, and when one of those images is clicked, it takes them to the detail page for that image.</p>\n\n<p>I've done most of the things above, what I'm after is an image rotator.\nWould appreciate your helps with a pointer. Any thing at all would be welcome.</p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "caching",
+        "jvm",
+        "visibility",
+        "volatile"
+      ],
+      "answer_count": 2,
+      "favorite_count": 1,
+      "question_timeline_url": "/questions/7075517/timeline",
+      "question_comments_url": "/questions/7075517/comments",
+      "question_answers_url": "/questions/7075517/answers",
+      "question_id": 7075517,
+      "owner": {
+        "user_id": 590091,
+        "user_type": "registered",
+        "display_name": "Hesey",
+        "reputation": 207,
+        "email_hash": "ad2761d3a84a1b29276b995d7719e694"
+      },
+      "creation_date": 1313483538,
+      "last_activity_date": 1313485147,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 52,
+      "score": 2,
+      "community_owned": false,
+      "title": "Does Object has Visibility Problem?",
+      "body": "<p>We often use <code>volatile</code> to ensure that a condition variable can be visible to every Thread.</p>\n\n<p>I see the <code>volatile</code> fields are all <code>primitive type</code> in code so far.</p>\n\n<p>Does <code>object</code> field has this problem? For example:</p>\n\n<pre><code>class a {\n\npublic String str;\n\npublic List list;\n\n}\n</code></pre>\n\n<p>If there are some <code>Threads</code> will access str and list, must I add 'volatile'?</p>\n\n<p>I guess each access to <code>Object</code> will get diectly from <code>Heap</code>, and the <code>Object</code> will not be cached like primitive type.</p>\n\n<p>Is that right?</p>\n"
+    },
+    {
+      "tags": [
+        "android",
+        "sqlite",
+        "facebook-graph-api"
+      ],
+      "answer_count": 5,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075509/timeline",
+      "question_comments_url": "/questions/7075509/comments",
+      "question_answers_url": "/questions/7075509/answers",
+      "question_id": 7075509,
+      "owner": {
+        "user_id": 520141,
+        "user_type": "registered",
+        "display_name": "abhishek",
+        "reputation": 78,
+        "email_hash": "f36715bb88cff3d35430917aa9247830"
+      },
+      "creation_date": 1313483498,
+      "last_edit_date": 1313485564,
+      "last_activity_date": 1313487852,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 22,
+      "score": 0,
+      "community_owned": false,
+      "title": "Cant store facebook access token in android sqlLite3 database",
+      "body": "<p>I am making an application which involves facebook integration.\nI have to store the access token so that it doesnt needs to login again to see the application. But i am not able to store the access token .\nThe following is the error which i get</p>\n\n<pre><code>08-16 13:57:53.236: ERROR/Database(7964): Error inserting acces_token=177852938929775|8e4aec98e182f7034b497766.3-618306968|YAriJqaRTDz1aIgNHjom_tdBnnw\n08-16 13:57:53.236: ERROR/Database(7964): android.database.sqlite.SQLiteConstraintException: error code 19: constraint failed\n08-16 13:57:53.236: ERROR/Database(7964):     at android.database.sqlite.SQLiteStatement.native_execute(Native Method)\n08-16 13:57:53.236: ERROR/Database(7964):     at android.database.sqlite.SQLiteStatement.execute(SQLiteStatement.java:55)\n08-16 13:57:53.236: ERROR/Database(7964):     at android.database.sqlite.SQLiteDatabase.insertWithOnConflict(SQLiteDatabase.java:1623)\n08-16 13:57:53.236: ERROR/Database(7964):     at android.database.sqlite.SQLiteDatabase.insert(SQLiteDatabase.java:1484)\n08-16 13:57:53.236: ERROR/Database(7964):     at org.db.dbHelper.insertRows(dbHelper.java:63)\n08-16 13:57:53.236: ERROR/Database(7964):     at org.neighbourhood.neighbourhood.onFacebookConnectorWorking(neighbourhood.java:142)\n</code></pre>\n\n<p>Code :-</p>\n\n<pre><code>  dbHelper db = new dbHelper(neighbourhood.this);\n        db.open();\n        ContentValues cv = new ContentValues();\n        cv.put(\"acces_token\",   \n                  facebookConnector.getFacebook().getAccessToken());\n        db.insertRows(cv, \"facebook\");\n        db.close();\n</code></pre>\n\n<p>Code to inset values in database :-</p>\n\n<p>public class dbHelper {</p>\n\n<pre><code>private final String DATABASE_NAME = \"neighbourhood.db\";\nprivate final String TAG = \"dbHelper\";\n\nprivate static final String DATABASE_CREATE_TABLE_LOGIN = \"create table login\" +\n        \" (is_login text not null);\";\n\nprivate static final String DATABASE_CREATE_TABLE_FACEBOOK = \"create table \"\n        + \"facebook\"\n        + \" (name text not null,\"\n        + \"first_name text not null,\" +\n        \"last_name text not null,\" +\n        \"gender text not null,\" +\n        \"email text not null,\" +\n        \"id text not null,\" +\n        \"birthday text not null,\" +\n        \"acces_token text not null);\";\n\n\nprivate SQLiteDatabase myDatabase;\nprivate myDbhelper helper;\n\npublic dbHelper(Context context) {\n    helper = new myDbhelper(context, DATABASE_NAME, null, 1);\n}\n\n/**\n * This method is used to open the database in Writable mode\n * \n * @return instance of the database\n */\npublic dbHelper open() {\n    try {\n        myDatabase = helper.getWritableDatabase();\n    } catch (SQLException ex) {\n        ex.printStackTrace();\n        }\n    return this;\n}\n\n/**\n * This method is used for closing the database\n */\npublic void close() {\n    myDatabase.close();\n}\n\n\npublic long insertRows(ContentValues values, String tableName) {\n    long val = myDatabase.insert(tableName, null, values);\n    return val;\n}\n\npublic Cursor getAllValues(String tableName) {\n    Cursor myResult;\n    myResult = myDatabase.query(tableName, null, null, null, null, null,\n            null, null);\n\n    return myResult;\n}\n\n\nprivate static class myDbhelper extends SQLiteOpenHelper {\n    public myDbhelper(Context context, String name, CursorFactory factory,\n            int version) {\n        super(context, name, factory, version);\n    }\n\n    /**\n     * this method is called when the database is created first time\n     */\n    @Override\n    public void onCreate(SQLiteDatabase _db) {\n        _db.execSQL(DATABASE_CREATE_TABLE_LOGIN);\n        _db.execSQL(DATABASE_CREATE_TABLE_FACEBOOK);\n\n    }\n\n    /**\n     * this method is called when the database version is changed\n     */\n    @Override\n    public void onUpgrade(SQLiteDatabase _db, int _oldVersion,\n            int _newVersion) {\n        /*\n         * _db.execSQL(\"DROP TABLE IF EXISTS all_audio\");\n         * _db.execSQL(\"DROP TABLE IF EXISTS all_video\");\n         * _db.execSQL(\"DROP TABLE IF EXISTS all_playlist\");\n         */\n        _db.execSQL(\"DROP TABLE IF EXISTS all_playlist_song\");\n        onCreate(_db);\n\n    }\n}\n</code></pre>\n\n<p>}</p>\n"
+    },
+    {
+      "tags": [
+        "c++",
+        "native",
+        "clr-hosting",
+        "heap-corruption"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075504/timeline",
+      "question_comments_url": "/questions/7075504/comments",
+      "question_answers_url": "/questions/7075504/answers",
+      "question_id": 7075504,
+      "owner": {
+        "user_id": 607430,
+        "user_type": "registered",
+        "display_name": "nemcija",
+        "reputation": 79,
+        "email_hash": "9e81b5a0c1f3913bf8f3c8a9f040aa1e"
+      },
+      "creation_date": 1313483483,
+      "last_edit_date": 1313485711,
+      "last_activity_date": 1313485711,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 15,
+      "score": 2,
+      "community_owned": false,
+      "title": "CLR4 Hosting Interface is causing Heap Corruption?",
+      "body": "<p>I'm working with native CLR hosting for some weeks now. In the beginning it works pretty fine. But later on I've noticed that something in my application causes a heap corruption. I've figured out that this is already caused by the CLR startup. (See following short version of the code)</p>\n\n<pre><code>#pragma comment(lib, \"mscoree.lib\")\n#include &lt;mscoree.h&gt;\n#include &lt;metahost.h&gt;\n#include &lt;comdef.h&gt;\n#import \"mscorlib.tlb\" raw_interfaces_only          \\\n    high_property_prefixes(\"_get\",\"_put\",\"_putref\")     \\\n    rename(\"ReportEvent\", \"InteropServices_ReportEvent\")\n\nusing namespace mscorlib;\n\nint _tmain(int argc, _TCHAR* argv[])\n{\n    HRESULT hr; // In fullversion used for error detection - but here unused.\n    PCWSTR pszVersion = L\"v4.0.30319\";\n    ICLRMetaHost* lpMetaHost = NULL;\n    ICLRRuntimeInfo* lpRuntimeInfo = NULL;\n    ICorRuntimeHost* lpRuntimeHost = NULL;\n    _AppDomainPtr spAppDomain = NULL;\n    BOOL bLoadable = false;\n    IUnknownPtr spAppDomainThunk = NULL;\n\n    CLRCreateInstance(CLSID_CLRMetaHost, IID_ICLRMetaHost, (LPVOID *)&amp;lpMetaHost);\n    // After this line i can \"late detect\" 6 array bound heap corruptions in process memory.\n\n    lpMetaHost-&gt;GetRuntime(pszVersion, IID_ICLRRuntimeInfo, (LPVOID *)&amp;lpRuntimeInfo);    \n    lpRuntimeInfo-&gt;IsLoadable(&amp;bLoadable);\n    lpRuntimeInfo-&gt;GetInterface(CLSID_CorRuntimeHost, IID_PPV_ARGS(&amp;lpRuntimeHost));\n    lpRuntimeHost-&gt;Start();\n    lpRuntimeHost-&gt;GetDefaultDomain(&amp;spAppDomainThunk);\n    spAppDomainThunk-&gt;QueryInterface(IID_PPV_ARGS(&amp;spAppDomain));\n    spAppDomainThunk-&gt;Release();\n    // Now I can \"late detect\" up to 9 array bound heap corruptions in process memory.\n\n    // ...\n}\n</code></pre>\n\n<p><img src=\"http://i.stack.imgur.com/yYY1x.png\" alt=\"Rational Purify Exception\"></p>\n\n<p>Has anyone an idea how to avoid this?\nAt the moment in some cases it still works, but when my applications gets bigger and bigger the chance for an error increases exponentially.</p>\n\n<p>Regards Nem.</p>\n"
+    },
+    {
+      "tags": [
+        "c++",
+        "namespaces",
+        "using"
+      ],
+      "answer_count": 5,
+      "accepted_answer_id": 7075669,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075501/timeline",
+      "question_comments_url": "/questions/7075501/comments",
+      "question_answers_url": "/questions/7075501/answers",
+      "question_id": 7075501,
+      "owner": {
+        "user_id": 653478,
+        "user_type": "registered",
+        "display_name": "MKo",
+        "reputation": 320,
+        "email_hash": "d7e44ed38fe2e538a90c437c3376ae7f"
+      },
+      "creation_date": 1313483462,
+      "last_activity_date": 1313485578,
+      "up_vote_count": 4,
+      "down_vote_count": 0,
+      "view_count": 74,
+      "score": 4,
+      "community_owned": false,
+      "title": "c++ using namespace::function",
+      "body": "<p>consider the following C++ code.</p>\n\n<pre><code>namespace A {\n    void f() { // first function\n    }\n\n    void f(int) { // second function\n    }\n}\n...\nusing A::f; // introduces both functions\n</code></pre>\n\n<p>Is there a way to introduce only one function?</p>\n"
+    },
+    {
+      "tags": [
+        "javascript",
+        "jquery",
+        "css",
+        "jquery-plugins"
+      ],
+      "answer_count": 2,
+      "favorite_count": 1,
+      "question_timeline_url": "/questions/7075499/timeline",
+      "question_comments_url": "/questions/7075499/comments",
+      "question_answers_url": "/questions/7075499/answers",
+      "question_id": 7075499,
+      "owner": {
+        "user_id": 507629,
+        "user_type": "registered",
+        "display_name": "Nathan",
+        "reputation": 587,
+        "email_hash": "67cb8107e085324765a5b21c289dfd86"
+      },
+      "creation_date": 1313483456,
+      "last_activity_date": 1313488380,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 20,
+      "score": 1,
+      "community_owned": false,
+      "title": "Why is this background image fade in plugin deleting out the content of my div?",
+      "body": "<p>I am using the <a href=\"http://isthatclear.com/jquery/bgFade/\" rel=\"nofollow\">jQuery bgFade Plugin</a> and it fades the background image nicely but there's a problem with it. It deletes everything that is in the div when you hover. You can see it here: <a href=\"http://weebuild1.yolasite.com/\" rel=\"nofollow\">http://weebuild1.yolasite.com/</a> (hover over the first box that says \"Packages\")</p>\n\n<p>This is the code:</p>\n\n<pre><code>&lt;script type=\"text/javascript\"&gt;\n$(document).ready(function() {\n$('.packages').hover(function() {\n$(this).bgFade('fadeIn');\n}, function() {\n$(this).bgFade('fadeOut');\n});\n});\n&lt;/script&gt; \n</code></pre>\n\n<p>Can someone help me fix this issue? As you all know, this cannot stay like this. It needs to only fade the background and not remove the contents.</p>\n\n<p>The plugin's jQuery is here: <a href=\"http://weebuild1.yolasite.com/resources/javascript/jquery.bgFade.js\" rel=\"nofollow\">http://weebuild1.yolasite.com/resources/javascript/jquery.bgFade.js</a></p>\n\n<p>I hope someone can help. Thanks in advance!</p>\n"
+    }
+  ]
+}

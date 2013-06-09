@@ -10,8 +10,8 @@ int main() {
     string vcdPath = "./dump.vcd";
     VCD vcd(vcdPath);
     
-    Signal edge = (vcd & "uut_g" & "edge").asSignal();
-    for (Change ch : edge.changes()) {
+    Signal &edge = *(vcd & "uut_g" & "edge").asSignal();
+    for (Change ch : edge.changes) {
         cout << ch.time << " " << ch.value << "\n";
     }
 }

@@ -1,0 +1,3 @@
+
+mainClass := Some("Test")
+

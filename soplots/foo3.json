@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": 4001,
+    "message": "The 'pagesize' query parameter is invalid."
+  }
+}

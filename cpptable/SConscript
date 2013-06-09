@@ -1,0 +1,23 @@
+
+env = Environment()
+
+env.Append(CXXFLAGS = '-g')
+env.Append(CXXFLAGS = '-Wall')
+env.Append(CXXFLAGS = '-O0')
+env.Append(CXXFLAGS = '--std=c++0x')
+
+env.Append(CPPPATH = './src/')
+
+env.Append(LINKFLAGS = '--std=c++0x')
+env.Append(LINKFLAGS = '-Wall')
+env.Append(LINKFLAGS = '-O0')
+
+lib_sources = (
+      Glob('./*.cpp') 
+)
+
+test = env.Program(
+    target = 'test',
+    source = lib_sources
+)
+

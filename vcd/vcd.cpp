@@ -14,6 +14,7 @@ Value parseValue(string bitstr) {
     for (int i=0; i<bitstr.size(); i++) {
         char c = bitstr[i];
         switch (c) {
+            case 'b': break;
             case '0': value.push_back(B0); break;
             case '1': value.push_back(B1); break;
             default:  value.push_back(BU);
@@ -22,70 +23,11 @@ Value parseValue(string bitstr) {
     return value;
 }
 
-vector<Change> const& Signal::changes() {
-    if (dyn->valid) return dyn->changes;
-    ifstream &file(*dyn->file);
-    file.clear();
-    file.seekg(0, ios::beg);
-    
-    while (file.good()) {
-        string line;
-        getline(file, line);
-        
-        if (line.find("enddefinitions") != string::npos)
-            break;
-    }
-    
-    long long currentTime = 0;
-    
-    while (file.good()) {
-        string line;
-        getline(file, line);
-        
-        if (line.size() <= 0) {
-            continue;
-        }
-        else if (line.size()>0 && line[0]=='#') {
-            istringstream t(line.substr(1, line.size()-1));
-            t >> currentTime;
-        }
-        else {
-            string bitStr, symStr;
-            int spaceI = line.find(" ");
-            if (spaceI == string::npos) {
-                bitStr = line.substr(0, 1);
-                istringstream t(line.substr(1, line.size()-1));
-                t >> symStr;
-            }
-            else {
-                istringstream t(line);
-                t >> bitStr;
-                t >> symStr;
-            }
-            
-            if (symStr == symbol) {
-                dyn->changes.push_back(
-                    Change(currentTime, parseValue(bitStr))
-                );
-            }
-        }
-    }
-    dyn->valid = true;
-    return dyn->changes;
-}
-
-DynSignal::DynSignal(shared_ptr<ifstream> file) :
-    file(file),
-    changes(),
-    valid(false)
-{
-}
-    
-Signal::Signal(string name, string symbol, int width, shared_ptr<ifstream> file) :
+Signal::Signal(string name, string symbol, int width, vector<Change> const& changes) :
     name(name),
     symbol(symbol),
     width(width),
-    dyn(new DynSignal(file))
+    changes(changes)
 {
 }
 
@@ -94,15 +36,13 @@ Signal::Signal() { }
 VCD::VCD(string path) :
     scopes(),
     signals(),
-    file(new ifstream(path))
+    signalsBySymbol()
 {
-    buildSignals();
+    buildSignals(path);
 }
 
-void VCD::buildSignals() {
-    ifstream &file = *this->file;
-    file.clear();
-    file.seekg(0, ios::beg);
+void VCD::buildSignals(string path) {
+    ifstream file(path);
     
     vector<string> scopeStack;
     auto qualifiedName = [&](string end) -> string {
@@ -153,9 +93,43 @@ void VCD::buildSignals() {
             
             string sigName = qualifiedName(endName);
             
-            signals.insert(pair<string,Signal>(
-                sigName, Signal(sigName, symbol, width, this->file)
-            ));
+            shared_ptr<Signal> sig = shared_ptr<Signal>(
+                    new Signal(sigName, symbol, width, vector<Change>()));
+            signals[sigName] = sig;
+            signalsBySymbol[symbol] = sig;
+        }
+    }
+    
+    int currentTime = 0;
+    while (file.good()) {
+        string line;
+        getline(file, line);
+        
+        if (line.size() <= 0) {
+            continue;
+        }
+        else if (line.size()>0 && line[0]=='#') {
+            istringstream t(line.substr(1, line.size()-1));
+            t >> currentTime;
+        }
+        else {
+            string bitStr, symStr;
+            int spaceI = line.find(" ");
+            if (spaceI == string::npos) {
+                bitStr = line.substr(0, 1);
+                istringstream t(line.substr(1, line.size()-1));
+                t >> symStr;
+            }
+            else {
+                istringstream t(line);
+                t >> bitStr;
+                t >> symStr;
+            }
+            if (signalsBySymbol.count(symStr) > 0) {
+                Value value = parseValue(bitStr);
+                Change change(currentTime, value);
+                signalsBySymbol[symStr]->changes.push_back(change);
+            }
         }
     }
 }
@@ -176,7 +150,7 @@ bool Module::existsAsModule() {
     return vcd.scopes.count(prefix) > 0;
 }
 
-Signal Module::asSignal() {
+shared_ptr<Signal> Module::asSignal() {
     return vcd.signals[prefix];
 }
 

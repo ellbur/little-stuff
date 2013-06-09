@@ -1,0 +1,2942 @@
+{
+  "total": 1954888,
+  "page": 2,
+  "pagesize": 100,
+  "questions": [
+    {
+      "tags": [
+        "asp.net-mvc-3",
+        "foreach",
+        "submitchanges"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076124/timeline",
+      "question_comments_url": "/questions/7076124/comments",
+      "question_answers_url": "/questions/7076124/answers",
+      "question_id": 7076124,
+      "owner": {
+        "user_id": 878219,
+        "user_type": "registered",
+        "display_name": "Amy",
+        "reputation": 32,
+        "email_hash": "2f135ac730952d9f83ebcbfe666f9d4f"
+      },
+      "creation_date": 1313486935,
+      "last_activity_date": 1313487566,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 10,
+      "score": 0,
+      "community_owned": false,
+      "title": "ASP.NET MVC3 C# - not all code paths return a value",
+      "body": "<p>I'm almost there with this loop!</p>\n\n<p>Controller:</p>\n\n<pre><code>// Hide 'posts'\n    [AcceptVerbs(HttpVerbs.Post)]\n    public ActionResult Hide (int id)\n    {\n        var post = db.tb_SH_Forum_Posts.Single(p =&gt; p.Post_ID == id);\n        post.Private_ID = (post.Private_ID == 1) ? 2 : 1;\n        db.SaveChanges();\n        RedirectToAction(\"Details\", new { id = post.Thread_ID });\n    }\n</code></pre>\n\n<p>View:</p>\n\n<pre><code>@foreach\n(var post in Model.tb_SH_Forum_Posts.Where(w =&gt; w.Private_ID == 1).OrderBy(o =&gt;     o.Post_Date))\n{\nusing (Html.BeginForm(\"Hide\", \"Post\", new { id = post.Post_ID }))\n{   \n   &lt;input type=\"submit\" name = \"hidePosts\" value=\"Hide\" /&gt; \n}\n\n&lt;div class =\"post\"&gt;\n&lt;fieldset&gt;\n        &lt;p class=\"post_details\"&gt;At @post.Post_Date By @(post.Anon == true ? \"Anonymous\"     : post.Username)          \n        &lt;/p&gt;\n        @post.Post_Desc\n\n&lt;/fieldset&gt;\n        &lt;/div&gt;}\n</code></pre>\n\n<p>Error:</p>\n\n<p>The resource cannot be found.</p>\n\n<p>Description: HTTP 404. The resource you are looking for (or one of its dependencies) could have been removed, had its name changed, or is temporarily unavailable.  Please review the following URL and make sure that it is spelled correctly. </p>\n\n<p>Requested URL: /Post/Hide/1</p>\n\n<p>I know that /Post/Hide/1 doesn't exist!  I don't want it to!  It's supposed to redirect to /Thread/Details/id (ergo the 'thread' that the 'post' was in)</p>\n\n<p>As always, any help/guidance is MUCH appreciated!</p>\n"
+    },
+    {
+      "tags": [
+        "mysql",
+        "sql"
+      ],
+      "answer_count": 7,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076120/timeline",
+      "question_comments_url": "/questions/7076120/comments",
+      "question_answers_url": "/questions/7076120/answers",
+      "question_id": 7076120,
+      "owner": {
+        "user_id": 769677,
+        "user_type": "registered",
+        "display_name": "Adrian B",
+        "reputation": 122,
+        "email_hash": "cf033a03d9f70ad8405414fcbd3878d9"
+      },
+      "creation_date": 1313486915,
+      "last_activity_date": 1313487788,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 39,
+      "score": 2,
+      "community_owned": false,
+      "title": "Why mysql return one row?",
+      "body": "<p>When I use count() function MySQL return one row. I need to use count function for pagination system, I don't have a better idea. \nMy SQL is:</p>\n\n<pre><code>SELECT *, count(id_question) AS num FROM `questions` LIMIT 0, 10\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "windows-phone-7"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076118/timeline",
+      "question_comments_url": "/questions/7076118/comments",
+      "question_answers_url": "/questions/7076118/answers",
+      "question_id": 7076118,
+      "owner": {
+        "user_id": 883372,
+        "user_type": "registered",
+        "display_name": "tabassum pervez",
+        "reputation": 11,
+        "email_hash": "65f1e6542a9b1e0c13ca674983e32015"
+      },
+      "creation_date": 1313486907,
+      "last_activity_date": 1313486907,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 5,
+      "score": 1,
+      "community_owned": false,
+      "title": "Itemdatabound event of longlistselector control in Windows phone 7",
+      "body": "<p>I want to control the visibility of an image (inside a dynamically bind longlistselector control), depending on a binding value (say if somevalue>0 then make that image visible otherwise invisible).But there is no such event like itemdatabound in the longlistselector to accomplish this task,  I am  new to windows phone development, and really don't have an idea how to do this.Please help me guys.</p>\n\n<p>Thanks,</p>\n"
+    },
+    {
+      "tags": [
+        "asp.net-mvc-3"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076117/timeline",
+      "question_comments_url": "/questions/7076117/comments",
+      "question_answers_url": "/questions/7076117/answers",
+      "question_id": 7076117,
+      "owner": {
+        "user_id": 268667,
+        "user_type": "registered",
+        "display_name": "Ahmad",
+        "reputation": 2503,
+        "email_hash": "16bcee1c03b9b94a2e446aa1f96e24ba"
+      },
+      "creation_date": 1313486902,
+      "last_activity_date": 1313486902,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 3,
+      "score": 1,
+      "community_owned": false,
+      "title": "Why does validation error messages not show when returning a view?",
+      "body": "<p>I am using a PGR pattern for updating a page. My issue is that when model validation fails and I return the <code>View</code>, there are no error messages being displayed. I want to display the validation error messages.</p>\n\n<pre><code>[HttpPost]\n[Authorize(Users = \"lty\\\\sd,lty\\\\am\")]\npublic ActionResult Edit(ConfigurationModel model, \n                         IList&lt;Shift&gt; ConfiguredShifts, \n                         IList&lt;string&gt; EmailErrorList, \n                         IList&lt;string&gt; EmailSuccessList)\n{\n    TryUpdateModel&lt;ConfigurationModel&gt;(model, \n      new string[] { \"ConfiguredShifts\", \"EmailErrorList\", \"EmailSuccessList\" });\n    if (ModelState.IsValid)\n    {\n       EsgConsole config = new EsgConsole();              \n       config.UpdateConfiguration(model.ToDictionary());\n       return RedirectToAction(\"Index\"); //works fine\n     } \n     // since I have reached here, there must have been Validation errors. \n     // How do I display the messages\n     return View(\"Edit\", model);\n }\n</code></pre>\n\n<p>Note, I am using Steve Sanderson's <a href=\"http://blog.stevensanderson.com/2010/01/28/editing-a-variable-length-list-aspnet-mvc-2-style/\" rel=\"nofollow\">Editing a variable length list, ASP.NET MVC 2-style</a> to  handle the editing of <code>IList&lt;Shift&gt; ConfiguredShifts</code>, <code>IList&lt;string&gt; EmailErrorList</code> and <code>IList&lt;string&gt; EmailSuccessList</code>; thus the reason for using <code>TryUpdateModel</code>so that I update my <code>ConfigurationModel model</code>. </p>\n\n<p>The <code>ConfigurationModel</code> is define as follows (snipped for brevity). I am using <code>DataAnnotations</code> on all fields, specifically <code>[Required(ErrorMessage=\"xxx\")]</code> and <code>[Display(Name = \"xxx\")]</code></p>\n\n<pre><code>public class ConfigurationModel\n{\n    public double LongDatedRate { get; set; }\n    public int FwdStartingSwaps { get; set; }\n\n    // ..... snip, snip\n\n    public IList &lt;String&gt; EmailErrorList { get; set; }\n    public IList &lt;String&gt; EmailSuccessList { get; set; }\n    public IList &lt;Shift&gt; ConfiguredShifts { get; set; }\n\n    public Dictionary&lt;string, string&gt; ToDictionary() { // snnniiipp}\n} \n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "winforms",
+        "tooltip"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076112/timeline",
+      "question_comments_url": "/questions/7076112/comments",
+      "question_answers_url": "/questions/7076112/answers",
+      "question_id": 7076112,
+      "owner": {
+        "user_id": 651291,
+        "user_type": "registered",
+        "display_name": "opiswahn",
+        "reputation": 98,
+        "email_hash": "4fdd6987218500b9cef53c7b7b4dc553"
+      },
+      "creation_date": 1313486860,
+      "last_activity_date": 1313486860,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 4,
+      "score": 0,
+      "community_owned": false,
+      "title": "Text length in a WinForms ToolTip",
+      "body": "<p>how to set the max length of a text in a WinForms ToolTip?\nI have a String with about 300 chars, but my ToolTip displays only 264 of them...</p>\n\n<p>Greets, </p>\n\n<p>Jürgen</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "asp.net-mvc-3"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076111/timeline",
+      "question_comments_url": "/questions/7076111/comments",
+      "question_answers_url": "/questions/7076111/answers",
+      "question_id": 7076111,
+      "owner": {
+        "user_id": 683741,
+        "user_type": "registered",
+        "display_name": "e-on",
+        "reputation": 136,
+        "email_hash": "1ff56ec92b08eeaf8be0455d80d39c86"
+      },
+      "creation_date": 1313486859,
+      "last_activity_date": 1313486859,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 8,
+      "score": 0,
+      "community_owned": false,
+      "title": "throw new Exception statement not working in MVC3 application",
+      "body": "<p>I am trying to import details from an access database into my sql application database.  I have a check to make sure that it has imported all the rows, and if it hasn't then I want it to stop the process and throw an error.</p>\n\n<p>However, despite it going into the correct function, and hitting the \"throw\" line, it doesn't throw the error, and instead just carries on with the process.</p>\n\n<p>Should this code block not work?</p>\n\n<pre><code>AccessRepository details = new AccessRepository();\nif (numRows != details.GetDetailsRowCount(periodsInFreq, payDate))\n{\n   throw new DataException(\"Some data is missing from the Details table (only \" + numRows.ToString() + \" rows) - Please try again.  If this problem persists, please contact the system administrator\");\n}\n</code></pre>\n\n<p>Thanks</p>\n"
+    },
+    {
+      "tags": [
+        "iphone"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076110/timeline",
+      "question_comments_url": "/questions/7076110/comments",
+      "question_answers_url": "/questions/7076110/answers",
+      "question_id": 7076110,
+      "owner": {
+        "user_id": 889646,
+        "user_type": "unregistered",
+        "display_name": "Vikas Maini",
+        "reputation": 1,
+        "email_hash": "d99309362c07e126f68db2f696023a03"
+      },
+      "creation_date": 1313486859,
+      "last_activity_date": 1313487806,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 15,
+      "score": 0,
+      "community_owned": false,
+      "title": "show textfield above keyboard for all interface orientations?",
+      "body": "<p>Actually In my iPhone app i used the following code to lift the view in order to show the textfield above the keyboard. My application support all four interface orientations. I use the following code to lift the view. Problem here is that it only works for portrait orientation. Is there any way to implement the correct lifting in all four orientations </p>\n\n<pre><code>    static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;\n    static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;\n    static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;\n    static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;\n    static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;\n\n    - (void)textFieldDidBeginEditing:(UITextField *)textField {\n        UIInterfaceOrientation orientation =    [Globals getUIInterfaceOrientation];//[[UIApplication sharedApplication] statusBarOrientation];\n        CGRect textFieldRect = [self.view.window convertRect:textField.bounds fromView:textField];\n        CGRect viewRect = [self.view.window convertRect:self.view.bounds fromView:self.view];   \n\n        CGFloat midline = textFieldRect.origin.y + 0.5 * textFieldRect.size.height;\n        CGFloat numerator = midline - viewRect.origin.y - MINIMUM_SCROLL_FRACTION * viewRect.size.height;\n        CGFloat denominator = (MAXIMUM_SCROLL_FRACTION - MINIMUM_SCROLL_FRACTION) * viewRect.size.height;   \n        CGFloat heightFraction = numerator / denominator;\n\n        if (heightFraction &lt; 0.0) {\n            heightFraction = 0.0;\n        }\n        else if (heightFraction &gt; 1.0) {\n            heightFraction = 1.0;\n        }   \n        if (orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown) \n            animatedDistance = floor(PORTRAIT_KEYBOARD_HEIGHT * heightFraction);\n        else \n            animatedDistance = floor(LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);\n        CGRect viewFrame = self.view.frame;\n        viewFrame.origin.y -= animatedDistance;\n        [UIView beginAnimations:nil context:NULL];\n        [UIView setAnimationBeginsFromCurrentState:YES];\n        [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];\n        [self.view setFrame:viewFrame];    \n        [UIView commitAnimations];  \n    }\n\n    - (void)textFieldDidEndEditing:(UITextField *)textField{\n        CGRect viewFrame = self.view.frame;\n        viewFrame.origin.y += animatedDistance;\n        [UIView beginAnimations:nil context:NULL];\n        [UIView setAnimationBeginsFromCurrentState:YES];\n        [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];\n        [self.view setFrame:viewFrame];    \n        [UIView commitAnimations];      \n    }\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "python",
+        "sorting",
+        "dictionary"
+      ],
+      "answer_count": 3,
+      "favorite_count": 1,
+      "question_timeline_url": "/questions/7076108/timeline",
+      "question_comments_url": "/questions/7076108/comments",
+      "question_answers_url": "/questions/7076108/answers",
+      "question_id": 7076108,
+      "owner": {
+        "user_id": 815924,
+        "user_type": "registered",
+        "display_name": "Damian",
+        "reputation": 116,
+        "email_hash": "d551dfa511605fd573ce83be8208d76b"
+      },
+      "creation_date": 1313486848,
+      "last_edit_date": 1313488134,
+      "last_activity_date": 1313488134,
+      "up_vote_count": 3,
+      "down_vote_count": 0,
+      "view_count": 26,
+      "score": 3,
+      "community_owned": false,
+      "title": "Sorting the content of a dictionary by the value and by the key",
+      "body": "<p>Sorting the content of a dictonary by the value has been throughly described already, so it can be acheived by something like this:</p>\n\n<pre><code>d={'d':1,'b':2,'c':2,'a':3}\nsorted_res_1= sorted(d.items(), key=lambda x: x[1]) \n# or\nfrom operator import itemgetter \nsorted_res_2 = sorted(d.items(), key=itemgetter(1)) \n</code></pre>\n\n<p>My question is, what would be the best way to acheive the following output:</p>\n\n<p>[('d', 1), ('b', 2), ('c', 2), ('a', 3)] instead of [('d', 1), ('c', 2), ('b', 2), ('a', 3)]</p>\n\n<p>so that the tuples are sorted by value and then by the key, if the value was equal.</p>\n\n<p>Secondly - would such be possible for reversed:\n[('a', 3), ('b', 2), ('c', 2), ('d', 1)] instead of [('a', 3), ('c', 2), ('b', 2), ('d', 1)]? </p>\n"
+    },
+    {
+      "tags": [
+        "cakephp",
+        "join",
+        "find"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076107/timeline",
+      "question_comments_url": "/questions/7076107/comments",
+      "question_answers_url": "/questions/7076107/answers",
+      "question_id": 7076107,
+      "owner": {
+        "user_id": 509663,
+        "user_type": "registered",
+        "display_name": "Dunhamzzz",
+        "reputation": 3073,
+        "email_hash": "82f329055a906bb9f670de449f365eb8"
+      },
+      "creation_date": 1313486829,
+      "last_activity_date": 1313486829,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 7,
+      "score": 0,
+      "community_owned": false,
+      "title": "Complex find query in CakePHP",
+      "body": "<p>I need to write a complex query in CakePHP to work out some stats.</p>\n\n<p>Each user can be assigned Tasks <code>Task belongsTo Assigned</code>, and each task can have any number of notes <code>Task hasMany Note</code>.</p>\n\n<p>I need to write a query that essentially counts the number of tasks each user has been assigned that contains a note with the word 're-opened' in <code>Note.content</code>. I already have a counterCache to work out the total number of assigned tasks, so can't use that.</p>\n"
+    },
+    {
+      "tags": [
+        "android",
+        "gps",
+        "location",
+        "height"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076105/timeline",
+      "question_comments_url": "/questions/7076105/comments",
+      "question_answers_url": "/questions/7076105/answers",
+      "question_id": 7076105,
+      "owner": {
+        "user_id": 896370,
+        "user_type": "unregistered",
+        "display_name": "android_dev",
+        "reputation": 6,
+        "email_hash": "3e9fff36e0ae641c120ad7382e2ae4d8"
+      },
+      "creation_date": 1313486810,
+      "last_activity_date": 1313486810,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 8,
+      "score": 1,
+      "community_owned": false,
+      "title": "Android get exact height above NN",
+      "body": "<p>How do i get the actual (accurate ~1m) height of my location?</p>\n\n<p>Ive tried registering a LocationListener, receiving the Altitude, but that does not work fine or even accurate. Im around 400m above NN and it displays 7m.</p>\n\n<p>As result: GPS is not a good height-provider as i assume.</p>\n\n<p>Do you have any ideas how to obtain this height?</p>\n"
+    },
+    {
+      "tags": [
+        "magento"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076099/timeline",
+      "question_comments_url": "/questions/7076099/comments",
+      "question_answers_url": "/questions/7076099/answers",
+      "question_id": 7076099,
+      "owner": {
+        "user_id": 536116,
+        "user_type": "registered",
+        "display_name": "Bizboss",
+        "reputation": 385,
+        "email_hash": "53fed7aa209af507769f7c789bb77a19"
+      },
+      "creation_date": 1313486785,
+      "last_activity_date": 1313486785,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 4,
+      "score": 0,
+      "community_owned": false,
+      "title": "Sort associated products by cutom attribute within a grouped product in Magento",
+      "body": "<p>how can I sort associated products by cutom attribute within a grouped product in Magento, </p>\n\n<p>I have duplicated the file Grouped.php to: app/code/local/Mage/Catalog/Model/Product/Type/Grouped.php</p>\n\n<p>and tried to add this in my getAssociatedProducts function:</p>\n\n<pre><code>-&gt;addAttributeToSort('my_attribute', 'DESC');\n</code></pre>\n\n<p>but it don't work, can anyone help ? </p>\n\n<p>Thanks a lot.</p>\n"
+    },
+    {
+      "tags": [
+        "ruby-on-rails-3",
+        "rake"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076094/timeline",
+      "question_comments_url": "/questions/7076094/comments",
+      "question_answers_url": "/questions/7076094/answers",
+      "question_id": 7076094,
+      "owner": {
+        "user_id": 835698,
+        "user_type": "registered",
+        "display_name": "Ringo Blancke",
+        "reputation": 58,
+        "email_hash": "55c68e9a5ffbd6a6b57935dca760fff9"
+      },
+      "creation_date": 1313486761,
+      "last_activity_date": 1313487534,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 7,
+      "score": 0,
+      "community_owned": false,
+      "title": "rake db:seed issue",
+      "body": "<p>I'm seeing a weird issue here when I run rake db:seed or rake db:migrate:</p>\n\n<pre><code>user@ubuntu:~/Desktop/staging/config$ bundle show activeresource\n/usr/lib/ruby/gems/1.8/gems/activeresource-3.0.3\nuser@ubuntu:~/Desktop/staging/config$ rake db:seed\n(in /home/rohan/Desktop/staging)\nCould not find activesupport-3.0.3 in any of the sources\nTry running `bundle install`.\nuser@ubuntu:~/Desktop/staging/config$ ruby --version\nruby 1.9.2p180 (2011-02-18 revision 30909) [i686-linux]\n</code></pre>\n\n<p>I don't know what to do. Any help would be appreciated. For the record, I am using RVM.</p>\n"
+    },
+    {
+      "tags": [
+        "ruby-on-rails",
+        "ruby"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076093/timeline",
+      "question_comments_url": "/questions/7076093/comments",
+      "question_answers_url": "/questions/7076093/answers",
+      "question_id": 7076093,
+      "owner": {
+        "user_id": 393440,
+        "user_type": "registered",
+        "display_name": "Brian",
+        "reputation": 111,
+        "email_hash": "5211a40b19154f5ab50964e041415981"
+      },
+      "creation_date": 1313486760,
+      "last_activity_date": 1313487434,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 12,
+      "score": 2,
+      "community_owned": false,
+      "title": "Ruby on Rails Listener",
+      "body": "<p>Is there such a thing as a listener in Ruby? I know they have session listeners for JSP, so I was wondering if there was something similar. Ultimately, I would like to create a listener to listen to when session are created or destroyed so I can display a count of how many users are currently online.</p>\n\n<p>Thank you,</p>\n\n<p>Brian  </p>\n"
+    },
+    {
+      "tags": [
+        "database",
+        "instance",
+        "ravendb"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076090/timeline",
+      "question_comments_url": "/questions/7076090/comments",
+      "question_answers_url": "/questions/7076090/answers",
+      "question_id": 7076090,
+      "owner": {
+        "user_id": 641614,
+        "user_type": "registered",
+        "display_name": "Stephan Ryer",
+        "reputation": 1,
+        "email_hash": "500a725c2d3561f8ac58a1e415deac4f"
+      },
+      "creation_date": 1313486751,
+      "last_activity_date": 1313486751,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 6,
+      "score": 0,
+      "community_owned": false,
+      "title": "Multiple databases in RavenDB",
+      "body": "<p>We are planning to use RavenDB in a production environment and different customers will have different databases, but I would like to use the same instance of RavenDB.</p>\n\n<p>This page describes the creation of multiple  databases: <a href=\"http://ravendb.net/documentation/multiple-databases\" rel=\"nofollow\">http://ravendb.net/documentation/multiple-databases</a></p>\n\n<p>I have tried to create a 'Databases'-folder in the server-folder and then created a file named 'MyCustomerName' (Without extension). I have tried different other things, but I keep getting the message:</p>\n\n<p>{\n  \"Url\": \"/databases/MyCustomerName\",\n  \"Message\": \"Could not find a database named: MyCustomerName\",\n  \"Error\": \"Could not find a database named: MyCustomerName\"\n}</p>\n\n<p>This page above is the only source I could find on the subject and I'm sure I only need a little direction to make this work.</p>\n\n<p>Thankyou in advance</p>\n"
+    },
+    {
+      "tags": [
+        "clojure",
+        "repl",
+        "slime"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076088/timeline",
+      "question_comments_url": "/questions/7076088/comments",
+      "question_answers_url": "/questions/7076088/answers",
+      "question_id": 7076088,
+      "owner": {
+        "user_id": 468112,
+        "user_type": "registered",
+        "display_name": "Chris Mowforth",
+        "reputation": 631,
+        "email_hash": "f4e90ce9fdf9e968587c7f9bec94721e"
+      },
+      "creation_date": 1313486745,
+      "last_activity_date": 1313486745,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 4,
+      "score": 0,
+      "community_owned": false,
+      "title": "read-line not working in clojure REPL",
+      "body": "<p>Whenever I call a clojure function that gets a users' console input using <code>(read-line)</code> through SLIME or a normal REPL, the function returns immediately. I've resorted to jar'ing up my project and running it to test but this obviously isn't quick or sustainable.</p>\n\n<p>Is there some trick to getting console interaction through a REPL working or is it not possible? If not are there any good workarounds?</p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "swing",
+        "jfilechooser",
+        "filefilter"
+      ],
+      "answer_count": 5,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076083/timeline",
+      "question_comments_url": "/questions/7076083/comments",
+      "question_answers_url": "/questions/7076083/answers",
+      "question_id": 7076083,
+      "owner": {
+        "user_id": 896367,
+        "user_type": "unregistered",
+        "display_name": "Sonja",
+        "reputation": 6,
+        "email_hash": "ff1010949cf292d509058492c75e0570"
+      },
+      "creation_date": 1313486696,
+      "last_edit_date": 1313487793,
+      "last_activity_date": 1313487793,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 22,
+      "score": 1,
+      "community_owned": false,
+      "title": "FileFilter for JFileChooser doesn't filter files - don't why, have code",
+      "body": "<p>I want to choose only .csv files with FileChooser but when chooser opens I see all extensions. Do I need to set somehing more then this?</p>\n\n<pre><code>        btnFile.addActionListener(new ActionListener() {\n            @Override\n            public void actionPerformed(ActionEvent e){\n                        chooser = new JFileChooser(); \n                        chooser.setCurrentDirectory(new java.io.File(\".\"));\n                        chooser.setDialogTitle(\"Choose Value File\");\n                        chooser.addChoosableFileFilter(new CSVFilter());\n\n                        if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) { \n                          System.out.println(\"getCurrentDirectory(): \" \n                             +  chooser.getCurrentDirectory());\n                          System.out.println(\"getSelectedFile() : \" \n                             +  chooser.getSelectedFile());\n                          }\n                        else {\n                          System.out.println(\"No Selection \");\n                          }\n\n            }\n        });\n</code></pre>\n\n<p>and Filter is nested class</p>\n\n<pre><code>class CSVFilter extends javax.swing.filechooser.FileFilter {\n      public boolean accept(File f) {\n\n        return f.isFile() || f.getName().toLowerCase().endsWith(\".csv\");\n      }\n\n      public String getDescription() {\n        return \"*.csv\";\n      }\n    }\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "sharepoint"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076078/timeline",
+      "question_comments_url": "/questions/7076078/comments",
+      "question_answers_url": "/questions/7076078/answers",
+      "question_id": 7076078,
+      "owner": {
+        "user_id": 430944,
+        "user_type": "registered",
+        "display_name": "Jerome",
+        "reputation": 584,
+        "email_hash": "370cd4206714433ba490cbbbd19fe451"
+      },
+      "creation_date": 1313486677,
+      "last_activity_date": 1313486677,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 4,
+      "score": 0,
+      "community_owned": false,
+      "title": "How do I find which content types are using an SPField?",
+      "body": "<p>I am trying to delete an SPField but I can't since a content type is apparently using it. I am already searching for it in SPContentType.FieldLinks for all site and list content types How do I query programmatically which content type is using it?</p>\n"
+    },
+    {
+      "tags": [
+        "string",
+        "visual-studio-2010",
+        "bugs",
+        "indexof"
+      ],
+      "answer_count": 2,
+      "accepted_answer_id": 7076193,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076077/timeline",
+      "question_comments_url": "/questions/7076077/comments",
+      "question_answers_url": "/questions/7076077/answers",
+      "question_id": 7076077,
+      "owner": {
+        "user_id": 862025,
+        "user_type": "registered",
+        "display_name": "Tinia",
+        "reputation": 35,
+        "email_hash": "4bc9ebc2dd0a357e764b88445fb3dcf2"
+      },
+      "creation_date": 1313486677,
+      "last_activity_date": 1313487290,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 17,
+      "score": 2,
+      "community_owned": false,
+      "title": "IndexOf bug when string contains 'AA'",
+      "body": "<p>I've run into a strange problem. I have a string with a value containing <strong>'AA'</strong>.\nI'm trying to find <strong>IndexOf</strong> the first accouring <strong>A</strong>. When I ask if the string <strong>Contains(\"A\")</strong> it returns true. When using <strong>IndexOf(\"A\")</strong> I keeps getting the default value <strong>-1</strong>! <em>(se the picture below)</em></p>\n\n<p><img src=\"http://i.stack.imgur.com/EqTm9.png\" alt=\"enter image description here\"></p>\n\n<p>So far i tested there is only a problem with '<strong>A</strong>' and '<strong>a</strong>'.\nWhen putting 3 <strong>a</strong>'s in the string I get the index of number 3, as if the first two doesn't exsist.</p>\n\n<p><img src=\"http://i.stack.imgur.com/WpQId.png\" alt=\"enter image description here\"></p>\n\n<p>When adding an extra <strong>a</strong> to the string, I get the default value -1 again.</p>\n\n<p><img src=\"http://i.stack.imgur.com/rG8TY.png\" alt=\"enter image description here\"></p>\n\n<p>I don't know what is causing this, I have a suspision that it's somehow connected to some langauge setting. I'm from denmark, and the use of the letters <strong>aa</strong> is a synonym for <strong>å</strong>.</p>\n\n<p>Have anyone else experinced a simular problem or have a suggestion how to avoid it?</p>\n\n<p><strong>System information:</strong></p>\n\n<p>Windows 7 Ultimate (English)</p>\n\n<p>Visual Studio 10 Premium</p>\n"
+    },
+    {
+      "tags": [
+        "ruby-on-rails-3",
+        "routing"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076076/timeline",
+      "question_comments_url": "/questions/7076076/comments",
+      "question_answers_url": "/questions/7076076/answers",
+      "question_id": 7076076,
+      "owner": {
+        "user_id": 52086,
+        "user_type": "registered",
+        "display_name": "Tarscher",
+        "reputation": 739,
+        "email_hash": "ec854a864bcefae4d8068d0f4dcbc705"
+      },
+      "creation_date": 1313486674,
+      "last_activity_date": 1313486674,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 7,
+      "score": 0,
+      "community_owned": false,
+      "title": "conditional 301 redirect in routes",
+      "body": "<p>I want to do a conditional redirect in my routes file.</p>\n\n<p>Users can opt to have a shorter url for their site. When this short url is available but the longer url is used, I always want to redirect them to the shorter version. For example: user goes fubar.mysite.com but fubarsite.com is available -> redirect from fubar.mysite.com to fubarsite.com . </p>\n\n<p>I store the available shorter url in the database.</p>\n\n<p>I want to do this in routes but don't know if this is possible. I tried the constraint approach but have no idea how to do the redirect in the block</p>\n\n<pre><code>constraints(Redirect) do\n #need to redirect here\nend \n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "c",
+        "struct"
+      ],
+      "answer_count": 3,
+      "accepted_answer_id": 7076086,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076072/timeline",
+      "question_comments_url": "/questions/7076072/comments",
+      "question_answers_url": "/questions/7076072/answers",
+      "question_id": 7076072,
+      "owner": {
+        "user_id": 651216,
+        "user_type": "registered",
+        "display_name": "yotamoo",
+        "reputation": 197,
+        "email_hash": "61c450b6debb461e4177388f7191baa6"
+      },
+      "creation_date": 1313486659,
+      "last_edit_date": 1313487118,
+      "last_activity_date": 1313488179,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 34,
+      "score": 0,
+      "community_owned": false,
+      "title": "error: redefinition of typedef in c",
+      "body": "<p>We have an assignment in school where we got a header file and we\nneed to implement it. The header defines:</p>\n\n<pre><code>typedef struct Board* BoardP;\n</code></pre>\n\n<p>which to my understanding means the BoardP is a pointer to struct Board.\nAnyhow, my implementation is:</p>\n\n<pre><code>typedef struct Board\n{\n    int width;\n    int height;\n    char *board;\n} *BoardP;\n</code></pre>\n\n<p>But i keep getting:</p>\n\n<pre><code>Board.c:21: error: redefinition of typedef ‘BoardP’\nBoard.h:4: note: previous declaration of ‘BoardP’ was here\n</code></pre>\n\n<p>Any ideas as to why this happens? Thanks!</p>\n\n<p>EDIT: another question. As you can see my struct hold an array of characters. When I write a constructor should I initialize (malloc(sizeof(height*width)) the array first and then the struct? And how about use of free()? Should I free the array first and then the struct?\nThanks</p>\n"
+    },
+    {
+      "tags": [
+        "android",
+        "gesture"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076071/timeline",
+      "question_comments_url": "/questions/7076071/comments",
+      "question_answers_url": "/questions/7076071/answers",
+      "question_id": 7076071,
+      "owner": {
+        "user_id": 826014,
+        "user_type": "registered",
+        "display_name": "atul",
+        "reputation": 6,
+        "email_hash": "a141975d192e03db7a62a307ceecf141"
+      },
+      "creation_date": 1313486658,
+      "last_activity_date": 1313486658,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 4,
+      "score": 1,
+      "community_owned": false,
+      "title": "setGesture() displays the gesture outside the screen: Android",
+      "body": "<p>I am developing an android app in which I need to display the saved gesture to the user. I have tried doing it using the GestureOverlayView object's setGesture() function but it displays the gesture well outside the screen. Only small portion is visible in the left top corner of the screen in the Android emulator 2.1.\nHere is the code that I have used..</p>\n\n<pre><code>protected void onCreate(Bundle savedInstanceState) {\n    super.onCreate(savedInstanceState);\n    setContentView(R.layout.savegesture);\n    gestureoverlay = (GestureOverlayView) findViewById(R.id.gestures_overlay2);\n    mOldGesture = (Gesture) getIntent().getExtras().get(\"gesture\");\n    mDoneButton = findViewById(R.id.done);\n    DisplayMetrics dm = new DisplayMetrics();\n    getWindowManager().getDefaultDisplay().getMetrics(dm);\n    gestureoverlay.setLayoutParams(new FrameLayout.LayoutParams(dm.widthPixels,dm.heightPixels,0x50));\n    gestureoverlay.setGesture(mOldGesture);\n    gestureoverlay.invalidate();\n}\n</code></pre>\n\n<p>The android GestureOverlayView defined in \"savegesture.xml\" is as follows:-</p>\n\n<pre><code>&lt;android.gesture.GestureOverlayView android:scaleType=\"center\" android:layout_gravity=\"center\"\n    android:id=\"@+id/gestures_overlay2\" android:layout_width=\"fill_parent\"\n    android:layout_height=\"fill_parent\" android:gestureStrokeType=\"multiple\" /&gt;\n</code></pre>\n\n<p>I don't know what the problem is, but it won't show the gesture ON the screen....</p>\n"
+    },
+    {
+      "tags": [
+        "android",
+        "app"
+      ],
+      "answer_count": 2,
+      "favorite_count": 1,
+      "question_timeline_url": "/questions/7076070/timeline",
+      "question_comments_url": "/questions/7076070/comments",
+      "question_answers_url": "/questions/7076070/answers",
+      "question_id": 7076070,
+      "owner": {
+        "user_id": 896366,
+        "user_type": "unregistered",
+        "display_name": "Ward",
+        "reputation": 11,
+        "email_hash": "ef96d606d2f443bfcbd24a60cbd454c1"
+      },
+      "creation_date": 1313486657,
+      "last_activity_date": 1313487414,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 26,
+      "score": 2,
+      "community_owned": false,
+      "title": "Splash screen functionality",
+      "body": "<p>I've made a splash screen for my pretty basic game app a while ago. It lasts for 5 seconds and I followed a tutorial for it.</p>\n\n<p>What I want to do is make the splash screen last for 20 seconds, UNLESS the screen is tapped which I want to act as a 'skip' feature to skip the splash screen but allow the user to read the boring bits if they so wish.</p>\n\n<p>My current code is: </p>\n\n<pre><code>public class StartScreen extends Activity {\n@Override\npublic void onCreate(Bundle savedInstanceState) {\nsuper.onCreate(savedInstanceState);\nsetContentView(R.layout.startscreen);\nHandler x = new Handler();\nx.postDelayed(new StartScreenHandler(), 5000);\n}\nclass StartScreenHandler implements Runnable {\npublic void run() {\nstartActivity(new Intent(getApplication(), Menu.class));\n};\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "kohana-3"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076069/timeline",
+      "question_comments_url": "/questions/7076069/comments",
+      "question_answers_url": "/questions/7076069/answers",
+      "question_id": 7076069,
+      "owner": {
+        "user_id": 896205,
+        "user_type": "unregistered",
+        "display_name": "json",
+        "reputation": 1,
+        "email_hash": "d8a7e7248216f3b37f07c06466edba6c"
+      },
+      "creation_date": 1313486657,
+      "last_activity_date": 1313487355,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 2,
+      "score": 0,
+      "community_owned": false,
+      "title": "How to pass value from controller to view",
+      "body": "<p>i want to pass a variable to view file. i am using the following code:</p>\n\n<pre><code>View::factory('admin/modules/video_category')-&gt;set($x, $parent_id);\n</code></pre>\n\n<p>to pass value of $parent_id to $x but $x variable is showing null.\nplease advise how to do this correctly.</p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "web-services",
+        "java-me"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076066/timeline",
+      "question_comments_url": "/questions/7076066/comments",
+      "question_answers_url": "/questions/7076066/answers",
+      "question_id": 7076066,
+      "owner": {
+        "user_id": 833129,
+        "user_type": "registered",
+        "display_name": "Andy Frédéric",
+        "reputation": 98,
+        "email_hash": "1d388ddecdb9cc9d6ba82af4f64dc6f8"
+      },
+      "creation_date": 1313486650,
+      "last_edit_date": 1313487494,
+      "last_activity_date": 1313487494,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 10,
+      "score": 2,
+      "community_owned": false,
+      "title": "Is it possible to post byte array data using webservice in J2ME?",
+      "body": "<p>In Java J2ME I want to post the content of a <code>byte[]</code> to a webserver. So I thought about using webservice. The client is a Java mobile application. So is it possible?</p>\n"
+    },
+    {
+      "tags": [
+        "jquery",
+        "gwt",
+        "frameworks",
+        "jquery-mobile",
+        "sencha-touch"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076064/timeline",
+      "question_comments_url": "/questions/7076064/comments",
+      "question_answers_url": "/questions/7076064/answers",
+      "question_id": 7076064,
+      "owner": {
+        "user_id": 449344,
+        "user_type": "registered",
+        "display_name": "Jeevan Dongre",
+        "reputation": 435,
+        "email_hash": "89d9a39ce85fbadcc19dc32df1b392fc"
+      },
+      "creation_date": 1313486637,
+      "last_activity_date": 1313486637,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 11,
+      "score": 0,
+      "community_owned": false,
+      "title": "JQM vs GWT mobile vs Sencha",
+      "body": "<p>After going through so many documents and online content like:</p>\n\n<pre><code>http://stackoverflow.com/questions/4066167/sencha-touch-or-jquery-mobile\nhttp://stackoverflow.com/questions/5093691/sencha-touch-vs-jqtouch-vs-gwt-mobile-vs-xui-vs-jquery-mobile-vs\nhttp://www.quora.com/Were-deciding-between-jQuery-Mobile-currently-in-alpha-and-Sencha-Touch-What-are-the-pros-and-cons-for-each\nhttp://interfacethis.com/2011/adventures-in-html5-part-one/ \n</code></pre>\n\n<p>and many more,\nI thought of posting this questions since I am not able to choose a  proper frame work for my mobile web app. \nI already have a native app running on android but I developing native apps for each and every platform would be expensive and consumes more time. I am looking for proper framework which should work seamlessly on android iPhone and BB platforms and also on tablets and mobile phones and ipad. </p>\n\n<p>In the native android app I have successfully and implemented XMPP chat , file transfers using FTP.</p>\n\n<p>Presently I have a web services written using SOAP and XML which transits data from android to the database at the server. I am wondering how to implement this features if I am using either sencha or jQuery mobile? </p>\n\n<p>Kindly help me and help me to choose the right frame work from which I can implement this core features in my app</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        ".net",
+        "exception-handling",
+        "intellitrace"
+      ],
+      "answer_count": 7,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076063/timeline",
+      "question_comments_url": "/questions/7076063/comments",
+      "question_answers_url": "/questions/7076063/answers",
+      "question_id": 7076063,
+      "owner": {
+        "user_id": 282328,
+        "user_type": "registered",
+        "display_name": "Poma",
+        "reputation": 823,
+        "email_hash": "7b72e2f284edbf550703eaf56ea3370b"
+      },
+      "creation_date": 1313486629,
+      "last_edit_date": 1313487050,
+      "last_activity_date": 1313488365,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 35,
+      "score": 1,
+      "community_owned": false,
+      "title": "How to log all thrown exceptions?",
+      "body": "<p>How to log any exceptions that were thrown and catched? Something like Visual Studio's IntelliTrace do. Or is there a way to integrate InteliTrace into debug version of application and then view its logs?</p>\n\n<p><strong>Update:</strong> I'll clarify that a bit. I want standard .txt (or any custom) logs, the format doesn't matter. The main point is I want to log all exceptions that occurred in all third-party libraries without adding code to them.</p>\n"
+    },
+    {
+      "tags": [
+        "iphone",
+        "objective-c",
+        "ipad",
+        "printing",
+        "uiscrollview"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076061/timeline",
+      "question_comments_url": "/questions/7076061/comments",
+      "question_answers_url": "/questions/7076061/answers",
+      "question_id": 7076061,
+      "owner": {
+        "user_id": 756941,
+        "user_type": "registered",
+        "display_name": "Azik",
+        "reputation": 1,
+        "email_hash": "eefa4cab9ae124ff161dda697c3caaca"
+      },
+      "creation_date": 1313486608,
+      "last_activity_date": 1313487151,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 10,
+      "score": 0,
+      "community_owned": false,
+      "title": "how to take printout from my iphone app",
+      "body": "<p>I have a print button in my app. if I click the button it should print the screen.\nMy problem is if the screen has a scrollview and it has contents more than screen size. it should print the whole content of the screen. the printout may take 2 or 3 pages. is there any sample code or project for print the screen not by taking photos or screen shots.</p>\n"
+    },
+    {
+      "tags": [
+        "exception",
+        "symfony",
+        "symfony-1.4"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076057/timeline",
+      "question_comments_url": "/questions/7076057/comments",
+      "question_answers_url": "/questions/7076057/answers",
+      "question_id": 7076057,
+      "owner": {
+        "user_id": 193108,
+        "user_type": "registered",
+        "display_name": "HongKilDong",
+        "reputation": 99,
+        "email_hash": "31d44df7da46385b1300dcf8deed18c2"
+      },
+      "creation_date": 1313486578,
+      "last_activity_date": 1313486578,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 4,
+      "score": 0,
+      "community_owned": false,
+      "title": "symfony 1.4: How to pass exception message to error.html.php?",
+      "body": "<p>I tried using special variable <code>$message</code> described here <a href=\"http://www.symfony-project.org/cookbook/1_2/en/error_templates\" rel=\"nofollow\">http://www.symfony-project.org/cookbook/1_2/en/error_templates</a> but it seems this variable isn't defined in symfony 1.4, at least it doesn't contain message passed to exception this way <code>throw new sfException('some message')</code></p>\n\n<p>Do you know other way to pass this message to error.html.php ?</p>\n"
+    },
+    {
+      "tags": [
+        "python",
+        "windows",
+        "handle"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076056/timeline",
+      "question_comments_url": "/questions/7076056/comments",
+      "question_answers_url": "/questions/7076056/answers",
+      "question_id": 7076056,
+      "owner": {
+        "user_id": 888051,
+        "user_type": "registered",
+        "display_name": "Alcott",
+        "reputation": 8,
+        "email_hash": "c4e1477113874fc2971bee45c984b3d6"
+      },
+      "creation_date": 1313486575,
+      "last_edit_date": 1313486706,
+      "last_activity_date": 1313487932,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 12,
+      "score": 0,
+      "community_owned": false,
+      "title": "How can I get the main window's handle in Python?",
+      "body": "<p>In python, I enumerate top-level windows through <code>EnumWindows</code>, and also I enumerate the processes through <code>EnumProcesses</code>.</p>\n\n<p>Then in the python script, I put all the window handles which belongs to the same pid into one list (I did this through <code>GetWindowThreadProcessId</code>).</p>\n\n<p>Later I found out something: there are 3 window handles which belong to <code>notepad.exe</code>, but I only open one text file. </p>\n\n<p>Why?</p>\n\n<p>Besides, I tried to set the text window as the foreground window through <code>SetForegroundWindow</code>, I passed the three window handles to this function, and two work.</p>\n\n<p>How could this be ?</p>\n"
+    },
+    {
+      "tags": [
+        "android"
+      ],
+      "answer_count": 2,
+      "accepted_answer_id": 7076209,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076055/timeline",
+      "question_comments_url": "/questions/7076055/comments",
+      "question_answers_url": "/questions/7076055/answers",
+      "question_id": 7076055,
+      "owner": {
+        "user_id": 831498,
+        "user_type": "registered",
+        "display_name": "Nagkeeran Piraba",
+        "reputation": 392,
+        "email_hash": "74feeaa29347af1777d3ff65fa0fa00d"
+      },
+      "creation_date": 1313486567,
+      "last_edit_date": 1313487213,
+      "last_activity_date": 1313487401,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 19,
+      "score": 1,
+      "community_owned": false,
+      "title": "Android Package structure",
+      "body": "<p>My default package name is <code>com.xont.controller</code> (R file contain that package.Eclipse generated one) . I want to make it more packages.Like 'com.xont.controller.sales<code>and 'com.xont.controller.admin</code> like this: And I added activity also in manifestfile </p>\n\n<p><strong>Edited</strong></p>\n\n<pre><code> &lt;manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n  package=\"com.android.xont.controller\"\n  android:versionCode=\"1\"\n  android:versionName=\"1.0\"&gt;\n&lt;uses-sdk android:minSdkVersion=\"8\" /&gt;\n\n&lt;application android:label=\"Xont\" android:icon=\"@drawable/virtusel64\"&gt;\n\n    &lt;activity android:name=\".AndroidAppXontActivity\"\n              android:label=\"Xont\"&gt;\n        &lt;intent-filter&gt;\n            &lt;action android:name=\"android.intent.action.MAIN\" /&gt;\n            &lt;category android:name=\"android.intent.category.LAUNCHER\" /&gt;\n        &lt;/intent-filter&gt;\n    &lt;/activity&gt;\n\n &lt;activity android:name=\".LoginActivity\" \n             android:label=\"Login\"&gt;\n    &lt;/activity&gt;\n\n\n &lt;activity android:name=\".syn.DatabaseCheckActivity\" \n             android:label=\"Databse Setup\"&gt;\n  &lt;/activity&gt;\n   ...........\n</code></pre>\n\n<p>Package structure is:\n  <img src=\"http://i.stack.imgur.com/UfAQr.png\" alt=\"enter image description here\"></p>\n\n<p>Error says : <strong>android.content.ActivityNotFoundException: Unable to find explicit activity class {com.xont.controller/com.xont.controller.syn.DatabaseSetupActivity}; have you declared this activity in your AndroidManifest.xml?</strong></p>\n\n<p>Please help me what i want to do here...</p>\n\n<p>Thanks in advance</p>\n"
+    },
+    {
+      "tags": [
+        "objective-c",
+        "xcode4",
+        "uiimageview",
+        "uiimage",
+        "alpha-transparency"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076053/timeline",
+      "question_comments_url": "/questions/7076053/comments",
+      "question_answers_url": "/questions/7076053/answers",
+      "question_id": 7076053,
+      "owner": {
+        "user_id": 892346,
+        "user_type": "registered",
+        "display_name": "Tim",
+        "reputation": 1,
+        "email_hash": "e3181469e6247929d5eb48b53bf842a3"
+      },
+      "creation_date": 1313486529,
+      "last_activity_date": 1313486529,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 4,
+      "score": 0,
+      "community_owned": false,
+      "title": "UIImageView after returning from background only accessible using IBAction method",
+      "body": "<p>I have a problem accessing an uiimageview after returning from the background. I like to set the alpha of the uiimageview using a process. This process starts running again after the app will become active again. But the uiimageview seem to be 'null'. </p>\n\n<p>As a test i added a slider to the IB giving it a IBAction to set the alpha manually.</p>\n\n<pre><code>-(IBAction) changeslidervalue:(id)sender {\n    NSLog(@\"image= %@\",image);\n    image.alpha = sliderValue.value;\n}\n</code></pre>\n\n<p>This works; i can set the alpha value with this slider manually.\nNSLog returns </p>\n\n<pre><code>UIImageView: 0x19aa70; frame = (0 0; 320 460); alpha = 0; autoresize = RM+BM; userInteractionEnabled = NO; layer = CALayer: 0x198820'\n</code></pre>\n\n<p>The automatic process calls this method:</p>\n\n<pre><code>-(void)fadeIn {\n   NSLog(@\"image= %@\",image);\n   image.alpha = 1.0;\n}\n</code></pre>\n\n<p>Alpha is not set here. The NSLog here returns '(null)'.</p>\n\n<p>Should be something really simple... What am I overlooking? Thanks! </p>\n"
+    },
+    {
+      "tags": [
+        "css",
+        "html-table"
+      ],
+      "answer_count": 1,
+      "favorite_count": 1,
+      "question_timeline_url": "/questions/7076052/timeline",
+      "question_comments_url": "/questions/7076052/comments",
+      "question_answers_url": "/questions/7076052/answers",
+      "question_id": 7076052,
+      "owner": {
+        "user_id": 882196,
+        "user_type": "registered",
+        "display_name": "user882196",
+        "reputation": 20,
+        "email_hash": "b51a5d70be14f3c3784bcbe4dcb7b399"
+      },
+      "creation_date": 1313486523,
+      "last_edit_date": 1313487025,
+      "last_activity_date": 1313487083,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 18,
+      "score": 2,
+      "community_owned": false,
+      "title": "Vertically rotate text inside an HTML table header cell",
+      "body": "<p>I am using the following css to rotate the text inside table header cells but the header cells is of the same width as if the text were horizontal.How can I just rotate the text and the width will reduce automatically..</p>\n\n<pre><code>    table#MyTable tr th a{\n    color: #FFFFFF;\n    display: block;\n    /*Firefox*/\n    -moz-transform: rotate(-90deg);\n    /*Safari*/\n    -webkit-transform: rotate(-90deg);\n    /*Opera*/\n    -o-transform: rotate(-90deg);\n    /*IE*/\n    writing-mode: tb-rl;\n    filter: flipv fliph;\n    padding: 60px 1px;\n}\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "php",
+        "jquery",
+        "validation"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076051/timeline",
+      "question_comments_url": "/questions/7076051/comments",
+      "question_answers_url": "/questions/7076051/answers",
+      "question_id": 7076051,
+      "owner": {
+        "user_id": 612787,
+        "user_type": "registered",
+        "display_name": "Moumita",
+        "reputation": 68,
+        "email_hash": "83f89bc53a13b0fe97d4203ce5fea3cf"
+      },
+      "creation_date": 1313486511,
+      "last_activity_date": 1313488175,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 26,
+      "score": 1,
+      "community_owned": false,
+      "title": "Checking field is blank or not to upload image file",
+      "body": "<p>I can't validate upload field. the field name is an array. how to validate it using jquery?\nhere is my code: </p>\n\n<pre><code>&lt;script type=\"text/javascript\"&gt;\n    $().ready(function() {\n    // validate signup form on keyup and submit\n    var validator = $(\"#signupform\").submit(function() {\n            // update underlying textarea before submit validation\n        }).validate({\n        rules: {\n            name: \"required\",\n\n            photo_path: { required: true }\n        },\n        errorPlacement: function(label, element) {\n\n                    label.insertAfter(element);\n\n            },\n        messages: {\n            name: \"Please enter your name\",\n\n            photo_path: \"Upload your Image\"\n        }\n    });\n\n});\n&lt;/script&gt;\n\n\n\n\n&lt;?php\n $count=1;\n for($i=0; $i&lt;4; $i++)\n {\n?&gt;\n             &lt;input type=\"hidden\" name=\"galleryImage[]\" id=\"galleryImage[]\" value=\"&lt;?=$i?&gt;\"/&gt;   &lt;/td&gt;\n  &lt;/tr&gt;\n  &lt;tr&gt;\n    &lt;td align=\"left\" valign=\"middle\" bordercolor=\"1\" class=\"signup\"&gt;Upload Image &lt;?=$count?&gt;:&lt;/td&gt;\n    &lt;td align=\"left\" valign=\"middle\" bordercolor=\"1\"&gt;&lt;input type=\"file\" name=\"photo_path[]\" id=\"photo_path\"  class=\"inputcolor_text\" /&gt;\n      &lt;br /&gt;            \n&lt;?php\n$count++;\n}\n?&gt;\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "wordpress",
+        "wordpress-loop"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076049/timeline",
+      "question_comments_url": "/questions/7076049/comments",
+      "question_answers_url": "/questions/7076049/answers",
+      "question_id": 7076049,
+      "owner": {
+        "user_id": 616636,
+        "user_type": "registered",
+        "display_name": "niksos",
+        "reputation": 1,
+        "email_hash": "b9a607ad3c5f1382f36fccd42e3a65c4"
+      },
+      "creation_date": 1313486505,
+      "last_activity_date": 1313486505,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 2,
+      "score": 0,
+      "community_owned": false,
+      "title": "get_template_part aka calling the loop on page.php",
+      "body": "<p>I build wp sites in fashion that all pages are made to admin. This means that they get the titles and description from the admin page but have custom template that calls different loops. </p>\n\n<p>The problem is that get_template_part( 'loop', 'index' ); does not work with page.php. Any ideas? I've tried all possible loop resets etc</p>\n\n<p>so header call\npost loop call\nreset\nget_template_part loop call</p>\n"
+    },
+    {
+      "tags": [
+        "matlab"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076046/timeline",
+      "question_comments_url": "/questions/7076046/comments",
+      "question_answers_url": "/questions/7076046/answers",
+      "question_id": 7076046,
+      "owner": {
+        "user_id": 827429,
+        "user_type": "unregistered",
+        "display_name": "noob",
+        "reputation": 39,
+        "email_hash": "29427e4271ac4a9d89cc6f34cfff0224"
+      },
+      "creation_date": 1313486491,
+      "last_activity_date": 1313487359,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 6,
+      "score": 1,
+      "community_owned": false,
+      "title": "matlab normalized problem",
+      "body": "<p>I have 84 sets of data, the 1st set of data was normalized by the code below...</p>\n\n<pre><code>%read 1st set of data\nN = xlsread('output1.xls','data');    \n\n%normalize the 27 columns\nN = bsxfun(@minus,N,min(N,[],1));\nN = bsxfun(@times,N,2./max(N,[],1));\nN = N - 1;\nxlswrite('output1.xls',N,'normdata');\n</code></pre>\n\n<p>Now, from the second set of data onward, i would like to use the max and min from the 1st set of data to normalize  the rest of the 83 sets of data. May i know how should i write the code?</p>\n"
+    },
+    {
+      "tags": [
+        "web",
+        "mime-types"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076042/timeline",
+      "question_comments_url": "/questions/7076042/comments",
+      "question_answers_url": "/questions/7076042/answers",
+      "question_id": 7076042,
+      "owner": {
+        "user_id": 28901,
+        "user_type": "registered",
+        "display_name": "Steve Dunn",
+        "reputation": 1312,
+        "email_hash": "754672131bf84b01ef8294606d8e4190"
+      },
+      "creation_date": 1313486463,
+      "last_activity_date": 1313487105,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 11,
+      "score": 1,
+      "community_owned": false,
+      "title": "What MIME type should I use for CSV?",
+      "body": "<p>I've seen <code>application/csv</code> used and also <code>text/csv</code>.</p>\n\n<p>What's the difference?  Is there a difference?  Does it matter which as long as the request matches something that's available?  Are they interchangeable?</p>\n"
+    },
+    {
+      "tags": [
+        "xpath"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076041/timeline",
+      "question_comments_url": "/questions/7076041/comments",
+      "question_answers_url": "/questions/7076041/answers",
+      "question_id": 7076041,
+      "owner": {
+        "user_id": 896356,
+        "user_type": "unregistered",
+        "display_name": "ramesh",
+        "reputation": 6,
+        "email_hash": "e48d3733b0640403dc9f6e28d4e75451"
+      },
+      "creation_date": 1313486453,
+      "last_edit_date": 1313486535,
+      "last_activity_date": 1313486535,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 7,
+      "score": 1,
+      "community_owned": false,
+      "title": "how can i find out the min and max values of the productID from the below data using xpath expression",
+      "body": "<pre><code>&lt;soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:nor=\"http://schemas.cordys.com/NorthwindMetadata\"&gt;\n   &lt;soapenv:Header/&gt;\n   &lt;soapenv:Body&gt;\n      &lt;nor:UpdateOrder_x0020_Details reply=\"yes\" commandUpdate=\"no\" preserveSpace=\"no\" batchUpdate=\"no\"&gt;\n         &lt;nor:tuple&gt;\n            &lt;nor:new&gt;\n               &lt;nor:Order_x0020_Details qAccess=\"0\" qConstraint=\"0\" qInit=\"0\" qValues=\"\"&gt;\n                  &lt;nor:OrderID&gt;11113&lt;/nor:OrderID&gt;\n                  &lt;nor:ProductID&gt;43&lt;/nor:ProductID&gt;\n                  &lt;nor:UnitPrice&gt;36.0000&lt;/nor:UnitPrice&gt;\n                  &lt;nor:Quantity&gt;25&lt;/nor:Quantity&gt;\n                  &lt;nor:Discount&gt;0&lt;/nor:Discount&gt;\n               &lt;/nor:Order_x0020_Details&gt;\n            &lt;/nor:new&gt;\n         &lt;/nor:tuple&gt;\n         &lt;nor:tuple&gt;\n            &lt;nor:new&gt;\n               &lt;nor:Order_x0020_Details qAccess=\"0\" qConstraint=\"0\" qInit=\"0\" qValues=\"\"&gt;\n                  &lt;nor:OrderID&gt;11113&lt;/nor:OrderID&gt;\n                  &lt;nor:ProductID&gt;30&lt;/nor:ProductID&gt;\n                  &lt;nor:UnitPrice&gt;99.000&lt;/nor:UnitPrice&gt;\n                  &lt;nor:Quantity&gt;10&lt;/nor:Quantity&gt;\n                  &lt;nor:Discount&gt;0&lt;/nor:Discount&gt;\n               &lt;/nor:Order_x0020_Details&gt;\n            &lt;/nor:new&gt;\n         &lt;/nor:tuple&gt;\n         &lt;nor:tuple&gt;\n            &lt;nor:new&gt;\n               &lt;nor:Order_x0020_Details qAccess=\"0\" qConstraint=\"0\" qInit=\"0\" qValues=\"\"&gt;\n                  &lt;nor:OrderID&gt;11113&lt;/nor:OrderID&gt;\n                  &lt;nor:ProductID&gt;40&lt;/nor:ProductID&gt;\n                  &lt;nor:UnitPrice&gt;88.0000&lt;/nor:UnitPrice&gt;\n                  &lt;nor:Quantity&gt;19&lt;/nor:Quantity&gt;\n                  &lt;nor:Discount&gt;0&lt;/nor:Discount&gt;\n               &lt;/nor:Order_x0020_Details&gt;\n            &lt;/nor:new&gt;\n         &lt;/nor:tuple&gt;\n      &lt;/nor:UpdateOrder_x0020_Details&gt;\n   &lt;/soapenv:Body&gt;\n&lt;/soapenv:Envelope&gt;\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "jquery",
+        "mobile"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076038/timeline",
+      "question_comments_url": "/questions/7076038/comments",
+      "question_answers_url": "/questions/7076038/answers",
+      "question_id": 7076038,
+      "owner": {
+        "user_id": 896279,
+        "user_type": "registered",
+        "display_name": "user896279",
+        "reputation": 1,
+        "email_hash": "be24177294199053b885f9c1e5d7d800"
+      },
+      "creation_date": 1313486436,
+      "last_edit_date": 1313486578,
+      "last_activity_date": 1313486778,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 11,
+      "score": 0,
+      "community_owned": false,
+      "title": "passing values in the a href tag of jquery mobile",
+      "body": "<p>Is there any other way of attaching values in a href tag of jquery mobile aside from attaching it to the ur(e.g.,<code>proj.html#page?ID=1</code>);</p>\n\n<p>I tried:</p>\n\n<pre><code>&lt;a href=\"#restaurants\" data-role=\"button\" data-icon=\"delete\" data-iconpos=\"left\" id=\"resto\" value=\"x\"&gt;Restaurants&lt;/a&gt; \n</code></pre>\n\n<p>but its not working.And how do I get the value in the other page?</p>\n"
+    },
+    {
+      "tags": [
+        "android"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076035/timeline",
+      "question_comments_url": "/questions/7076035/comments",
+      "question_answers_url": "/questions/7076035/answers",
+      "question_id": 7076035,
+      "owner": {
+        "user_id": 67419,
+        "user_type": "registered",
+        "display_name": "neildeadman",
+        "reputation": 389,
+        "email_hash": "4288093f703e3d430fe294de7c73e833"
+      },
+      "creation_date": 1313486418,
+      "last_activity_date": 1313486418,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 12,
+      "score": 1,
+      "community_owned": false,
+      "title": "Android ViewPager - Using a layout xml",
+      "body": "<p>I have a simple ViewPager example that just places a TextView with the current position. I want to adapt this to work in an existing app I have written.</p>\n\n<p>My app currently uses a layout and then adjusts the values as needed. I want to use this layout with the ViewPager, but I currently am unable to get the layout.</p>\n\n<p>When constructing my PagerAdapter I pass in the context from the main activity.</p>\n\n<p>I am unable to use findViewById to get my layout though.</p>\n\n<p>Can someone suggest the correct way to get it?</p>\n\n<p>I haven't pasted any code because the code doesn't actually compile!</p>\n"
+    },
+    {
+      "tags": [
+        "python",
+        "encoding",
+        "urllib"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076026/timeline",
+      "question_comments_url": "/questions/7076026/comments",
+      "question_answers_url": "/questions/7076026/answers",
+      "question_id": 7076026,
+      "owner": {
+        "user_id": 762622,
+        "user_type": "registered",
+        "display_name": "hack23",
+        "reputation": 1,
+        "email_hash": "2bddbe4c3b6eb42db2c207cf2ba19438"
+      },
+      "creation_date": 1313486355,
+      "last_activity_date": 1313486355,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 15,
+      "score": 0,
+      "community_owned": false,
+      "title": "Python 3.[12] urllib",
+      "body": "<p>i am working on a little script grabbing some files from a website. First i create a list of potential urls within the website. This worked fine with Python 3.1 but not with Python 3.2. I guess it is a question on encoding but i am not sure how to realise it in an elegant way. Can you help me?</p>\n\n<pre><code>def get_urls(username, password, userid):\n    cj = http.cookiejar.CookieJar()\n    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))\n    login_data = urllib.parse.urlencode({'login' : username, 'password' : password})\n    opener.open(BASE_URL+\"/bg/login\", login_data)\n    url = BASE_URL + \"/bg/user/\" + userid + \"?finished=1\"\n    resp = opener.open(url)\n    result = resp.read()\n    txt = result.decode(\"iso-8859-1\")\n    liste = (re.findall(\"/bg/export/[\\d]{4,8}\",txt))\n    return liste\n</code></pre>\n\n<p>Regards,</p>\n\n<p>Hack23</p>\n"
+    },
+    {
+      "tags": [
+        "silverlight",
+        "z-index"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076024/timeline",
+      "question_comments_url": "/questions/7076024/comments",
+      "question_answers_url": "/questions/7076024/answers",
+      "question_id": 7076024,
+      "owner": {
+        "user_id": 207022,
+        "user_type": "registered",
+        "display_name": "Joseph Le Brech",
+        "reputation": 937,
+        "email_hash": "6623b3045e95611491404026bd823a7a"
+      },
+      "creation_date": 1313486350,
+      "last_activity_date": 1313486587,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 7,
+      "score": 0,
+      "community_owned": false,
+      "title": "ZIndex and silverlight",
+      "body": "<p>I have an image which constitutes the subject of a question and I want to place buttons on top of it for the user to click. </p>\n\n<p>I have an object which positions a sprite (a rectangle with a background image which is transformed)</p>\n\n<p>And I have an ItemsControl which positions the buttons using Margin.left and top. Like so</p>\n\n<pre><code>&lt;Grid x:Name=\"imageGrid\"&gt;\n        &lt;local:spriteView Canvas.ZIndex=\"10\" x:Name=\"QuestionImage\" Sprite=\"{Binding QuestionImageSprite}\" /&gt;\n        &lt;local:ImageAnswers Canvas.ZIndex=\"50\" x:Name=\"AnswersImages\" Answers=\"{Binding answers}\"&gt;&lt;/local:ImageAnswers&gt;\n&lt;/Grid&gt;\n</code></pre>\n\n<p>I want <code>AnswersImages</code> to be positioned directly on top of <code>QuestionImage</code> but <code>QuestionImage</code> is pushing <code>AnswerImages</code> down and <code>AnswerImages</code> is also affecting the position of <code>QuestionImage</code>.</p>\n\n<p>How do I stop them from doing that? Can I force them to be positioned absolutely within the <code>ImageGrid</code></p>\n"
+    },
+    {
+      "tags": [
+        "wpf",
+        "3d",
+        "hidden",
+        "material"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076023/timeline",
+      "question_comments_url": "/questions/7076023/comments",
+      "question_answers_url": "/questions/7076023/answers",
+      "question_id": 7076023,
+      "owner": {
+        "user_id": 612844,
+        "user_type": "registered",
+        "display_name": "yafeya",
+        "reputation": 27,
+        "email_hash": "7e553d656963d21fac609bdf89bef60e"
+      },
+      "creation_date": 1313486349,
+      "last_activity_date": 1313486349,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 5,
+      "score": 0,
+      "community_owned": false,
+      "title": "How can i hide a wpf material",
+      "body": "<p>There i have 3D wpf application, and i use a material in a GeometryModel3D. The material brush is a visual brush, and binding some data. As the requirement of user, they want hide the data some-times. And i try to give the visual/element \"Hidden\" of the visible property. Then there will be blank pad on the application. Then i tried give the transparent color to the Color-property of the material, i failed too. </p>\n\n<p>So how can i hide the material? i want some help, thanks.</p>\n\n<pre><code>&lt;GeometryModel3D.Material&gt;\n                                &lt;MaterialGroup&gt;\n                                    &lt;DiffuseMaterial x:Name=\"floorSurfaceMaterial\"&gt;\n                                        &lt;DiffuseMaterial.Brush&gt;\n                                            &lt;VisualBrush&gt;\n                                                &lt;VisualBrush.Visual&gt;\n                                                    &lt;Grid Name=\"floorSurfaceGrid\" &gt;\n                                                        &lt;TextBlock Text=\"yafeya\"/&gt;\n                                                    &lt;/Grid&gt;\n                                                &lt;/VisualBrush.Visual&gt;\n                                            &lt;/VisualBrush&gt;\n                                        &lt;/DiffuseMaterial.Brush&gt;\n                                    &lt;/DiffuseMaterial&gt;\n                                &lt;/MaterialGroup&gt;\n                            &lt;/GeometryModel3D.Material&gt;\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        ".net",
+        "testing",
+        "nunit",
+        "mstest",
+        "fitnesse"
+      ],
+      "answer_count": 1,
+      "favorite_count": 1,
+      "question_timeline_url": "/questions/7076022/timeline",
+      "question_comments_url": "/questions/7076022/comments",
+      "question_answers_url": "/questions/7076022/answers",
+      "question_id": 7076022,
+      "owner": {
+        "user_id": 671347,
+        "user_type": "unregistered",
+        "display_name": "Gilbert Liddell",
+        "reputation": 107,
+        "email_hash": "2665a7d37d863f35d90860220552ae75"
+      },
+      "creation_date": 1313486338,
+      "last_edit_date": 1313487623,
+      "last_activity_date": 1313487623,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 9,
+      "score": 2,
+      "community_owned": false,
+      "title": "Schema and Stored Procedure tests using Nunit",
+      "body": "<p>We have various systems where the majority of our business logic is within stored procedures. We need to write some tests that basically check data has changed in the expected way when a stored proc has been run. I'd also like some basic schema tests, input and output params etc as well.</p>\n\n<p>I've been looking at DBfit and MSTest database tests and currently, i'm not sold on either. I've used Nunit to test c# code and was wondering if using Nunit would be a good alternative approach to testing stored procs from within .net (maybe using EF4)</p>\n\n<p>Something like </p>\n\n<ul>\n<li>Setup data </li>\n<li>Check data</li>\n<li>Execute proc</li>\n<li>Check data has changed</li>\n</ul>\n\n<p>Would this be a suitable method of testing stored procs? Are there other, better methods?</p>\n\n<p>Opinions and feedback would be appreciated :-)</p>\n\n<p>EDIT: i'd also like to integrate this into our CI process using TeamCity</p>\n"
+    },
+    {
+      "tags": [
+        "visual-studio-2008",
+        "ssis",
+        "bids"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076018/timeline",
+      "question_comments_url": "/questions/7076018/comments",
+      "question_answers_url": "/questions/7076018/answers",
+      "question_id": 7076018,
+      "owner": {
+        "user_id": 604613,
+        "user_type": "registered",
+        "display_name": "UrbanEsc",
+        "reputation": 146,
+        "email_hash": "e0fb293869c6289ca45a0d21388f2498"
+      },
+      "creation_date": 1313486323,
+      "last_activity_date": 1313486323,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 3,
+      "score": 0,
+      "community_owned": false,
+      "title": "How to fail SSIS component on invalid rows",
+      "body": "<p>I want to be able to do the following:</p>\n\n<ul>\n<li>Import a flatfile row by row</li>\n<li>Do a conditional split on a column value of each row</li>\n<li>if i detect a valid value, i want to continue with this row</li>\n<li>if in any case i detect a value that is not possible i want to FAIL the component so the workflow stops and i get an error</li>\n</ul>\n\n<p>Example: I have a file with three columns ( \"type\", \"value\", \"message\")</p>\n\n<p>I want to import that file row by row using the flatfile destination. Then i want to do the conditional split. If the \"type\" column has \"1\" as value, i want to write that row into my destinatoin. If the type is \"2\" or \"3\" i want to ignore them. However if its \"A\" or \"0\" i want to FAIL the component.</p>\n\n<p>I have everything except the \"FAIL\" part. I configured the output for the last condition (\"column is not 1,2 or 3\") as \"Fail Component\", however it does not actually fail the component.</p>\n"
+    },
+    {
+      "tags": [
+        "cryptography"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076019/timeline",
+      "question_comments_url": "/questions/7076019/comments",
+      "question_answers_url": "/questions/7076019/answers",
+      "question_id": 7076019,
+      "owner": {
+        "user_id": 610159,
+        "user_type": "registered",
+        "display_name": "Andrei Petrenko",
+        "reputation": 309,
+        "email_hash": "1cb074ab5c8a989288afd7e41c485f94"
+      },
+      "creation_date": 1313486323,
+      "last_activity_date": 1313486323,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 5,
+      "score": 0,
+      "community_owned": false,
+      "title": "Verify product without revealing multipliers",
+      "body": "<p><strong>Situation:</strong></p>\n\n<p>Several participants contribute encrypted random numbers. These numbers will be used to generate community-agreed random (by simple multiplication).</p>\n\n<p><strong>Question:</strong></p>\n\n<p>Is there any way to detect same products values without revealing multipliers? Maybe it is possible to use some homomorphic encryption?</p>\n"
+    },
+    {
+      "tags": [
+        "php",
+        "mysql",
+        "codeigniter"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076016/timeline",
+      "question_comments_url": "/questions/7076016/comments",
+      "question_answers_url": "/questions/7076016/answers",
+      "question_id": 7076016,
+      "owner": {
+        "user_id": 896353,
+        "user_type": "unregistered",
+        "display_name": "ram",
+        "reputation": 1,
+        "email_hash": "e64488f73f62f94fc1049d29c7e5606c"
+      },
+      "creation_date": 1313486307,
+      "last_activity_date": 1313486307,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 9,
+      "score": 0,
+      "community_owned": false,
+      "title": "how to get the hierarchical dat using recursive in php with codeigniter",
+      "body": "<p>function getrel($userid)\n          {</p>\n\n<pre><code>          $sql =  'SELECT DISTINCT *  FROM family_user WHERE userid in ( SELECT  DISTINCT rel_id FROM family_rel WHERE tree_id ='.$userid.')';\n\n           $query = $this-&gt;db-&gt;query($sql);                                        \n           if ($query-&gt;num_rows() &gt; 0)\n           {\n                foreach($query-&gt;result_array() as $row)\n\n                {\n                    $user[] = $row['userid'];\n                    if(@in_array($row['userid'],$user))\n                    {\n                        echo \"----------&gt;\";\n                        echo $row['userid'];\n                        echo \"&lt;/br&gt;\";                            \n                        $this-&gt;getrel($row['userid']);        \n                        //echo \"HAI\";                                            \n                    }                                           \n                }                 \n               // return $user;                                                         \n           }\n</code></pre>\n\n<p>the above function has no limit.please resolved\n          }</p>\n"
+    },
+    {
+      "tags": [
+        "c#"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076013/timeline",
+      "question_comments_url": "/questions/7076013/comments",
+      "question_answers_url": "/questions/7076013/answers",
+      "question_id": 7076013,
+      "owner": {
+        "user_id": 465558,
+        "user_type": "registered",
+        "display_name": "Yanshof",
+        "reputation": 857,
+        "email_hash": "6bef631b2e4da7009c8e1483e1222c9c"
+      },
+      "creation_date": 1313486287,
+      "last_activity_date": 1313487081,
+      "up_vote_count": 0,
+      "down_vote_count": 2,
+      "view_count": 37,
+      "score": -2,
+      "community_owned": false,
+      "title": "How to send email from code ?",
+      "body": "<p>I have some simple winform application. \nIn some place in the flow the user have button that if he will press on it the application will send email to some know mail address. </p>\n\n<p>How can i implement this ? \nHow can i send the mail ? </p>\n\n<p>Thanks for any help. </p>\n"
+    },
+    {
+      "tags": [
+        "blackberry",
+        "java-me"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076012/timeline",
+      "question_comments_url": "/questions/7076012/comments",
+      "question_answers_url": "/questions/7076012/answers",
+      "question_id": 7076012,
+      "owner": {
+        "user_id": 896352,
+        "user_type": "unregistered",
+        "display_name": "Buffel",
+        "reputation": 1,
+        "email_hash": "9b4997290ee27ca34c3dda4f64a5df79"
+      },
+      "creation_date": 1313486285,
+      "last_activity_date": 1313486285,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 4,
+      "score": 0,
+      "community_owned": false,
+      "title": "J2ME handleKeyReleased affecting DefaultCommand",
+      "body": "<p>I'm having a bit of a problem with an app I'm developing for BlackBerry.</p>\n\n<p>I have a series of Item objects on the screen, each with a DefaultCommand tied to it. Example \nbelow:</p>\n\n<pre><code>...\ncmdBrowse = new Command(temp.id,Command.ITEM,0);        \nmainList.setDefaultCommand(cmdBrowse);\nmainList.setItemCommandListener(icl);\n...\n</code></pre>\n\n<p>Previously just clicking on the item with the confirm button would run the proper command. No problem there.</p>\n\n<p>Then I added the handleKeyReleased method to capture the BlackBerry's back button as follows:</p>\n\n<pre><code>protected boolean handleKeyReleased(int keyCode, int gameAction) {\nif(keyCode==1769472) {\n    /*code to deal with back button*/\n    return true;\n} else {\n    return false;\n}\n}\n</code></pre>\n\n<p>Now when I click on the mainList Item with the confirm button, it brings up the list of commands first and I have to click again to actually run the command. Two clicks where it used to be one.</p>\n\n<p>So, is there a way to either:</p>\n\n<p>A) Keep the single click behaviour while still being able to capture the back button with handleKeyReleased</p>\n\n<p>OR  </p>\n\n<p>B) Capture the back button in a different way?</p>\n\n<p>Thank you.</p>\n"
+    },
+    {
+      "tags": [
+        "linq",
+        "linq-to-sql",
+        "lambda",
+        "c#-3.0"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076011/timeline",
+      "question_comments_url": "/questions/7076011/comments",
+      "question_answers_url": "/questions/7076011/answers",
+      "question_id": 7076011,
+      "owner": {
+        "user_id": 475607,
+        "user_type": "registered",
+        "display_name": "Haroon",
+        "reputation": 392,
+        "email_hash": "bc1b282e89fa898e222d26fb19ce57e1"
+      },
+      "creation_date": 1313486284,
+      "last_edit_date": 1313487383,
+      "last_activity_date": 1313488183,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 17,
+      "score": 0,
+      "community_owned": false,
+      "title": "Lambda statement to project results based on if",
+      "body": "<p>I have a user who is part of a company, this company can have multiple offices, so the user can be part of head/main office or part of another office, I am projecting from a lamdba expression but I cannot figure out how to do: if user is not headoffice throw out the office address.</p>\n\n<p>The code below shows user, joined onto userhistory (2 table join - which is necessary so I can throw out some info that is held on that table related to this user), here is what I have done so far:</p>\n\n<pre><code>    [HttpPost]\n    [AjaxOnly]\n    public PartialViewResult GetUsers(string term)\n    {\n\n        var _sf = _repo.Single&lt;Company&gt;(x =&gt; x.Type == x.IsActive &amp;&amp;\n            (x.Identifier.Contains(term) || x.Name.Contains(term)));\n\n        //get company with addresses...\n        var users = _repo.All&lt;User&gt;().Where(x =&gt; x.CompanyID == _sf.CompanyID);\n        var offices = _repo.All&lt;Office&gt;().Where(x =&gt; x.CompanyID == _sf.CompanyID);\n\n        var _users = _repo.All&lt;UserHistory&gt;()\n            .Join(users, x =&gt; x.UserID, y =&gt; y.UserID,\n            (s, u) =&gt; new\n            {\n                _s = s,\n                _user = u\n            }).Select(x =&gt; new QuoteData\n            {\n                Login = x._user.Login,\n                Name = string.Format(\"{0} {1}\", x._user.FirstName, x._user.LastName),\n                Tel = x._s.Mobile,\n//let me know where user is based, if head office get me the address too...\n                IsBasedInHeadOffice = x._user.IsBasedInHeadOffice\n\n//here: if !IsBasedInHeadOffice =&gt; GetMeAddress\n            });\n\n        return PartialView(\"QuoteUsersUC\", _users);\n    }\n\npublic class QuoteData\n{\n    public string Login { get; set; }\n    public string Name { get; set; }\n    public string Address { get; set; }\n    public string Tel { get; set; }\n    public bool IsBasedInHeadOffice { get; set; }\n}\n</code></pre>\n\n<p>Could I have written this even better/ simpler?</p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "validation",
+        "struts2",
+        "conditional"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076009/timeline",
+      "question_comments_url": "/questions/7076009/comments",
+      "question_answers_url": "/questions/7076009/answers",
+      "question_id": 7076009,
+      "owner": {
+        "user_id": 746462,
+        "user_type": "registered",
+        "display_name": "kakashi99",
+        "reputation": 15,
+        "email_hash": "83f3add79e330c4024d4161a3a17bbcc"
+      },
+      "creation_date": 1313486267,
+      "last_activity_date": 1313486267,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 8,
+      "score": 0,
+      "community_owned": false,
+      "title": "Struts2 condition on validation",
+      "body": "<p>I have a form with 5 \"name\" fields which represent a String tab, example</p>\n\n<pre><code>obj.props[0].name\nobj.props[1].name\nobj.props[2].name\nobj.props[3].name\nobj.props[4].name\n</code></pre>\n\n<p>but these fields, if they are filled, must be different. So i made an xml validator. i tried something like that:</p>\n\n<pre><code>&lt;validator type=\"expression\"&gt;\n    &lt;param name=\"expression\"&gt;!obj.props[0].name.equals(obj.props[1].name) || \n    !obj.props[0].name.equals(obj.props[2].name) || \n    !obj.props[0].name.equals(obj.props[3].name) || \n    !obj.props[0].name.equals(obj.props[4].name)...&lt;/param&gt;\n    &lt;message key=\"create.company.error.domaindiff\" /&gt;\n    &lt;/validator&gt;\n</code></pre>\n\n<p>but it doesn't work. do you have any idea about how conditions are used in struts2 validation ?</p>\n"
+    },
+    {
+      "tags": [
+        "api",
+        "google",
+        "map"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076006/timeline",
+      "question_comments_url": "/questions/7076006/comments",
+      "question_answers_url": "/questions/7076006/answers",
+      "question_id": 7076006,
+      "owner": {
+        "user_id": 825922,
+        "user_type": "registered",
+        "display_name": "vinod bhatt",
+        "reputation": 1,
+        "email_hash": "41c902ef7e6f3d6d3d9dbd6214977a83"
+      },
+      "creation_date": 1313486243,
+      "last_activity_date": 1313486243,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 4,
+      "score": 0,
+      "community_owned": false,
+      "title": "Fusion Table in google map API V2",
+      "body": "<p>Can we add fusion table to google map API Version 2</p>\n"
+    },
+    {
+      "tags": [
+        "jquery",
+        "iframe",
+        "parent"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076005/timeline",
+      "question_comments_url": "/questions/7076005/comments",
+      "question_answers_url": "/questions/7076005/answers",
+      "question_id": 7076005,
+      "owner": {
+        "user_id": 500610,
+        "user_type": "registered",
+        "display_name": "Paparappa",
+        "reputation": 77,
+        "email_hash": "fad0186a9ecde6e33958c65c761331d4"
+      },
+      "creation_date": 1313486237,
+      "last_activity_date": 1313486371,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 8,
+      "score": 0,
+      "community_owned": false,
+      "title": "Jquery load outside iframe",
+      "body": "<p>I have a very strange problem, i have an iframe that is able to communicate with it's parent, but only in some certain ways. For an example i have this code in the iframe</p>\n\n<pre><code>$(document).ready(function(){\n           parent.document.getElementById('target').style.display = 'none';\n});\n</code></pre>\n\n<p>This hides a div called target in the parent page. Very nice. But this code wich is really what i want to do (loading page.php into the div called target) does not work even though its placed in the exact same way:</p>\n\n<pre><code>$(document).ready(function(){\n           parent.document.getElementById('target').load(\"page.php\");\n});\n</code></pre>\n\n<p>Does anyone know why?\nPeace</p>\n"
+    },
+    {
+      "tags": [
+        "events",
+        "gwt",
+        "handler",
+        "preview"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7076004/timeline",
+      "question_comments_url": "/questions/7076004/comments",
+      "question_answers_url": "/questions/7076004/answers",
+      "question_id": 7076004,
+      "owner": {
+        "user_id": 883541,
+        "user_type": "registered",
+        "display_name": "cn1h",
+        "reputation": 1,
+        "email_hash": "b1b1cef3ae646365fb9faa0a5e3ca135"
+      },
+      "creation_date": 1313486237,
+      "last_activity_date": 1313486237,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 4,
+      "score": 0,
+      "community_owned": false,
+      "title": "GWT Event Preview vs Event Handler",
+      "body": "<p>My question is, what's the different between event preview and event handler in GWT. </p>\n\n<p>There is a callback function <code>boolean onEventPreview(Event event)</code> for event preview and a callback function <code>void onBrowserEvent(Event event)</code> as well. They are pretty similar, so what's the different between them? Especially when should I use the event preview at all when the event handler works perfect?</p>\n\n<p>thanks</p>\n"
+    },
+    {
+      "tags": [
+        "javascript",
+        "ruby-on-rails",
+        "ajax",
+        "redirect",
+        "rjs"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075999/timeline",
+      "question_comments_url": "/questions/7075999/comments",
+      "question_answers_url": "/questions/7075999/answers",
+      "question_id": 7075999,
+      "owner": {
+        "user_id": 297218,
+        "user_type": "registered",
+        "display_name": "nenne",
+        "reputation": 25,
+        "email_hash": "9bb81c14b7b6c72184b616036447d141"
+      },
+      "creation_date": 1313486231,
+      "last_activity_date": 1313487779,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 19,
+      "score": 0,
+      "community_owned": false,
+      "title": "Redirecting main window from ajax call",
+      "body": "<p>I have a ajax call to a controller that checks for authentication, when no authentication exists it sends the call onwards to the signin controller who checks if it is a xhr request. If it is it renders an rjs containing a page.redirect_to to the signin path and the main window is redirected to the signin page. This works flawlessly in google chrome but fails in Firefox. </p>\n\n<p>the only code in the rjs file is: </p>\n\n<pre><code>page.redirect_to(\"http://localhost:3000/signin\")\n</code></pre>\n\n<p>As i said, it works flawlessly in chrome but Firefox(v3.6) refuses to redirect the main Window. Does anyone have any ideas as to how i can get this to work in Firefox as well? </p>\n"
+    },
+    {
+      "tags": [
+        "ruby-on-rails",
+        "database",
+        "ruby-on-rails-3",
+        "facebook-graph-api"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075991/timeline",
+      "question_comments_url": "/questions/7075991/comments",
+      "question_answers_url": "/questions/7075991/answers",
+      "question_id": 7075991,
+      "owner": {
+        "user_id": 521411,
+        "user_type": "unregistered",
+        "display_name": "Simpleton",
+        "reputation": 78,
+        "email_hash": "5143ad2cc64aafc2fa2dc43111831f81"
+      },
+      "creation_date": 1313486166,
+      "last_activity_date": 1313486166,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 6,
+      "score": 0,
+      "community_owned": false,
+      "title": "How should I cache Facebook call data into my database so rails can use it locally?",
+      "body": "<p>I want to start out by generating a model to hold this information:</p>\n\n<pre><code>rails g model UserData UID:string birthday:string likes:string location:string \\n\nactivities:string books:string movies:string music:string tv:string \\n\ninterests:string post_count:string friend_count:string\n</code></pre>\n\n<p>Then I rake the DB.</p>\n\n<p>Then I create the file $RAILS_ROOT/jobs/update_facebook.rb:</p>\n\n<pre><code>config = YAML::load(File.open(\"#{RAILS_ROOT}/config/facebook.yml\"));\nAPP_ID = CONFIG['app_id']\nfetching_app = FbGraph::Application.new(config['APP_ID']);\naccess_token = fetching_app.get_access_token(config['production']['client_secret']);\n\n#Don't know what else to put in here\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "selenium",
+        "selenium2"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075986/timeline",
+      "question_comments_url": "/questions/7075986/comments",
+      "question_answers_url": "/questions/7075986/answers",
+      "question_id": 7075986,
+      "owner": {
+        "user_id": 20038,
+        "user_type": "registered",
+        "display_name": "Richard",
+        "reputation": 1164,
+        "email_hash": "57160c14b75d422eaad070ae278303f6"
+      },
+      "creation_date": 1313486138,
+      "last_edit_date": 1313487192,
+      "last_activity_date": 1313487192,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 4,
+      "score": 0,
+      "community_owned": false,
+      "title": "Selenium 2 RemoteWebDriver -StaleElementReferenceException: Element specified by 'id' is no longer valid",
+      "body": "<p>I'm using the 2.4.0 selenium server in hub mode with two nodes each with 5 instances of Internet explorer (IE8 on win7) - this is all running on the same Win7 machine</p>\n\n<p>The following code throws the exception on the final call to FindElements on the RemoteWebDriver</p>\n\n<pre><code>_driver.Navigate().GoToUrl(@\"http://devrsql714/webpages/parentview.aspx\");\n            var wait = new WebDriverWait(_driver, new TimeSpan(0, 0, 40));\n            wait.Until(d =&gt; d.FindElement(By.ClassName(\"TitleAlternative\")));\n            Console.WriteLine(string.Format(\"Window title: {0}\", _driver.Title));\n            var element = _driver.FindElementById(\"txtLessonID\");\n            element.SendKeys(\"13814\");\n            var button = _driver.FindElementById(\"btnLessonID\");\n            button.Click();\n            wait = new WebDriverWait(_driver, new TimeSpan(0, 0, 40));\n            var link = wait.Until(d =&gt; d.Title.Contains(\"01652-06-A\"));\n            Console.WriteLine(string.Format(\"Window title: {0}\", _driver.Title));\n            Assert.IsTrue(_driver.Title.Contains(\"01652\"));\n            Console.WriteLine(string.Format(\"page source: {0}\", _driver.PageSource));\n            _driver.FindElementsByTagName(\"DIV\");\n</code></pre>\n\n<p>I can see the browser load, navigate, fillin the text box and click the button - the page refreshes the title changes - the assert passes (this is running in MbUnit with Gallio)</p>\n\n<p>but the subsequent call to _driver.FindElementsByTagName throws the exception below - I added waits in case that was the issue and any find elements results in the same exception</p>\n\n<p>what am I doing wrong? - other properties on the driver work such as title and page source (which has the excepted content)</p>\n\n<p>Note the same code but swapping the RemoteWebDriver for a local InternetExplorerDriver does not throw the exception</p>\n\n<p>In both cases capabilities were set to ignore protect mode: </p>\n\n<pre><code>DesiredCapabilities capabilities = DesiredCapabilities.InternetExplorer();\n            capabilities.Platform = new Platform(PlatformType.Any);\n            capabilities.SetCapability(\"ignoreProtectedModeSettings\", true);\n\nExecute\nOpenQA.Selenium.StaleElementReferenceException: Element specified by 'id' is no longer valid (WARNING: The server did not provide any stacktrace information)\nBuild info: version: '2.4.0', revision: '13337', time: '2011-08-12 09:57:13'\nSystem info: os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.6.0_20'\nDriver info: driver.version: RemoteWebDriver\n   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse) in c:\\Projects\\WebDriver\\trunk\\dotnet\\src\\WebDriver\\Remote\\RemoteWebDriver.cs:line 948\n   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(DriverCommand driverCommandToExecute, Dictionary`2 parameters) in c:\\Projects\\WebDriver\\trunk\\dotnet\\src\\WebDriver\\Remote\\RemoteWebDriver.cs:line 805\n   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElements(String mechanism, String value) in c:\\Projects\\WebDriver\\trunk\\dotnet\\src\\WebDriver\\Remote\\RemoteWebDriver.cs:line 851\n   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementsByTagName(String tagName) in c:\\Projects\\WebDriver\\trunk\\dotnet\\src\\WebDriver\\Remote\\RemoteWebDriver.cs:line 622\n   at SeleniumTests.DemoTest.AnotherTest() \n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "android",
+        "scrolling",
+        "gallery"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075979/timeline",
+      "question_comments_url": "/questions/7075979/comments",
+      "question_answers_url": "/questions/7075979/answers",
+      "question_id": 7075979,
+      "owner": {
+        "user_id": 896340,
+        "user_type": "registered",
+        "display_name": "user896340",
+        "reputation": 6,
+        "email_hash": "dd8478833ce91df60621a7d0c018f36f"
+      },
+      "creation_date": 1313486111,
+      "last_activity_date": 1313486688,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 13,
+      "score": 1,
+      "community_owned": false,
+      "title": "android gallery horizontal scrolling. Help please",
+      "body": "<p>I have a gallery with images and when scroll horizontally, multiple images are scrolled instead of one. please help me solve this \nBelow is part of my code. thanks in advance</p>\n\n<p>public View getView(int position, View convertView, ViewGroup parent) {</p>\n\n<pre><code>        View view = convertView;\n        if (convertView == null) {\n            view = inflater.inflate(resourceid, null);\n        }\n        synchronized (view) {\n            TextView txtTitle = (TextView) view\n                    .findViewById(R.id.txtCaption);\n            ImageList item = getItem(position);\n\n            ImageView ivImage = (ImageView) view.findViewById(R.id.ivImage);\n            ivImage.setScaleType(ScaleType.CENTER_INSIDE);\n\n            try {\n                ivImage.setImageBitmap(getBitmapFromAsset(item.imageUrl));\n</code></pre>\n\n<p>}</p>\n"
+    },
+    {
+      "tags": [
+        "wpf",
+        "window",
+        "resizing",
+        "moving"
+      ],
+      "answer_count": 1,
+      "accepted_answer_id": 7076060,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075977/timeline",
+      "question_comments_url": "/questions/7075977/comments",
+      "question_answers_url": "/questions/7075977/answers",
+      "question_id": 7075977,
+      "owner": {
+        "user_id": 855686,
+        "user_type": "registered",
+        "display_name": "mjk6026",
+        "reputation": 241,
+        "email_hash": "bb9109fc7bacae9040745a4fe6cd5424"
+      },
+      "creation_date": 1313486103,
+      "last_activity_date": 1313486592,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 13,
+      "score": 0,
+      "community_owned": false,
+      "title": "WPF : Move and resize window at once time",
+      "body": "<p>in Win32 API, a SetWindowPos provided a function easy to move and resize window at once.</p>\n\n<p>but in WPF, WPF Window dosen't have a method like SetWindowPos. So I must coding like following style:</p>\n\n<pre><code>        this.Left += e.HorizontalChange;\n        this.Top += e.VerticalChange;\n        this.Width = newWidth;\n        this.Height = newHeight;\n</code></pre>\n\n<p>Of cause it works well. but the it's not simple. and it looks dirty.</p>\n\n<p>How can i move a window and resize at once time?</p>\n\n<p>Am I need to using API?</p>\n"
+    },
+    {
+      "tags": [
+        "html",
+        "css",
+        "div"
+      ],
+      "answer_count": 4,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075974/timeline",
+      "question_comments_url": "/questions/7075974/comments",
+      "question_answers_url": "/questions/7075974/answers",
+      "question_id": 7075974,
+      "owner": {
+        "user_id": 196697,
+        "user_type": "registered",
+        "display_name": "Promather",
+        "reputation": 1388,
+        "email_hash": "96a881f71350236db2ef853bfc9ec9a1"
+      },
+      "creation_date": 1313486095,
+      "last_activity_date": 1313486233,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 22,
+      "score": 1,
+      "community_owned": false,
+      "title": "Clipping div's inner content",
+      "body": "<p>I have a DIV of size 147x88 and inside it an image which has the same width, but might be larger in height. In this case, the image goes beyond the boundary of the DIV. Is there anyway to clip the image, keeping in mind that I want my page to work in old browsers which doesn't support CSS3 (IE7 and IE8)?</p>\n"
+    },
+    {
+      "tags": [
+        "oracle",
+        "plsql",
+        "refactoring"
+      ],
+      "answer_count": 2,
+      "accepted_answer_id": 7076065,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075972/timeline",
+      "question_comments_url": "/questions/7075972/comments",
+      "question_answers_url": "/questions/7075972/answers",
+      "question_id": 7075972,
+      "owner": {
+        "user_id": 896347,
+        "user_type": "unregistered",
+        "display_name": "digdug",
+        "reputation": 3,
+        "email_hash": "afb07edcad09df7aab63610d895d5ea0"
+      },
+      "creation_date": 1313486083,
+      "last_edit_date": 1313486951,
+      "last_activity_date": 1313486648,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 12,
+      "score": 0,
+      "community_owned": false,
+      "title": "refactoring PL/SQL",
+      "body": "<p>I encountered the following PL/SQL code(variables modified) at work:</p>\n\n<pre><code>PROCEDURE test(i_w IN a.w%type,o_result IN OUT resu_cur_type) IS\nBEGIN\n    IF i_w IS NULL THEN\n      open o_result for SELECT a.x, b.y FROM a,b WHERE a.z=b.z;\n    ELSE\n      open o_result for SELECT a.x, b.y FROM a,b WHERE a.z=b.z AND a.w=i_w;\n    END IF;\nEND test;\n</code></pre>\n\n<p>I think the above is equivalent to the following:</p>\n\n<pre><code>PROCEDURE test(i_w IN a.w%type,o_result IN OUT resu_cur_type) IS\nBEGIN\n      open o_result for SELECT a.x, b.y FROM a,b WHERE a.z=b.z AND NVL(a.w,1)=NVL(NVL(i_w,a.w),1);\nEND test;\n</code></pre>\n\n<p>Won't it be the same?. Could somebody please explain is there any reason to use the\noriginal version?. \nPlease note that the original cursor is a 50 line query, so refactoring might improve its readability and keep it simple.</p>\n\n<p>Edit:</p>\n\n<p>To address the problem in Kevin Burton's answer, I've updated the WHERE condition.</p>\n"
+    },
+    {
+      "tags": [
+        "query",
+        "coldfusion"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075970/timeline",
+      "question_comments_url": "/questions/7075970/comments",
+      "question_answers_url": "/questions/7075970/answers",
+      "question_id": 7075970,
+      "owner": {
+        "user_id": 415865,
+        "user_type": "registered",
+        "display_name": "Vikas",
+        "reputation": 1718,
+        "email_hash": "a5b4298f43861186852e6c962be99e73"
+      },
+      "creation_date": 1313486073,
+      "last_activity_date": 1313486073,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 7,
+      "score": 0,
+      "community_owned": false,
+      "title": "Use count() function in ColdFusion query of query",
+      "body": "<p>I wanted to use <code>count()</code> function in ColdFusion Query object.</p>\n\n<p>Here is my code and test:</p>\n\n<pre><code>&lt;cfset x = querynew(\"id,name\")&gt;\n\n&lt;cfquery name=\"y\" dbtype=\"query\"&gt;\n    select count(*) as total from x\n&lt;/cfquery&gt;\n\n&lt;cfoutput&gt;Test1: #y.total#&lt;/cfoutput&gt;\n\n&lt;cfset temp = QueryAddRow(x)&gt;\n&lt;cfset Temp = QuerySetCell(x, \"id\", 1)&gt;\n&lt;cfset Temp = QuerySetCell(x, \"Name\", \"Vikas\")&gt;\n\n&lt;cfquery name=\"y\" dbtype=\"query\"&gt;\n    select count(*) as total from x\n&lt;/cfquery&gt;\n\n&lt;cfoutput&gt;Test2: #y.total#&lt;/cfoutput&gt;\n</code></pre>\n\n<p>Should I use convert function? Like if total is [enpty string] then result should be 0.\nOr is there any other best/proper way to do that?</p>\n"
+    },
+    {
+      "tags": [
+        "facebook",
+        "facebook-graph-api",
+        "facebook-fql"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075963/timeline",
+      "question_comments_url": "/questions/7075963/comments",
+      "question_answers_url": "/questions/7075963/answers",
+      "question_id": 7075963,
+      "owner": {
+        "user_id": 896344,
+        "user_type": "unregistered",
+        "display_name": "Tobias",
+        "reputation": 1,
+        "email_hash": "7a0f313678ed161c1c5d3cc4f3aee28f"
+      },
+      "creation_date": 1313486040,
+      "last_activity_date": 1313486040,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 4,
+      "score": 0,
+      "community_owned": false,
+      "title": "Is there a way using any of Facebook's APIs to get the posts made to a Page that have automatically been hidden",
+      "body": "<p>When people post to my Facebook page's wall they are sometimes (always?) automatically hidden and I have to manually go to the wall_admin page and unhide them.</p>\n\n<p>www.facebook.com/pages/[PAGE_NAME]/[PAGE_ID]?sk=wall_admin</p>\n\n<p>My question is if there is a way using any of Facebook's APIs to retrieve these posts that have automatically been hidden.</p>\n\n<p>I have tries using the Graph and FQL but the both only display posts that are not hidden.</p>\n\n<p>graph.facebook.com/[PAGE_ID]/feed</p>\n\n<p>api.facebook.com/method/fql.queryquery=SELECT post_id FROM stream WHERE source_id=[PAGE_ID]</p>\n\n<p>If I add is_hidden=1 to the FQL request no posts are returned.</p>\n\n<p>api.facebook.com/method/fql.queryquery=SELECT post_id FROM stream WHERE source_id=[PAGE_ID] AND is_hidden=1</p>\n\n<p>I of course use acccess_tokens for all requests. I have tried with both the access_token I get for a user if I accept the apps permissions and as the access_token you get for the page with:</p>\n\n<p>graph.facebook.com/me/accounts</p>\n\n<p>If there is no way to get these posts does anybody know of a way to disable so that Facebook does not automatically hide posts from a Page's wall?</p>\n\n<p>(I have removed http:// and https:// from all URLs because StackOverflow prevents me from posting more then 2 links because I am a new user)</p>\n"
+    },
+    {
+      "tags": [
+        "python",
+        "hidden",
+        "hidden-features",
+        "easter-eggs"
+      ],
+      "answer_count": 5,
+      "favorite_count": 3,
+      "question_timeline_url": "/questions/7075959/timeline",
+      "question_comments_url": "/questions/7075959/comments",
+      "question_answers_url": "/questions/7075959/answers",
+      "question_id": 7075959,
+      "owner": {
+        "user_id": 293050,
+        "user_type": "registered",
+        "display_name": "MatToufoutu",
+        "reputation": 1529,
+        "email_hash": "e82816a51578772c55dae3470c822ff2"
+      },
+      "creation_date": 1313486034,
+      "last_activity_date": 1313487814,
+      "up_vote_count": 7,
+      "down_vote_count": 0,
+      "view_count": 44,
+      "score": 7,
+      "community_owned": false,
+      "title": "Python and python modules easter eggs",
+      "body": "<p>This is not really a programming question, but as it's still related to a programming language, i thought it had its place on SO, if you don't think so, feel free to downvote/flag the question.</p>\n\n<p>After having commented on <a href=\"http://stackoverflow.com/questions/7075082/what-is-future-in-python-used-for-and-how-when-to-use-it/7075121#7075121\">this answer</a>, i searched SO, and noticed there was no question which would list all the known (or less known) easter eggs that can be found in <code>Python</code> and its modules (or at least i didn't find it), there is <a href=\"http://stackoverflow.com/questions/101268/hidden-features-of-python\">this question</a> about <code>Python</code> hidden features, but none about easter eggs. So here it is!</p>\n\n<p>Here are the easter eggs i know:</p>\n\n<p><strong>__future__ easter egg:</strong></p>\n\n<pre><code>&gt;&gt;&gt; from __future__ import braces\n  File \"&lt;stdin&gt;\", line 1\nSyntaxError: not a chance\n</code></pre>\n\n<p><strong>the zen of python:</strong></p>\n\n<pre><code>&gt;&gt;&gt; import this\nThe Zen of Python, by Tim Peters\n\nBeautiful is better than ugly.\nExplicit is better than implicit.\nSimple is better than complex.\nComplex is better than complicated.\nFlat is better than nested.\nSparse is better than dense.\nReadability counts.\nSpecial cases aren't special enough to break the rules.\nAlthough practicality beats purity.\nErrors should never pass silently.\nUnless explicitly silenced.\nIn the face of ambiguity, refuse the temptation to guess.\nThere should be one-- and preferably only one --obvious way to do it.\nAlthough that way may not be obvious at first unless you're Dutch.\nNow is better than never.\nAlthough never is often better than *right* now.\nIf the implementation is hard to explain, it's a bad idea.\nIf the implementation is easy to explain, it may be a good idea.\nNamespaces are one honking great idea -- let's do more of those!\n</code></pre>\n\n<p><strong>hello world:</strong></p>\n\n<pre><code>&gt;&gt;&gt; import __hello__\nHello World...\n</code></pre>\n\n<p>I also know another one in <code>Werkzeug</code>, but as it's quite complicated to reveal, i'll put it separately in an answer.</p>\n\n<p>Do you know other easter eggs in python (or in its third party modules)? I'm sure there are other ones!</p>\n"
+    },
+    {
+      "tags": [
+        "jquery",
+        "html",
+        "asp.net-mvc-2",
+        "html5"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075953/timeline",
+      "question_comments_url": "/questions/7075953/comments",
+      "question_answers_url": "/questions/7075953/answers",
+      "question_id": 7075953,
+      "owner": {
+        "user_id": 148601,
+        "user_type": "registered",
+        "display_name": "Dejan.S",
+        "reputation": 497,
+        "email_hash": "6e0a2eb5407b3f96e51f9c4d822a4128"
+      },
+      "creation_date": 1313485990,
+      "last_activity_date": 1313487212,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 27,
+      "score": 1,
+      "community_owned": false,
+      "title": "html5 problem renders in ie8",
+      "body": "<p>i got this issue with html5 in ie8 (i know its not supported), i use HTML5 Shiv and DOCTYPE html</p>\n\n<p>I got the issue that it will work when the page renders but when i do a ajax request and load (in my case) a product it will ignore the html tags <code>&lt;figure&gt;</code> and <code>&lt;section&gt;</code></p>\n\n<p>anybody got an idea why its like this? i try to find a solutions and html5 shiv and doctype was pretty much what i found.. im ok with a jquery solution if there is any.. any ideas?</p>\n\n<p>im not sure if my markup will help any in this case but ill show it anyway</p>\n\n<pre><code>&lt;figure&gt;\n        &lt;%= Html.ProductImageLinksThickbox(\"2\", \"1\")%&gt;\n&lt;/figure&gt;\n</code></pre>\n\n<p>this is the html that the browser renders</p>\n\n<pre><code>&lt;figure/&gt;\n&lt;/figure/&gt;\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "reflection",
+        "vb",
+        ".net-2.0"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075951/timeline",
+      "question_comments_url": "/questions/7075951/comments",
+      "question_answers_url": "/questions/7075951/answers",
+      "question_id": 7075951,
+      "owner": {
+        "user_id": 896311,
+        "user_type": "registered",
+        "display_name": "user896311",
+        "reputation": 1,
+        "email_hash": "1d08bc9af51ba3855aa700ef948e1518"
+      },
+      "creation_date": 1313485982,
+      "last_activity_date": 1313485982,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 4,
+      "score": 0,
+      "community_owned": false,
+      "title": "spot when event is attached",
+      "body": "<p>I have the problem that an event in my program is called twice and i have no clue where to start to look for the problem.\nI'm just curious if there is a way to spot the places when a method gets hooked to an event.\nI can attach a method dynamically with AddHandler and i thought i read somewhere that in the final code WithEvents is replaced with AddHandler.\nSo if i have the code and the assemblies, can i use a tool like ilspy to find these calls in the code and how would i do that (i know that ilspy currently displays code in c# out, that shouldn't be the problem)?</p>\n\n<p>Thanks in advance.</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "wpf",
+        "binding",
+        "focus",
+        "exit"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075945/timeline",
+      "question_comments_url": "/questions/7075945/comments",
+      "question_answers_url": "/questions/7075945/answers",
+      "question_id": 7075945,
+      "owner": {
+        "user_id": 838806,
+        "user_type": "unregistered",
+        "display_name": "Mårten",
+        "reputation": 21,
+        "email_hash": "8598a3a3fe80a9a89726bd8a911fe45e"
+      },
+      "creation_date": 1313485956,
+      "last_activity_date": 1313486375,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 11,
+      "score": 0,
+      "community_owned": false,
+      "title": "WPF bindings for settings read before execution",
+      "body": "<p>I have an application where bindings work almost as they should, there is just one problem:</p>\n\n<p>Some GUI elements update the underlying data type \"on exit\" i.e. when focusing on something else. However, this doesn't happend when I click \"execute\" or \"save\" (saving settings). So if the last setting that was set was a textbox and the user didn't click somewhere else, the updated setting value is not included into the execution / setting save.</p>\n\n<ol>\n<li>Is there a way to do this manually at execute/save?</li>\n<li>Why doesn't my clicking on execute/save work as a focus change? Maybe it does but it doesn't happend until after the event for the button is run?</li>\n</ol>\n"
+    },
+    {
+      "tags": [
+        "php",
+        "md5"
+      ],
+      "answer_count": 6,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075941/timeline",
+      "question_comments_url": "/questions/7075941/comments",
+      "question_answers_url": "/questions/7075941/answers",
+      "question_id": 7075941,
+      "owner": {
+        "user_id": 409585,
+        "user_type": "registered",
+        "display_name": "phphunger",
+        "reputation": 39,
+        "email_hash": "9580592a7be5c7c78aa9e798c80a7498"
+      },
+      "creation_date": 1313485934,
+      "last_activity_date": 1313486230,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 39,
+      "score": 1,
+      "community_owned": false,
+      "title": "how to extract first 5 and last 5 characters from a string using php?",
+      "body": "<p>i have an MD5 alpha numeric. how can i get the first five characters and last five characters, and put them in one string using php? example : like \"aabbccddeeffgghh\" will be \"aabbcfgghh\"</p>\n"
+    },
+    {
+      "tags": [
+        "asp.net",
+        "string",
+        "visual-studio-2010",
+        "gridview"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075940/timeline",
+      "question_comments_url": "/questions/7075940/comments",
+      "question_answers_url": "/questions/7075940/answers",
+      "question_id": 7075940,
+      "owner": {
+        "user_id": 883937,
+        "user_type": "registered",
+        "display_name": "Karl",
+        "reputation": 33,
+        "email_hash": "3895065f0066ecb96ab376eb78ec830b"
+      },
+      "creation_date": 1313485922,
+      "last_edit_date": 1313486335,
+      "last_activity_date": 1313488275,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 9,
+      "score": 0,
+      "community_owned": false,
+      "title": "Reading integer from gridview textbox",
+      "body": "<p>I am converting a string that is being read from a textbox in gridview</p>\n\n<p>int numTC = Convert.ToInt32(((TextBox)row.FindControl(\"numTC\")).Text);</p>\n\n<p>However it is returning the following exception:</p>\n\n<p>Input string was not in a correct format.</p>\n\n<p>Can anyone see anything wrong in the conversion?</p>\n\n<p>Thanks</p>\n"
+    },
+    {
+      "tags": [
+        "php",
+        "mysql",
+        "sql",
+        "csv",
+        "import"
+      ],
+      "answer_count": 3,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075939/timeline",
+      "question_comments_url": "/questions/7075939/comments",
+      "question_answers_url": "/questions/7075939/answers",
+      "question_id": 7075939,
+      "owner": {
+        "user_id": 459611,
+        "user_type": "registered",
+        "display_name": "WorldSignia",
+        "reputation": 46,
+        "email_hash": "a8862e8e262d63505df21fb41e39c6ff"
+      },
+      "creation_date": 1313485916,
+      "last_activity_date": 1313487002,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 39,
+      "score": 0,
+      "community_owned": false,
+      "title": "How to import data to analyse it the fastest way",
+      "body": "<p>I just have a question which way gives me more performance and would be easier to get done. We have a DB with over 120000 datarows which is stored in a database. These data is currently exported as CSV file to an ftp location.</p>\n\n<p>Now from this csv file there should be a webform created to filter the datasets. What would you recommend regarding performance and work todo. Should I parse the csv file and get the information out to the webpage or should I reimport the csv file to a DB (MySQL) and use SQL queries to filter the data (Note: The original DB and export is on a different server than the webpage/webform.)</p>\n\n<p>A direct connection to the DB on the original server is not possible.\nI prefer reuploading it to a DB, because it makes the development easier, I just simply need to create the SQL query against the filter criteria entered in the webform and run it.</p>\n\n<p>Any ideas?</p>\n\n<p>Thanks...\nWorldSignia</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "java",
+        "unit-testing"
+      ],
+      "answer_count": 13,
+      "favorite_count": 1,
+      "question_timeline_url": "/questions/7075938/timeline",
+      "question_comments_url": "/questions/7075938/comments",
+      "question_answers_url": "/questions/7075938/answers",
+      "question_id": 7075938,
+      "owner": {
+        "user_id": 323051,
+        "user_type": "registered",
+        "display_name": "dormisher",
+        "reputation": 872,
+        "email_hash": "b669f27d86887d04bb5f5c17ef42d014"
+      },
+      "creation_date": 1313485902,
+      "last_activity_date": 1313487841,
+      "up_vote_count": 6,
+      "down_vote_count": 0,
+      "view_count": 87,
+      "score": 6,
+      "community_owned": false,
+      "title": "Making a private method public to unit test it...good idea?",
+      "body": "<p>I occasionaly find myself needing to make a private method in a class public just to write some unit tests for it.</p>\n\n<p>Usually this would be because the method contains logic shared between other methods in the class and it's tidier to test the logic on it's own, or another reason could be possible be I want to test logic used in synchronous threads without having to worry about threading problems.</p>\n\n<p>Do other people find themselves doing this, because I don't really like doing it?? I personally think the bonuses outweigh the problems of making a method public which doesn't really provide any service outside of the class...</p>\n"
+    },
+    {
+      "tags": [
+        "sql",
+        "sql-server",
+        "join"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075934/timeline",
+      "question_comments_url": "/questions/7075934/comments",
+      "question_answers_url": "/questions/7075934/answers",
+      "question_id": 7075934,
+      "owner": {
+        "user_id": 896338,
+        "user_type": "unregistered",
+        "display_name": "Alex",
+        "reputation": 1,
+        "email_hash": "0b80476c4872c46f0848e0f96ec69e77"
+      },
+      "creation_date": 1313485880,
+      "last_activity_date": 1313487086,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 21,
+      "score": 0,
+      "community_owned": false,
+      "title": "SQL Server - Select Left Join NULL record WHERE condition",
+      "body": "<p>I am trying to perform a SELECT query on two tables joined with a LEFT JOIN where there may not be a record in the joined table. Something like:</p>\n\n<pre><code>--SELECT row using AreaID\nSELECT *\nFROM Rate\nLEFT JOIN Area\nON Rate.AreaID = Area.AreaID\nWHERE ProductID = @ProductID\nAND Area.PostcodeOutcode = @PostcodeOutcode\n</code></pre>\n\n<p>This works when @PostcodeOutcode exists in the Area table, but I still need to return the record in the left table if there is not a record in the right table.</p>\n\n<p>I am fudging it currently by doing this, but I know there is a better solution:</p>\n\n<pre><code>DECLARE @AreaID int\nSELECT @AreaID = AreaID\nFROM Area WHERE PostcodeOutcode = @PostcodeOutcode \n\n--SELECT row using AreaID\nSELECT *\nFROM Rate\nWHERE ProductID = @ProductID\nAND\n(\n    AreaID = @AreaID\n    OR (@AreaID IS NULL AND AreaID IS NULL)\n)\n</code></pre>\n\n<p>I know this is probably simple, but my SQL knowledge is limited.  Please help.</p>\n\n<p>Thanks</p>\n\n<p>Alex</p>\n"
+    },
+    {
+      "tags": [
+        "android",
+        "uigesturerecognizer",
+        "gesture-recognition"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075933/timeline",
+      "question_comments_url": "/questions/7075933/comments",
+      "question_answers_url": "/questions/7075933/answers",
+      "question_id": 7075933,
+      "owner": {
+        "user_id": 820443,
+        "user_type": "registered",
+        "display_name": "Usama Sarwar",
+        "reputation": 59,
+        "email_hash": "434209628296e68f9031b78c58066259"
+      },
+      "creation_date": 1313485876,
+      "last_activity_date": 1313487561,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 14,
+      "score": 1,
+      "community_owned": false,
+      "title": "Unable to swipe the screens horizontally",
+      "body": "<p>Helo Evryone!</p>\n\n<p>I am trying to add \"swipe\" functionality in my app but i am unable to do so. I have stories to swipe left to right and vice versa. I have written a sub class MYGestureListener which has the following implementation.</p>\n\n<pre><code> class MyGestureListener extends SimpleOnGestureListener {\n\n    @Override\n    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {\n\n        Log.e(\"Now\", \"onFling\");\n\n        try {\n            if (Math.abs(e1.getY() - e2.getY()) &gt; SWIPE_MAX_OFF_PATH)\n                return false;\n\n            // right to left swipe\n            if (e1.getX() - e2.getX() &gt; SWIPE_MIN_DISTANCE &amp;&amp; Math.abs(velocityX) &gt; SWIPE_THRESHOLD_VELOCITY) {\n                // checking if current index is the last index\n                if (ind == items.size() - 1 || ind &gt; items.size() - 1) {\n                    Log.e(\"Last Index\", \"Can't move further anymore\");\n                    return false;\n                } else {\n                    ind++;\n                    loadAndShowNextActivity();\n                }\n            }\n            // left to right\n            else if (e2.getX() - e1.getX() &gt; SWIPE_MIN_DISTANCE &amp;&amp; Math.abs(velocityX) &gt; SWIPE_THRESHOLD_VELOCITY) {\n\n                if (ind &lt;= 0) {\n                    Log.d(\"First Index\", \"Can't move back anymore\");\n                    return false;\n                } else {\n                    ind--;\n                    loadAndShowNextActivity();\n                }\n            }\n        } catch (Exception e) {\n            System.out.println(\"Exception occured while flinging\");\n            e.printStackTrace();\n        }\n\n        return false;\n    }\n}\n</code></pre>\n\n<p>Then i have overriden onTouchEvent() Function in main class. which is implemented as follows:</p>\n\n<pre><code>  @Override\n\npublic boolean onTouchEvent(MotionEvent event) {\n\n    Log.e(\"Now\",\"onTouchEvent\");\n    if (gestureDetector.onTouchEvent(event))\n        return true;\n    else\n        return false;\n}\n</code></pre>\n\n<p>and then calling its instance in onCreate of the main class as follows:</p>\n\n<pre><code>  gestureDetector = new GestureDetector(new MyGestureListener());\n    gestureListener = new View.OnTouchListener() {\n        public boolean onTouch(View v, MotionEvent event) {\n            if (gestureDetector.onTouchEvent(event)) {\n                return true;\n            }\n            return false;\n        }\n    };  \n</code></pre>\n\n<p>It's not working, please suggest and identify where am i going wrong. Thanks in Advance..:-)</p>\n"
+    },
+    {
+      "tags": [
+        "c#"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075932/timeline",
+      "question_comments_url": "/questions/7075932/comments",
+      "question_answers_url": "/questions/7075932/answers",
+      "question_id": 7075932,
+      "owner": {
+        "user_id": 896139,
+        "user_type": "registered",
+        "display_name": "maduranga",
+        "reputation": 6,
+        "email_hash": "3eb373c8e3caf0443358fed643f208d0"
+      },
+      "creation_date": 1313485873,
+      "last_activity_date": 1313488150,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 14,
+      "score": 0,
+      "community_owned": false,
+      "title": "i want to remove xml node from file where in xml user select path?",
+      "body": "<p>that code does not work . it not remove path4 node how can i do it please help me. thank you.</p>\n\n<pre><code>&lt;WindowEntries&gt;\n&lt;WindowEntry&gt;\n  &lt;Name&gt;tbwUnitOverview&lt;/Name&gt;\n  &lt;View&gt;TRN_UNIT&lt;/View&gt;\n  &lt;LU&gt;TrnUnit&lt;/LU&gt;\n  &lt;DefaultWindowText&gt; windowtext&lt;/DefaultWindowText&gt;\n  &lt;Flags&gt;0&lt;/Flags&gt;\n&lt;/WindowEntry&gt;\n&lt;WindowEntry&gt;\n  &lt;Name&gt;tbwBrandOverView&lt;/Name&gt;\n  &lt;View&gt;TRN_BRAND&lt;/View&gt;\n  &lt;LU&gt;TrnBrand&lt;/LU&gt;\n  &lt;DefaultWindowText /&gt;\n  &lt;Flags&gt;0&lt;/Flags&gt;\n&lt;/WindowEntry&gt;\n&lt;WindowEntry&gt;\n  &lt;Name&gt;tbwProductCategory&lt;/Name&gt;\n  &lt;View&gt;TRN_PROD_CATEGORY&lt;/View&gt;\n  &lt;LU&gt;TrnProdCategory&lt;/LU&gt;\n  &lt;DefaultWindowText /&gt;\n  &lt;Flags&gt;0&lt;/Flags&gt;\n&lt;/WindowEntry&gt;\n</code></pre>\n\n<p></p>\n\n<pre><code>         XmlTextReader reader = new XmlTextReader(\"component.xml\");\n         XmlDocument doc = new XmlDocument();\n            doc.Load(reader);\n            reader.Close();\n            XmlNode currNode;\n            string path4 = treeView1.SelectedNode.FullPath.ToString();\n\n                currNode = doc.SelectSingleNode(path4);\n                currNode.RemoveAll();\n\n\n\n            doc.Save(\"component.xml\");\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "java"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075928/timeline",
+      "question_comments_url": "/questions/7075928/comments",
+      "question_answers_url": "/questions/7075928/answers",
+      "question_id": 7075928,
+      "owner": {
+        "user_id": 896287,
+        "user_type": "registered",
+        "display_name": "gaurav",
+        "reputation": 1,
+        "email_hash": "63c430cffa751438c6940fdad8b4ef8a"
+      },
+      "creation_date": 1313485843,
+      "last_activity_date": 1313486734,
+      "up_vote_count": 0,
+      "down_vote_count": 4,
+      "view_count": 23,
+      "score": -4,
+      "community_owned": false,
+      "title": "How to trnsfer Control from a infinite loop method to a different method, and to take back control back to infinite loop method?",
+      "body": "<pre><code>import java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport org.openrtk.idl.epprtk.epp_Command;\nimport org.openrtk.idl.epprtk.epp_Exception;\nimport org.openrtk.idl.epprtk.epp_Greeting;\nimport org.openrtk.idl.epprtk.epp_Response;\nimport org.openrtk.idl.epprtk.epp_Result;\nimport org.openrtk.idl.epprtk.epp_XMLException;\nimport org.openrtk.idl.epprtk.contact.epp_ContactInfoReq;\nimport org.openrtk.idl.epprtk.contact.epp_ContactInfoRsp;\nimport com.tucows.oxrs.epprtk.rtk.EPPClient;\nimport com.tucows.oxrs.epprtk.rtk.transport.EPPTransportException;\nimport com.tucows.oxrs.epprtk.rtk.xml.EPPContactInfo;\npublic class ClientTest  {\n    static EPPClient my_client;\n    static int timeout = 1000*60;\n    static epp_Greeting greeting;\n    static String epp_host_name = \"hjkhjt\";\n    static int epp_host_port = 66;\n    static String epp_client_id = \"ghg\";\n    static String epp_password = \"jyghgh\";\n    //Creating EPP Client\n    public static EPPClient getClient()\n    {\n        try\n        {\n            my_client = new EPPClient(epp_host_name, epp_host_port, epp_client_id, epp_password);\n            my_client.setEPPTimeout(timeout);\n            my_client.setLang(\"en-US\");\n            greeting = my_client.connectAndGetGreeting();\n            //my_client.login(epp_client_id,epp_password);\n            if(greeting != null)\n            {\n                System.out.println(\"Greeting Recieved\");\n            }\n            else\n            {\n                System.out.println(\"No Greeting Receieved\");\n            }\n        }\n        catch ( Exception xcp )\n        {\n            System.err.println(\"Exception! [\"+xcp.getClass().getName()+\"] [\"+xcp.getMessage()+\"]\");\n            xcp.printStackTrace();\n        }\n\n        return my_client;\n    }\n    public static EPPClient useClient(int x)\n    {\n        EPPClient client = getClient();\n        if(x==1)\n        {\n            int i;\n            System.out.println(\"Hold Client Alive\");\n            for(i=5;i&gt;0;i++)\n            {\n                try\n                {\n                    client.hello();\n                    greeting = client.connectAndGetGreeting();\n                    Thread.sleep(1000*60);  // 1 Min delay\n                }\n                catch (InterruptedException ie)\n                {\n                    System.out.println(ie.getMessage());\n                } catch (epp_Exception e) {\n                    e.printStackTrace();\n                } catch (epp_XMLException e) {\n                    e.printStackTrace();\n                } catch (IOException e) {\n                    e.printStackTrace();\n                } catch (EPPTransportException e) {\n                    e.printStackTrace();\n                }\n                if(my_client != null)\n                {System.out.println(\"Client Alive\");}\n            }\n        }\n        if(x==2)\n            System.out.println(\"Returning EPP Client\");\n        return client;\n\n    }\n    public static void  contactInfo(EPPClient xy)//2.3.4 \n    {\n        try\n        {\n            xy.login(epp_client_id,epp_password);\n            epp_Command command_data ;\n            System.out.println(\" EPP Contact INFO command\");\n            String default_contact_id = \"OTE-C5\";\n            epp_ContactInfoReq contact_info_request = new epp_ContactInfoReq();\n            command_data = new epp_Command();\n            command_data.m_client_trid = getClientTrid(epp_client_id);\n            contact_info_request.m_cmd = command_data;\n            contact_info_request.m_id = default_contact_id;\n            EPPContactInfo contact_info = new EPPContactInfo();\n            contact_info.setRequestData(contact_info_request);\n            contact_info = (EPPContactInfo) xy.processAction(contact_info);\n            epp_ContactInfoRsp contact_info_response = contact_info.getResponseData();\n            epp_Response response = contact_info_response.m_rsp;\n            if(response != null)\n            {\n                epp_Result[] results = response.m_results;\n                //                  epp_AuthInfo contact_auth_info = contact_info_response.m_auth_info;\n                System.out.println(\"ContactInfo results: [\"+results[0].m_code+\"] [\"+results[0].m_msg+\"]\");\n                System.out.println(\"             Contact ID: [\"+contact_info_response.m_id+\"]\");\n                System.out.println(\"             Contact Name: [\"+contact_info_response.m_addresses[0].m_name+\"]\");\n                System.out.println(\"             Contact Organization: [\"+contact_info_response.m_addresses[0].m_org+\"]\");\n                System.out.println(\"             Contact Address Street1: [\"+contact_info_response.m_addresses[0].m_address.m_street1+\"]\");\n                System.out.println(\"             Contact Address Street2: [\"+contact_info_response.m_addresses[0].m_address.m_street2+\"]\");\n                System.out.println(\"             Contact Address City: [\"+contact_info_response.m_addresses[0].m_address.m_city+\"]\");\n                System.out.println(\"             Contact Address State/Province: [\"+contact_info_response.m_addresses[0].m_address.m_state_province+\"]\");\n                System.out.println(\"             Contact Address Postal Code: [\"+contact_info_response.m_addresses[0].m_address.m_postal_code+\"]\");\n                System.out.println(\"             Contact Address Country: [\"+contact_info_response.m_addresses[0].m_address.m_country_code+\"]\");\n                System.out.println(\"             Contact Voice: [\"+contact_info_response.m_voice.m_value+\"]\");\n                System.out.println(\"             Contact Voice Extension: [\"+contact_info_response.m_voice.m_extension+\"]\");//extension)\n                System.out.println(\"             Fax: [\"+contact_info_response.m_fax.m_value+\":\"+contact_info_response.m_fax.m_extension+\"]\");\n                System.out.println(\"             Contact EMail: [\"+contact_info_response.m_email+\"]\");\n                System.out.println(\"             Auth INFO: [\"+contact_info_response.m_auth_info+\"]\");\n                System.out.println(\"End of the EPP Contact Info command\");\n                System.out.println();\n                System.out.println(\"****************\"); System.out.println();\n            }\n            else\n            {\n                System.out.println(\"No Response For ontact INFO command\");\n            }\n        }\n        catch(epp_XMLException xcp)\n        {\n            System.err.println(\"epp_XMLException! [\"+xcp.m_error_message+\"]\");\n        }\n        catch ( epp_Exception xcp )\n        {\n            System.err.println(\"epp_Exception!\");\n            epp_Result[] results = xcp.m_details;\n            System.err.println(\"\\tresults: \"+results[0]+\"]\");\n        }\n        catch ( Exception xcp )\n        {\n            System.err.println(\"Contact Info failed! [\"+xcp.getClass().getName()+\"] [\"+xcp.getMessage()+\"]\");\n            xcp.printStackTrace();\n        }  \n\n    } \n    protected static String getClientTrid(String epp_client_id)\n    {\n        return \"ABC:\"+epp_client_id+\":\"+System.currentTimeMillis();\n    }\n    public static void main (String []args)\n    {\n        System.out.println(\"Enter your Choice '1'- Hold '2'- Execute Command \");    \n        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n        int choice =0;\n        try {\n            choice =Integer.parseInt( br.readLine());\n        } catch (IOException ioe) {\n            System.out.println(\"IO error !\");\n            System.exit(1);\n        }\n        useClient(choice); \n        EPPClient y = useClient(choice);\n        contactInfo(y);\n    }\n}\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "database",
+        "jmeter"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075926/timeline",
+      "question_comments_url": "/questions/7075926/comments",
+      "question_answers_url": "/questions/7075926/answers",
+      "question_id": 7075926,
+      "owner": {
+        "user_id": 896295,
+        "user_type": "registered",
+        "display_name": "Amstaf",
+        "reputation": 1,
+        "email_hash": "d316c0eff60ff940586b6498ef42826c"
+      },
+      "creation_date": 1313485836,
+      "last_edit_date": 1313487559,
+      "last_activity_date": 1313487559,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 3,
+      "score": 0,
+      "community_owned": false,
+      "title": "How to read database (JDBC Request) result into variables in Jmeter",
+      "body": "<p>I want to read Database result into variables so I can use it for later requests.</p>\n\n<ol>\n<li>How can i do it? </li>\n<li>What if i want to return from database multiple\ncolumns, or even rows? can loop the returned table same way i can\nwith \"CSV Data Set Config\"</li>\n</ol>\n\n<p>--edit--</p>\n\n<p>Ok, i found <a href=\"http://altentee.com/blogs/2010/dynamic-data-from-jmeter-jdbc-requests/\" rel=\"nofollow\">this solution</a> that uses regular expression to parse the response, but this solution and other like it doesn't work for me, because they require me to change SQL queries so Jmeter could parse them more \"easily\". I'm using Jmeter to do testing (load testing), and the last thing I want is to maintain to different codes, one for \"testing\" and other for \"runtime\".</p>\n\n<p>Is there a \"specific\" JDBC Request solution that enable me to read result into variables using the concept of result-sets and columns?</p>\n\n<p>10x!</p>\n"
+    },
+    {
+      "tags": [
+        "git"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075923/timeline",
+      "question_comments_url": "/questions/7075923/comments",
+      "question_answers_url": "/questions/7075923/answers",
+      "question_id": 7075923,
+      "owner": {
+        "user_id": 217157,
+        "user_type": "registered",
+        "display_name": "Christian W",
+        "reputation": 787,
+        "email_hash": "3231a48b14fa4b43da953a0b84ae4ecc"
+      },
+      "creation_date": 1313485820,
+      "last_activity_date": 1313486665,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 11,
+      "score": 2,
+      "community_owned": false,
+      "title": "Resync git repo with new gitignore file",
+      "body": "<p>Is it possible to \"refresh\" a git repository after updating the gitignore file?</p>\n\n<p>I just added more ignorations(?) to my gitignore and would like to remove stuff already in the repo matching the new file.</p>\n"
+    },
+    {
+      "tags": [
+        "c#"
+      ],
+      "answer_count": 1,
+      "accepted_answer_id": 7076003,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075919/timeline",
+      "question_comments_url": "/questions/7075919/comments",
+      "question_answers_url": "/questions/7075919/answers",
+      "question_id": 7075919,
+      "owner": {
+        "user_id": 880472,
+        "user_type": "registered",
+        "display_name": "eMi",
+        "reputation": 14,
+        "email_hash": "21b5fe346f3c6ce2a0d2219a863c9c6b"
+      },
+      "creation_date": 1313485778,
+      "last_activity_date": 1313486235,
+      "up_vote_count": 0,
+      "down_vote_count": 3,
+      "view_count": 31,
+      "score": -3,
+      "community_owned": false,
+      "title": "Need something like \"Solution Explorer\" (Visual Studio)",
+      "body": "<p>I would like to display a directory.\nIt should be as such as the Solution Explorer in Visual Studio looks like. (Treeview or something like that)</p>\n\n<p>So that I (as an User) can also move files for example, dragging file A to Folder B and so on..</p>\n\n<p>Hope u guys can help me..</p>\n"
+    },
+    {
+      "tags": [
+        "c++",
+        "algorithm",
+        "graph"
+      ],
+      "answer_count": 1,
+      "accepted_answer_id": 7076138,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075916/timeline",
+      "question_comments_url": "/questions/7075916/comments",
+      "question_answers_url": "/questions/7075916/answers",
+      "question_id": 7075916,
+      "owner": {
+        "user_id": 287592,
+        "user_type": "registered",
+        "display_name": "Matthew Hoggan",
+        "reputation": 237,
+        "email_hash": "6b9f8f02783e7f4cd6b87c7c5f830b27"
+      },
+      "creation_date": 1313485768,
+      "last_activity_date": 1313487014,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 32,
+      "score": 0,
+      "community_owned": false,
+      "title": "Connectivity Question",
+      "body": "<p>Q.1.2 List all the different ways to connect two different objects for the input/output in the table below:</p>\n\n<pre><code>   Input    |    Output    |    Not Output (Connection Already Established)\n   3-4           3-4\n   4-9           4-9\n   8-0           8-0\n   2-3           2-3\n   5-6           5-6\n   2-9                          2-3-4-9\n   5-9           5-9\n   7-3           7-3\n   4-8           4-8\n   5-6                          5-6\n   0-2                          0-8-4-3-2\n   6-1           6-1\n</code></pre>\n\n<p>A.1.2 (I don't understand this question) How would you answer this? That is you are given a pair, and if the nodes are not connected by other nodes already in the graph it outputs the pair else it does not output the pair because it is already connected based on the data that came before it.</p>\n"
+    },
+    {
+      "tags": [
+        "php",
+        "google-maps",
+        "google",
+        "geolocation",
+        "google-maps-api-3"
+      ],
+      "answer_count": 1,
+      "accepted_answer_id": 7076165,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075912/timeline",
+      "question_comments_url": "/questions/7075912/comments",
+      "question_answers_url": "/questions/7075912/answers",
+      "question_id": 7075912,
+      "owner": {
+        "user_id": 358193,
+        "user_type": "registered",
+        "display_name": "Peeyush",
+        "reputation": 354,
+        "email_hash": "808dca470ecfeacd642c4cec8cccdc5f"
+      },
+      "creation_date": 1313485732,
+      "last_activity_date": 1313487169,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 14,
+      "score": 0,
+      "community_owned": false,
+      "title": "How to convert postcode to Geolocation(latitude & longitutde) using google maps api?",
+      "body": "<p>i Just want to get latitude &amp; longitude using the post code with Google maps API.</p>\n\n<p>I am using PHP for development.</p>\n\n<p>So please suggest me how can i do this ?</p>\n\n<p>The post code can be from any where in this world.</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "wpf",
+        ".net-4.0"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075903/timeline",
+      "question_comments_url": "/questions/7075903/comments",
+      "question_answers_url": "/questions/7075903/answers",
+      "question_id": 7075903,
+      "owner": {
+        "user_id": 13440,
+        "user_type": "registered",
+        "display_name": "Manoj",
+        "reputation": 1090,
+        "email_hash": "45f41d8b7e792f70ed67c002d2f5a519"
+      },
+      "creation_date": 1313485669,
+      "last_edit_date": 1313487310,
+      "last_activity_date": 1313487310,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 23,
+      "score": 0,
+      "community_owned": false,
+      "title": "Displaying and getting data from the datagrid in a multi threaded application",
+      "body": "<p>I am using a multi threaded application and I need to update data in UI from another thread. For this purpose I share a reference for an Observable Collection object and bind(through ItemsSource) the same to the data grid. Now, whenever the thread updates the data, it calls a specific function in the UI thread asking it to refresh the datagrid. This works perfectly fine.</p>\n\n<p>The problem arises when I try to modify some value in the grid so that it is sent back to the thread that is running in parallel. It throws an exception \"'DeferRefresh' is not allowed during an AddNew or EditItem transaction.\"</p>\n\n<p>How best to handle this situation. Are there any other way to do this better?</p>\n\n<p>EDIT:\nAm adding a code sample to show what I am doing now...please let me know if more sample is needed:</p>\n\n<pre><code>public ObservableCollection&lt;FrontPanelDataType&gt; FrontPanelData;\n.\n.\n.\n\npublic void UpdateTestStatus()\n{\n     FrontPanelGrid.ItemsSource = \"\";\n     FrontPanelGrid.ItemsSource = FrontPanelData;\n}\n</code></pre>\n\n<p>In the parallel thread that is running I use the following where Updater is a delegate and refers to 'UpdateTestStatus' from the UI thread(mentioned above).</p>\n\n<pre><code>//Code which changes data in the FronPanelData. The reference is passed from the UI thread.\nSystem.Windows.Application.Current.Dispatcher.BeginInvoke(Updater);\n</code></pre>\n\n<p>Now when the user tries to edit the data in data grid from the UI, it throws an error.</p>\n\n<p><em>Essentially I want to use the data gird to both display data and also for getting input from the user.</em></p>\n\n<p>Thanks...</p>\n"
+    },
+    {
+      "tags": [
+        "facebook",
+        "facebook-graph-api"
+      ],
+      "answer_count": 1,
+      "favorite_count": 1,
+      "question_timeline_url": "/questions/7075900/timeline",
+      "question_comments_url": "/questions/7075900/comments",
+      "question_answers_url": "/questions/7075900/answers",
+      "question_id": 7075900,
+      "owner": {
+        "user_id": 204804,
+        "user_type": "registered",
+        "display_name": "pawlik",
+        "reputation": 637,
+        "email_hash": "263f777bf7a664203b47d4fb8001d09a"
+      },
+      "creation_date": 1313485667,
+      "last_edit_date": 1313485839,
+      "last_activity_date": 1313485861,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 9,
+      "score": 0,
+      "community_owned": false,
+      "title": "Facebook API - how to get page ID using Facebook API?",
+      "body": "<p>With Facebook API, within a custom app added to a fanpage (tab app), how do I get the fanpage ID?</p>\n\n<p>Here's what I'm trying to achieve:</p>\n\n<ul>\n<li>user goes to the full-width canvas app, he authorizes himself there and allows the app to add a tab to one of the fanpages he's administrating</li>\n<li>every Facebook user going to that fanpage, sees the tab and the tab shows content specific to that fanpage (that's why I need to know the fanpage ID)</li>\n<li>if fanpage administrator wants to change something, he goes to the full-width canvas and logs in to my service (here's where I store what he wants to show in his Fanpage)</li>\n</ul>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "api",
+        "line",
+        "phone",
+        "fax"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075895/timeline",
+      "question_comments_url": "/questions/7075895/comments",
+      "question_answers_url": "/questions/7075895/answers",
+      "question_id": 7075895,
+      "owner": {
+        "user_id": 896330,
+        "user_type": "unregistered",
+        "display_name": "Xiphoid",
+        "reputation": 1,
+        "email_hash": "18040d914818ad2b14ee6be4e3cdb58c"
+      },
+      "creation_date": 1313485626,
+      "last_activity_date": 1313485626,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 6,
+      "score": 0,
+      "community_owned": false,
+      "title": "Fax Application using phone line",
+      "body": "<p>I connected the phone line of my fax machine into my computer. My application would get the data on the phone line and convert them to a pdf/tiff file and display. </p>\n\n<p>When I want to send a new fax, I will choose a pdf/tiff file and app will convert it to bytes array and send via phone line. Also, it will give me a specific ID for each fax. This ID will be used for questioning whether the fax is delivered or not. (or when fax delivered, application will send an informative e-mail.)</p>\n\n<p>In brief, I don't want to use a fax machine. I want to display the fax on my screen (as pdf/tiff file) and send it to printer if a hard copy is needed. </p>\n\n<p>I guess I need a Fax API (in Java) to do this. I wonder <a href=\"http://www.interfax.net/en/dev/java\" rel=\"nofollow\">Interfax</a> can help me or not?\nIf I can make the data transfer between phone line and computer, the rest is easy.</p>\n\n<p>Searched on this topic but couldn't find a satisfying answer. </p>\n\n<p>Note: I know about internet faxing (efax, joyfax etc.) but my aim is not sending fax via e-mail or using an internet fax server.</p>\n\n<p>Any suggestions? Thanks in advance. </p>\n"
+    },
+    {
+      "tags": [
+        "data-structures",
+        "hashing",
+        "time-complexity",
+        "trie",
+        "bst"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075894/timeline",
+      "question_comments_url": "/questions/7075894/comments",
+      "question_answers_url": "/questions/7075894/answers",
+      "question_id": 7075894,
+      "owner": {
+        "user_id": 834239,
+        "user_type": "registered",
+        "display_name": "sharda PAL",
+        "reputation": 19,
+        "email_hash": "2948134cc602e150f24ae9a0e19caafa"
+      },
+      "creation_date": 1313485623,
+      "last_activity_date": 1313485623,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 7,
+      "score": 0,
+      "community_owned": false,
+      "title": "Difference between BST , Hashing , Tries and map",
+      "body": "<p>I read some blog and tutorial on Tries , hashing, Map(stl) and BST. I am very confused in which one is better to use and where. I know that to make such difference between them are nonsense because they are all implementation dependent. Would you please tell me more specific and please do not forgot to mention the complexity (worst , avg, and best case). </p>\n\n<p>Thanks in advance...</p>\n"
+    },
+    {
+      "tags": [
+        "iphone",
+        "objective-c",
+        "facebook",
+        "permissions",
+        "fbdialogs"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075891/timeline",
+      "question_comments_url": "/questions/7075891/comments",
+      "question_answers_url": "/questions/7075891/answers",
+      "question_id": 7075891,
+      "owner": {
+        "user_id": 831434,
+        "user_type": "registered",
+        "display_name": "Danny Togaer",
+        "reputation": 88,
+        "email_hash": "719cc6d0ab14e77e2afcab671466329f"
+      },
+      "creation_date": 1313485613,
+      "last_activity_date": 1313486118,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 10,
+      "score": 0,
+      "community_owned": false,
+      "title": "why fbdidlogin didn't call?",
+      "body": "<pre><code>- (id)init {\nif (self == [super init]) {\n    facebook = [[Facebook alloc] initWithAppId:kAppId];\n\n    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];\n    if ([defaults objectForKey:@\"FBAccessTokenKey\"] \n        &amp;&amp; [defaults objectForKey:@\"FBExpirationDateKey\"]) {\n        facebook.accessToken = [defaults objectForKey:@\"FBAccessTokenKey\"];\n        facebook.expirationDate = [defaults objectForKey:@\"FBExpirationDateKey\"];\n    }\n\n    if (![facebook isSessionValid]) {\n        permissions =  [[NSArray arrayWithObjects:\n                         @\"read_stream\", @\"user_birthday\", \n                         @\"publish_stream\", nil] retain];\n        [facebook authorize:permissions delegate:self];\n    }\n\n    [self login];\n}\nreturn self;\n\n}\n\n- (void)login {\nif (![_session isConnected]) {\n    [self postToWall];  \n}\n\n\nif (![facebook isSessionValid]) {\n   [facebook authorize:permissions delegate:self];\n}\n}\n\n- (void)fbdidLogin {\n[[NSUserDefaults standardUserDefaults] setObject:self.facebook.accessToken forKey:@\"FBAccessToken\"];\n[[NSUserDefaults standardUserDefaults] setObject:self.facebook.expirationDate forKey:@\"FBExpirationDate\"];\n\n// User has logged in to Facebook, now get their userId from Facebook\n[facebook requestWithGraphPath:@\"me\" andDelegate:self];\n}\n\n-(void)postToWall\n{\nSBJSON *jsonWriter = [[SBJSON new] autorelease];\n\nNSDictionary *actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys:\n                                                       @\"Always Running\",@\"text\",@\"http://itsti.me/\",@\"href\", nil], nil];\n\nNSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];\nNSDictionary *attachment = [NSDictionary dictionaryWithObjectsAndKeys:\n                            @\"Your Happiness!\", @\"name\",\n                            @\"asda\", @\"caption\",\n                            @\"asdf\", @\"description\",\n                            nil];\nNSString *attachmentStr = [jsonWriter stringWithObject:attachment];\nNSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:\n                               @\"Share on Facebook\",  @\"user_message_prompt\",\n                               actionLinksStr, @\"action_links\",\n                               attachmentStr, @\"attachment\",\n                               nil];\n\n\n[facebook dialog:@\"stream.publish\" andParams:params andDelegate:self];\n\n}\n\n- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {\n\nreturn [facebook handleOpenURL:url]; \n}\n</code></pre>\n\n<p>This is my methods for calling facebook dialog boxes.But every time when i click to score for publishing;The permission box came first.I need to give permission after that the publish dialog box comes.I want to give permission ones and i want it to save it;after saving it i don't wanna see the permission box ever again.How can i do it?What is wrong with my code?</p>\n"
+    },
+    {
+      "tags": [
+        "mysql",
+        "forms",
+        "relational-database",
+        "normalization"
+      ],
+      "answer_count": 3,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075890/timeline",
+      "question_comments_url": "/questions/7075890/comments",
+      "question_answers_url": "/questions/7075890/answers",
+      "question_id": 7075890,
+      "owner": {
+        "user_id": 790169,
+        "user_type": "registered",
+        "display_name": "user790169",
+        "reputation": 1,
+        "email_hash": "cd08c1abdf65f781c805fcd5d1b8999a"
+      },
+      "creation_date": 1313485606,
+      "last_activity_date": 1313486102,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 15,
+      "score": 0,
+      "community_owned": false,
+      "title": "Storing lots of user information into one MySQL table?",
+      "body": "<p>I'm working on a application where each user has to fill out an extensive profile for themselves.</p>\n\n<p>The first part of the user profile consists of about 25 or so fields of general information</p>\n\n<p>The next section of the user profile is a section where they evaluate themselves on a set list of criteria. ie, \"Rate how good you are at cooking\" and then they tick a radio box from one to five, there is also a check box that the can check if they are 'extra interested' in the activity/subject they rated themselves on.</p>\n\n<p>There are about 40 of these that they rate themselves on.</p>\n\n<p>So my question is, how should I store this information, should there be columns in my users table for every field and item? This would be nearly 70 fields</p>\n\n<p>or should I setup a table for user_profile, and user_self_evaluation, and have the columns for each in there and have a one-one relationship with the users?</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        ".net"
+      ],
+      "answer_count": 3,
+      "accepted_answer_id": 7075913,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075889/timeline",
+      "question_comments_url": "/questions/7075889/comments",
+      "question_answers_url": "/questions/7075889/answers",
+      "question_id": 7075889,
+      "owner": {
+        "user_id": 289246,
+        "user_type": "registered",
+        "display_name": "Naor",
+        "reputation": 1552,
+        "email_hash": "6559194055071e71f24d8f890d4a4f1b"
+      },
+      "creation_date": 1313485604,
+      "last_activity_date": 1313486953,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 32,
+      "score": 2,
+      "community_owned": false,
+      "title": "declare variable outside of the foreach loop",
+      "body": "<p>In for loop case I can declare the index outside the for statement. For example, instead of</p>\n\n<pre><code>for (int i = 0; i &lt; 8; i++) { }\n</code></pre>\n\n<p>I can do:</p>\n\n<pre><code>int i;\nfor (i = 0; i &lt; 8; i++) { }\n</code></pre>\n\n<p>Now in compare to foreach loop, I have to declare the variable inside the loop:</p>\n\n<pre><code>foreach (string name in names) { }\n</code></pre>\n\n<p>And I cannot do something like:</p>\n\n<pre><code>string name;\nforeach (name in names) { }\n</code></pre>\n\n<p>The reason this bothers me is that after the loop I want to use the variable \"name\" again. In case of foreach loop the variable \"name\" can't be used since it outside of the foreach scope, and I cannot declare another variable with the same name since it declared before in the same scope.</p>\n\n<p>Any idea?</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "multithreading",
+        "nullreferenceexception"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075888/timeline",
+      "question_comments_url": "/questions/7075888/comments",
+      "question_answers_url": "/questions/7075888/answers",
+      "question_id": 7075888,
+      "owner": {
+        "user_id": 415795,
+        "user_type": "registered",
+        "display_name": "user415795",
+        "reputation": 171,
+        "email_hash": "dfb8e3abdf3ed1fb9ea06acc0c992fd8"
+      },
+      "creation_date": 1313485599,
+      "last_edit_date": 1313487431,
+      "last_activity_date": 1313487431,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 31,
+      "score": 0,
+      "community_owned": false,
+      "title": "C# - Thread Abort and System.NullReferenceException",
+      "body": "<p>I am doing a practise GUI Oven program using a thread, I am not sure if I should even be doing this because I want to interact with the GUI when the Heating process is ongoing. When I try to abort the thread by click btnStop_Click, it throws the NullReference exception:</p>\n\n<p><strong>System.NullReferenceException: Object reference not set to an instance of an object.</strong></p>\n\n<p>Please advice on how can I gracefully stop the thread. Thanks.</p>\n\n<p>Code: </p>\n\n<pre><code> public partial class Form1 : Form\n        {\n            private Thread t;\n\n            public Form1()\n            {\n                InitializeComponent();\n            }\n            // button to begin heating\n            private void btnStart_Click(object sender, EventArgs e)\n            {   \n                if ((txtMin.Text) == \"\" || (txtSec.Text) == \"\")\n                {\n                    MessageBox.Show(\"Please enter duration of heating\");\n                }\n                else\n                {\n                    t = new Thread(heatIt);\n                    btnHeat.Enabled = false;\n                    t.Start();\n                }\n            }\n\n           //stop heating\n            private void btnStop_Click(object sender, EventArgs e)\n            {\n                Heating heat = new Heating();\n                Form1 l = new Form1();\n                l.Subscribe(heat);\n                heat.stopHeat();\n                btnHeat.Enabled = true;\n            }\n\n            private void heatIt()\n            {\n            // heat food Implementation that calls the 'Heating' class\n            }\n\n           public void Subscribe(Heating m)\n           {\n            m.heatComplete += SignalHeatCompleted;\n            m.heatStop += SignalStop;\n           }\n\n           private void SignalHeatCompleted(Heating m, EventArgs e)\n           {\n            MessageBox.Show( \"Done, please enjoy your food\");\n            return;\n           }\n\n           private void SignalStop(Heating m, EventArgs e)\n           {\n           t.Abort();\n            MessageBox.Show(\"Heating Terminated\");\n            return;            \n           }\n\npublic class Heating\n        {\n            public event HeatingCompleted heatComplete; // Heating Completed Event\n            public event HeatingStop heatStop;          // Heating Stop Event\n            public EventArgs e = null;\n            public delegate void HeatingCompleted(Heating h, EventArgs e);\n            public delegate void HeatingStop(Heating s, EventArgs e);\n\n            public void startHeat(int temp, int min, int sec)\n            {\n                int totalSec;\n                totalSec = ((min*60) + sec) * 1000;\n\n                Thread.Sleep(totalSec);\n                if (heatComplete != null)\n                {\n                    heatComplete(this, e);\n                }\n                else\n                {\n                    //Use default signal if there's no subscription to this event\n                    MessageBox.Show(\"*TING*\");\n\n                }\n                return;    \n            }\n\n            public void stopHeat()\n            {\n                if (heatStop != null)\n                {\n                    heatStop(this, e);\n                }\n            }\n        }\n    }\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        ".net",
+        "video-streaming"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075884/timeline",
+      "question_comments_url": "/questions/7075884/comments",
+      "question_answers_url": "/questions/7075884/answers",
+      "question_id": 7075884,
+      "owner": {
+        "user_id": 581331,
+        "user_type": "registered",
+        "display_name": "Jinal Kothari",
+        "reputation": 23,
+        "email_hash": "538986cf231a27354993756eb29e7f50"
+      },
+      "creation_date": 1313485577,
+      "last_activity_date": 1313485577,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 5,
+      "score": 0,
+      "community_owned": false,
+      "title": "Using a flash video stream in my .NET application",
+      "body": "<p>The question has been edited for clarity.</p>\n\n<p>What I need to do is this:</p>\n\n<p>Use a custom application based on WPF/.NET to access a video stream from youtube and other similar sites.</p>\n\n<p>I want to be able to play the video as well as store it for later consumption.</p>\n\n<p>I understand that the exact procedure for doing this would differ from one video hosting service to another. I just would like to understand the general concept.</p>\n\n<p>I do not just want to include a web page frame, I want my application to be able to download the actual video file.(Sort of like what some of those \"YouTube Video Capture\" software are capable of doing)</p>\n\n<p>How do I do all of this ?</p>\n\n<p>What should I be looking for in the HTML and JS of a video hosting page to design a scrapper of sorts.</p>\n\n<p>Hope this question is more clear and to the point.</p>\n"
+    },
+    {
+      "tags": [
+        "asp.net",
+        "mvc",
+        "excel"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075879/timeline",
+      "question_comments_url": "/questions/7075879/comments",
+      "question_answers_url": "/questions/7075879/answers",
+      "question_id": 7075879,
+      "owner": {
+        "user_id": 482138,
+        "user_type": "registered",
+        "display_name": "Darren Young",
+        "reputation": 1583,
+        "email_hash": "2ef5e21fd2a9ee6af55232252c655db2"
+      },
+      "creation_date": 1313485547,
+      "last_activity_date": 1313486274,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 11,
+      "score": 0,
+      "community_owned": false,
+      "title": "ASP.net MVC Export To Excel",
+      "body": "<p>I am currently exporting to Excel using the old HTML trick, where I set the MIME type to application/ms-excel.  This gives the added benefit of nicely formatted tables, however the negative of the excel document not being native Excel format.  </p>\n\n<p>I could export it as CSV, but then this would not be formatted.</p>\n\n<p>I have read brief snippets that you can export it as XML to create the Excel document, but cannot find too much information on this.  Does anybody know of any tutorials and/or benefits of this?  Can it be formatted tables using this method?</p>\n\n<p>Thanks.</p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "eclipse",
+        "maven"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075875/timeline",
+      "question_comments_url": "/questions/7075875/comments",
+      "question_answers_url": "/questions/7075875/answers",
+      "question_id": 7075875,
+      "owner": {
+        "user_id": 884007,
+        "user_type": "registered",
+        "display_name": "John156",
+        "reputation": 11,
+        "email_hash": "b6a9fe614b9a47d22b1df1f1a11c3b09"
+      },
+      "creation_date": 1313485533,
+      "last_edit_date": 1313487544,
+      "last_activity_date": 1313487544,
+      "up_vote_count": 1,
+      "down_vote_count": 0,
+      "view_count": 40,
+      "score": 1,
+      "community_owned": false,
+      "title": "java heap space",
+      "body": "<p>do you have any idea why I could get a <strong>'Exception in thread \"main\" java.lang.OutOfMemoryError: Java heap space'</strong> error when building my android app, even though I added -vmargs -Xmx1024M -Xms512M to the eclipse arguments ?\nI would like to know what error could I have made that would trigger such an error at build time, as it would appear to me that only a bug in eclipse or maven could produce such an error at build time.\nI am using run as maven install to build my application (with the maven android eclipse plugin). Run as-> 'maven package' also produces the same build failure, after waiting roughly 1min30.\nI have a desktop computer with 3GB of memory, and my application isn't nearly that big.</p>\n\n<p>Thanks.</p>\n"
+    },
+    {
+      "tags": [
+        "ruby-on-rails",
+        "ruby-on-rails-3",
+        "devise"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075873/timeline",
+      "question_comments_url": "/questions/7075873/comments",
+      "question_answers_url": "/questions/7075873/answers",
+      "question_id": 7075873,
+      "owner": {
+        "user_id": 585101,
+        "user_type": "registered",
+        "display_name": "Kleber S.",
+        "reputation": 475,
+        "email_hash": "161cfa234780988a5269603abda9070c"
+      },
+      "creation_date": 1313485529,
+      "last_activity_date": 1313487396,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 17,
+      "score": 0,
+      "community_owned": false,
+      "title": "Devise: How to create a new user being already logged in?",
+      "body": "<p>I'm going to create a multi user app, so, I will have a admin user that will have permission to create new ones.</p>\n\n<p>I've created the <code>UsersController</code>but when trying to create a new user, being already signed in, I'm getting redirect to root_path with an error message that says \"You are already signed in\".</p>\n\n<p>So, what should I do to make this possible?</p>\n"
+    },
+    {
+      "tags": [
+        "sockets",
+        "client-server",
+        "sctp"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075864/timeline",
+      "question_comments_url": "/questions/7075864/comments",
+      "question_answers_url": "/questions/7075864/answers",
+      "question_id": 7075864,
+      "owner": {
+        "user_id": 718895,
+        "user_type": "registered",
+        "display_name": "user718895",
+        "reputation": 35,
+        "email_hash": "e4a8ca5518ca38a234828dc884750b65"
+      },
+      "creation_date": 1313485462,
+      "last_activity_date": 1313485462,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 9,
+      "score": 0,
+      "community_owned": false,
+      "title": "SCTP: Issue with sending data over 100msec delay",
+      "body": "<p>I am using a SCTP client to send 1000byte data to another SCTP server over a 100m sec delay link. The delay is configured using traffic control(tc) and netem available in Linux</p>\n\n<pre><code>tc qdisc add dev eth0 root netem delay 100ms\n</code></pre>\n\n<p>The code I have used is from <a href=\"http://stackoverflow.com/questions/6342617/sctp-multihoming\">SCTP Multihoming</a>. I have set roundtrip time(max) to 60 seconds and heartbeat to 10sec. Now the issue I am facing is that I can send around 3 to 4 packets of 1000 bytes properly. After that the \"Connection reset by peer\" happens and because of that I am not able to send any more packets. Can you please let me know what I need to do to send SCTP data over high latency link. Thanks for your help.</p>\n"
+    },
+    {
+      "tags": [
+        "charts",
+        "software-tools"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "closed_date": 1313485680,
+      "closed_reason": "off topic",
+      "migrated": {
+        "new_question_id": 323808,
+        "to_site": {
+          "name": "Super User",
+          "logo_url": "http://sstatic.net/superuser/img/logo.png",
+          "api_endpoint": "http://api.superuser.com",
+          "site_url": "http://superuser.com",
+          "description": "Q&A for computer enthusiasts and power users",
+          "icon_url": "http://sstatic.net/superuser/img/apple-touch-icon.png",
+          "state": "normal",
+          "styling": {
+            "link_color": "#1086A4",
+            "tag_foreground_color": "#1087A4",
+            "tag_background_color": "#FFFFFF"
+          }
+        },
+        "on_date": 1313485681
+      },
+      "question_timeline_url": "/questions/7075855/timeline",
+      "question_comments_url": "/questions/7075855/comments",
+      "question_answers_url": "/questions/7075855/answers",
+      "question_id": 7075855,
+      "locked_date": 1313485681,
+      "owner": {
+        "user_id": 486057,
+        "user_type": "registered",
+        "display_name": "Rogach",
+        "reputation": 981,
+        "email_hash": "a9fd749502d6cb012df9425b028cea32"
+      },
+      "creation_date": 1313485413,
+      "last_activity_date": 1313485413,
+      "up_vote_count": 0,
+      "down_vote_count": 2,
+      "view_count": 14,
+      "score": -2,
+      "community_owned": false,
+      "title": "Good chart drawing software?",
+      "body": "<p>I'm looking for a program, which I can use to draw good and smooth-looking charts. I would prefer it to be free, but it is another problem :)</p>\n\n<p>What can you recommend?</p>\n"
+    },
+    {
+      "tags": [
+        "python",
+        "function",
+        "tkinter"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075852/timeline",
+      "question_comments_url": "/questions/7075852/comments",
+      "question_answers_url": "/questions/7075852/answers",
+      "question_id": 7075852,
+      "owner": {
+        "user_id": 896317,
+        "user_type": "registered",
+        "display_name": "evil_inside",
+        "reputation": 1,
+        "email_hash": "3712011d569534d7ce67abb78413ceca"
+      },
+      "creation_date": 1313485400,
+      "last_edit_date": 1313486765,
+      "last_activity_date": 1313486765,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 16,
+      "score": 0,
+      "community_owned": false,
+      "title": "Tkinter function problem",
+      "body": "<p>I have a question to make.If i have a function inserting an item from a list in a text widget and then doing something with that item,it first finishes processing all the items and then does the insert on the text widget.</p>\n\n<p>Here is a simple code demonstrating what I say:</p>\n\n<pre><code>from Tkinter import*\nimport Tkinter as tk\n\nlist = range(1,1000)\n\ndef highlow():\n    for numbers in list:\n       text1.insert(END,'Number : '+str(numbers)+'\\n')\n    if numbers&gt;500:\n       print 'High'\n    else:\n       print 'Low'\n\napp=Tk()\napp.title(\"Window Title\")\napp.geometry('400x400+200+200')\napp.resizable(0,0)\n\nbutton=Button(app,text=\"Run\",font=(\"Times\", 12, \"bold\"), width=20 ,borderwidth=5, foreground = 'white',background = 'blue',command=highlow)\nbutton.pack()\n\ntext1 = Text(app,height = 60,font=(\"Times\", 12))\ntext1.insert(END,\"\")\ntext1.pack(padx=15,pady=1)\n\n\napp.mainloop()\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "android",
+        "web-services",
+        "spinner"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075848/timeline",
+      "question_comments_url": "/questions/7075848/comments",
+      "question_answers_url": "/questions/7075848/answers",
+      "question_id": 7075848,
+      "owner": {
+        "user_id": 891567,
+        "user_type": "registered",
+        "display_name": "Tarishi",
+        "reputation": 6,
+        "email_hash": "37ba2caf5ae6d0db0dae84904358d6d3"
+      },
+      "creation_date": 1313485369,
+      "last_edit_date": 1313485858,
+      "last_activity_date": 1313485858,
+      "up_vote_count": 1,
+      "down_vote_count": 1,
+      "view_count": 19,
+      "score": 0,
+      "community_owned": false,
+      "title": "How to fill next spinner corresponding the selected value",
+      "body": "<p>I have three spinner.I fetch Data from Webservice and make text file of it,and fill this text file to spinner.Now I want to fill second Spinner which is depends on Selected value of first spinner..How can It will work..plz give me some sample code also.thankyou</p>\n"
+    },
+    {
+      "tags": [
+        "flex",
+        "events"
+      ],
+      "answer_count": 2,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075842/timeline",
+      "question_comments_url": "/questions/7075842/comments",
+      "question_answers_url": "/questions/7075842/answers",
+      "question_id": 7075842,
+      "owner": {
+        "user_id": 842112,
+        "user_type": "registered",
+        "display_name": "San_Flexy",
+        "reputation": 75,
+        "email_hash": "3882b07d792e7c6b674f2bff8a793d13"
+      },
+      "creation_date": 1313485354,
+      "last_activity_date": 1313485851,
+      "up_vote_count": 2,
+      "down_vote_count": 0,
+      "view_count": 25,
+      "score": 2,
+      "community_owned": false,
+      "title": "what is the difference between roll over and mouse over?",
+      "body": "<p>In flex what is the difference between rollover and mouseover?</p>\n\n<p>it occurs first rollover, then mouseover,then mouseout, then rollout.\nwhen these events most suitable?</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        ".net",
+        "winforms"
+      ],
+      "answer_count": 3,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075839/timeline",
+      "question_comments_url": "/questions/7075839/comments",
+      "question_answers_url": "/questions/7075839/answers",
+      "question_id": 7075839,
+      "owner": {
+        "user_id": 584448,
+        "user_type": "registered",
+        "display_name": "Philippe Sohm",
+        "reputation": 102,
+        "email_hash": "d031be700ebff9f2013a36bf5953637e"
+      },
+      "creation_date": 1313485341,
+      "last_activity_date": 1313487487,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 25,
+      "score": 0,
+      "community_owned": false,
+      "title": "Designing a winform application / avoid modal model",
+      "body": "<p>I have to maintain a winform application.</p>\n\n<p>It consists of a succession of modal window. (for example : on some screens, I can have 5 modal screen and there are a lot of problems).</p>\n\n<p>I would like to migrate from the modal window to another model but I don't want to use the MDI style (it will take too long).</p>\n\n<p>My feeling would be to create a class (all form will inherits from this form). In the constructeur we would provide in the parameter the parent form and it would handle, hide / show. This basic construction should work, but I have to handle the close event of the form.</p>\n\n<p>Does someone have a solution ?</p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "glassfish-3",
+        "weld"
+      ],
+      "answer_count": 1,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075837/timeline",
+      "question_comments_url": "/questions/7075837/comments",
+      "question_answers_url": "/questions/7075837/answers",
+      "question_id": 7075837,
+      "owner": {
+        "user_id": 53897,
+        "user_type": "registered",
+        "display_name": "Thorbjørn Ravn Andersen",
+        "reputation": 23413,
+        "email_hash": "2e71c1745ebc5401c8c8dfbf7c9a5d30"
+      },
+      "creation_date": 1313485330,
+      "last_edit_date": 1313485726,
+      "last_activity_date": 1313485726,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 9,
+      "score": 0,
+      "community_owned": false,
+      "title": "Where can I place eligible candidates for CDI in a Glassfish v3 deployment?",
+      "body": "<p>I have code in one jar (a.jar) which contains an <code>@Inject X x</code>.</p>\n\n<p>I want to satisfy the injection with an implementation in <em>another</em> jar (b.jar, being a valid bean archive etc.).</p>\n\n<p>To my understanding, I cannot deploy a.jar and b.jar in separate WAR standalone archives as these are independent CDI-wise.    I may be able to put b.jar in the lib folder that Glassfish provides to all deployments (but is this \"pure Java 6 EE\" and this mean I cannot deploy in the same way as a war or an ear?).  I may be able to provide b.jar in an EAR placed in lib along with a.war or a.jar but I am unfamiliar with this.</p>\n\n<p>My question is <strong>which options do I have for deploying a.jar and b.jar</strong> so that Glassfish (currently 3.0.1 but I will consider 3.1.1 if it works better) will correctly resolve this dependency?   I am looking for an exhaustive list.</p>\n\n<p>(EDIT:  I'd prefer a solution where b.jar can be deployed independently of a.jar)</p>\n"
+    },
+    {
+      "tags": [
+        "c",
+        "pointers",
+        "structs"
+      ],
+      "answer_count": 2,
+      "accepted_answer_id": 7075859,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075834/timeline",
+      "question_comments_url": "/questions/7075834/comments",
+      "question_answers_url": "/questions/7075834/answers",
+      "question_id": 7075834,
+      "owner": {
+        "user_id": 485498,
+        "user_type": "registered",
+        "display_name": "JJG",
+        "reputation": 996,
+        "email_hash": "078b5666504468fb85d72c4b498ee896"
+      },
+      "creation_date": 1313485324,
+      "last_activity_date": 1313485661,
+      "up_vote_count": 7,
+      "down_vote_count": 0,
+      "view_count": 69,
+      "score": 7,
+      "community_owned": false,
+      "title": "Self-referencing in C Structs",
+      "body": "<p>This part of K&amp;R (The C book) got me thining:</p>\n\n<p>From the book:</p>\n\n<pre><code>struct tnode{\n             char *word;\n              int    count;\n             struct tnode *left;\n             struct tnode *right;\n   };\n</code></pre>\n\n<p><em>The recursion declaration of a node might look chancy, but it's correct.</em></p>\n\n<p>Because tnode's defiition doesn't use a tnode, but merely a pointer to a tnode somehow the compiler gives us a free pass. But I'm wondering how the computer knows how much memory to give a tnode, when it is declared?</p>\n"
+    },
+    {
+      "tags": [
+        "sockets",
+        "panel",
+        "frame"
+      ],
+      "answer_count": 0,
+      "favorite_count": 0,
+      "question_timeline_url": "/questions/7075831/timeline",
+      "question_comments_url": "/questions/7075831/comments",
+      "question_answers_url": "/questions/7075831/answers",
+      "question_id": 7075831,
+      "owner": {
+        "user_id": 896319,
+        "user_type": "registered",
+        "display_name": "Ahmet Ozkul",
+        "reputation": 1,
+        "email_hash": "0bd397ec59eefdf11b66b1cd6df7bf1f"
+      },
+      "creation_date": 1313485302,
+      "last_activity_date": 1313485302,
+      "up_vote_count": 0,
+      "down_vote_count": 0,
+      "view_count": 7,
+      "score": 0,
+      "community_owned": false,
+      "title": "Socket prevents panel?",
+      "body": "<p>I am trying to create a panel while I have already connected to a server with socket, but in java it shows frame but not inside of frame. Panel is only shown after socket closed, but I need it while it is open. How can I solve this? It is because of a thread problem or I just missing something....\nThanks...</p>\n"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<plugin>
+    <name>metrics</name>
+    <classname>metrics.MetricsPlugin</classname>
+</plugin>
+

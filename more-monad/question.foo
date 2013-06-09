@@ -1,0 +1,51 @@
+
+I have occasionally encountered a pattern in code which resembles a monad but
+does not keep a consistent type across `>>=`.
+
+Here is the simplest example I could come up with:
+
+(First some type-level booleans:
+
+	data TyT = TyT
+	data TyF = TyF
+
+	class TyOr a b c | a b -> c
+	
+	instance TyOr TyF TyF TyF
+	-- rest similarly
+)
+
+Now here is our "monad" type constructor:
+
+	data Marked p a = Marked a
+		deriving (Show)
+
+For a given `p`, `Marked p` is a `* -> *` which acts very much like `m` in a
+monad, but different, as occurs next, when we define "bind":
+
+	(>>%) :: (TyOr p q r) => Marked p a -> (a -> Marked q b) -> Marked r b
+	(Marked x) >>% f = Marked y where Marked y = f x
+
+What's different here is that the result of `>>%` has a different type
+constructor than the arguments. Other than that it's basically a monad.
+
+We could use it like this:
+
+	a :: Marked TyF Int
+	a = Marked 5
+
+	f :: Int -> Marked TyT Int
+	f x = Marked (x + 1)
+	
+	ghci> a >>% f
+	Marked 6
+	
+	ghci> :t a >>% f
+	a >>% f :: Marked TyT Int
+
+(This was inspired by [outis's observation that Python's "with" can't be a
+monad because it changes the type][1], but I've seen it in other (simpler) ways
+too).
+
+ [1]: http://stackoverflow.com/questions/7131027/is-with-monadic/7131291#7131291
+

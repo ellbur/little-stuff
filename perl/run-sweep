@@ -1,0 +1,32 @@
+#!/usr/bin/perl
+
+use ctrl_in qw(gen_ctrl_in);
+use File::Copy;
+
+my $adc_path = $ARGV[0] or die('Specificy ADC path');
+
+my %settings = (
+    ev_per_adu   =>    7.89256,
+    
+    carbon_hw    =>   12,
+    carbon_gap   =>    1,
+    carbon_param =>  270.0, # eV
+    
+    fast_trig    => 1727.0, # eV
+    fast_bigtrig => 1060.0, # eV
+    slow_trig    =>  416.0, # eV
+    slow_bigtrig =>  360.0, # eV
+    
+    sym          =>   14,
+    dur          =>   30,
+    lag          =>   16
+);
+
+open my $ctrl_in, ">", "./ctrl.in";
+print $ctrl_in gen_ctrl_in \%settings;
+close $ctrl_in;
+
+copy($adc_path, './waves.csv') or die $!;
+    
+system('./vhrun', 'PulseProcTest') or die $!;
+

@@ -1,0 +1,51 @@
+#!/usr/bin/env python
+
+# vim: set ft=python
+
+import os
+import re
+from argparse import ArgumentParser
+from rstformatter import *
+
+parser = ArgumentParser(
+    description = 'Convert a pweave (literate python) noweb file to HTML.'
+)
+
+parser.add_argument(
+    'inpath',
+    metavar = 'source',
+    type    = str,
+    help    = 'Input noweb file',
+)
+parser.add_argument(
+    '-o',
+    '--output',
+    metavar = 'dest',
+    dest    = 'outpath',
+    type    = str,
+    help    = 'Output HTML file',
+    default = ''
+)
+
+args = parser.parse_args()
+
+inpath = args.inpath
+innoext = re.sub(r'\.[^\.]*$', '', inpath)
+inpath = os.path.abspath(inpath)
+
+outpath = args.outpath
+if outpath == '':
+    outpath = innoext + '.html'
+outpath = os.path.abspath(outpath)
+
+outdir, outname = os.path.split(outpath)
+if outdir == '':
+    outdir = '.'
+
+RSTFormatter.run(
+    inpath,
+    outdir,
+    outpath,
+    ''
+)
+
