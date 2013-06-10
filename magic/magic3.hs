@@ -40,8 +40,41 @@ m car cdr = OpenMagic result where
     result pureStack = close (m2 pureStack (close car pureStack) cdr) pureStack
 
 m2 :: [Idiom] -> ClosedMagic -> OpenMagic -> OpenMagic
+-- The case where the car has no idioms.
 m2 pureStack (ClosedMagic [] carResult) cdr = m3 pureStack carResult cdr
-m2 pureStack (ClosedMagic _ carResult) cdr = error "Not implemented: car transforms"
+-- The case where the car has idioms!
+m2 pureStack (ClosedMagic (carIdiom : carIdioms') carObject) cdr = result where
+    (ClosedMagic cdrIdioms cdrObject) = close cdr pureStack
+    
+    -- Technically for this to be correct we need a crazy mutually recursive solution
+    -- by which we figure out the pureStack to give to cdr based on the result of this
+    -- application. But that would be crazy.
+    
+    carA = i_ap carIdiom
+    carP = i_pure carIdiom
+    car' = carObject `openWith` carIdioms'
+    
+    carWhole = carObject `openWith` (carIdiom : carIdioms')
+    cdrWhole = cdrObject `openWith` cdrIdioms
+    
+    result = case cdrIdioms of
+                  [] -> carA `m` car' `m` (carP `m` cdrWhole)
+                  (cdrIdiom : cdrIdioms') -> let
+                      cdrA = i_ap cdrIdiom
+                      cdrP = i_pure cdrIdiom
+                      cdr' = cdrObject `openWith` cdrIdioms'
+                      
+                      searchPureStack [] = error (show carIdiom ++ " is not pured.")
+                      searchPureStack (pureIdiom : pureIdioms') =
+                          if pureIdiom == carIdiom && pureIdiom == cdrIdiom
+                             then carA `m` car' `m` cdr'
+                          else if pureIdiom == carIdiom 
+                             then carA `m` car' `m` (carP `m` cdrWhole)
+                          else if pureIdiom == cdrIdiom
+                             then cdrA `m` (cdrP `m` carWhole) `m` cdr'
+                          else searchPureStack pureIdioms'
+                    in
+                      searchPureStack pureStack
 
 m3 :: [Idiom] -> Object -> OpenMagic -> OpenMagic
 -- How to implement pures:
@@ -111,10 +144,18 @@ open obj = OpenMagic $ \is -> ClosedMagic [] obj
 openWith :: Object -> [Idiom] -> OpenMagic
 openWith obj antiPureStack = OpenMagic $ \is -> ClosedMagic antiPureStack obj
 
+singleAntiPure :: Idiom -> OpenMagic
+singleAntiPure idiom = OpenMagic $ \s -> ClosedMagic [] $ AntiPure idiom
+
 multiAntiPure :: [Idiom] -> OpenMagic
 multiAntiPure [] = mI
-multiAntiPure (idiom : []) = OpenMagic $ \s -> ClosedMagic [] $ AntiPure idiom
-multiAntiPure _ = error "Not implemented: multiple anti pures"
+multiAntiPure (idiom : []) = singleAntiPure idiom
+multiAntiPure idioms = strong ("ak " ++ show idioms) $ \is a -> let
+      applyAll :: [Idiom] -> OpenMagic
+      applyAll [] = a
+      applyAll (idiom : idioms') = (singleAntiPure idiom) `m` (applyAll idioms')
+    in
+      applyAll idioms
 
 mI = strong "I" $ \is a -> a
 mK = weak "K" $ \a -> strong "K1" $ \is b -> open a
@@ -126,9 +167,13 @@ mS = weak "S" $ \a -> weak "S1" $ \b -> strong "S2" $ \is c ->
       m ac bc
 
 x = Idiom "x" mK mS undefined
+y = Idiom "y" mK mS undefined
 
 akx = OpenMagic $ \s -> ClosedMagic [] $ AntiPure x
 kx = OpenMagic $ \s -> ClosedMagic [] $ Pure x
+
+aky = OpenMagic $ \s -> ClosedMagic [] $ AntiPure y
+ky = OpenMagic $ \s -> ClosedMagic [] $ Pure y
 
 sii = mS `m` mI `m` mI
 -- This term has no normal form.
@@ -137,7 +182,15 @@ siisii = sii `m` sii
 ok = mK `m` mI `m` siisii
     
 f = kx `m` (mK `m` (akx `m` mI))
-yo = f `m` mI `m` mS
 
+xx = kx `m` ((akx `m` mI) `m` (akx `m` mI))
+
+first = kx `m` (ky `m` (akx `m` mI))
+second = kx `m` (ky `m` (aky `m` mI))
+
+-- This one doesn't work.
+swapK = kx `m` (ky `m` (akx `m` (aky `m` mK)))
+
+yo = swapK `m` mS `m` mK
 dawg = eval yo
 
