@@ -1,0 +1,4 @@
+v 3
+file . "foo.vhd" "20120516041408.000" "20120516001800.168":
+  entity main at 2( 1) + 0 on 25;
+  architecture behavior of main at 10( 129) + 0 on 26;

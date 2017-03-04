@@ -1,0 +1,7 @@
+v 3
+file . "foo.vhd" "20120515063119.000" "20120515230559.992":
+  entity p4 at 5( 73) + 0 on 15;
+  architecture p4_arch of p4 at 16( 282) + 0 on 16;
+file . "bar.vhd" "20120516183814.000" "20120516143815.960":
+  entity main at 2( 1) + 0 on 25;
+  architecture behavior of main at 14( 227) + 0 on 26;

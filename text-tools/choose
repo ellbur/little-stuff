@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+
+use GetOpt::Long;
+use Pod::Usage;
+
+my $outfile = '/dev/stderr'
+my $help = 0;
+GetOptions(
+    'help|?' => \$help,
+

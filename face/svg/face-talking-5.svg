@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="640px"
+   height="480px"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="face-talking-5.svg">
+  <defs
+     id="defs2987" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="8.7650156"
+     inkscape:cx="435.68738"
+     inkscape:cy="137.37013"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1061"
+     inkscape:window-x="1280"
+     inkscape:window-y="19"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata2990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <path
+       sodipodi:type="arc"
+       style="fill:#00ee00;stroke:none;stroke-width:10.98337936;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2997"
+       sodipodi:cx="272.03192"
+       sodipodi:cy="249.27304"
+       sodipodi:rx="181.67731"
+       sodipodi:ry="181.67731"
+       d="m 453.70923,249.27304 a 181.67731,181.67731 0 1 1 -363.354616,0 181.67731,181.67731 0 1 1 363.354616,0 z"
+       transform="matrix(1.2320434,0,0,1.2320434,-42.470757,-69.781891)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#8888ff;stroke:none;stroke-width:10.98337936;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2997-6"
+       sodipodi:cx="272.03192"
+       sodipodi:cy="249.27304"
+       sodipodi:rx="181.67731"
+       sodipodi:ry="181.67731"
+       d="m 453.70923,249.27304 a 181.67731,181.67731 0 1 1 -363.354616,0 181.67731,181.67731 0 1 1 363.354616,0 z"
+       transform="matrix(0.20104128,0,0,0.20104128,148.60822,120.74399)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#8888ff;stroke:none;stroke-width:10.98337936;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2997-6-0"
+       sodipodi:cx="272.03192"
+       sodipodi:cy="249.27304"
+       sodipodi:rx="181.67731"
+       sodipodi:ry="181.67731"
+       d="m 453.70923,249.27304 a 181.67731,181.67731 0 1 1 -363.354616,0 181.67731,181.67731 0 1 1 363.354616,0 z"
+       transform="matrix(0.20104128,0,0,0.20104128,327.38128,120.74399)" />
+    <path
+       id="path3803-4"
+       style="fill:#ff8888;stroke:#8888ff;stroke-width:1.89999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 356.53385,330.28081 c -14.44215,5.13323 -25.91946,10.50539 -45.03884,11.46107 -19.85989,0.9927 -20.84179,-0.18974 -32.89217,-0.19074 -14.60988,-0.001 -19.89126,-6.13876 -33.90848,-10.29923 -19.76483,-5.86641 -44.98514,-18.89833 -44.98514,-18.89833 0,0 31.29846,-6.93082 47.211,-11.12546 15.91253,-4.19465 15.57388,-8.38968 33.17907,-8.39124 12.05038,-0.001 14.96845,-1.18344 34.82834,-0.19074 19.11937,0.95568 23.98144,6.00514 37.61685,9.5249 13.63542,3.51975 33.03709,9.53716 33.03709,9.53716 0,0 -14.60557,13.43938 -29.04772,18.57261 z"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssscsssscs" />
+  </g>
+</svg>

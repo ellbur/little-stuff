@@ -1,0 +1,10 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jnlp spec="1.0+" href="applettest.jnlp">
+    <resources>
+        <j2se version="1.6.0+"/>
+        <jar href="target/scala-2.9.2/default-11c211_2.9.2-0.1-SNAPSHOT.jar"/>
+    </resources>
+</jnlp>
+

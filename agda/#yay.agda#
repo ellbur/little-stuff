@@ -1,0 +1,8 @@
+
+module yay where
+
+data Stuff : Set where
+  A B : Stuff
+
+x : Stuff
+x = _

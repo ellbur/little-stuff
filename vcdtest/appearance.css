@@ -1,0 +1,47 @@
+
+h2 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-weight: bold;
+}
+
+p {
+    padding-top: 0.5em;
+}
+
+#head {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+div.pinBox {
+    border: 1px solid #000;
+    padding: 1em;
+    margin: 1em;
+    float: left;
+}
+
+.pinBox h3 {
+    font-weight: bold;
+}
+
+.pinTable {
+    clear: both;
+}
+
+.pinName {
+    color: #558;
+}
+
+.pinValue {
+    color: #000;
+    text-align: right;
+}
+
+#pins, #pins p {
+    whitespace: pre;
+    font-size: 8pt;
+    font-family: monospace;
+}
+

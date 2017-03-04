@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+
+my $pat = $ARGV[0];
+
+my $on = "\033[32m";
+my $off = "\033[0m";
+
+while (<STDIN>) {
+   s/($pat)/$on\1$off/g;
+   print;
+}
+

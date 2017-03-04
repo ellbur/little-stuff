@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo '/usr/bin/install' $*
+
+/usr/bin/install $*
+

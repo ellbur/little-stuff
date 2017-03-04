@@ -1,0 +1,47 @@
+
+<html>
+    <head><title>Simulation Run</title>
+        <link rel="stylesheet" type="text/css" href="./reset.css"/>
+        <link rel="stylesheet" type="text/css" href="appearance.css"/>
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="http://yelotofu.com/labs/jquery/snippets/shuffle/jquery.shuffle.js"></script>
+        <script src="./arbor.js"></script>
+        <script src="https://raw.github.com/sporritt/jsPlumb/master/js/archive/1.3.5/jquery.jsPlumb-1.3.5-all.js"></script>
+        <script src="./dump.js"></script>
+        <script src="./arrows.js"></script>
+        <script src="./signals.js"></script>
+        <script src="./hardware.js"></script>
+        <script src="./pins.js"></script>
+        <script src="./gui.js"></script>
+    </head>
+    <body>
+        <div style="margin-left:1em;">
+            <div id="container" style="position:relative;">
+                <div id="slave0" style="position:relative;">
+                    <h2 style="margin-bottom:140px;">Slave 0</h2>
+                    <div style="clear:both;"> </div>
+                    <div style="position:relative;">
+                        <div id="slave0Memory" style="position:relative;"/>
+                    </div>
+                    <div style="clear:both;"> </div>
+                    <div id="pins" style="float:right;"> </div>
+                    <div style="padding-top:4em;">
+                        <p><span id="head">Head</span></p>
+                        <p>Head Stack: <span id="headStack"> </span></p>
+                        <p>Cdr Stack: <span id="cdrStack"> </span></p>
+                    </div>
+                </div>
+                <div id="nowhere" style="position:absolute;left:-5000px;"/>
+            </div>
+            <div style="padding-top:2em;">
+                <p>
+                    <a id="prevLink" href="#">Prev</a>
+                    <a id="nextLink" href="#">Next</a>
+                </p>
+                <p>Time: <span id="time"/></p>
+                <p><span id="startTime"> </span> ... <span id="endTime"> </span></p>
+            </div>
+        </div>
+    </body>
+</html>
+

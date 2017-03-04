@@ -1,0 +1,387 @@
+===--- building phase 0
+make -r --no-print-directory -f ghc.mk phase=0 phase_0_builds
+make[1]: Nothing to be done for `phase_0_builds'.
+===--- building phase 1
+make -r --no-print-directory -f ghc.mk phase=1 phase_1_builds
+make[1]: Nothing to be done for `phase_1_builds'.
+===--- building final phase
+make -r --no-print-directory -f ghc.mk phase=final install
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/share/man"
+/usr/bin/install -m 755 -d /usr/local/share/man
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/share/man/man1"
+/usr/bin/install -m 755 -d /usr/local/share/man/man1
+/home/owen/src/little-stuff/uninstaller/install -m 644  docs/man/ghc.1 "/usr/local/share/man/man1"
+/usr/bin/install -m 644 docs/man/ghc.1 /usr/local/share/man/man1
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711"
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711
+/home/owen/src/little-stuff/uninstaller/install -m 755  driver/split/dist/ghc-split "/usr/local/lib/ghc-7.3.20110711"
+/usr/bin/install -m 755 driver/split/dist/ghc-split /usr/local/lib/ghc-7.3.20110711
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/bin"
+/usr/bin/install -m 755 -d /usr/local/bin
+"rm" -f                                 "/usr/local/bin/ghci-7.3.20110711"
+create () { touch "$1" && chmod 755 "$1" ; } && create                                   "/usr/local/bin/ghci-7.3.20110711"
+echo '#!/bin/sh'                               >> "/usr/local/bin/ghci-7.3.20110711"
+echo 'exec "/usr/local/bin/ghc-7.3.20110711" --interactive ${1+"$@"}' >> "/usr/local/bin/ghci-7.3.20110711"
+chmod +x                                 "/usr/local/bin/ghci-7.3.20110711"
+"rm" -f "/usr/local/bin/ghci"
+ln -s ghci-7.3.20110711 "/usr/local/bin/ghci"
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711/include"
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711/include
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711/include/." && /home/owen/src/little-stuff/uninstaller/install -m 644  includes/./*.h "/usr/local/lib/ghc-7.3.20110711/include/./" &&   /home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711/include/rts" && /home/owen/src/little-stuff/uninstaller/install -m 644  includes/rts/*.h "/usr/local/lib/ghc-7.3.20110711/include/rts/" &&   /home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711/include/rts/prof" && /home/owen/src/little-stuff/uninstaller/install -m 644  includes/rts/prof/*.h "/usr/local/lib/ghc-7.3.20110711/include/rts/prof/" &&   /home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711/include/rts/storage" && /home/owen/src/little-stuff/uninstaller/install -m 644  includes/rts/storage/*.h "/usr/local/lib/ghc-7.3.20110711/include/rts/storage/" &&   /home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711/include/stg" && /home/owen/src/little-stuff/uninstaller/install -m 644  includes/stg/*.h "/usr/local/lib/ghc-7.3.20110711/include/stg/" &&  true
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711/include/.
+/usr/bin/install -m 644 includes/./Cmm.h includes/./DerivedConstants.h includes/./GHCConstants.h includes/./HsFFI.h includes/./MachDeps.h includes/./Rts.h includes/./RtsAPI.h includes/./RtsOpts.h includes/./Stg.h includes/./ghcautoconf.h includes/./ghcconfig.h includes/./ghcplatform.h /usr/local/lib/ghc-7.3.20110711/include/./
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711/include/rts
+/usr/bin/install -m 644 includes/rts/Adjustor.h includes/rts/BlockSignals.h includes/rts/Bytecodes.h includes/rts/Config.h includes/rts/Constants.h includes/rts/EventLogFormat.h includes/rts/FileLock.h includes/rts/Flags.h includes/rts/Globals.h includes/rts/Hooks.h includes/rts/Hpc.h includes/rts/IOManager.h includes/rts/Linker.h includes/rts/Messages.h includes/rts/OSThreads.h includes/rts/Parallel.h includes/rts/PrimFloat.h includes/rts/Signals.h includes/rts/SpinLock.h includes/rts/Stable.h includes/rts/TTY.h includes/rts/Threads.h includes/rts/Ticky.h includes/rts/Timer.h includes/rts/Types.h includes/rts/Utils.h /usr/local/lib/ghc-7.3.20110711/include/rts/
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711/include/rts/prof
+/usr/bin/install -m 644 includes/rts/prof/CCS.h includes/rts/prof/LDV.h /usr/local/lib/ghc-7.3.20110711/include/rts/prof/
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711/include/rts/storage
+/usr/bin/install -m 644 includes/rts/storage/Block.h includes/rts/storage/ClosureMacros.h includes/rts/storage/ClosureTypes.h includes/rts/storage/Closures.h includes/rts/storage/FunTypes.h includes/rts/storage/GC.h includes/rts/storage/InfoTables.h includes/rts/storage/Liveness.h includes/rts/storage/MBlock.h includes/rts/storage/SMPClosureOps.h includes/rts/storage/TSO.h /usr/local/lib/ghc-7.3.20110711/include/rts/storage/
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711/include/stg
+/usr/bin/install -m 644 includes/stg/DLL.h includes/stg/MachRegs.h includes/stg/MiscClosures.h includes/stg/Regs.h includes/stg/SMP.h includes/stg/TailCalls.h includes/stg/Ticky.h includes/stg/Types.h /usr/local/lib/ghc-7.3.20110711/include/stg/
+/home/owen/src/little-stuff/uninstaller/install -m 644  includes/ghcautoconf.h includes/ghcplatform.h "/usr/local/lib/ghc-7.3.20110711/include/"
+/usr/bin/install -m 644 includes/ghcautoconf.h includes/ghcplatform.h /usr/local/lib/ghc-7.3.20110711/include/
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/bin"
+/usr/bin/install -m 755 -d /usr/local/bin
+"rm" -f                                        "/usr/local/bin/haddock-ghc-7.3.20110711"
+create () { touch "$1" && chmod 755 "$1" ; } && create                                           "/usr/local/bin/haddock-ghc-7.3.20110711"
+echo '#!/bin/sh'                                       >> "/usr/local/bin/haddock-ghc-7.3.20110711"
+echo 'exedir="/usr/local/lib/ghc-7.3.20110711"'                        >> "/usr/local/bin/haddock-ghc-7.3.20110711"
+echo 'exeprog="haddock"'                          >> "/usr/local/bin/haddock-ghc-7.3.20110711"
+echo 'executablename="$exedir/$exeprog"'           >> "/usr/local/bin/haddock-ghc-7.3.20110711"
+echo 'datadir="/usr/local/share"'                             >> "/usr/local/bin/haddock-ghc-7.3.20110711"
+echo 'bindir="/usr/local/bin"'                               >> "/usr/local/bin/haddock-ghc-7.3.20110711"
+echo 'topdir="/usr/local/lib/ghc-7.3.20110711"'                               >> "/usr/local/bin/haddock-ghc-7.3.20110711"
+cat utils/haddock/haddock.wrapper                         >> "/usr/local/bin/haddock-ghc-7.3.20110711"
+chmod +x                                         "/usr/local/bin/haddock-ghc-7.3.20110711"
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/share/doc/ghc/html"
+/usr/bin/install -m 755 -d /usr/local/share/doc/ghc/html
+"cp" -R utils/haddock/html "/usr/local/share/doc/ghc/html"
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711/html/"  
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711/html/
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711/html/Classic.theme/"  
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711/html/Classic.theme/
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711/html/Ocean.std-theme/"  
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711/html/Ocean.std-theme/
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711/latex/"
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711/latex/
+/home/owen/src/little-stuff/uninstaller/install -m 644  utils/haddock/html/frames.html "/usr/local/lib/ghc-7.3.20110711/html/"  
+/usr/bin/install -m 644 utils/haddock/html/frames.html /usr/local/lib/ghc-7.3.20110711/html/
+/home/owen/src/little-stuff/uninstaller/install -m 644  utils/haddock/html/haddock-util.js "/usr/local/lib/ghc-7.3.20110711/html/"  
+/usr/bin/install -m 644 utils/haddock/html/haddock-util.js /usr/local/lib/ghc-7.3.20110711/html/
+/home/owen/src/little-stuff/uninstaller/install -m 644  utils/haddock/html/Classic.theme/haskell_icon.gif "/usr/local/lib/ghc-7.3.20110711/html/Classic.theme/"  
+/usr/bin/install -m 644 utils/haddock/html/Classic.theme/haskell_icon.gif /usr/local/lib/ghc-7.3.20110711/html/Classic.theme/
+/home/owen/src/little-stuff/uninstaller/install -m 644  utils/haddock/html/Classic.theme/minus.gif "/usr/local/lib/ghc-7.3.20110711/html/Classic.theme/"  
+/usr/bin/install -m 644 utils/haddock/html/Classic.theme/minus.gif /usr/local/lib/ghc-7.3.20110711/html/Classic.theme/
+/home/owen/src/little-stuff/uninstaller/install -m 644  utils/haddock/html/Classic.theme/plus.gif "/usr/local/lib/ghc-7.3.20110711/html/Classic.theme/"  
+/usr/bin/install -m 644 utils/haddock/html/Classic.theme/plus.gif /usr/local/lib/ghc-7.3.20110711/html/Classic.theme/
+/home/owen/src/little-stuff/uninstaller/install -m 644  utils/haddock/html/Classic.theme/xhaddock.css "/usr/local/lib/ghc-7.3.20110711/html/Classic.theme/"  
+/usr/bin/install -m 644 utils/haddock/html/Classic.theme/xhaddock.css /usr/local/lib/ghc-7.3.20110711/html/Classic.theme/
+/home/owen/src/little-stuff/uninstaller/install -m 644  utils/haddock/html/Ocean.std-theme/hslogo-16.png "/usr/local/lib/ghc-7.3.20110711/html/Ocean.std-theme/"  
+/usr/bin/install -m 644 utils/haddock/html/Ocean.std-theme/hslogo-16.png /usr/local/lib/ghc-7.3.20110711/html/Ocean.std-theme/
+/home/owen/src/little-stuff/uninstaller/install -m 644  utils/haddock/html/Ocean.std-theme/minus.gif "/usr/local/lib/ghc-7.3.20110711/html/Ocean.std-theme/"  
+/usr/bin/install -m 644 utils/haddock/html/Ocean.std-theme/minus.gif /usr/local/lib/ghc-7.3.20110711/html/Ocean.std-theme/
+/home/owen/src/little-stuff/uninstaller/install -m 644  utils/haddock/html/Ocean.std-theme/ocean.css "/usr/local/lib/ghc-7.3.20110711/html/Ocean.std-theme/"  
+/usr/bin/install -m 644 utils/haddock/html/Ocean.std-theme/ocean.css /usr/local/lib/ghc-7.3.20110711/html/Ocean.std-theme/
+/home/owen/src/little-stuff/uninstaller/install -m 644  utils/haddock/html/Ocean.std-theme/plus.gif "/usr/local/lib/ghc-7.3.20110711/html/Ocean.std-theme/"  
+/usr/bin/install -m 644 utils/haddock/html/Ocean.std-theme/plus.gif /usr/local/lib/ghc-7.3.20110711/html/Ocean.std-theme/
+/home/owen/src/little-stuff/uninstaller/install -m 644  utils/haddock/html/Ocean.std-theme/synopsis.png "/usr/local/lib/ghc-7.3.20110711/html/Ocean.std-theme/"  
+/usr/bin/install -m 644 utils/haddock/html/Ocean.std-theme/synopsis.png /usr/local/lib/ghc-7.3.20110711/html/Ocean.std-theme/
+/home/owen/src/little-stuff/uninstaller/install -m 644  utils/haddock/latex/haddock.sty "/usr/local/lib/ghc-7.3.20110711/latex/"
+/usr/bin/install -m 644 utils/haddock/latex/haddock.sty /usr/local/lib/ghc-7.3.20110711/latex/
+"rm" -f "/usr/local/bin/haddock"
+ln -s haddock-ghc-7.3.20110711 "/usr/local/bin/haddock"
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/bin"
+/usr/bin/install -m 755 -d /usr/local/bin
+"rm" -f                                        "/usr/local/bin/hsc2hs"
+create () { touch "$1" && chmod 755 "$1" ; } && create                                           "/usr/local/bin/hsc2hs"
+echo '#!/bin/sh'                                       >> "/usr/local/bin/hsc2hs"
+echo 'exedir="/usr/local/lib/ghc-7.3.20110711"'                        >> "/usr/local/bin/hsc2hs"
+echo 'exeprog="hsc2hs"'                          >> "/usr/local/bin/hsc2hs"
+echo 'executablename="$exedir/$exeprog"'           >> "/usr/local/bin/hsc2hs"
+echo 'datadir="/usr/local/share"'                             >> "/usr/local/bin/hsc2hs"
+echo 'bindir="/usr/local/bin"'                               >> "/usr/local/bin/hsc2hs"
+echo 'topdir="/usr/local/lib/ghc-7.3.20110711"'                               >> "/usr/local/bin/hsc2hs"
+echo 'HSC2HS_EXTRA="--cflag=-fno-stack-protector "' >> "/usr/local/bin/hsc2hs"
+cat utils/hsc2hs/hsc2hs.wrapper                         >> "/usr/local/bin/hsc2hs"
+chmod +x                                         "/usr/local/bin/hsc2hs"
+/home/owen/src/little-stuff/uninstaller/install -m 644  utils/hsc2hs/template-hsc.h "/usr/local/lib/ghc-7.3.20110711"
+/usr/bin/install -m 644 utils/hsc2hs/template-hsc.h /usr/local/lib/ghc-7.3.20110711
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/bin"
+/usr/bin/install -m 755 -d /usr/local/bin
+"rm" -f                                        "/usr/local/bin/ghc-pkg-7.3.20110711"
+create () { touch "$1" && chmod 755 "$1" ; } && create                                           "/usr/local/bin/ghc-pkg-7.3.20110711"
+echo '#!/bin/sh'                                       >> "/usr/local/bin/ghc-pkg-7.3.20110711"
+echo 'exedir="/usr/local/lib/ghc-7.3.20110711"'                        >> "/usr/local/bin/ghc-pkg-7.3.20110711"
+echo 'exeprog="ghc-pkg"'                          >> "/usr/local/bin/ghc-pkg-7.3.20110711"
+echo 'executablename="$exedir/$exeprog"'           >> "/usr/local/bin/ghc-pkg-7.3.20110711"
+echo 'datadir="/usr/local/share"'                             >> "/usr/local/bin/ghc-pkg-7.3.20110711"
+echo 'bindir="/usr/local/bin"'                               >> "/usr/local/bin/ghc-pkg-7.3.20110711"
+echo 'topdir="/usr/local/lib/ghc-7.3.20110711"'                               >> "/usr/local/bin/ghc-pkg-7.3.20110711"
+cat utils/ghc-pkg/ghc-pkg.wrapper                         >> "/usr/local/bin/ghc-pkg-7.3.20110711"
+chmod +x                                         "/usr/local/bin/ghc-pkg-7.3.20110711"
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/bin"
+/usr/bin/install -m 755 -d /usr/local/bin
+"rm" -f "/usr/local/bin/ghc-pkg"
+ln -s ghc-pkg-7.3.20110711 "/usr/local/bin/ghc-pkg"
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/bin"
+/usr/bin/install -m 755 -d /usr/local/bin
+"rm" -f                                        "/usr/local/bin/runghc"
+create () { touch "$1" && chmod 755 "$1" ; } && create                                           "/usr/local/bin/runghc"
+echo '#!/bin/sh'                                       >> "/usr/local/bin/runghc"
+echo 'exedir="/usr/local/lib/ghc-7.3.20110711"'                        >> "/usr/local/bin/runghc"
+echo 'exeprog="runghc"'                          >> "/usr/local/bin/runghc"
+echo 'executablename="$exedir/$exeprog"'           >> "/usr/local/bin/runghc"
+echo 'datadir="/usr/local/share"'                             >> "/usr/local/bin/runghc"
+echo 'bindir="/usr/local/bin"'                               >> "/usr/local/bin/runghc"
+echo 'topdir="/usr/local/lib/ghc-7.3.20110711"'                               >> "/usr/local/bin/runghc"
+cat utils/runghc/runghc.wrapper                         >> "/usr/local/bin/runghc"
+chmod +x                                         "/usr/local/bin/runghc"
+"rm" -f "/usr/local/bin/runhaskell"
+ln -s runghc "/usr/local/bin/runhaskell"
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/bin"
+/usr/bin/install -m 755 -d /usr/local/bin
+"rm" -f                                        "/usr/local/bin/ghc-7.3.20110711"
+create () { touch "$1" && chmod 755 "$1" ; } && create                                           "/usr/local/bin/ghc-7.3.20110711"
+echo '#!/bin/sh'                                       >> "/usr/local/bin/ghc-7.3.20110711"
+echo 'exedir="/usr/local/lib/ghc-7.3.20110711"'                        >> "/usr/local/bin/ghc-7.3.20110711"
+echo 'exeprog="ghc-stage2"'                          >> "/usr/local/bin/ghc-7.3.20110711"
+echo 'executablename="$exedir/$exeprog"'           >> "/usr/local/bin/ghc-7.3.20110711"
+echo 'datadir="/usr/local/share"'                             >> "/usr/local/bin/ghc-7.3.20110711"
+echo 'bindir="/usr/local/bin"'                               >> "/usr/local/bin/ghc-7.3.20110711"
+echo 'topdir="/usr/local/lib/ghc-7.3.20110711"'                               >> "/usr/local/bin/ghc-7.3.20110711"
+echo 'executablename="$exedir/ghc"' >> "/usr/local/bin/ghc-7.3.20110711"
+cat ghc/ghc.wrapper                         >> "/usr/local/bin/ghc-7.3.20110711"
+chmod +x                                         "/usr/local/bin/ghc-7.3.20110711"
+"rm" -f "/usr/local/bin/ghc"
+ln -s ghc-7.3.20110711 "/usr/local/bin/ghc"
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711"
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711
+for i in driver/ghc-usage.txt driver/ghci-usage.txt libffi/dist-install/build/libHSffi.a libffi/dist-install/build/libHSffi_p.a libffi/dist-install/build/HSffi.o libffi/dist-install/build/libHSffi-ghc7.3.20110711.so rts/dist/build/libHSrtsmain.a rts/dist/build/libHSrts.a rts/dist/build/libHSrts_p.a rts/dist/build/libHSrts-ghc7.3.20110711.so rts/dist/build/libHSrts_l.a rts/dist/build/libHSrts_debug.a rts/dist/build/libHSrts_thr.a rts/dist/build/libHSrts_thr_debug.a rts/dist/build/libHSrts_thr_l.a rts/dist/build/libHSrts_thr_p.a rts/dist/build/libHSrts_debug-ghc7.3.20110711.so rts/dist/build/libHSrts_thr-ghc7.3.20110711.so rts/dist/build/libHSrts_thr_debug-ghc7.3.20110711.so settings; do \
+		case $i in \
+		  *.a) \
+		    /home/owen/src/little-stuff/uninstaller/install -m 644  $i "/usr/local/lib/ghc-7.3.20110711"; \
+		    true /usr/local/lib/ghc-7.3.20110711/`basename $i` ;; \
+		  *.dll) \
+		    /home/owen/src/little-stuff/uninstaller/install -m 644 -s  $i "/usr/local/lib/ghc-7.3.20110711" ;; \
+		  *.so) \
+		    /home/owen/src/little-stuff/uninstaller/install -m 755  $i "/usr/local/lib/ghc-7.3.20110711" ;; \
+		  *.dylib) \
+		    /home/owen/src/little-stuff/uninstaller/install -m 755  $i "/usr/local/lib/ghc-7.3.20110711";; \
+		  *) \
+		    /home/owen/src/little-stuff/uninstaller/install -m 644  $i "/usr/local/lib/ghc-7.3.20110711"; \
+		esac; \
+	done
+/usr/bin/install -m 644 driver/ghc-usage.txt /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 644 driver/ghci-usage.txt /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 644 libffi/dist-install/build/libHSffi.a /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 644 libffi/dist-install/build/libHSffi_p.a /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 644 libffi/dist-install/build/HSffi.o /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 755 libffi/dist-install/build/libHSffi-ghc7.3.20110711.so /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 644 rts/dist/build/libHSrtsmain.a /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 644 rts/dist/build/libHSrts.a /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 644 rts/dist/build/libHSrts_p.a /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 755 rts/dist/build/libHSrts-ghc7.3.20110711.so /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 644 rts/dist/build/libHSrts_l.a /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 644 rts/dist/build/libHSrts_debug.a /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 644 rts/dist/build/libHSrts_thr.a /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 644 rts/dist/build/libHSrts_thr_debug.a /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 644 rts/dist/build/libHSrts_thr_l.a /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 644 rts/dist/build/libHSrts_thr_p.a /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 755 rts/dist/build/libHSrts_debug-ghc7.3.20110711.so /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 755 rts/dist/build/libHSrts_thr-ghc7.3.20110711.so /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 755 rts/dist/build/libHSrts_thr_debug-ghc7.3.20110711.so /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 644 settings /usr/local/lib/ghc-7.3.20110711
+/usr/bin/gcc -E  -undef -traditional -P -DINSTALLING -DLIB_DIR='"/usr/local/lib/ghc-7.3.20110711"' -DINCLUDE_DIR='"/usr/local/lib/ghc-7.3.20110711/include"'  -x c -Iincludes libffi/package.conf.in -o libffi/package.conf.install.raw
+grep -v '^#pragma GCC' libffi/package.conf.install.raw | sed -e 's/""//g' -e 's/:[ 	]*,/: /g' >libffi/package.conf.install
+/usr/bin/gcc -E  -undef -traditional -P -DINSTALLING -DLIB_DIR='"/usr/local/lib/ghc-7.3.20110711"' -DINCLUDE_DIR='"/usr/local/lib/ghc-7.3.20110711/include"' -DPAPI_INCLUDE_DIR="" -DPAPI_LIB_DIR="" -x c -Iincludes rts/package.conf.in -o rts/package.conf.install.raw
+grep -v '^#pragma GCC' rts/package.conf.install.raw | sed -e 's/""//g' -e 's/:[ 	]*,/: /g' >rts/package.conf.install
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711"
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711
+for i in utils/haddock/dist/build/tmp/haddock utils/hsc2hs/dist-install/build/tmp/hsc2hs utils/ghc-pkg/dist-install/build/tmp/ghc-pkg utils/runghc/dist-install/build/tmp/runghc ghc/stage2/build/tmp/ghc-stage2; do \
+		/home/owen/src/little-stuff/uninstaller/install -m 755  $i "/usr/local/lib/ghc-7.3.20110711"; \
+	done
+/usr/bin/install -m 755 utils/haddock/dist/build/tmp/haddock /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 755 utils/hsc2hs/dist-install/build/tmp/hsc2hs /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 755 utils/ghc-pkg/dist-install/build/tmp/ghc-pkg /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 755 utils/runghc/dist-install/build/tmp/runghc /usr/local/lib/ghc-7.3.20110711
+/usr/bin/install -m 755 ghc/stage2/build/tmp/ghc-stage2 /usr/local/lib/ghc-7.3.20110711
+"mv" "/usr/local/lib/ghc-7.3.20110711/ghc-stage2" "/usr/local/lib/ghc-7.3.20110711/ghc"
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711"
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711
+"rm" -rf "/usr/local/lib/ghc-7.3.20110711/package.conf.d"
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711/package.conf.d"
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711/package.conf.d
+"/usr/local/lib/ghc-7.3.20110711/ghc-pkg" --force --global-conf "/usr/local/lib/ghc-7.3.20110711/package.conf.d" update libffi/package.conf.install
+Reading package info from "libffi/package.conf.install" ... done.
+"/usr/local/lib/ghc-7.3.20110711/ghc-pkg" --force --global-conf "/usr/local/lib/ghc-7.3.20110711/package.conf.d" update rts/package.conf.install
+Reading package info from "rts/package.conf.install" ... done.
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/ghc-prim dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/ghc-prim-0.2.0.0
+Registering ghc-prim-0.2.0.0...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/integer-gmp dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/integer-gmp-0.3.0.0
+Registering integer-gmp-0.3.0.0...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/base dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/base-4.4.0.0
+Registering base-4.4.0.0...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/filepath dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/filepath-1.2.0.1
+Registering filepath-1.2.0.1...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/array dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/array-0.3.0.3
+Registering array-0.3.0.3...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/bytestring dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/bytestring-0.9.2.0
+Registering bytestring-0.9.2.0...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/containers dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/containers-0.4.0.0
+Registering containers-0.4.0.0...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/unix dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/unix-2.5.0.0
+Registering unix-2.5.0.0...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/old-locale dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/old-locale-1.0.0.3
+Registering old-locale-1.0.0.3...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/old-time dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/old-time-1.0.0.7
+Registering old-time-1.0.0.7...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/time dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/time-1.2.0.5
+Registering time-1.2.0.5...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/directory dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/directory-1.1.0.1
+Registering directory-1.1.0.1...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/process dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/process-1.1.0.0
+Registering process-1.1.0.0...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/extensible-exceptions dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in
+/usr/local/lib/ghc-7.3.20110711/extensible-exceptions-0.1.1.3
+Registering extensible-exceptions-0.1.1.3...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/hpc dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/hpc-0.5.1.0
+Registering hpc-0.5.1.0...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/pretty dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/pretty-1.1.0.0
+Registering pretty-1.1.0.0...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/template-haskell dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/template-haskell-2.6.0.0
+Registering template-haskell-2.6.0.0...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/Cabal/cabal dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/Cabal-1.11.2
+Registering Cabal-1.11.2...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/binary dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/binary-0.5.0.2
+Registering binary-0.5.0.2...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/bin-package-db dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/bin-package-db-0.0.0.0
+Registering bin-package-db-0.0.0.0...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/hoopl dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/hoopl-3.8.7.0
+Registering hoopl-3.8.7.0...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" compiler stage2 '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/ghc-7.3.20110711
+Registering ghc-7.3.20110711...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/haskell98 dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO  
+Installing library in /usr/local/lib/ghc-7.3.20110711/haskell98-2.0.0.0
+Registering haskell98-2.0.0.0...
+"inplace/bin/ghc-cabal" install "/usr/local/lib/ghc-7.3.20110711/ghc" "/usr/local/lib/ghc-7.3.20110711/ghc-pkg" "strip" "/usr/local/lib/ghc-7.3.20110711" libraries/haskell2010 dist-install '' '/usr/local' '/usr/local/lib/ghc-7.3.20110711' '/usr/local/share/doc/ghc/html/libraries' NO
+Installing library in /usr/local/lib/ghc-7.3.20110711/haskell2010-1.1.0.0
+Registering haskell2010-1.1.0.0...
+"/usr/local/lib/ghc-7.3.20110711/ghc-pkg" --global-conf "/usr/local/lib/ghc-7.3.20110711/package.conf.d" hide binary
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711/include"
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711/include
+for i in libffi/dist-install/build/ffi.h libffi/dist-install/build/ffitarget.h; do \
+		/home/owen/src/little-stuff/uninstaller/install -m 644  $i "/usr/local/lib/ghc-7.3.20110711/include"; \
+	done
+/usr/bin/install -m 644 libffi/dist-install/build/ffi.h /usr/local/lib/ghc-7.3.20110711/include
+/usr/bin/install -m 644 libffi/dist-install/build/ffitarget.h /usr/local/lib/ghc-7.3.20110711/include
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/bin"
+/usr/bin/install -m 755 -d /usr/local/bin
+for i in utils/hp2ps/dist/build/tmp/hp2ps utils/hpc/dist-install/build/tmp/hpc; do \
+		/home/owen/src/little-stuff/uninstaller/install -m 755  $i "/usr/local/bin" ;  \
+	done
+/usr/bin/install -m 755 utils/hp2ps/dist/build/tmp/hp2ps /usr/local/bin
+/usr/bin/install -m 755 utils/hpc/dist-install/build/tmp/hpc /usr/local/bin
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/lib/ghc-7.3.20110711"
+/usr/bin/install -m 755 -d /usr/local/lib/ghc-7.3.20110711
+for i in utils/unlit/dist/build/tmp/unlit; do \
+		/home/owen/src/little-stuff/uninstaller/install -m 755  $i "/usr/local/lib/ghc-7.3.20110711"; \
+	done
+/usr/bin/install -m 755 utils/unlit/dist/build/tmp/unlit /usr/local/lib/ghc-7.3.20110711
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/share/doc/ghc"
+/usr/bin/install -m 755 -d /usr/local/share/doc/ghc
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/share/doc/ghc/html"
+/usr/bin/install -m 755 -d /usr/local/share/doc/ghc/html
+/home/owen/src/little-stuff/uninstaller/install -m 644  docs/index.html "/usr/local/share/doc/ghc/html"
+/usr/bin/install -m 644 docs/index.html /usr/local/share/doc/ghc/html
+/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/share/doc/ghc/html/libraries"
+/usr/bin/install -m 755 -d /usr/local/share/doc/ghc/html/libraries
+for i in libraries/*.html libraries/*.gif libraries/*.css libraries/*.js; do \
+		/home/owen/src/little-stuff/uninstaller/install -m 644  $i "/usr/local/share/doc/ghc/html/libraries/"; \
+	done
+/usr/bin/install -m 644 libraries/doc-index-124.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-126.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-33.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-36.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-37.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-38.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-42.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-43.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-45.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-46.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-47.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-58.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-60.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-61.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-62.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-92.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-94.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-A.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-All.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-B.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-C.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-D.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-E.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-F.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-G.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-H.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-I.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-J.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-K.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-L.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-M.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-N.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-O.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-P.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-Q.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-R.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-S.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-T.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-U.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-V.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-W.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-X.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-Y.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index-Z.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/doc-index.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/frames.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/index-frames.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/index.html /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/minus.gif /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/plus.gif /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/hscolour.css /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/ocean.css /usr/local/share/doc/ghc/html/libraries/
+/usr/bin/install -m 644 libraries/haddock-util.js /usr/local/share/doc/ghc/html/libraries/
+/home/owen/src/little-stuff/uninstaller/install -m 644  libraries/prologue.txt "/usr/local/share/doc/ghc/html/libraries/"
+/usr/bin/install -m 644 libraries/prologue.txt /usr/local/share/doc/ghc/html/libraries/
+/home/owen/src/little-stuff/uninstaller/install -m 755  libraries/gen_contents_index "/usr/local/share/doc/ghc/html/libraries/"
+/usr/bin/install -m 755 libraries/gen_contents_index /usr/local/share/doc/ghc/html/libraries/
+for i in docs/users_guide/users_guide utils/haddock/doc/haddock; do \
+		/home/owen/src/little-stuff/uninstaller/install -m 755 -d "/usr/local/share/doc/ghc/html/`basename $i`"; \
+		/home/owen/src/little-stuff/uninstaller/install -m 644  $i/* "/usr/local/share/doc/ghc/html/`basename $i`"; \
+	done
+/usr/bin/install -m 755 -d /usr/local/share/doc/ghc/html/users_guide
+/usr/bin/install -m 644 docs/users_guide/users_guide/License.html docs/users_guide/users_guide/arrow-notation.html docs/users_guide/users_guide/assertions.html docs/users_guide/users_guide/bang-patterns.html docs/users_guide/users_guide/bug-reporting.html docs/users_guide/users_guide/bugs-and-infelicities.html docs/users_guide/users_guide/bugs.html docs/users_guide/users_guide/ch04s02.html docs/users_guide/users_guide/compiler-plugins.html docs/users_guide/users_guide/data-type-extensions.html docs/users_guide/users_guide/deriving.html docs/users_guide/users_guide/ext-core.html docs/users_guide/users_guide/extending-ghc.html docs/users_guide/users_guide/faster.html docs/users_guide/users_guide/ffi-ghc.html docs/users_guide/users_guide/ffi.html docs/users_guide/users_guide/file-suffixes.html docs/users_guide/users_guide/flag-reference.html docs/users_guide/users_guide/fptools.css docs/users_guide/users_guide/generic-classes.html docs/users_guide/users_guide/generic-programming.html docs/users_guide/users_guide/ghc-as-a-library.html docs/users_guide/users_guide/ghc-language-features.html docs/users_guide/users_guide/ghci-commands.html docs/users_guide/users_guide/ghci-compiled.html docs/users_guide/users_guide/ghci-cygwin.html docs/users_guide/users_guide/ghci-debugger.html docs/users_guide/users_guide/ghci-dot-files.html docs/users_guide/users_guide/ghci-faq.html docs/users_guide/users_guide/ghci-invocation.html docs/users_guide/users_guide/ghci-obj.html docs/users_guide/users_guide/ghci-set.html docs/users_guide/users_guide/ghci-windows.html docs/users_guide/users_guide/ghci.html docs/users_guide/users_guide/hp2ps.html docs/users_guide/users_guide/hpc.html docs/users_guide/users_guide/hsc2hs.html docs/users_guide/users_guide/index.html docs/users_guide/users_guide/interactive-evaluation.html docs/users_guide/users_guide/introduction-GHC.html docs/users_guide/users_guide/ix01.html docs/users_guide/users_guide/lang-parallel.html docs/users_guide/users_guide/library-differences.html docs/users_guide/users_guide/loading-source-files.html docs/users_guide/users_guide/mailing-lists-GHC.html docs/users_guide/users_guide/modes.html docs/users_guide/users_guide/monomorphism.html docs/users_guide/users_guide/options-debugging.html docs/users_guide/users_guide/options-help.html docs/users_guide/users_guide/options-optimise.html docs/users_guide/users_guide/options-phases.html docs/users_guide/users_guide/options-platform.html docs/users_guide/users_guide/options-sanity.html docs/users_guide/users_guide/other-type-extensions.html docs/users_guide/users_guide/packages.html docs/users_guide/users_guide/pragmas.html docs/users_guide/users_guide/primitives.html docs/users_guide/users_guide/prof-compiler-options.html docs/users_guide/users_guide/prof-heap.html docs/users_guide/users_guide/prof-time-options.html docs/users_guide/users_guide/prof_scc.png docs/users_guide/users_guide/profiling.html docs/users_guide/users_guide/rewrite-rules.html docs/users_guide/users_guide/runghc.html docs/users_guide/users_guide/runtime-control.html docs/users_guide/users_guide/safe-haskell.html docs/users_guide/users_guide/separate-compilation.html docs/users_guide/users_guide/smaller.html docs/users_guide/users_guide/sooner-faster-quicker.html docs/users_guide/users_guide/special-ids.html docs/users_guide/users_guide/static-dynamic-flags.html docs/users_guide/users_guide/syntax-extns.html docs/users_guide/users_guide/template-haskell.html docs/users_guide/users_guide/terminal-interaction.html docs/users_guide/users_guide/thriftier.html docs/users_guide/users_guide/ticky-ticky.html docs/users_guide/users_guide/type-class-extensions.html docs/users_guide/users_guide/type-families.html docs/users_guide/users_guide/using-concurrent.html docs/users_guide/users_guide/using-ghc.html docs/users_guide/users_guide/using-shared-libs.html docs/users_guide/users_guide/using-smp.html docs/users_guide/users_guide/utils.html docs/users_guide/users_guide/version-numbering.html docs/users_guide/users_guide/win32-dlls.html docs/users_guide/users_guide/win32.html docs/users_guide/users_guide/wrong-compilee.html docs/users_guide/users_guide/wrong.html /usr/local/share/doc/ghc/html/users_guide
+/usr/bin/install -m 755 -d /usr/local/share/doc/ghc/html/haddock
+/usr/bin/install -m 644 utils/haddock/doc/haddock/ch01s03.html utils/haddock/doc/haddock/ch01s04.html utils/haddock/doc/haddock/ch03s02.html utils/haddock/doc/haddock/ch03s03.html utils/haddock/doc/haddock/ch03s04.html utils/haddock/doc/haddock/ch03s05.html utils/haddock/doc/haddock/ch03s08.html utils/haddock/doc/haddock/fptools.css utils/haddock/doc/haddock/hyperlinking.html utils/haddock/doc/haddock/index.html utils/haddock/doc/haddock/introduction.html utils/haddock/doc/haddock/invoking.html utils/haddock/doc/haddock/ix01.html utils/haddock/doc/haddock/license.html utils/haddock/doc/haddock/markup.html utils/haddock/doc/haddock/module-attributes.html /usr/local/share/doc/ghc/html/haddock

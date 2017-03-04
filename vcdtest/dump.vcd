@@ -1,0 +1,482 @@
+$date
+	Tue Feb 28 04:09:38 2012
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module main $end
+$var wire 1 ! master_has_control $end
+$var wire 5 " master_read_addr [4:0] $end
+$var wire 1 # master_write $end
+$var wire 5 $ master_write_addr [4:0] $end
+$var wire 12 % master_write_node [11:0] $end
+$var wire 5 & read_addr [4:0] $end
+$var wire 12 ' read_node [11:0] $end
+$var wire 5 ( slave_read_addr [4:0] $end
+$var wire 1 ) slave_write $end
+$var wire 5 * slave_write_addr [4:0] $end
+$var wire 12 + slave_write_node [11:0] $end
+$var wire 1 , write $end
+$var wire 5 - write_addr [4:0] $end
+$var wire 12 . write_node [11:0] $end
+$var reg 1 / clk $end
+$var reg 1 0 reset $end
+$scope module access_mux $end
+$var wire 23 1 a [22:0] $end
+$var wire 23 2 b [22:0] $end
+$var wire 23 3 c [22:0] $end
+$var wire 1 ! sw $end
+$upscope $end
+$scope module slave_memory $end
+$var wire 1 4 clk $end
+$var wire 5 5 read_addr [4:0] $end
+$var wire 12 6 read_node [11:0] $end
+$var wire 1 7 reset $end
+$var wire 1 , write $end
+$var wire 5 8 write_addr [4:0] $end
+$var wire 12 9 write_node [11:0] $end
+$var reg 385 : all_memory [384:0] $end
+$scope module constants $end
+$upscope $end
+$upscope $end
+$scope module slave $end
+$var wire 1 4 clk $end
+$var wire 5 ; read_car [4:0] $end
+$var wire 5 < read_cdr [4:0] $end
+$var wire 12 = read_node [11:0] $end
+$var wire 2 > read_type [1:0] $end
+$var wire 1 7 reset $end
+$var reg 5 ? _slave_read_addr [4:0] $end
+$var reg 1 @ _slave_write $end
+$var reg 5 A _slave_write_addr [4:0] $end
+$var reg 12 B _slave_write_node [11:0] $end
+$var reg 5 C cdr1 [4:0] $end
+$var reg 5 D cdr2 [4:0] $end
+$var reg 5 E cdr3 [4:0] $end
+$var reg 3 F depth [2:0] $end
+$var reg 5 G head1 [4:0] $end
+$var reg 5 H head2 [4:0] $end
+$var reg 5 I head3 [4:0] $end
+$var reg 5 J head_ptr [4:0] $end
+$var reg 1 K k_done $end
+$var reg 5 L slave_read_addr [4:0] $end
+$var reg 1 M slave_write $end
+$var reg 5 N slave_write_addr [4:0] $end
+$var reg 12 O slave_write_node [11:0] $end
+$var reg 3 P state [2:0] $end
+$scope task reduce_k $end
+$upscope $end
+$scope task reduce_k_init $end
+$upscope $end
+$scope task reduce_s $end
+$upscope $end
+$scope task reduce_s_init $end
+$upscope $end
+$scope task search $end
+$upscope $end
+$scope task search_init $end
+$upscope $end
+$scope task shift_stacks $end
+$upscope $end
+$scope task stuck $end
+$upscope $end
+$scope task stuck_init $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 P
+bx O
+bx N
+0M
+bx L
+xK
+bx J
+bx I
+bx H
+bx G
+bx F
+bx E
+bx D
+bx C
+bx B
+bx A
+x@
+bx ?
+bx >
+bx =
+bx <
+bx ;
+b10000000000010000000000010000000000010000000000010000000000100100000111100001100110100001000101100000100100 :
+bx 9
+bx 8
+17
+bx 6
+bx 5
+14
+bx 3
+b0 2
+bx 1
+10
+1/
+bx .
+bx -
+x,
+bx +
+bx *
+x)
+bx (
+bx '
+bx &
+b0 %
+b0 $
+0#
+b0 "
+0!
+$end
+#1
+0,
+0@
+bx0xxxxxxxxxxxx 3
+bx0xxxxxxxxxxxx 1
+0)
+0/
+04
+#2
+b1 P
+b0 L
+b0 J
+b0 F
+1/
+14
+#3
+b10 >
+b1 ;
+b100 <
+b100000100100 '
+b100000100100 6
+b100000100100 =
+b0 &
+b0 5
+b0 ?
+b0xxxxx0xxxxxxxxxxxx 3
+b0xxxxx0xxxxxxxxxxxx 1
+b0 (
+0/
+04
+#4
+b1 L
+b1 J
+b1 F
+b100 C
+b0 G
+1/
+14
+#5
+b10 ;
+b101 <
+b100001000101 '
+b100001000101 6
+b100001000101 =
+b1 &
+b1 5
+b1 ?
+b1xxxxx0xxxxxxxxxxxx 3
+b1xxxxx0xxxxxxxxxxxx 1
+b1 (
+0/
+04
+#6
+b10 L
+b10 J
+b10 F
+b101 C
+b100 D
+b1 G
+b0 H
+1/
+14
+#7
+b11 ;
+b110 <
+b100001100110 '
+b100001100110 6
+b100001100110 =
+b10 &
+b10 5
+b10 ?
+b10xxxxx0xxxxxxxxxxxx 3
+b10xxxxx0xxxxxxxxxxxx 1
+b10 (
+0/
+04
+#8
+b11 L
+b11 J
+b11 F
+b110 C
+b101 D
+b100 E
+b10 G
+b1 H
+b0 I
+1/
+14
+#9
+b1000 ;
+b111 <
+b100100000111 '
+b100100000111 6
+b100100000111 =
+b11 &
+b11 5
+b11 ?
+b11xxxxx0xxxxxxxxxxxx 3
+b11xxxxx0xxxxxxxxxxxx 1
+b11 (
+0/
+04
+#10
+b1000 L
+b1000 J
+b100 F
+b111 C
+b110 D
+b101 E
+b11 G
+b10 H
+b1 I
+1/
+14
+#11
+b1 >
+b0 ;
+b0 <
+b10000000000 '
+b10000000000 6
+b10000000000 =
+b1000 &
+b1000 5
+b1000 ?
+b1000xxxxx0xxxxxxxxxxxx 3
+b1000xxxxx0xxxxxxxxxxxx 1
+b1000 (
+0/
+04
+#12
+0K
+b11 P
+b111 L
+1/
+14
+#13
+b111 &
+b111 5
+b111 ?
+b111xxxxx0xxxxxxxxxxxx 3
+b111xxxxx0xxxxxxxxxxxx 1
+b111 (
+0/
+04
+#14
+1K
+1M
+b10000000000 O
+b10 N
+1/
+14
+#15
+b10000000000 .
+b10000000000 9
+1,
+b10 -
+b10 8
+b10000000000 B
+b10000000000 +
+1@
+1)
+b10 A
+b111000101010000000000 3
+b111000101010000000000 1
+b10 *
+0/
+04
+#16
+b10000000000010000000000010000000000010000000000010000000000100100000111010000000000100001000101100000100100 :
+b1 P
+b0 L
+b0 J
+b0 F
+0M
+1/
+14
+#17
+b10 >
+b1 ;
+b100 <
+b100000100100 '
+b100000100100 6
+b100000100100 =
+0,
+b0 &
+b0 5
+0@
+0)
+b0 ?
+b100010000000000 3
+b100010000000000 1
+b0 (
+0/
+04
+#18
+b1 L
+b1 J
+b1 F
+b100 C
+b111 D
+b110 E
+b0 G
+b11 H
+b10 I
+1/
+14
+#19
+b10 ;
+b101 <
+b100001000101 '
+b100001000101 6
+b100001000101 =
+b1 &
+b1 5
+b1 ?
+b1000100010000000000 3
+b1000100010000000000 1
+b1 (
+0/
+04
+#20
+b10 L
+b10 J
+b10 F
+b101 C
+b100 D
+b111 E
+b1 G
+b0 H
+b11 I
+1/
+14
+#21
+b1 >
+b0 ;
+b0 <
+b10000000000 '
+b10000000000 6
+b10000000000 =
+b10 &
+b10 5
+b10 ?
+b10000100010000000000 3
+b10000100010000000000 1
+b10 (
+0/
+04
+#22
+0K
+b11 P
+b101 L
+1/
+14
+#23
+b101 &
+b101 5
+b101 ?
+b101000100010000000000 3
+b101000100010000000000 1
+b101 (
+0/
+04
+#24
+1K
+1M
+b0 N
+1/
+14
+#25
+1,
+b0 -
+b0 8
+1@
+1)
+b0 A
+b101000001010000000000 3
+b101000001010000000000 1
+b0 *
+0/
+04
+#26
+b10000000000010000000000010000000000010000000000010000000000100100000111010000000000100001000101010000000000 :
+b1 P
+b0 L
+b0 J
+b0 F
+0M
+1/
+14
+#27
+0,
+b0 &
+b0 5
+0@
+0)
+b0 ?
+b10000000000 3
+b10000000000 1
+b0 (
+0/
+04
+#28
+b100 P
+1/
+14
+#29
+0/
+04
+#30
+1/
+14
+#31
+0/
+04
+#32
+1/
+14
+#33
+0/
+04
+#34
+1/
+14
+#35
+0/
+04
+#36
+1/
+14
+#37
+0/
+04
+#38
+1/
+14
+#39
+0/
+04
+#40
+1/
+14

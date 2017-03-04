@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>default</groupId>
+    <artifactId>default-11c211_2.9.2</artifactId>
+    <packaging>jar</packaging>
+    <description>default-11c211</description>
+    <version>0.1-SNAPSHOT</version>
+    <name>default-11c211</name>
+    <organization>
+        <name>default</name>
+    </organization>
+    <dependencies>
+    </dependencies>
+</project>
+

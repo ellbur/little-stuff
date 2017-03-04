@@ -1,0 +1,16 @@
+
+<html>
+    <script src="./dump.js"></script>
+    <script src="./signals.js"></script>
+    <script src="./hardware.js"></script>
+
+    <script>
+        var sigSet = VCDSignalSet(dump);
+        sigSet.next();
+        sigSet.next();
+        sigSet.next();
+        snap = sigSet.snapshot();
+        fields = slaveFields(snap);
+    </script>
+</html>
+

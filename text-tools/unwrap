@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+import re
+import sys
+
+text = sys.stdin.read()
+text = re.sub(r'\n\s*\n', r'\\\\', text)
+text = re.sub(r'\n', ' ', text)
+text = re.sub(r'\\\\', r'\n', text)
+
+sys.stdout.write(text)
+sys.stdout.flush()
+

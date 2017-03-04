@@ -1,0 +1,7 @@
+v 3
+file . "foo.vhd" "20120929143800.000" "20120929104053.327":
+  entity foo at 2( 1) + 0 on 19;
+  architecture struct of foo at 11( 156) + 0 on 20;
+file . "bar.vhd" "20120929144050.000" "20120929104053.277":
+  entity bar at 2( 1) + 0 on 17;
+  architecture struct of bar at 11( 156) + 0 on 18;

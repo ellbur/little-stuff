@@ -1,0 +1,117 @@
+
+-- For now I am turning off the positivity checker.
+-- https://lists.chalmers.se/pipermail/agda/2010/002484.html
+-- https://lists.chalmers.se/pipermail/agda/2010/002485.html
+
+{-# OPTIONS --no-positivity-check #-}
+{-# OPTIONS --no-termination-check #-}
+
+-- Compiled against standard library 0.6
+module Events where
+
+open import Level
+open import Data.Sum using (_⊎_; inj₁; inj₂) 
+open import Data.Product using (_×_; proj₁; proj₂; _,_)
+open import Data.Maybe using (Maybe; just; nothing)
+
+record EventSystem {l} : Set (suc l ⊔ suc zero) where
+  infixl 5 _map_
+  field
+    -- The type of a one-shot event, ie it does not repeat.
+    -- It is not an event stream.
+    -- IT MAY BE an event that happens "instantly".
+    -- This is how we allow events to be a monad.
+    -- This is how we get pure.
+    Event : (result-type : Set l) → Set l
+    
+    -- Axioms of Events
+    
+    -- Basic map.
+    _map_ : ∀ {r₁ r₂} (ev : Event r₁) (f : r₁ → r₂) → Event r₂   
+    
+    -- Wait for the second in a series of events. 
+    chain : ∀ {r} (ev : Event (Event r)) → Event r
+    
+    -- Create an event that happens instantly.
+    instantly : ∀ {r} (result : r) → Event r 
+    
+    -- For any two events, one of them happens first.
+    order : ∀ {r₁ r₂} (ev₁ : Event r₁) (ev₂ : Event r₂)
+          → Event ((r₁ × Event r₂) ⊎ (r₂ × Event r₁))
+          
+module EventUtils1 {l} (system : EventSystem {l}) where
+
+  open EventSystem system
+  
+  order-homog : ∀ {r} (ev₁ : Event r) (ev₂ : Event r)
+        → Event (r × Event r)
+  order-homog ev₁ ev₂ = order ev₁ ev₂ map λ {
+      (inj₁ (x , rest)) → x , rest;
+      (inj₂ (x , rest)) → x , rest
+    }
+    
+  second : ∀ {r} (ev₁ : Event r) (ev₂ : Event r) → Event r 
+  second ev₁ ev₂ = chain ( (order-homog ev₁ ev₂) map proj₂ )
+  
+module EventUtils2 {l} (system : EventSystem {l}) where
+
+  open EventSystem system
+  open EventUtils1 system
+  
+  -- Here we work with event streams. They are much like lists.
+  
+  data EventStream (A : Set l) : Set l where
+    empty : EventStream A
+    more-coming : Event (A × EventStream A) → EventStream A
+    
+  -- This is boring
+  
+  _smap_ : ∀ {A B} → EventStream A → (A → B) → EventStream B
+  empty smap f = empty
+  more-coming x smap f = more-coming (x map λ {
+        (a , rest) → f a , rest smap f 
+    })
+    
+  -- This is basically an induction axiom on event streams.
+  
+  module Fold {A B} (zero : B) (suc : B → A → B) where
+    fold : EventStream A → Event B
+    fold empty = instantly zero
+    fold (more-coming ev) = chain (ev map λ {
+            (a , next) → (fold next) map (λ b → suc b a)
+        })
+        
+  open Fold
+  
+  -- This takes advantage of the total ordering of events.
+  -- It puts a single event in its place in the stream.
+  insert : ∀ {A} → EventStream A → Event A → EventStream A
+  insert' : ∀ {A} → EventStream A → Event A → Event (A × EventStream A)
+  
+  insert' empty event = event map λ a → (a , empty)
+  insert' (more-coming rest) event = order rest event map λ {
+      (inj₁ ((a , rest) , event)) → a , insert rest event;
+      (inj₂ (a , rest)) → a , more-coming rest 
+    }
+    
+  insert stream event = more-coming (insert' stream event)
+  
+  open import Relation.Binary.PropositionalEquality.TrustMe
+  
+  -- This takes advantage of the previous definition.
+  merge : ∀ {A} → EventStream A → EventStream A → EventStream A
+  merge empty stream = stream
+  merge stream empty = stream 
+  merge {A} (more-coming a) (more-coming b) = more-coming result where
+    in-order : Event ((A × EventStream A) × Event (A × EventStream A))
+    in-order = order-homog a b
+    
+    result : Event (A × EventStream A)
+    result = in-order map λ {
+        ((x , rest-x) , rest-y) → x , merge rest-x (more-coming rest-y)
+      }
+      
+  
+  
+  
+      

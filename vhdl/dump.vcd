@@ -1,0 +1,19 @@
+$date
+  Tue May 15 23:06:00 2012
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$var reg 2 ! which[1:0] $end
+$scope module p4_1 $end
+$var reg 4 " lines[3:0] $end
+$var reg 2 # which[1:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+b01 !
+b0110 "
+b01 #

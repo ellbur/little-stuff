@@ -1,0 +1,76 @@
+
+<html>
+    <head>
+        <title>Kid'sBridge Face</title>
+        <script type="text/javascript" src="./lib/jquery-1.7.1.min.js"> </script>
+    </head>
+    <style type="text/css">
+        #face-p {
+            text-align : center;
+        }
+        #sound {
+            visibility: hidden;
+        }
+    </style>
+
+    <body>
+        <p id="face-p">
+            <img id="face" src="./png/face-neutral.png"/>
+        </p>
+
+        <p>Hit Space</p>
+
+        <audio id="sound" src="./reversed.wav" autostart="false"/>
+    </body>
+
+    <script type="text/javascript">
+        var talkingImages = [
+            './png/face-talking-1.png',
+            './png/face-talking-2.png',
+            './png/face-talking-3.png',
+            './png/face-talking-4.png',
+            './png/face-talking-5.png',
+            './png/face-talking-6.png',
+            './png/face-talking-7.png',
+            './png/face-talking-8.png',
+            './png/face-talking-9.png',
+            './png/face-talking-10.png',
+            './png/face-talking-11.png',
+            './png/face-talking-12.png',
+            './png/face-talking-13.png',
+            './png/face-talking-14.png'
+        ];
+        
+        function beginAnimation() {
+            doFrame(0)
+        }
+
+        function doFrame(i) {
+            $('#face').attr('src', talkingImages[i]);
+            
+            if (i < talkingImages.length - 1) {
+                setTimeout(function() { doFrame(i + 1) }, 115);
+            }
+            else {
+                setTimeout(function() { endAnimation() }, 115);
+            }
+        }
+
+        function endAnimation() {
+            $('#face').attr('src', './png/face-neutral.png');
+        }
+                
+        $(document).ready(function() {
+            $(document).keydown(function(event){
+                if (event.which == 32) {
+                    document.getElementById('sound').play();
+                    //$('#sound').play()
+                    beginAnimation();
+                    return false;
+                }
+            })
+        })
+
+    </script>
+</html>
+

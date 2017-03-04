@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+
+use Verilog::VCD qw(parse_vcd);
+use JSON::XS;
+use Data::Dumper;
+
+my $vcd = parse_vcd("/dev/stdin");
+print encode_json $vcd;
+print "\n";
+
